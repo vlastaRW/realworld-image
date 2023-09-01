@@ -1,0 +1,8 @@
+; RWCodecImageSVG.def : Declares the module parameters.
+
+LIBRARY      "RWCodecImageSVG.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE

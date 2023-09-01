@@ -1,0 +1,627 @@
+// RWDrawing.idl : IDL source for RWDrawing
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (RWDrawing.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "RWBase.idl";
+import "RWImaging.idl";
+import "RWProcessing.idl";
+import "RWConceptDesignerExtension.idl";
+import "RWConceptDesignerView.idl";
+
+
+typedef [v1_enum] enum EOutlineJoinType
+{
+	EOJTMiter = 0,
+	EOJTRound = 2,
+	EOJTBevel = 3,
+} EOutlineJoinType;
+
+typedef [v1_enum] enum EControlKeysState
+{
+	ECKSNone = 0,
+	ECKSShift = 1,
+	ECKSControl = 2,
+	ECKSShiftControl = ECKSShift|ECKSControl,
+} EControlKeysState;
+
+typedef [v1_enum] enum EMouseButton
+{
+	EMBLeft = 0,
+	EMBRight,
+	EMBMiddle,
+	EMBX1,
+	EMBX2,
+} EMouseButton;
+
+typedef struct TPixelCoords
+{
+	float fX;
+	float fY;
+} TPixelCoords;
+
+[
+	object,
+	uuid(AD31FE77-2ECF-4885-83CF-B6603CF05C6D),
+	helpstring("IRasterImageBrushOwner Interface"),
+	pointer_default(unique)
+]
+interface IRasterImageBrushOwner : IUnknown
+{
+	[helpstring("method Size")] HRESULT Size([out] ULONG* a_pSizeX, [out] ULONG* a_pSizeY);
+	[helpstring("method ControlPointsChanged")] HRESULT ControlPointsChanged();
+	[helpstring("method ControlPointChanged")] HRESULT ControlPointChanged([in] ULONG a_nIndex);
+	[helpstring("method RectangleChanged")] HRESULT RectangleChanged([in] RECT const* a_pChanged);
+	[helpstring("method ControlLinesChanged")] HRESULT ControlLinesChanged();
+	[helpstring("method SetBrushState")] HRESULT SetBrushState([in] ISharedState* a_pState);
+};
+
+typedef [v1_enum] enum EControlLineType
+{
+	ECLTSelection = 0x1,
+	ECLTHelp = 0x2,
+	ECLTDWORD = 0xffffffff
+} EControlLineType;
+
+[
+	object,
+	uuid(D494C785-7B19-4F87-917E-1A10BF61119B),
+	helpstring("IEditToolControlLines Interface"),
+	pointer_default(unique)
+]
+interface IEditToolControlLines : IUnknown
+{
+	[helpstring("method MoveTo")] HRESULT MoveTo([in] float a_fX, [in] float a_fY);
+	[helpstring("method LineTo")] HRESULT LineTo([in] float a_fX, [in] float a_fY);
+	[helpstring("method Close")] HRESULT Close();
+	[helpstring("method HandleSize")] HRESULT HandleSize([out] float* a_pRadiusInImagePixels);
+};
+
+typedef struct TRWPolygon
+{
+	ULONG nVertices;
+	[size_is(nVertices)] TPixelCoords const* pVertices;
+} TRWPolygon;
+
+[
+	object,
+	uuid(A8B6A583-8FC0-4E5C-9A56-A4BC2F845C12),
+	helpstring("IRasterImageBrush Interface"),
+	pointer_default(unique)
+]
+interface IRasterImageBrush : IUnknown
+{
+	[helpstring("method Init")] HRESULT Init([in] IRasterImageBrushOwner* a_pOwner);
+
+	[helpstring("method SetShapeBounds")] HRESULT SetShapeBounds([in] TPixelCoords const* a_pCenter, [in] float a_fSizeX, [in] float a_fSizeY, [in] float a_fAngle);
+	[helpstring("method SetState")] HRESULT SetState([in] ISharedState* a_pState);
+	[helpstring("method GetState")] HRESULT GetState([in] ISharedState** a_ppState);
+
+	[helpstring("method NeedsPrepareShape")] HRESULT NeedsPrepareShape();
+	[helpstring("method PrepareShape")] HRESULT PrepareShape([in] RECT const* a_pBounds, [in] ULONG a_nPaths, [in, size_is(a_nPaths)] TRWPolygon const* a_pPaths);
+
+	[helpstring("method IsSolid")] HRESULT IsSolid([in] RECT const* a_pRect);
+	[helpstring("method GetBrushTile")] HRESULT GetBrushTile([in] ULONG a_nX, [in] ULONG a_nY, [in] ULONG a_nSizeX, [in] ULONG a_nSizeY, [in] float a_fGamma, [in] ULONG a_nStride, [out, size_is(a_nStride*a_nSizeY)] TRasterImagePixel* a_pBuffer);
+
+	[helpstring("method AdjustCoordinates")] HRESULT AdjustCoordinates([in, out] TPixelCoords* a_pPos, [in] ULONG a_nControlPointIndex);
+
+	[helpstring("method GetControlPointCount")] HRESULT GetControlPointCount([out] ULONG* a_pCount);
+	[helpstring("method GetControlPoint")] HRESULT GetControlPoint([in] ULONG a_nIndex, [out] TPixelCoords* a_pPos, [out] ULONG* a_pClass);
+	[helpstring("method SetControlPoint")] HRESULT SetControlPoint([in] ULONG a_nIndex, [in] TPixelCoords const* a_pPos, [in] boolean a_bReleased, [in] float a_fPointSize);
+	[helpstring("method GetControlPointDesc")] HRESULT GetControlPointDesc([in] ULONG a_nIndex, [out] ILocalizedString** a_ppDescription);
+
+	[helpstring("method GetControlLines")] HRESULT GetControlLines([in] IEditToolControlLines* a_pLines);
+
+	[helpstring("method Transform")] HRESULT Transform([in] TMatrix3x3f const* a_pMatrix);
+};
+
+
+typedef [v1_enum] enum EImageTileIntent
+{
+	EITIBackground = 0x1, // image will be used as background for drawing
+	EITIContent = 0x2, // image will be analyzed result of the operation depends on it
+	EITIBoth = 0x3, // this may fail is the background and content are not the same
+} EImageTileIntent;
+
+[
+	object,
+	uuid(87B5F899-D8C8-43AB-AFC2-C96AD5F90AC0),
+	helpstring("IRasterImageEditWindow Interface"),
+	pointer_default(unique)
+]
+interface IRasterImageEditWindow : IUnknown
+{
+	[helpstring("method Size")] HRESULT Size([out] ULONG* a_pSizeX, [out] ULONG* a_pSizeY);
+	[helpstring("method GetDefaultColor")] HRESULT GetDefaultColor([out] TRasterImagePixel* a_pDefault);
+	[helpstring("method GetImageTile")] HRESULT GetImageTile([in] LONG a_nX, [in] LONG a_nY, [in] ULONG a_nSizeX, [in] ULONG a_nSizeY, [in] float a_fGamma, [in] ULONG a_nStride, [in] EImageTileIntent a_eIntent, [out, size_is(a_nStride*a_nSizeY)] TRasterImagePixel* a_pBuffer);
+	[helpstring("method GetSelectionInfo")] HRESULT GetSelectionInfo([out] RECT* a_pBoundingRectangle, [out] BOOL* a_bEntireRectangle);
+	[helpstring("method GetSelectionTile")] HRESULT GetSelectionTile([in] LONG a_nX, [in] LONG a_nY, [in] ULONG a_nSizeX, [in] ULONG a_nSizeY, [in] ULONG a_nStride, [out, size_is(a_nStride*a_nSizeY)] BYTE* a_pBuffer);
+	[helpstring("method ControlPointsChanged")] HRESULT ControlPointsChanged();
+	[helpstring("method ControlPointChanged")] HRESULT ControlPointChanged([in] ULONG a_nIndex);
+	[helpstring("method ControlLinesChanged")] HRESULT ControlLinesChanged();
+	[helpstring("method RectangleChanged")] HRESULT RectangleChanged([in] RECT const* a_pChanged);
+	[helpstring("method ScrollWindow")] HRESULT ScrollWindow([in] ULONG a_nScrollID, [in] TPixelCoords const* a_pDelta);
+	[helpstring("method SetState")] HRESULT SetState([in] ISharedState* a_pState);
+	[helpstring("method SetBrushState")] HRESULT SetBrushState([in] BSTR a_bstrStyleID, [in] ISharedState* a_pState);
+	[helpstring("method Handle")] HRESULT Handle([out] RWHWND* a_phWnd);
+	[helpstring("method Document")] HRESULT Document([out] IDocument** a_ppDocument);
+};
+
+typedef [v1_enum] enum EBlendingMode
+{
+	EBMDrawOver = 0x1,
+	EBMReplace = 0x2,
+	EBMDrawUnder = 0x4,
+	EBMAdd = 0x8,
+} EBlendingMode;
+typedef [v1_enum] enum ERasterizationMode
+{
+	ERMBinary = 0x1,
+	ERMSmooth = 0x2
+} ERasterizationMode;
+typedef [v1_enum] enum ECoordinatesMode
+{
+	ECMFloatingPoint = 0x1,
+	ECMIntegral = 0x2,
+	ECMTile2 = 0x4,
+	ECMTile4 = 0x8,
+	ECMTile8 = 0x10,
+} ECoordinatesMode;
+
+typedef [v1_enum] enum ETestPointHresult
+{
+	ETPAHitMask = 1,
+	ETPAActionMask = 0xe,
+	ETPAHit = 0, // S_OK
+	ETPAMissed = 1, // S_FALSE
+	ETPATransform = 0,
+	ETPAStartNew = 2,
+	ETPACustomAction = 4,
+	ETPAApply = 0x10,
+} ETestPointHresult;
+
+
+[
+	object,
+	uuid(F66069FF-D698-4AE9-81AB-6506E7663435),// TODO: change to prevent plug-in problems
+	helpstring("IRasterImageEditTool Interface"),
+	pointer_default(unique)
+]
+interface IRasterImageEditTool : IUnknown
+{
+	[helpstring("method Init")] HRESULT Init([in] IRasterImageEditWindow* a_pWindow);
+	[helpstring("method Reset")] HRESULT Reset(); // called when image change notification is received
+
+	[helpstring("method IsDirty")] HRESULT IsDirty([out] RECT* a_pImageRect, [out] BOOL* a_pOptimizeImageRect, [out] RECT* a_pSelectionRect);
+	[helpstring("method GetImageTile")] HRESULT GetImageTile([in] LONG a_nX, [in] LONG a_nY, [in] ULONG a_nSizeX, [in] ULONG a_nSizeY, [in] float a_fGamma, [in] ULONG a_nStride, [out, size_is(a_nStride*a_nSizeY)] TRasterImagePixel* a_pBuffer);
+	[helpstring("method GetSelectionInfo")] HRESULT GetSelectionInfo([out] RECT* a_pBoundingRectangle, [out] BOOL* a_bEntireRectangle);
+	[helpstring("method GetSelectionTile")] HRESULT GetSelectionTile([in] LONG a_nX, [in] LONG a_nY, [in] ULONG a_nSizeX, [in] ULONG a_nSizeY, [in] ULONG a_nStride, [out, size_is(a_nStride*a_nSizeY)] BYTE* a_pBuffer);
+
+	[helpstring("method PreTranslateMessage")] HRESULT PreTranslateMessage([in] MSG const* a_pMsg);
+	[helpstring("method GetCursor"), local] HRESULT GetCursor([in] EControlKeysState a_eKeysState, [in] TPixelCoords const* a_tPos, [out] HCURSOR* a_phCursor);
+
+	[helpstring("method SetState")] HRESULT SetState([in] ISharedState* a_pState);
+	[helpstring("method SetOutline")] HRESULT SetOutline([in] BYTE a_bEnabled, [in] float a_fWidth, [in] float a_fPos, [in] EOutlineJoinType a_eJoins, [in] TColor const* a_pColor);
+	[helpstring("method SetBrush")] HRESULT SetBrush([in] IRasterImageBrush* a_pBrush);
+	[helpstring("method SetGlobals")] HRESULT SetGlobals([in] EBlendingMode a_eBlendingMode, [in] ERasterizationMode a_eRasterizationMode, [in] ECoordinatesMode a_eCoordinatesMode);
+
+	[helpstring("method AdjustCoordinates")] HRESULT AdjustCoordinates([in] EControlKeysState a_eKeysState, [in, out] TPixelCoords* a_pPos, [in] TPixelCoords const* a_pPointerSize, [in] ULONG const* a_pControlPointIndex, [in] float a_fPointSize);
+	[helpstring("method ProcessInputEvent")] HRESULT ProcessInputEvent([in] EControlKeysState a_eKeysState, [in] TPixelCoords const* a_pPos, [in] TPixelCoords const* a_pPointerSize, [in] float a_fNormalPressure, [in] float a_fTangentPressure, [in] float a_fOrientation, [in] float a_fRotation, [in] float a_fZ, [out] DWORD* a_pMaxIdleTime);
+
+	[helpstring("method GetControlPointCount")] HRESULT GetControlPointCount([out] ULONG* a_pCount);
+	[helpstring("method GetControlPoint")] HRESULT GetControlPoint([in] ULONG a_nIndex, [out] TPixelCoords* a_pPos, [out] ULONG* a_pClass);
+	[helpstring("method SetControlPoint")] HRESULT SetControlPoint([in] ULONG a_nIndex, [in] TPixelCoords const* a_pPos, [in] boolean a_bReleased, [in] float a_fPointSize);
+	[helpstring("method GetControlPointDesc")] HRESULT GetControlPointDesc([in] ULONG a_nIndex, [out] ILocalizedString** a_ppDescription);
+
+	[helpstring("method GetControlLines")] HRESULT GetControlLines([in] IEditToolControlLines* a_pLines, [in] ULONG a_nLineTypes);
+
+	[helpstring("method PointTest")] HRESULT PointTest([in] EControlKeysState a_eKeysState, [in] TPixelCoords const* a_pPos, [in] BYTE a_bAccurate, [in] float a_fPointSize);
+	[helpstring("method Transform")] HRESULT Transform([in] TMatrix3x3f const* a_pMatrix);
+};
+
+[
+	object,
+	uuid(355D2F1A-F20E-45CA-AE6E-A714F8FE4993),
+	helpstring("IRasterImageEditToolFloatingSelection Interface"),
+	pointer_default(unique)
+]
+interface IRasterImageEditToolFloatingSelection : IUnknown
+{
+	[helpstring("method Set")] HRESULT Set([in] float a_fX, [in] float a_fY, [in] ULONG a_nSizeX, [in] ULONG a_nSizeY, [in] ULONG a_nStride, [in, size_is(a_nStride*a_nSizeY)] TRasterImagePixel const* a_pBuffer, [in] BOOL a_bModifyExisting);
+	[helpstring("method Position")] HRESULT Position([out] float* a_pX, [out] float* a_pY);
+	[helpstring("method Size")] HRESULT Size([out] ULONG* a_pSizeX, [out] ULONG* a_pSizeY);
+	[helpstring("method Data")] HRESULT Data([in] ULONG a_nX, [in] ULONG a_nY, [in] ULONG a_nSizeX, [in] ULONG a_nSizeY, [in] ULONG a_nStride, [out, size_is(a_nStride*a_nSizeY)] TRasterImagePixel* a_pBuffer);
+	[helpstring("method Delete")] HRESULT Delete();
+	[helpstring("method SelectAll")] HRESULT SelectAll();
+};
+
+[
+	object,
+	uuid(24809E17-1C15-442B-9C45-CED504A3DF34),
+	helpstring("IRasterImageEditToolContextMenu Interface"),
+	pointer_default(unique)
+]
+interface IRasterImageEditToolContextMenu : IUnknown
+{
+	[helpstring("method CommandsEnum")] HRESULT CommandsEnum([in] TPixelCoords const* a_pPixel, [in] ULONG a_nControlPointIndex, [out] IEnumUnknowns** a_ppSubCommands);
+};
+
+[
+	object,
+	uuid(C0087410-50BC-4E98-9CB7-FD616CBE3BC5),
+	helpstring("IRasterImageEditToolContextMenu Interface"),
+	pointer_default(unique)
+]
+interface IRasterImageEditToolCustomApply : IUnknown
+{
+	[helpstring("method ApplyChanges")] HRESULT ApplyChanges(BOOL a_bExplicit); // ApplyChanges is also called when swithcing tools with a_bExplicit set to FALSE
+};
+
+//[
+//	object,
+//	uuid(0C6074FC-EFB8-48EA-B81C-76FC12E22927),
+//	helpstring("IRasterImageEditWindowHDR Interface"),
+//	pointer_default(unique)
+//]
+//interface IRasterImageEditWindowHDR : IUnknown
+//{
+//	[helpstring("method GetImageTile16")] HRESULT GetImageTile16([in] ULONG a_nX, [in] ULONG a_nY, [in] ULONG a_nSizeX, [in] ULONG a_nSizeY, [in] ULONG a_nStride, [out, size_is(a_nStride*a_nSizeY)] TRasterImagePixel16* a_pBuffer);
+//	[helpstring("method GetImageTile32")] HRESULT GetImageTile32([in] ULONG a_nX, [in] ULONG a_nY, [in] ULONG a_nSizeX, [in] ULONG a_nSizeY, [in] ULONG a_nStride, [out, size_is(a_nStride*a_nSizeY)] TRasterImagePixel32* a_pBuffer);
+//};
+//
+//[
+//	object,
+//	uuid(6AA7FA72-F90D-4E66-BC01-8FAADFF47572),
+//	helpstring("IRasterImageEditToolHDR Interface"),
+//	pointer_default(unique)
+//]
+//interface IRasterImageEditToolHDR : IUnknown
+//{
+//	[helpstring("method InitHDR")] HRESULT InitEx([in] IRasterImageEditWindowHDR* a_pWindow);
+//	[helpstring("method GetImageTile16")] HRESULT GetImageTile16([in] ULONG a_nX, [in] ULONG a_nY, [in] ULONG a_nSizeX, [in] ULONG a_nSizeY, [in] ULONG a_nStride, [out, size_is(a_nStride*a_nSizeY)] TRasterImagePixel16* a_pBuffer);
+//	[helpstring("method GetImageTile32")] HRESULT GetImageTile32([in] ULONG a_nX, [in] ULONG a_nY, [in] ULONG a_nSizeX, [in] ULONG a_nSizeY, [in] ULONG a_nStride, [out, size_is(a_nStride*a_nSizeY)] TRasterImagePixel32* a_pBuffer);
+//};
+
+[
+	object,
+	uuid(5BF49B38-8D8C-49D7-A5BF-D5E22D5EF3F6),
+	helpstring("IRasterImageEditToolScripting Interface"),
+	pointer_default(unique)
+]
+interface IRasterImageEditToolScripting : IUnknown
+{
+	[helpstring("method FromText")] HRESULT FromText([in] BSTR a_bstrParams);
+	[helpstring("method ToText")] HRESULT ToText([out] BSTR* a_pbstrParams);
+};
+
+typedef struct TRWPathPoint
+{
+	DWORD dwFlags;
+	TPixelCoords tPos;
+	TPixelCoords tTanPrev;
+	TPixelCoords tTanNext;
+} TRWPathPoint;
+
+typedef struct TRWPath
+{
+	ULONG nVertices;
+	[size_is(nVertices)] TRWPathPoint const* pVertices;
+} TRWPath;
+
+[
+	object,
+	uuid(E440ED6A-A3D1-4C4B-B8A9-F8B6A76EF28E),
+	helpstring("IRasterImageEditToolPolygon Interface"),
+	pointer_default(unique)
+]
+interface IRasterImageEditToolPolygon : IUnknown
+{
+	[helpstring("method FromPolygon")] HRESULT FromPolygon([in] ULONG a_nCount, [in, size_is(a_nCount)] TRWPolygon const* a_pPolygons);
+	[helpstring("method ToPolygon")] HRESULT ToPolygon([in] IRasterImageEditToolPolygon* a_pConsumer);
+	[helpstring("method FromPath")] HRESULT FromPath([in] ULONG a_nCount, [in, size_is(a_nCount)] TRWPath const* a_pPaths);
+	[helpstring("method ToPath")] HRESULT ToPath([in] IRasterImageEditToolPolygon* a_pConsumer);
+};
+
+
+
+[
+	object,
+	uuid(59BAAB78-A74B-40D0-8449-B837E7279985),
+	helpstring("IRasterImageEditToolWindow Interface"),
+	pointer_default(unique)
+]
+interface IRasterImageEditToolWindow : IChildWindow
+{
+	[helpstring("method OptimumSize")] HRESULT OptimumSize([out] SIZE* a_pSize);
+	[helpstring("method SetState")] HRESULT SetState([in] ISharedState* a_pState);
+	//[helpstring("method EditToolCreate")] HRESULT EditToolCreate([in] BSTR a_bstrID, [out] IRasterImageEditTool** a_ppTool);
+	//[helpstring("method WindowCreate")] HRESULT WindowCreate([in] BSTR a_bstrID, [out] IRasterImageEditTool** a_ppTool);
+};
+
+interface IRasterImageEditToolsManager;
+
+typedef [v1_enum] enum EToolBrushType
+{
+	ETBTIdentifier0 = 0,
+	ETBTIdentifierInterior = 0,
+	ETBTIdentifierOutline = 1,
+	ETBTIdentifierMask = 0xf,
+	ETBTSingleColor = 0,
+	ETBTRasterImage = 0x10,
+	ETBTNeedsMask = 0x20,
+	ETBTTypeMask = 0xf0,
+	ETBTOutlineWidth = 0x100,
+} EToolBrushType;
+
+[
+	object,
+	uuid(DEF55732-85B2-485B-BF60-D3C9DCE7FECB),
+	helpstring("IRasterImageEditToolsFactory Interface"),
+	pointer_default(unique)
+]
+interface IRasterImageEditToolsFactory : IUnknown
+{
+	[helpstring("method ToolIDsEnum")] HRESULT ToolIDsEnum([in] IRasterImageEditToolsManager* a_pManager, [out] IEnumStrings** a_ppToolIDs);
+	[helpstring("method ToolNameGet")] HRESULT ToolNameGet([in] IRasterImageEditToolsManager* a_pManager, [in] BSTR a_bstrID, [out] ILocalizedString** a_ppName);
+	[helpstring("method ToolDescGet")] HRESULT ToolDescGet([in] IRasterImageEditToolsManager* a_pManager, [in] BSTR a_bstrID, [out] ILocalizedString** a_ppDesc);
+	[helpstring("method ToolIconIDGet")] HRESULT ToolIconIDGet([in] IRasterImageEditToolsManager* a_pManager, [in] BSTR a_bstrID, [out] GUID* a_ptDefaultIcon);
+	[helpstring("method ToolIconGet"), local] HRESULT ToolIconGet([in] IRasterImageEditToolsManager* a_pManager, [in] BSTR a_bstrID, [in] ULONG a_nSize, [out] HICON* a_phIcon);
+	[helpstring("method SupportedStates")] HRESULT SupportedStates([in] IRasterImageEditToolsManager* a_pManager, [in] BSTR a_bstrID, [out] DWORD* a_pBlendingModes, [out] DWORD* a_pRasterizationModes, [out] DWORD* a_pCoordinatesModes, [in] IEnum2UInts* a_pPaintSpecs);
+	[helpstring("method EditToolCreate")] HRESULT EditToolCreate([in] IRasterImageEditToolsManager* a_pManager, [in] BSTR a_bstrID, [in] IDocument* a_pDocument, [out] IRasterImageEditTool** a_ppTool);
+	[helpstring("method WindowCreate")] HRESULT WindowCreate([in] IRasterImageEditToolsManager* a_pManager, [in] BSTR a_bstrID, [in] RWHWND a_hParent, [in] LCID a_tLocaleID, [in] ISharedStateManager* a_pStates, [in] BSTR a_bstrSyncID, [out] IRasterImageEditToolWindow** a_ppWindow);
+};
+
+[
+	object,
+	uuid(9EEE0079-F612-4FF5-874F-F5855F2652F9),
+	helpstring("IAutoEditTools Interface"),
+	pointer_default(unique)
+]
+interface IAutoEditTools : IUnknown
+{
+	[helpstring("method ModifyIDs")] HRESULT ModifyIDs([in] IDocument* a_pDoc, [in, out] BSTR* a_pbstrIDs, [in] BSTR a_bstrBlocked);
+};
+
+[
+	object,
+	uuid(8B5CFA7C-90FF-4D0D-8B3B-6D6FB5410FEE),
+	helpstring("IRasterImageEditToolsManager Interface"),
+	pointer_default(unique)
+]
+interface IRasterImageEditToolsManager : IUnknown
+{
+	[helpstring("method ToolIDsEnum")] HRESULT ToolIDsEnum([out] IEnumStrings** a_ppToolIDs);
+	[helpstring("method ToolNameGet")] HRESULT ToolNameGet([in] BSTR a_bstrID, [out] ILocalizedString** a_ppName);
+	[helpstring("method ToolDescGet")] HRESULT ToolDescGet([in] BSTR a_bstrID, [out] ILocalizedString** a_ppDesc);
+	[helpstring("method ToolIconIDGet")] HRESULT ToolIconIDGet([in] BSTR a_bstrID, [out] GUID* a_ptDefaultIcon);
+	[helpstring("method ToolIconGet"), local] HRESULT ToolIconGet([in] BSTR a_bstrID, [in] ULONG a_nSize, [out] HICON* a_phIcon);
+	[helpstring("method SupportedStates")] HRESULT SupportedStates([in] BSTR a_bstrID, [out] DWORD* a_pBlendingModes, [out] DWORD* a_pRasterizationModes, [out] DWORD* a_pCoordinatesModes, [in] IEnum2UInts* a_pPaintSpecs);
+	[helpstring("method EditToolCreate")] HRESULT EditToolCreate([in] BSTR a_bstrID, [in] IDocument* a_pDocument, [out] IRasterImageEditTool** a_ppTool);
+	[helpstring("method WindowCreate")] HRESULT WindowCreate([in] BSTR a_bstrID, [in] RWHWND a_hParent, [in] LCID a_tLocaleID, [in] ISharedStateManager* a_pStates, [in] BSTR a_bstrSyncID, [out] IRasterImageEditToolWindow** a_ppWindow);
+};
+
+
+interface IRasterImageFillStyleManager;
+
+[
+	object,
+	uuid(5C8A10D3-4CD8-4BF4-A0F9-CBD3B2B50036),
+	helpstring("IRasterImageFillStyleFactory Interface"),
+	pointer_default(unique)
+]
+interface IRasterImageFillStyleFactory : IUnknown
+{
+	[helpstring("method StyleIDsEnum")] HRESULT StyleIDsEnum([in] IRasterImageFillStyleManager* a_pManager, [out] IEnumStrings** a_ppIDs);
+	[helpstring("method StyleNameGet")] HRESULT StyleNameGet([in] IRasterImageFillStyleManager* a_pManager, [in] BSTR a_bstrID, [out] ILocalizedString** a_ppName);
+	[helpstring("method StyleDescGet")] HRESULT StyleDescGet([in] IRasterImageFillStyleManager* a_pManager, [in] BSTR a_bstrID, [out] ILocalizedString** a_ppDesc);
+	[helpstring("method StyleIconIDGet")] HRESULT StyleIconIDGet([in] IRasterImageFillStyleManager* a_pManager, [in] BSTR a_bstrID, [out] GUID* a_ptDefaultIcon);
+	[helpstring("method StyleIconGet"), local] HRESULT StyleIconGet([in] IRasterImageFillStyleManager* a_pManager, [in] BSTR a_bstrID, [in] ULONG a_nSize, [out] HICON* a_phIcon);
+	[helpstring("method FillStyleCreate")] HRESULT FillStyleCreate([in] IRasterImageFillStyleManager* a_pManager, [in] BSTR a_bstrID, [in] IDocument* a_pDocument, [out] IRasterImageBrush** a_ppFillStyle);
+	[helpstring("method WindowCreate")] HRESULT WindowCreate([in] IRasterImageFillStyleManager* a_pManager, [in] BSTR a_bstrID, [in] RWHWND a_hParent, [in] LCID a_tLocaleID, [in] ISharedStateManager* a_pStates, [in] BSTR a_bstrSyncID, [out] IRasterImageEditToolWindow** a_ppWindow);
+};
+
+[
+	object,
+	uuid(8F089C36-75A1-47DC-B15F-5C3CE5604FCE),
+	helpstring("IRasterImageFillStyleManager Interface"),
+	pointer_default(unique)
+]
+interface IRasterImageFillStyleManager : IUnknown
+{
+	[helpstring("method StyleIDsEnum")] HRESULT StyleIDsEnum([out] IEnumStrings** a_ppIDs);
+	[helpstring("method StyleNameGet")] HRESULT StyleNameGet([in] BSTR a_bstrID, [out] ILocalizedString** a_ppName);
+	[helpstring("method StyleDescGet")] HRESULT StyleDescGet([in] BSTR a_bstrID, [out] ILocalizedString** a_ppDesc);
+	[helpstring("method StyleIconIDGet")] HRESULT StyleIconIDGet([in] BSTR a_bstrID, [out] GUID* a_ptDefaultIcon);
+	[helpstring("method StyleIconGet"), local] HRESULT StyleIconGet([in] BSTR a_bstrID, [in] ULONG a_nSize, [out] HICON* a_phIcon);
+	[helpstring("method FillStyleCreate")] HRESULT FillStyleCreate([in] BSTR a_bstrID, [in] IDocument* a_pDocument, [out] IRasterImageBrush** a_ppFillStyle);
+	[helpstring("method WindowCreate")] HRESULT WindowCreate([in] BSTR a_bstrID, [in] RWHWND a_hParent, [in] LCID a_tLocaleID, [in] ISharedStateManager* a_pStates, [in] BSTR a_bstrSyncID, [out] IRasterImageEditToolWindow** a_ppWindow);
+};
+
+typedef [v1_enum] enum ELineJoinMode
+{
+	ELJMMiter = 0,
+	ELJMRound = 2,
+	ELJMBevel = 3,
+} ELineJoinMode;
+
+typedef [v1_enum] enum ELineCapMode
+{
+	ELCMButt = 0,
+	ELCMSquare = 1,
+	ELCMRound = 2,
+} ELineCapMode;
+
+[
+	object,
+	uuid(1CA1E6C2-A599-4ED3-967D-EEA8DAF04563),
+	helpstring("IEditToolLine Interface"),
+	pointer_default(unique)
+]
+interface IEditToolLine : IUnknown
+{
+	[helpstring("method IsClosed")] HRESULT IsClosed();
+	[helpstring("method DashPattern")] HRESULT DashPattern([out] BSTR* a_pbstrPattern);
+	[helpstring("method JoinMode")] HRESULT JoinMode([out] ELineJoinMode* a_pMode);
+	[helpstring("method CapMode")] HRESULT CapMode([out] ELineCapMode* a_pMode);
+	[helpstring("method Width")] HRESULT Width([out] float* a_pWidth);
+	[helpstring("method Polygon")] HRESULT Polygon([in] IRasterImageEditToolPolygon* a_pConsumer);
+};
+
+[
+	object,
+	uuid(AA18B4C8-064C-482B-9FA0-8922A108C57D),
+	helpstring("IBezierPathUtils Interface"),
+	pointer_default(unique)
+]
+interface IBezierPathUtils : IUnknown
+{
+	[helpstring("method SVGToPolygon")] HRESULT SVGToPolygon([in] BSTR a_bstrSVG, [in] IRasterImageEditToolPolygon* a_pConsumer);
+};
+
+[
+	object,
+	uuid(1295FE16-27AD-4461-9656-81E37E74A8B2),
+	helpstring("ICanvasInteractingWrapper Interface"),
+	pointer_default(unique)
+]
+interface ICanvasInteractingWrapper : IUnknown
+{
+	[helpstring("method GetControlPointCount"), local] ULONG GetControlPointCount();
+	[helpstring("method GetControlPoint")] HRESULT GetControlPoint([in] ULONG a_nIndex, [out] TPixelCoords* a_pPos, [out] ULONG* a_pClass);
+	[helpstring("method SetControlPoint")] HRESULT SetControlPoint([in] ULONG a_nIndex, [in] TPixelCoords const* a_pPos, [in] boolean a_bReleased, [in] float a_fPointSize, [out] ICanvasInteractingWrapper** a_ppNew, [out] ULONG* a_pNewSel);
+	[helpstring("method GetControlPointDesc")] HRESULT GetControlPointDesc([in] ULONG a_nIndex, [out] ILocalizedString** a_ppDescription);
+	[helpstring("method GetControlLines")] HRESULT GetControlLines([in] IEditToolControlLines* a_pLines, [in] ULONG a_nLineTypes);
+	[helpstring("method ToConfig")] HRESULT ToConfig([in] IConfig* a_pConfig);
+};
+
+[
+	object,
+	uuid(154A0E9E-348B-4198-BBCE-E00B16174C69),
+	helpstring("ICanvasInteractingOperation Interface"),
+	pointer_default(unique)
+]
+interface ICanvasInteractingOperation : IUnknown
+{
+	[helpstring("method CreateWrapper")] HRESULT CreateWrapper([in] IConfig* a_pConfig, [in] ULONG a_nSizeX, [in] ULONG a_nSizeY, [out] ICanvasInteractingWrapper** a_ppWrapper);
+};
+
+
+[
+	uuid(0628D366-3FBB-4076-BB20-96224BD0196A),
+	version(1.0),
+	helpstring("RWDrawing 1.0 Type Library")
+]
+library RWDrawingLib
+{
+	importlib("stdole2.tlb");
+	importlib("RWBase.tlb");
+
+	interface IRasterImageEditToolFloatingSelection;
+	interface IRasterImageEditToolContextMenu;
+	interface IRasterImageEditToolCustomApply;
+	interface IRasterImageEditToolHDR;
+	interface IRasterImageEditToolScripting;
+	interface IEditToolLine;
+
+	[
+		uuid(6F847544-B497-4391-B9E1-CB7531E18DA0),
+		helpstring("RasterImageEditToolsManager Class")
+	]
+	coclass RasterImageEditToolsManager
+	{
+		[default] interface IRasterImageEditToolsFactory;
+		//[default] interface IRasterImageEditToolsManager;
+	};
+	[
+		uuid(8C54B5F7-5915-45C1-8A13-91ED1B175A44),
+		helpstring("RasterImageFillStyleManager Class")
+	]
+	coclass RasterImageFillStyleManager
+	{
+		[default] interface IRasterImageFillStyleManager;
+	};
+	[
+		uuid(5524C468-0B16-4DE1-822F-2FE7A8E6E5DD),
+		helpstring("SharedStateToolData Class")
+	]
+	coclass SharedStateToolData
+	{
+		[default] interface ISharedState;
+	};
+
+	[
+		uuid(66D30B12-5A4A-433F-BA2F-8FCE6894858C),
+		helpstring("RasterImageEditToolsShapes Class")
+	]
+	coclass RasterImageEditToolsShapes
+	{
+		[default] interface IRasterImageEditToolsFactory;
+		interface IBezierPathUtils;
+	};
+	[
+		uuid(3C12D84C-EAAA-4A3C-90AE-A84D61B78CD0),
+		helpstring("RasterImageEditToolsText Class")
+	]
+	coclass RasterImageEditToolsText
+	{
+		[default] interface IRasterImageEditToolsFactory;
+	};
+	[
+		uuid(902697F2-F371-41F9-90EC-D07B6DC26EEA),
+		helpstring("RasterImageEditToolsModifiers Class")
+	]
+	coclass RasterImageEditToolsModifiers
+	{
+		[default] interface IRasterImageEditToolsFactory;
+	};
+	[
+		uuid(B53FC166-F37E-4D2A-A3CF-C3416CD1FEB8),
+		helpstring("RasterImageEditToolsDrawing Class")
+	]
+	coclass RasterImageEditToolsDrawing
+	{
+		[default] interface IRasterImageEditToolsFactory;
+	};
+	[
+		uuid(C06DABFA-59AF-4D8B-A749-B60207CE8BBB),
+		helpstring("RasterImageEditToolsSpecial Class")
+	]
+	coclass RasterImageEditToolsSpecial
+	{
+		[default] interface IRasterImageEditToolsFactory;
+	};
+	[
+		uuid(7877AEF7-3678-478E-A099-B52770AC02C2),
+		helpstring("RasterImageEditToolsSelection Class")
+	]
+	coclass RasterImageEditToolsSelection
+	{
+		[default] interface IRasterImageEditToolsFactory;
+	};
+
+	[
+		uuid(E3FDA1B0-A2DC-4FD0-8571-4B16956961A3),
+		helpstring("RasterImageFillStyleGradient Class")
+	]
+	coclass RasterImageFillStyleGradient
+	{
+		[default] interface IRasterImageFillStyleFactory;
+	};
+	[
+		uuid(D401E04C-9975-4C50-8089-A82C5B9CB12F),
+		helpstring("RasterImageFillStyleBasic Class")
+	]
+	coclass RasterImageFillStyleBasic
+	{
+		[default] interface IRasterImageFillStyleFactory;
+	};
+};
+
+cpp_quote("EXTERN_C __declspec(selectany) const GUID CATID_RasterImageEditToolsFactory = {0x96ab0dd0, 0x2fe6, 0x44b4, {0x85, 0x66, 0x42, 0xbf, 0xa0, 0xeb, 0xdf, 0xdc}};")
+cpp_quote("EXTERN_C __declspec(selectany) const GUID CATID_RasterImageFillStyleFactory = {0x20e1ee01, 0x98fe, 0x434c, {0xad, 0xf7, 0x17, 0x20, 0xdb, 0x53, 0x22, 0xd6}};")
+
+cpp_quote("EXTERN_C __declspec(selectany) const GUID CATID_AutoEditTools = {0x9172e69b, 0x9dec, 0x40b9, {0x97, 0xad, 0x13, 0x3c, 0x8a, 0x29, 0x4a, 0xd0}};")
+

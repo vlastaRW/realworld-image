@@ -1,0 +1,163 @@
+// RWDocumentImageVector.idl : IDL source for RWDocumentImageVector
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (RWDocumentImageVector.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "RWBase.idl";
+import "RWInput.idl";
+import "RWImaging.idl";
+import "RWDrawing.idl";
+import "RWScripting.idl";
+import "RWDocumentImageRaster.idl";
+
+typedef [v1_enum] enum EVectorImageChange
+{
+	EVICImageProps = 0x1,
+	EVICObjects = 0x2,
+	EVICObjectToolID = 0x100,
+	EVICObjectParams = 0x200,
+	EVICObjectOutline = 0x400,
+	EVICObjectStyle = 0x800,
+	EVICObjectModes = 0x1000,
+	ECIVObjectVisibility = 0x2000,
+	ECIVObjectShape = 0x3f00,
+	EVICObjectName = 0x4000,
+	EVICFORCE_DWORD = 0x7fffffff
+} EVectorImageChange;
+
+typedef struct TVectorImageObjectChange
+{
+	ULONG nChangeFlags;
+	ULONG nID;
+} TVectorImageObjectChange;
+
+typedef struct TVectorImageChanges
+{
+	ULONG nGlobalChangeFlags;
+	ULONG nObjects;
+	[size_is(nObjects)] TVectorImageObjectChange const* aObjects;
+} TVectorImageChanges;
+
+
+[
+	object,
+	uuid(CEB63DA7-C1F1-4A15-83D0-5D8B550E2BA9),
+	helpstring("IVectorImageObserver Interface"),
+	pointer_default(unique)
+]
+interface IVectorImageObserver : IUnknown
+{
+	[helpstring("method Notify")] HRESULT Notify([in] TCookie a_tCookie, [in] TVectorImageChanges a_tChanges);
+};
+
+[
+	object,
+	uuid(8B5ECD2E-38F2-4DB2-AEA1-52A9BEFE7561),
+	helpstring("IDocumentVectorImage Interface"),
+	pointer_default(unique)
+]
+interface IDocumentVectorImage : IUnknown
+{
+	[helpstring("method ObjectIDs")] HRESULT ObjectIDs([in] IEnum2UInts* a_pIDs);
+	[helpstring("method ObjectGet")] HRESULT ObjectGet([in] ULONG a_nID, [out] BSTR* a_pToolID, [out] BSTR* a_pToolParams);
+	[helpstring("method ObjectSet")] HRESULT ObjectSet([in, out] ULONG* a_pID, [in] BSTR a_bstrToolID, [in] BSTR a_bstrToolParams);
+	[helpstring("method ObjectNameGet")] HRESULT ObjectNameGet([in] ULONG a_nID, [out] BSTR* a_pName);
+	[helpstring("method ObjectNameSet")] HRESULT ObjectNameSet([in] ULONG a_nID, [in] BSTR a_bstrName);
+	[helpstring("method ObjectStyleGet")] HRESULT ObjectStyleGet([in] ULONG a_nID, [out] BSTR* a_pStyleID, [out] BSTR* a_pStyleParams);
+	[helpstring("method ObjectStyleSet")] HRESULT ObjectStyleSet([in] ULONG a_nID, [in] BSTR a_bstrStyleID, [in] BSTR a_bstrStyleParams);
+	[helpstring("method ObjectStateGet")] HRESULT ObjectStateGet([in] ULONG a_nID, [out] BOOL* a_pFill, [out] ERasterizationMode* a_pRasterizationMode, [out] ECoordinatesMode* a_pCoordinatesMode, [out] BOOL* a_pOutline, [out] TColor* a_pOutlineColor, [out] float* a_pOutlineWidth, [out] float* a_pOutlinePos, [out] EOutlineJoinType* a_pOutlineJoins);
+	[helpstring("method ObjectStateSet")] HRESULT ObjectStateSet([in] ULONG a_nID, [in] BOOL const* a_pFill, [in] ERasterizationMode const* a_pRasterizationMode, [in] ECoordinatesMode const* a_pCoordinatesMode, [in] BOOL const* a_pOutline, [in] TColor const* a_pOutlineColor, [in] float const* a_pOutlineWidth, [in] float const* a_pOutlinePos, [in] EOutlineJoinType const* a_pOutlineJoins);
+	[helpstring("method ObjectEffectGet")] HRESULT ObjectEffectGet([in] ULONG a_nID, [out] IConfig** a_ppOperation);
+	[helpstring("method ObjectEffectSet")] HRESULT ObjectEffectSet([in] ULONG a_nID, [in] IConfig* a_pOperation);
+	[helpstring("method ObjectIsEnabled")] HRESULT ObjectIsEnabled([in] ULONG a_nID);
+	[helpstring("method ObjectEnable")] HRESULT ObjectEnable([in] ULONG a_nID, [in] BOOL a_bEnabled);
+	[helpstring("method ObjectsMove")] HRESULT ObjectsMove([in] ULONG a_nCount, [in, size_is(a_nCount)] ULONG const* a_aShapeIDs, [in] ULONG a_nUnder);
+
+	[helpstring("method StatePrefix")] HRESULT StatePrefix([out] BSTR* a_pbstrPrefix);
+	[helpstring("method StatePack")] HRESULT StatePack([in] ULONG a_nIDs, [in, size_is(a_nIDs)] ULONG const* a_pIDs, [out] ISharedState** a_ppState);
+	[helpstring("method StateUnpack")] HRESULT StateUnpack([in] ISharedState* a_pState, [in] IEnum2UInts* a_pIDs);
+
+	[helpstring("method ObserverIns")] HRESULT ObserverIns([in] IVectorImageObserver* a_pObserver, [in] TCookie a_tCookie);
+	[helpstring("method ObserverDel")] HRESULT ObserverDel([in] IVectorImageObserver* a_pObserver, [in] TCookie a_tCookie);
+
+	[helpstring("method ObjectTransform")] HRESULT ObjectTransform([in] ULONG a_nID, [in] TMatrix3x3f const* a_pContentTransform);
+	[helpstring("method ObjectBounds")] HRESULT ObjectBounds([in] ULONG a_nID, [out] TPixelCoords* a_pTL, [out] TPixelCoords* a_pBR);
+};
+
+[
+	object,
+	uuid(0DBF0A73-0BFE-4650-AB9C-ABF4D8428184),
+	helpstring("IDocumentFactoryVectorImage Interface"),
+	pointer_default(unique)
+]
+interface IDocumentFactoryVectorImage : IUnknown
+{
+	[helpstring("method Create")] HRESULT Create([in] BSTR a_bstrPrefix, [in] IDocumentBase* a_pBase, [in] TImageSize const* a_pSize, [in] TImageResolution const* a_pResolution, [in, size_is(4)] float const* a_aBackground);
+	[helpstring("method AddObject")] HRESULT AddObject([in] BSTR a_bstrPrefix, [in] IDocumentBase* a_pBase, [in] BSTR a_bstrName, [in] BSTR a_bstrToolID, [in] BSTR a_bstrParams, [in] BSTR a_bstrStyleID, [in] BSTR a_bstrStyleParams, [in] float const* a_pOutlineWidth, [in] float const* a_pOutlinePos, [in] EOutlineJoinType const* a_pOutlineJoins, [in] TColor const* a_pOutlineColor, [in] ERasterizationMode const* a_pRasterizationMode, [in] ECoordinatesMode const* a_pCoordinatesMode, [in] boolean const* a_pEnabled);
+};
+
+[
+	object,
+	uuid(7CB1DB64-E808-4C27-BB7C-A9E4FD393D82),
+	dual,
+	nonextensible,
+	helpstring("IScriptedVectorImage Interface"),
+	pointer_default(unique)
+]
+interface IScriptedVectorImage : IDispatch
+{
+	[propget, id(1), helpstring("property ElementIDs")] HRESULT ElementIDs([out, retval] IDispatch** ppArray);
+	[id(2), helpstring("method DeleteElement")] HRESULT DeleteElement([in] ULONG objectID);
+	[id(3), helpstring("method CreateElement")] HRESULT CreateElement([in] BSTR toolID, [in, optional] BSTR params, [out, retval] ULONG* pElementID);
+	[id(4), helpstring("method ModifyElement")] HRESULT ModifyElement([in] ULONG objectID, [in] BSTR toolID, [in, optional] BSTR params);
+	[id(5), helpstring("method GetElementName")] HRESULT GetElementName([in] ULONG objectID, [out, retval] BSTR* pName);
+	[id(6), helpstring("method SetElementName")] HRESULT SetElementName([in] ULONG objectID, [in] BSTR name);
+	[id(7), helpstring("method GetElementStyleID")] HRESULT GetElementStyleID([in] ULONG objectID, [out, retval] BSTR* pStyleID);
+	[id(8), helpstring("method GetElementStyleParams")] HRESULT GetElementStyleParams([in] ULONG objectID, [out, retval] BSTR* pStyleParams);
+	[id(9), helpstring("method SetElementStyle")] HRESULT SetElementStyle([in] ULONG objectID, [in] BSTR name, [in, optional] BSTR params);
+	[id(10), helpstring("method SetElementOutline")] HRESULT SetElementOutline([in] ULONG objectID, [in] float width, [in] ULONG rgba);
+	[id(11), helpstring("method ConvertToShape")] HRESULT ConvertToShape([in] ULONG objectID);
+	[id(12), helpstring("method SetCanvas")] HRESULT SetCanvas([in] ULONG sizeX, [in] ULONG sizeY, [in] float scaleX, [in] float scaleY, [in] float offsetX, [in] float offsetY);
+	[id(13), helpstring("method GetElementToolID")] HRESULT GetElementToolID([in] ULONG objectID, [out, retval] BSTR* pToolID);
+	[id(14), helpstring("method GetElementToolParams")] HRESULT GetElementToolParams([in] ULONG objectID, [out, retval] BSTR* pToolParams);
+	[id(15), helpstring("method CopyElement")] HRESULT CopyElement([in] IDispatch* sourceImage, [in] ULONG objectID, [out, retval] ULONG* pElementID);
+	[propget, id(23), helpstring("property sizeX")] HRESULT sizeX([out, retval] ULONG* pVal);
+	[propput, id(23), helpstring("property sizeX")] HRESULT sizeX([in] ULONG val);
+	[propget, id(24), helpstring("property sizeY")] HRESULT sizeY([out, retval] ULONG* pVal);
+	[propput, id(24), helpstring("property sizeY")] HRESULT sizeY([in] ULONG val);
+	[propget, id(25), helpstring("property background")] HRESULT background([out, retval] ULONG* pRgba);
+	[propput, id(25), helpstring("property background")] HRESULT background([in] ULONG rgba);
+	[id(27), helpstring("method GetIDsFromState")] HRESULT GetIDsFromState([in] IScriptedContext* context, [in] BSTR state, [out, retval] IDispatch** ppArray);
+	[id(28), helpstring("method PutIDsToState")] HRESULT PutIDsToState([in] IScriptedContext* context, [in] BSTR state, [in] VARIANT* pSelectedItems);
+};
+
+[
+	uuid(5575CF66-27F2-4C29-B287-A0BD9C8BAA71),
+	version(1.0),
+	helpstring("RWDocumentImageVector 1.0 Type Library")
+]
+library RWDocumentImageVectorLib
+{
+	importlib("stdole2.tlb");
+	importlib("RWConfig.tlb");
+	importlib("RWInput.tlb");
+	importlib("RWImaging.tlb");
+	importlib("RWDrawing.tlb");
+	importlib("RWScripting.tlb");
+
+	interface IScriptedVectorImage;
+
+	[
+		uuid(51C87837-B028-4252-A3B3-940F80181770),
+		helpstring("DocumentFactoryVectorImage Class")
+	]
+	coclass DocumentFactoryVectorImage
+	{
+		[default] interface IDocumentFactoryVectorImage;
+		interface IDocumentBuilder;
+		interface IScriptingInterface;
+	};
+};

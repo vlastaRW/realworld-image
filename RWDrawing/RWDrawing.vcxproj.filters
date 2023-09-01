@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="FillStyle Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FillStyle Files\Basic">
+      <UniqueIdentifier>{ac27cde0-0ac8-49c0-bb6c-f0967638e71d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FillStyle Files\Gradient">
+      <UniqueIdentifier>{0b6e739a-77ae-43cc-9645-14b495e5b8d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="DrawingTool Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Drawing">
+      <UniqueIdentifier>{52d3224f-d424-454c-bab5-e61a1681fb80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Drawing\Brush">
+      <UniqueIdentifier>{5eae6820-374e-4e0d-a36b-1176e2da7c75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Drawing\Pencil">
+      <UniqueIdentifier>{7cf51de6-d7a2-4c92-8d84-045a29759c1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Drawing\Lasso">
+      <UniqueIdentifier>{7e2724fd-8d5c-4f69-bafc-d256ba553de1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Meta">
+      <UniqueIdentifier>{6ad9a88d-cd4c-4b82-b4f2-18225a454852}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Meta\Alpha">
+      <UniqueIdentifier>{90f42d0f-b2d9-4898-b092-0011465ae35f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Meta\Eraser">
+      <UniqueIdentifier>{0c26736c-eb1f-4728-9697-a5e3db83317e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Meta\Retouch">
+      <UniqueIdentifier>{6a9afab7-010f-4b9a-89c9-f18975fcebea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Meta\Stylize">
+      <UniqueIdentifier>{fdc5accb-4815-4230-b9f3-93f55d64725d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Meta\Symmetry">
+      <UniqueIdentifier>{d402dc36-466f-45df-8927-d3249705b237}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Meta\ChannelMask">
+      <UniqueIdentifier>{ac366e1d-121e-4b40-a9f3-3a0746c1321e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Meta\Recolor">
+      <UniqueIdentifier>{cdfc195b-170a-4dfd-a53d-a1a81161e52a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Selection">
+      <UniqueIdentifier>{ea1442f2-b385-452a-98cc-7ee6215a30ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Selection\MagicWand">
+      <UniqueIdentifier>{ad279d6c-5af8-4177-add6-df95c0d054f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Selection\Select">
+      <UniqueIdentifier>{862b1904-4b66-4be2-b3c8-b6fff32ddf4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Selection\SimpleSelect">
+      <UniqueIdentifier>{ef07b65d-c0a1-40bc-8ecc-dc7a157073b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Selection\Transform">
+      <UniqueIdentifier>{b0211808-ec0f-4d49-96c5-165631dc85bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Selection\Move">
+      <UniqueIdentifier>{e1081b22-6f63-49f8-a1b5-0b5202eade05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Shape">
+      <UniqueIdentifier>{394a8a0c-362d-465e-8459-ff2fcb1f8123}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Shape\Curve">
+      <UniqueIdentifier>{3c88156e-102a-4f08-87a8-8ebd99fd0dfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Shape\Ellipse">
+      <UniqueIdentifier>{5f293591-b23c-4d17-9485-385f726ea36e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Shape\Line">
+      <UniqueIdentifier>{76af5ad1-0223-4572-aba0-dddad0c50665}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Shape\Polygon">
+      <UniqueIdentifier>{f0606591-8743-4353-a0fa-a764ba4c5e03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Shape\Rectangle">
+      <UniqueIdentifier>{deb4e530-0d29-4dcb-b625-44a1bd96074a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Shape\Shape">
+      <UniqueIdentifier>{88560ed7-301c-4352-9a69-e86aa378f80c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Shape\Stroke">
+      <UniqueIdentifier>{2afe67cf-6e27-47e8-9069-0bed96040214}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Special">
+      <UniqueIdentifier>{8a39dfe9-7099-4693-a31c-5be465a250ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Special\Dropper">
+      <UniqueIdentifier>{fba532d6-d53d-49e0-ba08-b6dc231f74bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Special\FloodFill">
+      <UniqueIdentifier>{c1d2eecb-9ef8-40ac-9e96-7715b1b21fea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Special\ProjectedShadow">
+      <UniqueIdentifier>{af671062-2fea-492e-879a-bc476a91e440}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Special\Fill">
+      <UniqueIdentifier>{8aa0dd6b-1123-4572-bc1b-cf58f56f3fdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Text">
+      <UniqueIdentifier>{056c4a7c-9572-4d3d-a31e-c55bd5a70b23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Text\Normal">
+      <UniqueIdentifier>{cab42b68-4004-4f64-8c57-15fbba666fb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Text\Artistic">
+      <UniqueIdentifier>{372cc028-f06c-4533-9469-f225814f6bfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawingTool Files\Text\GDI">
+      <UniqueIdentifier>{fe0beb9f-00c6-4bd0-a11e-3ac7cb098ac5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{5aa122ac-0545-4ed9-bfbe-9ed1a6de7b83}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="SharedStateToolData">
+      <UniqueIdentifier>{9ac35064-87cf-4aef-9086-bb9904c7e7a2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RasterImageFillStyleManager.h">
+      <Filter>FillStyle Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FillStylePattern.h">
+      <Filter>FillStyle Files\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="FillStylePatternDlg.h">
+      <Filter>FillStyle Files\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="FillStyleSolid.h">
+      <Filter>FillStyle Files\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="FillStyleSolidDlg.h">
+      <Filter>FillStyle Files\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterImageFillStyleBasic.h">
+      <Filter>FillStyle Files\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="FillStyleConical.h">
+      <Filter>FillStyle Files\Gradient</Filter>
+    </ClInclude>
+    <ClInclude Include="FillStyleDiamond.h">
+      <Filter>FillStyle Files\Gradient</Filter>
+    </ClInclude>
+    <ClInclude Include="FillStyleGradientDlg.h">
+      <Filter>FillStyle Files\Gradient</Filter>
+    </ClInclude>
+    <ClInclude Include="FillStyleLinear.h">
+      <Filter>FillStyle Files\Gradient</Filter>
+    </ClInclude>
+    <ClInclude Include="FillStyleMesh.h">
+      <Filter>FillStyle Files\Gradient</Filter>
+    </ClInclude>
+    <ClInclude Include="FillStyleRadial.h">
+      <Filter>FillStyle Files\Gradient</Filter>
+    </ClInclude>
+    <ClInclude Include="FillStyleShape.h">
+      <Filter>FillStyle Files\Gradient</Filter>
+    </ClInclude>
+    <ClInclude Include="FillStyleSphere.h">
+      <Filter>FillStyle Files\Gradient</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterImageFillStyleGradient.h">
+      <Filter>FillStyle Files\Gradient</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWVersion.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\_interninc\EditTool.h">
+      <Filter>DrawingTool Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolDlg.h">
+      <Filter>DrawingTool Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolPixelBuffer.h">
+      <Filter>DrawingTool Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\_interninc\EditToolPixelMixer.h">
+      <Filter>DrawingTool Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolPolyLine.h">
+      <Filter>DrawingTool Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolRectangularShape.h">
+      <Filter>DrawingTool Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolScanlineBuffer.h">
+      <Filter>DrawingTool Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolWithBrush.h">
+      <Filter>DrawingTool Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolWithCtrlDropper.h">
+      <Filter>DrawingTool Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterImageEditToolsManager.h">
+      <Filter>DrawingTool Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterImageEditWindowCallbackHelper.h">
+      <Filter>DrawingTool Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterImageEditToolsDrawing.h">
+      <Filter>DrawingTool Files\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolBrush.h">
+      <Filter>DrawingTool Files\Drawing\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolBrushDlg.h">
+      <Filter>DrawingTool Files\Drawing\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolPencil.h">
+      <Filter>DrawingTool Files\Drawing\Pencil</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolPencilDlg.h">
+      <Filter>DrawingTool Files\Drawing\Pencil</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolLasso.h">
+      <Filter>DrawingTool Files\Drawing\Lasso</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantRasterImageBrush.h">
+      <Filter>DrawingTool Files\Meta</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolEmboss.h">
+      <Filter>DrawingTool Files\Meta</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterImageEditToolsModifiers.h">
+      <Filter>DrawingTool Files\Meta</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolAlpha.h">
+      <Filter>DrawingTool Files\Meta\Alpha</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolEraser.h">
+      <Filter>DrawingTool Files\Meta\Eraser</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolRetouch.h">
+      <Filter>DrawingTool Files\Meta\Retouch</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolRetouchDlg.h">
+      <Filter>DrawingTool Files\Meta\Retouch</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolStylize.h">
+      <Filter>DrawingTool Files\Meta\Stylize</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolStylizeDlg.h">
+      <Filter>DrawingTool Files\Meta\Stylize</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolSymmetry.h">
+      <Filter>DrawingTool Files\Meta\Symmetry</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolChannelMask.h">
+      <Filter>DrawingTool Files\Meta\ChannelMask</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolRecolor.h">
+      <Filter>DrawingTool Files\Meta\Recolor</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolRecolorDlg.h">
+      <Filter>DrawingTool Files\Meta\Recolor</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterImageEditToolsSelection.h">
+      <Filter>DrawingTool Files\Selection</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolMagicWand.h">
+      <Filter>DrawingTool Files\Selection\MagicWand</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolMagicWandDlg.h">
+      <Filter>DrawingTool Files\Selection\MagicWand</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolMetaSelect.h">
+      <Filter>DrawingTool Files\Selection\Select</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolSelect.h">
+      <Filter>DrawingTool Files\Selection\Select</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolSimpleSelect.h">
+      <Filter>DrawingTool Files\Selection\SimpleSelect</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolSimpleSelectDlg.h">
+      <Filter>DrawingTool Files\Selection\SimpleSelect</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolTransform.h">
+      <Filter>DrawingTool Files\Selection\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolTransformDlg.h">
+      <Filter>DrawingTool Files\Selection\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolMove.h">
+      <Filter>DrawingTool Files\Selection\Move</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolMoveDlg.h">
+      <Filter>DrawingTool Files\Selection\Move</Filter>
+    </ClInclude>
+    <ClInclude Include="BezierDistance.h">
+      <Filter>DrawingTool Files\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="PolygonUtil.h">
+      <Filter>DrawingTool Files\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterImageEditToolsShapes.h">
+      <Filter>DrawingTool Files\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolCurve.h">
+      <Filter>DrawingTool Files\Shape\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolCurveDlg.h">
+      <Filter>DrawingTool Files\Shape\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolEllipse.h">
+      <Filter>DrawingTool Files\Shape\Ellipse</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolEllipseDlg.h">
+      <Filter>DrawingTool Files\Shape\Ellipse</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolLine.h">
+      <Filter>DrawingTool Files\Shape\Line</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolLineDlg.h">
+      <Filter>DrawingTool Files\Shape\Line</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolPolygon.h">
+      <Filter>DrawingTool Files\Shape\Polygon</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolPolygonDlg.h">
+      <Filter>DrawingTool Files\Shape\Polygon</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolRectangle.h">
+      <Filter>DrawingTool Files\Shape\Rectangle</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolRectangleDlg.h">
+      <Filter>DrawingTool Files\Shape\Rectangle</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolShape.h">
+      <Filter>DrawingTool Files\Shape\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolShapeDlg.h">
+      <Filter>DrawingTool Files\Shape\Shape</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolStroke.h">
+      <Filter>DrawingTool Files\Shape\Stroke</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolStrokeDlg.h">
+      <Filter>DrawingTool Files\Shape\Stroke</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterImageEditToolsSpecial.h">
+      <Filter>DrawingTool Files\Special</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolDropper.h">
+      <Filter>DrawingTool Files\Special\Dropper</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolFloodFill.h">
+      <Filter>DrawingTool Files\Special\FloodFill</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolFloodFillDlg.h">
+      <Filter>DrawingTool Files\Special\FloodFill</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolShadow.h">
+      <Filter>DrawingTool Files\Special\ProjectedShadow</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolShadowDlg.h">
+      <Filter>DrawingTool Files\Special\ProjectedShadow</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolFill.h">
+      <Filter>DrawingTool Files\Special\Fill</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterImageEditToolsText.h">
+      <Filter>DrawingTool Files\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolText.h">
+      <Filter>DrawingTool Files\Text\Normal</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolTextDlg.h">
+      <Filter>DrawingTool Files\Text\Normal</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolArtisticText.h">
+      <Filter>DrawingTool Files\Text\Artistic</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolArtisticTextDlg.h">
+      <Filter>DrawingTool Files\Text\Artistic</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolGDIText.h">
+      <Filter>DrawingTool Files\Text\GDI</Filter>
+    </ClInclude>
+    <ClInclude Include="RWDrawing_i.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SharedStateToolData.h">
+      <Filter>SharedStateToolData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\_inc\RasterImageFillStyleFactoryImpl.h">
+      <Filter>FillStyle Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\_inc\RasterImageEditToolsFactoryImpl.h">
+      <Filter>DrawingTool Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RasterImageFillStyleManager.cpp">
+      <Filter>FillStyle Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterImageFillStyleBasic.cpp">
+      <Filter>FillStyle Files\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterImageFillStyleGradient.cpp">
+      <Filter>FillStyle Files\Gradient</Filter>
+    </ClCompile>
+    <ClCompile Include="RWDrawing.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MiscUtils.cpp">
+      <Filter>DrawingTool Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterImageEditToolsManager.cpp">
+      <Filter>DrawingTool Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterImageEditToolsDrawing.cpp">
+      <Filter>DrawingTool Files\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterImageEditToolsModifiers.cpp">
+      <Filter>DrawingTool Files\Meta</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterImageEditToolsSelection.cpp">
+      <Filter>DrawingTool Files\Selection</Filter>
+    </ClCompile>
+    <ClCompile Include="PolygonUtil.cpp">
+      <Filter>DrawingTool Files\Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterImageEditToolsShapes.cpp">
+      <Filter>DrawingTool Files\Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterImageEditToolsSpecial.cpp">
+      <Filter>DrawingTool Files\Special</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterImageEditToolsText.cpp">
+      <Filter>DrawingTool Files\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="RWDrawing_i.c">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SharedStateToolData.cpp">
+      <Filter>SharedStateToolData</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="FillStylePattern.ico">
+      <Filter>FillStyle Files\Basic</Filter>
+    </Image>
+    <Image Include="FillStyleSolid.ico">
+      <Filter>FillStyle Files\Basic</Filter>
+    </Image>
+    <Image Include="OpenImage.ico">
+      <Filter>FillStyle Files\Basic</Filter>
+    </Image>
+    <Image Include="PasteImage.ico">
+      <Filter>FillStyle Files\Basic</Filter>
+    </Image>
+    <Image Include="FillStyleConical.ico">
+      <Filter>FillStyle Files\Gradient</Filter>
+    </Image>
+    <Image Include="FillStyleDiamond.ico">
+      <Filter>FillStyle Files\Gradient</Filter>
+    </Image>
+    <Image Include="FillStyleLinear.ico">
+      <Filter>FillStyle Files\Gradient</Filter>
+    </Image>
+    <Image Include="FillStyleRadial.ico">
+      <Filter>FillStyle Files\Gradient</Filter>
+    </Image>
+    <Image Include="FillStyleSphere.ico">
+      <Filter>FillStyle Files\Gradient</Filter>
+    </Image>
+    <Image Include="EditToolEraser.ico">
+      <Filter>DrawingTool Files\Meta\Eraser</Filter>
+    </Image>
+    <Image Include="EditToolStylize.ico">
+      <Filter>DrawingTool Files\Meta\Stylize</Filter>
+    </Image>
+    <Image Include="StatusRectSize.ico">
+      <Filter>DrawingTool Files\Shape</Filter>
+    </Image>
+    <Image Include="HowToShadow.ico">
+      <Filter>DrawingTool Files\Special\ProjectedShadow</Filter>
+    </Image>
+    <Image Include="EditToolFill.ico">
+      <Filter>DrawingTool Files\Special\Fill</Filter>
+    </Image>
+    <Image Include="EditToolArtisticText.ico">
+      <Filter>DrawingTool Files\Text\Artistic</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RWDrawing.def">
+      <Filter>Misc Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RWDrawing.rc">
+      <Filter>Misc Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="..\_inc\RWDrawing.idl">
+      <Filter>Misc Files</Filter>
+    </Midl>
+  </ItemGroup>
+</Project>

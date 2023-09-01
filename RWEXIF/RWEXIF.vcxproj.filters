@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="DesignerViewEXIF Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="libexif">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="libexif\canon">
+      <UniqueIdentifier>{ed5ea5c2-647a-4687-a098-5936705dcbac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libexif\olympus">
+      <UniqueIdentifier>{459b1d05-97f5-45b1-822b-d7104b25a95e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libexif\pentax">
+      <UniqueIdentifier>{4b2f93f2-efa0-4e0c-b9ec-6813ad2bbd21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libexif\fuji">
+      <UniqueIdentifier>{6d168789-011d-492a-b569-2e2a24155d6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{b23121fe-02e1-472c-9bb7-1588a3055979}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="RWEXIF">
+      <UniqueIdentifier>{78b50fc4-0e9e-4c7e-9ebf-df03ebad5392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ScriptingInterfaceEXIF Files">
+      <UniqueIdentifier>{59ac9d7e-e1c9-4283-887c-f3cb9697b8cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DesignerViewEXIFTag Files">
+      <UniqueIdentifier>{edc6b7af-df96-465e-84d0-ca9a725cbba8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MenuCommandsEXIF Files">
+      <UniqueIdentifier>{9a1ef6d1-fbf6-4090-845e-4618e0bdbdfa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConfigGUISyncID.h">
+      <Filter>DesignerViewEXIF Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewEXIF.h">
+      <Filter>DesignerViewEXIF Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewFactoryEXIF.h">
+      <Filter>DesignerViewEXIF Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyItem.h">
+      <Filter>DesignerViewEXIF Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyItemEditors.h">
+      <Filter>DesignerViewEXIF Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyItemImpl.h">
+      <Filter>DesignerViewEXIF Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyList.h">
+      <Filter>DesignerViewEXIF Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWVersion.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\_stdint.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\exif-byte-order.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\exif-content.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\exif-data-type.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\exif-data.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\exif-entry.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\exif-format.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\exif-ifd.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\exif-loader.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\exif-log.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\exif-mem.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\exif-mnote-data-priv.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\exif-mnote-data.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\exif-system.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\exif-tag.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\exif-utils.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\exif.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\i18n.h">
+      <Filter>libexif</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\canon\exif-mnote-data-canon.h">
+      <Filter>libexif\canon</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\canon\mnote-canon-entry.h">
+      <Filter>libexif\canon</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\canon\mnote-canon-tag.h">
+      <Filter>libexif\canon</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\olympus\exif-mnote-data-olympus.h">
+      <Filter>libexif\olympus</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\olympus\mnote-olympus-entry.h">
+      <Filter>libexif\olympus</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\olympus\mnote-olympus-tag.h">
+      <Filter>libexif\olympus</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\pentax\exif-mnote-data-pentax.h">
+      <Filter>libexif\pentax</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\pentax\mnote-pentax-entry.h">
+      <Filter>libexif\pentax</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\pentax\mnote-pentax-tag.h">
+      <Filter>libexif\pentax</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\fuji\exif-mnote-data-fuji.h">
+      <Filter>libexif\fuji</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\fuji\mnote-fuji-entry.h">
+      <Filter>libexif\fuji</Filter>
+    </ClInclude>
+    <ClInclude Include="libexif\fuji\mnote-fuji-tag.h">
+      <Filter>libexif\fuji</Filter>
+    </ClInclude>
+    <ClInclude Include="RWEXIF_i.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWEXIFWrapper.h">
+      <Filter>RWEXIF</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptingInterfaceEXIF.h">
+      <Filter>ScriptingInterfaceEXIF Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewEXIFTag.h">
+      <Filter>DesignerViewEXIFTag Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewFactoryEXIFTag.h">
+      <Filter>DesignerViewEXIFTag Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCommandsEXIF.h">
+      <Filter>MenuCommandsEXIF Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DesignerViewFactoryEXIF.cpp">
+      <Filter>DesignerViewEXIF Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RWEXIF.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\exif-byte-order.c">
+      <Filter>libexif</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\exif-content.c">
+      <Filter>libexif</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\exif-data.c">
+      <Filter>libexif</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\exif-entry.c">
+      <Filter>libexif</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\exif-format.c">
+      <Filter>libexif</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\exif-ifd.c">
+      <Filter>libexif</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\exif-loader.c">
+      <Filter>libexif</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\exif-log.c">
+      <Filter>libexif</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\exif-mem.c">
+      <Filter>libexif</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\exif-mnote-data.c">
+      <Filter>libexif</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\exif-tag.c">
+      <Filter>libexif</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\exif-utils.c">
+      <Filter>libexif</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\canon\exif-mnote-data-canon.c">
+      <Filter>libexif\canon</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\canon\mnote-canon-entry.c">
+      <Filter>libexif\canon</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\canon\mnote-canon-tag.c">
+      <Filter>libexif\canon</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\olympus\exif-mnote-data-olympus.c">
+      <Filter>libexif\olympus</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\olympus\mnote-olympus-entry.c">
+      <Filter>libexif\olympus</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\olympus\mnote-olympus-tag.c">
+      <Filter>libexif\olympus</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\pentax\exif-mnote-data-pentax.c">
+      <Filter>libexif\pentax</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\pentax\mnote-pentax-entry.c">
+      <Filter>libexif\pentax</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\pentax\mnote-pentax-tag.c">
+      <Filter>libexif\pentax</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\fuji\exif-mnote-data-fuji.c">
+      <Filter>libexif\fuji</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\fuji\mnote-fuji-entry.c">
+      <Filter>libexif\fuji</Filter>
+    </ClCompile>
+    <ClCompile Include="libexif\fuji\mnote-fuji-tag.c">
+      <Filter>libexif\fuji</Filter>
+    </ClCompile>
+    <ClCompile Include="RWEXIF_i.c">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RWEXIFWrapper.cpp">
+      <Filter>RWEXIF</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptingInterfaceEXIF.cpp">
+      <Filter>ScriptingInterfaceEXIF Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewFactoryEXIFTag.cpp">
+      <Filter>DesignerViewEXIFTag Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsEXIF.cpp">
+      <Filter>MenuCommandsEXIF Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RWEXIF.def">
+      <Filter>Misc Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RWEXIF.rc">
+      <Filter>Misc Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="..\_inc\RWEXIF.idl">
+      <Filter>Misc Files</Filter>
+    </Midl>
+  </ItemGroup>
+</Project>

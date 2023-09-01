@@ -1,0 +1,7 @@
+#define RWVER0409_FILEVERSION "4.1.0.0\0"
+#define RWVER0409_FILEINFO 4,1,0,0
+#define RWVER0409_COMMENTS "\0"
+#define RWVER0409_COPYRIGHT "© 2013 Jan Miléø\0"
+#define RWVER0409_FILEDESC "RealWorld Operation - Print\0"
+#define RWVER0409_INTERNALNAME "RWOperationPrint\0"
+#define RWVER0409_ORIGINALFILENAME "RWOperationPrint.dll\0"

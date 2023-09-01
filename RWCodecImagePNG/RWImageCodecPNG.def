@@ -1,0 +1,8 @@
+; RWCodecImagePNG.def : Declares the module parameters.
+
+LIBRARY      "RWCodecImagePNG.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE

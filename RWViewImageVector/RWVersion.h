@@ -1,0 +1,6 @@
+#define RWVER0409_FILEVERSION "4.1.0.0\0"
+#define RWVER0409_FILEINFO 4,1,0,0
+#define RWVER0409_COMMENTS "\0"
+#define RWVER0409_FILEDESC "Vector Image RealWorld Views\0"
+#define RWVER0409_INTERNALNAME "RWViewImageVector\0"
+#define RWVER0409_ORIGINALFILENAME "RWViewImageVector.dll\0"

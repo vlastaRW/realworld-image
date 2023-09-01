@@ -1,0 +1,8 @@
+; RWCodecImageRealWorld.def : Declares the module parameters.
+
+LIBRARY      "RWCodecImageRealWorld.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE

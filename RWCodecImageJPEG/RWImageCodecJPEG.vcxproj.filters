@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b0f17f1a-b2c4-4345-a482-296bc312d25c}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;cpp;c;cxx;def;odl;idl;hpj;bat;asm;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="DocumentEncoderJPEG Files">
+      <UniqueIdentifier>{dccb84c8-cf27-413c-a0cb-3e0332e0e6f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DocumentDecoderJPEG Files">
+      <UniqueIdentifier>{3f6f5654-125d-48bb-97ff-6bb101a286a3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RWVersion.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentEncoderJPEG.h">
+      <Filter>DocumentEncoderJPEG Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JPEGConfigIDs.h">
+      <Filter>DocumentEncoderJPEG Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentDecoderJPEG.h">
+      <Filter>DocumentDecoderJPEG Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iccjpeg.h">
+      <Filter>DocumentDecoderJPEG Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JPEGUtils.h">
+      <Filter>DocumentDecoderJPEG Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RWImageCodecJPEG.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentEncoderJPEG.cpp">
+      <Filter>DocumentEncoderJPEG Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentDecoderJPEG.cpp">
+      <Filter>DocumentDecoderJPEG Files</Filter>
+    </ClCompile>
+    <ClCompile Include="iccjpeg.c">
+      <Filter>DocumentDecoderJPEG Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RWImageCodecJPEG.def">
+      <Filter>Misc Files</Filter>
+    </None>
+    <None Include="tr01_d50.icm">
+      <Filter>DocumentDecoderJPEG Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RWImageCodecJPEG.rc">
+      <Filter>Misc Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

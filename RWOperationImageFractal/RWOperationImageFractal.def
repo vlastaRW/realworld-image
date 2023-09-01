@@ -1,0 +1,8 @@
+; RWOperationImageFractal.def : Declares the module parameters.
+
+LIBRARY      "RWOperationImageFractal.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE

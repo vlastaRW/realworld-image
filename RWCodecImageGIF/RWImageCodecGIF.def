@@ -1,0 +1,8 @@
+; RWCodecImageGIF.def : Declares the module parameters.
+
+LIBRARY      "RWCodecImageGIF.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE

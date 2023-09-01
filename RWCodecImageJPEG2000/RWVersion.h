@@ -1,0 +1,6 @@
+#define RWVER0409_FILEVERSION "4.1.0.0\0"
+#define RWVER0409_FILEINFO 4,1,0,0
+#define RWVER0409_COMMENTS "Recognizes, decodes and encodes JPEG2000 files\0"
+#define RWVER0409_FILEDESC "RealWorld JPEG2000 Decoder/Encoder\0"
+#define RWVER0409_INTERNALNAME "RWImageCodecJPEG2000\0"
+#define RWVER0409_ORIGINALFILENAME "RWImageCodecJPEG2000.dll\0"

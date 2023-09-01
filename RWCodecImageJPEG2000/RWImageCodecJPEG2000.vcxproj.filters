@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Wrapper Files">
+      <UniqueIdentifier>{6c53177c-b399-4c28-8abe-79699e8d0f33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{11dd6cb4-bf8b-498e-abc2-2b28c1065b51}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;cpp;c;cxx;def;odl;idl;hpj;bat;asm;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="JP2 Files">
+      <UniqueIdentifier>{9f82a7fd-4feb-46fa-a4fb-66f5ce409a75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JPC Files">
+      <UniqueIdentifier>{313e101f-3195-422b-ae4a-6806220da7fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_libjasper">
+      <UniqueIdentifier>{b9a99c70-6208-4281-b2ee-9ffb6ca11084}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_libjasper\_inc">
+      <UniqueIdentifier>{b42a43da-88c4-4753-8283-886dd3660599}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="JapPerImageSink.h">
+      <Filter>Wrapper Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JasPerImageSource.h">
+      <Filter>Wrapper Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWVersion.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentCodecJP2.h">
+      <Filter>JP2 Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentCodecJPC.h">
+      <Filter>JPC Files</Filter>
+    </ClInclude>
+    <ClInclude Include="jp2_cod.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jp2_dec.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_bs.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_cod.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_cs.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_dec.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_enc.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_fix.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_flt.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_math.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_mct.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_mqcod.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_mqdec.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_mqenc.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_qmfb.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_t1cod.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_t1dec.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_t1enc.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_t2cod.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_t2dec.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_t2enc.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_tagtree.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_tsfb.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jpc_util.h">
+      <Filter>_libjasper</Filter>
+    </ClInclude>
+    <ClInclude Include="jasper\jas_cm.h">
+      <Filter>_libjasper\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="jasper\jas_config.h">
+      <Filter>_libjasper\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="jasper\jas_config2.h">
+      <Filter>_libjasper\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="jasper\jas_debug.h">
+      <Filter>_libjasper\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="jasper\jas_fix.h">
+      <Filter>_libjasper\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="jasper\jas_getopt.h">
+      <Filter>_libjasper\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="jasper\jas_icc.h">
+      <Filter>_libjasper\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="jasper\jas_image.h">
+      <Filter>_libjasper\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="jasper\jas_init.h">
+      <Filter>_libjasper\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="jasper\jas_malloc.h">
+      <Filter>_libjasper\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="jasper\jas_math.h">
+      <Filter>_libjasper\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="jasper\jas_seq.h">
+      <Filter>_libjasper\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="jasper\jas_stream.h">
+      <Filter>_libjasper\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="jasper\jas_string.h">
+      <Filter>_libjasper\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="jasper\jas_tvp.h">
+      <Filter>_libjasper\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="jasper\jas_types.h">
+      <Filter>_libjasper\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="jasper\jas_version.h">
+      <Filter>_libjasper\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="jasper\jasper.h">
+      <Filter>_libjasper\_inc</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWImageCodecJPEG2000.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RWImageCodecJPEG2000.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentCodecJP2.cpp">
+      <Filter>JP2 Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentCodecJPC.cpp">
+      <Filter>JPC Files</Filter>
+    </ClCompile>
+    <ClCompile Include="jas_cm.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jas_debug.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jas_getopt.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jas_icc.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jas_iccdata.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jas_image.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jas_malloc.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jas_seq.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jas_stream.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jas_string.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jas_tvp.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jas_version.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jp2_cod.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jp2_dec.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jp2_enc.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_bs.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_cs.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_dec.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_enc.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_math.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_mct.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_mqcod.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_mqdec.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_mqenc.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_qmfb.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_t1cod.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_t1dec.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_t1enc.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_t2cod.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_t2dec.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_t2enc.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_tagtree.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_tsfb.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+    <ClCompile Include="jpc_util.c">
+      <Filter>_libjasper</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RWImageCodecJPEG2000.def">
+      <Filter>Misc Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RWImageCodecJPEG2000.rc">
+      <Filter>Misc Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

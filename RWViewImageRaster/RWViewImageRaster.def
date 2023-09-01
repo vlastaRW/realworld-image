@@ -1,0 +1,8 @@
+; RWViewImageRaster.def : Declares the module parameters.
+
+LIBRARY      "RWViewImageRaster.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE

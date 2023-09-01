@@ -1,0 +1,10 @@
+; RWViewImage.def : Declares the module parameters.
+
+LIBRARY      "RWViewImage.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+	DllEnumClasses		PRIVATE

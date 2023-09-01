@@ -1,0 +1,8 @@
+; RWCreatorWIA.def : Declares the module parameters.
+
+LIBRARY      "RWCreatorWIA.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE

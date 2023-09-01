@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx;h;hpp;hxx;hm;inl;inc;xsd;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{80f4c39d-7ff7-4775-8089-711b2615e511}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="RasterImageScript Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageScript Files\Example Icons">
+      <UniqueIdentifier>{0d07075e-1306-4852-98b6-bb626ac2896d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ToRasterImage Files">
+      <UniqueIdentifier>{d4c6ad72-f41a-4c91-ab42-71254e4c2d33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageResample Files">
+      <UniqueIdentifier>{bb98315f-c1f8-40cf-8624-de10091a589a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageRotate Files">
+      <UniqueIdentifier>{62c99694-1d8b-4fe8-988a-51111f0ac79a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageTransform Files">
+      <UniqueIdentifier>{4e94286b-b9cf-4fea-8a38-e4d00b2539be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageDropShadow Files">
+      <UniqueIdentifier>{f0a87fc5-8c96-4ca2-800f-c5750e0671f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageConvolution Files">
+      <UniqueIdentifier>{20b61299-9078-46b4-bf8b-40925ac9f2a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageColorTransformations Files">
+      <UniqueIdentifier>{8f96722f-eb79-49d5-8315-21e42ae6a9f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageRemoveBorder File">
+      <UniqueIdentifier>{51890e2d-12ff-41aa-8eca-88c81b6ba9ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageColorize Files">
+      <UniqueIdentifier>{f00a499a-073f-420a-96cc-22c9c02beb56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageShiftHue Files">
+      <UniqueIdentifier>{a6e8dbb2-02d0-4093-b418-c68e4152cf1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageBackgroundBlend Files">
+      <UniqueIdentifier>{c310de27-3e23-4fab-a026-0d6d3e021d23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageAutoMask Files">
+      <UniqueIdentifier>{8e840262-6470-4319-8297-ccd4175caf49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageModifyMask Files">
+      <UniqueIdentifier>{62426ef5-45b1-441a-8bd8-82a985518511}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageBlur Files">
+      <UniqueIdentifier>{204f7e14-3781-4bf4-95c8-d4c20e34fa4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageFade Files">
+      <UniqueIdentifier>{a6740944-cf4f-4d61-b62c-422bce2b0bae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageBevel Files">
+      <UniqueIdentifier>{dbc00bc8-9ac8-4ad7-921b-28a2f790685e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageFill Files">
+      <UniqueIdentifier>{1e671a50-cba9-420c-8c0f-0d6b9923043c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImagePolarTransformation Files">
+      <UniqueIdentifier>{67e1ee54-0f5c-4bfc-97d6-0b36d21bd124}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageOutlines Files">
+      <UniqueIdentifier>{7fe52fa0-58a2-439f-b758-ddf9a1d8c8e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageCanvasSize Files">
+      <UniqueIdentifier>{41382221-c63e-4808-8af6-8fb45586db82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageSatin Files">
+      <UniqueIdentifier>{5a5d1e2f-7743-4dde-a24b-65435eac9212}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageReduceColors Files">
+      <UniqueIdentifier>{32da43e6-371d-47e1-907f-0a110a7090c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageContourGradient Files">
+      <UniqueIdentifier>{4a0d3807-cf81-422d-80a7-b789eddc21bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterImageProjectedShadow Files">
+      <UniqueIdentifier>{c0f5165a-9cff-4170-8605-a0c364c78151}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditToolEffect">
+      <UniqueIdentifier>{7180137d-9267-4f37-a4f9-b25876f3bb41}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RWOperationImageRaster.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RWOperationImageRaster_i.c">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageScript.cpp">
+      <Filter>RasterImageScript Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptedRasterImage.cpp">
+      <Filter>RasterImageScript Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptedTool.cpp">
+      <Filter>RasterImageScript Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentTransformationToRasterImage.cpp">
+      <Filter>ToRasterImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageResample.cpp">
+      <Filter>RasterImageResample Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageRotate.cpp">
+      <Filter>RasterImageRotate Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImagePerspective.cpp">
+      <Filter>RasterImageTransform Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageDropShadow.cpp">
+      <Filter>RasterImageDropShadow Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageConvolution.cpp">
+      <Filter>RasterImageConvolution Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageColorTransformations.cpp">
+      <Filter>RasterImageColorTransformations Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageRemoveBorder.cpp">
+      <Filter>RasterImageRemoveBorder File</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageColorize.cpp">
+      <Filter>RasterImageColorize Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageShiftHue.cpp">
+      <Filter>RasterImageShiftHue Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageBackgroundBlend.cpp">
+      <Filter>RasterImageBackgroundBlend Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageAutoMask.cpp">
+      <Filter>RasterImageAutoMask Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageModifyMask.cpp">
+      <Filter>RasterImageModifyMask Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageBlur.cpp">
+      <Filter>RasterImageBlur Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageFade.cpp">
+      <Filter>RasterImageFade Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterImageBevel.cpp">
+      <Filter>RasterImageBevel Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterImageFill.cpp">
+      <Filter>RasterImageFill Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterImagePolarTransformation.cpp">
+      <Filter>RasterImagePolarTransformation Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageOutlines.cpp">
+      <Filter>RasterImageOutlines Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageCanvasSize.cpp">
+      <Filter>RasterImageCanvasSize Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageSatin.cpp">
+      <Filter>RasterImageSatin Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageReduceColors.cpp">
+      <Filter>RasterImageReduceColors Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterImageContourGradient.cpp">
+      <Filter>RasterImageContourGradient Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterImageProjectedShadow.cpp">
+      <Filter>RasterImageProjectedShadow Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterImageEditToolsEffect.cpp">
+      <Filter>EditToolEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationClipPath.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationLongShadow.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsInsertOperator.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWVersion.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageScript.h">
+      <Filter>RasterImageScript Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptedBlender.h">
+      <Filter>RasterImageScript Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptedRasterImage.h">
+      <Filter>RasterImageScript Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptedRasterImageEditWindow.h">
+      <Filter>RasterImageScript Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptedTool.h">
+      <Filter>RasterImageScript Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentTransformationToRasterImage.h">
+      <Filter>ToRasterImage Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUIResample.h">
+      <Filter>RasterImageResample Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageResample.h">
+      <Filter>RasterImageResample Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AGGBuffer.h">
+      <Filter>RasterImageRotate Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUIRotate.h">
+      <Filter>RasterImageRotate Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageRotate.h">
+      <Filter>RasterImageRotate Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUIPerspective.h">
+      <Filter>RasterImageTransform Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImagePerspective.h">
+      <Filter>RasterImageTransform Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUIDropShadow.h">
+      <Filter>RasterImageDropShadow Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageDropShadow.h">
+      <Filter>RasterImageDropShadow Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUIConvolution.h">
+      <Filter>RasterImageConvolution Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageConvolution.h">
+      <Filter>RasterImageConvolution Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUIColorTransformations.h">
+      <Filter>RasterImageColorTransformations Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageColorTransformations.h">
+      <Filter>RasterImageColorTransformations Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUIRemoveBorder.h">
+      <Filter>RasterImageRemoveBorder File</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageRemoveBorder.h">
+      <Filter>RasterImageRemoveBorder File</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUIColorize.h">
+      <Filter>RasterImageColorize Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageColorize.h">
+      <Filter>RasterImageColorize Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageShiftHue.h">
+      <Filter>RasterImageShiftHue Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageBackgroundBlend.h">
+      <Filter>RasterImageBackgroundBlend Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUIMask.h">
+      <Filter>RasterImageAutoMask Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageAutoMask.h">
+      <Filter>RasterImageAutoMask Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageModifyMask.h">
+      <Filter>RasterImageModifyMask Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageBlur.h">
+      <Filter>RasterImageBlur Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageFade.h">
+      <Filter>RasterImageFade Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FadeDocument.h">
+      <Filter>RasterImageFade Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterImageBevel.h">
+      <Filter>RasterImageBevel Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FillStylePreview.h">
+      <Filter>RasterImageFill Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterImageFill.h">
+      <Filter>RasterImageFill Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterImagePolarTransformation.h">
+      <Filter>RasterImagePolarTransformation Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageOutlines.h">
+      <Filter>RasterImageOutlines Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUICanvasSize.h">
+      <Filter>RasterImageCanvasSize Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageCanvasSize.h">
+      <Filter>RasterImageCanvasSize Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageSatin.h">
+      <Filter>RasterImageSatin Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageReduceColors.h">
+      <Filter>RasterImageReduceColors Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUIProjectedShadow.h">
+      <Filter>RasterImageProjectedShadow Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolEffect.h">
+      <Filter>EditToolEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolEffectDlg.h">
+      <Filter>EditToolEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="PixelLevelTask.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RWOperationImageRaster.def">
+      <Filter>Misc Files</Filter>
+    </None>
+    <None Include="Direction.ibt">
+      <Filter>RasterImageBevel Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RWOperationImageRaster.rc">
+      <Filter>Misc Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="HueTorus.ico">
+      <Filter>RasterImageScript Files\Example Icons</Filter>
+    </Image>
+    <Image Include="ImageProperties.ico">
+      <Filter>RasterImageScript Files\Example Icons</Filter>
+    </Image>
+    <Image Include="MixAlpha.ico">
+      <Filter>RasterImageScript Files\Example Icons</Filter>
+    </Image>
+    <Image Include="ScriptAlpha.ico">
+      <Filter>RasterImageScript Files\Example Icons</Filter>
+    </Image>
+    <Image Include="ScriptBrightness.ico">
+      <Filter>RasterImageScript Files\Example Icons</Filter>
+    </Image>
+    <Image Include="ScriptContrast.ico">
+      <Filter>RasterImageScript Files\Example Icons</Filter>
+    </Image>
+    <Image Include="ScriptContures.ico">
+      <Filter>RasterImageScript Files\Example Icons</Filter>
+    </Image>
+    <Image Include="ScriptShadow.ico">
+      <Filter>RasterImageScript Files\Example Icons</Filter>
+    </Image>
+    <Image Include="ImageBackground.ico">
+      <Filter>RasterImageBackgroundBlend Files</Filter>
+    </Image>
+    <Image Include="ImageContourGradient.ico">
+      <Filter>RasterImageContourGradient Files</Filter>
+    </Image>
+    <Image Include="ImageFade.ico">
+      <Filter>Misc Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="RWOperationImageRaster.idl">
+      <Filter>Misc Files</Filter>
+    </Midl>
+  </ItemGroup>
+</Project>

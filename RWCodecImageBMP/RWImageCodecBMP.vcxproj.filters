@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{5b3ff44a-25bc-4c49-9f75-a2f526f605ce}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;cpp;c;cxx;def;odl;idl;hpj;bat;asm;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="DocumentEncoderBMP Files">
+      <UniqueIdentifier>{dbbc03bd-7ec5-436e-96e2-da2ab4c8e313}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DocumentDecoderBMP Files">
+      <UniqueIdentifier>{fbaddea7-417d-4fd1-a458-0ca137524b5e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RWVersion.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigIDsBMPConvertor.h">
+      <Filter>DocumentEncoderBMP Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentEncoderBMP.h">
+      <Filter>DocumentEncoderBMP Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentDecoderBMP.h">
+      <Filter>DocumentDecoderBMP Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWImageCodecBMP.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RWImageCodecBMP.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentEncoderBMP.cpp">
+      <Filter>DocumentEncoderBMP Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentDecoderBMP.cpp">
+      <Filter>DocumentDecoderBMP Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RWImageCodecBMP.def">
+      <Filter>Misc Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RWImageCodecBMP.rc">
+      <Filter>Misc Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

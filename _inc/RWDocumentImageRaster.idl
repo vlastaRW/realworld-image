@@ -1,0 +1,425 @@
+// RWDocumentImageRaster.idl : IDL source for RWDocumentImageRaster
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (RWDocumentImageRaster.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "RWBase.idl";
+import "RWInput.idl";
+import "RWImaging.idl";
+import "RWConceptDesignerExtension.idl";
+import "RWConceptSharedState.idl";
+import "RWConceptStructuredData.idl";
+import "RWProcessing.idl";
+import "RWScripting.idl";
+
+
+typedef void (*fnDeleteBuffer)(TPixelChannel*);
+//typedef struct SPixelBuffer
+//{
+//	TPixelChannel* pBuffer;
+//	fnDeleteBuffer* pDeleter;
+//} SPixelBuffer;
+
+[
+	object,
+	uuid(0FA20C30-C04F-490F-9922-EA26EFFCB77F),
+	helpstring("IDocumentRasterImage Interface"),
+	pointer_default(unique)
+]
+interface IDocumentRasterImage : IDocumentEditableImage
+{
+	[helpstring("method TileSet")] HRESULT TileSet([in] ULONG a_nChannelIDs, [in] TImagePoint const* a_pOrigin, [in] TImageSize const* a_pSize, [in] TImageStride const* a_pStride, [in] ULONG a_nPixels, [in, size_is(a_nPixels)] TPixelChannel const* a_pPixels, [in] BYTE a_bDeleteOldContent);
+	[helpstring("method BufferReplace"), local] HRESULT BufferReplace([in] TImagePoint a_tAllocOrigin, [in] TImageSize a_tAllocSize, [in] TImagePoint const* a_pContentOrigin, [in] TImageSize const* a_pContentSize, [in] ULONGLONG const* a_pContentAlphaSum, [in] TPixelChannel* a_pPixels, [in] fnDeleteBuffer a_pDeleter);
+	[helpstring("method BufferAllocate"), local] HRESULT BufferAllocate([in] TImageSize a_tSize, [out] TPixelChannel** a_ppPixels, [out] fnDeleteBuffer* a_ppDeleter);
+};
+
+[
+	object,
+	uuid(2E8247E5-7184-4799-8FA2-514EC81E52F0),
+	helpstring("ISharedStateImageSelection Interface"),
+	pointer_default(unique)
+]
+interface ISharedStateImageSelection : ISharedState
+{
+	[helpstring("method Init")] HRESULT Init([in] LONG a_nX, [in] LONG a_nY, [in] ULONG a_nSizeX, [in] ULONG a_nSizeY, [in] ULONG a_nStride, [in, size_is(a_nStride*a_nSizeY)] BYTE const* a_pData);
+	[helpstring("method IsEmpty")] HRESULT IsEmpty();
+	[helpstring("method Bounds")] HRESULT Bounds([out] LONG* a_pX, [out] LONG* a_pY, [out] ULONG* a_pSizeX, [out] ULONG* a_pSizeY);
+	[helpstring("method GetTile")] HRESULT GetTile([in] LONG a_nX, [in] LONG a_nY, [in] ULONG a_nSizeX, [in] ULONG a_nSizeY, [in] ULONG a_nStride, [out, size_is(a_nStride*a_nSizeY)] BYTE* a_pData);
+};
+
+typedef [v1_enum] enum EComposedPreviewChange
+{
+	ECPCUnder = 1,
+	ECPCCurrent = 2,
+	ECPCOver = 4,
+} EComposedPreviewChange;
+
+[
+	object,
+	uuid(9C27D93F-92AD-461B-A071-EB4161FFF6BE),
+	helpstring("IRasterImageObserver Interface"),
+	pointer_default(unique)
+]
+interface IComposedPreviewObserver : IUnknown
+{
+	[helpstring("method Notify")] HRESULT Notify([in] TCookie a_tCookie, [in] ULONG a_nFlags);
+};
+
+typedef [v1_enum] enum EComposedPreviewMode
+{
+	ECPMFinal = 0,
+	ECPMTransparent,
+	ECPMAnimation,
+} EComposedPreviewMode;
+
+[
+	object,
+	uuid(AA4B1E5A-F2F2-4375-A7F2-5435CAE2A38B),
+	helpstring("IRasterImageComposedPreview Interface"),
+	pointer_default(unique)
+]
+interface IRasterImageComposedPreview : IUnknown
+{
+	[helpstring("method AdjustDirtyRect")] HRESULT AdjustDirtyRect([in, out] RECT* a_prc);
+	[helpstring("method PreProcessTile")] HRESULT PreProcessTile([in, out] RECT* a_prc);
+	[helpstring("method ProcessTile")] HRESULT ProcessTile([in] EComposedPreviewMode a_eMode, [in] LONG a_nX, [in] LONG a_nY, [in] ULONG a_nSizeX, [in] ULONG a_nSizeY, [in] ULONG a_nStride, [in, out, size_is(a_nStride*a_nSizeY)] TRasterImagePixel* a_pData);
+	[helpstring("method InputTransform")] HRESULT InputTransform([in, out] TMatrix3x3f* a_pTransform);
+
+	[helpstring("method ObserverIns")] HRESULT ObserverIns([in] IComposedPreviewObserver* a_pObserver, [in] TCookie a_tCookie);
+	[helpstring("method ObserverDel")] HRESULT ObserverDel([in] IComposedPreviewObserver* a_pObserver, [in] TCookie a_tCookie);
+};
+
+
+typedef struct TRasterImageRect
+{
+	TImagePoint tTL;
+	TImagePoint tBR;
+} TRasterImageRect;
+
+
+typedef [v1_enum] enum ELayerBlend
+{
+	EBEOperationMask = 0xff,
+	EBEParameterMask = 0xffffff00,
+	EBEAlphaBlend = 0,
+	EBEModulate,
+	EBEScreen, // !(!a * !b)
+	EBEAdd,
+	EBESubtract,
+	EBEAverage,
+	EBEDifference,
+	EBEMinimum,
+	EBEMaximum,
+	EBEOverlay,
+	EBEHLSReplace,
+	EBEMultiplyInvAlpha,
+	EBEGlass,
+	ELBHLSReplaceHue = EBEHLSReplace+0x100,
+	ELBHLSReplaceSaturation = EBEHLSReplace+0x200,
+	ELBHLSReplaceLuminance = EBEHLSReplace+0x400,
+	ELBHLSReplaceColor = EBEHLSReplace+0x300,
+	EBENext
+} ELayerBlend;
+
+typedef struct TImageLayer
+{
+	BYTE bVisible;
+	float fOpacity;
+	ELayerBlend eBlend;
+} TImageLayer;
+
+[
+	object,
+	uuid(A2127E79-04BE-4BB2-B9E2-10D4685A342F),
+	helpstring("IImageLayerCreator Interface"),
+	pointer_default(unique)
+]
+interface IImageLayerCreator : IUnknown
+{
+	[helpstring("method Create")] HRESULT Create([in] BSTR a_bstrID, [in] IDocumentBase* a_pBase);
+};
+
+typedef [v1_enum] enum ELayerInsertPosition
+{
+	ELIPAbove = 0,
+	ELIPBelow = 1,
+	ELIPDefault = 2,
+} ELayerInsertPosition;
+
+[
+	object,
+	uuid(A75BE7A0-85BA-4171-A036-FAAB205B81BC),
+	helpstring("IDocumentLayeredImage Interface"),
+	pointer_default(unique)
+]
+interface IDocumentLayeredImage : ISubDocumentsMgr
+{
+	[helpstring("method LayersEnum")] HRESULT LayersEnum([in] IComparable* a_pRoot, [out] IEnumUnknowns** a_ppLayers);
+	[helpstring("method LayerInsert")] HRESULT LayerInsert([in] IComparable* a_pWhere, [in] ELayerInsertPosition a_ePosition, [in] IImageLayerCreator* a_pCreator, [out] IComparable** a_ppNew);
+	[helpstring("method LayerMove")] HRESULT LayerMove([in] IComparable* a_pItem, [in] IComparable* a_pWhere, [in] ELayerInsertPosition a_ePosition);
+	[helpstring("method LayerDelete")] HRESULT LayerDelete([in] IComparable* a_pItem);
+	//[helpstring("method LayerReplace")] HRESULT LayerReplace([in] IComparable* a_pItem, [in] IImageLayerCreator* a_pCreator);
+	[helpstring("method LayerNameGet")] HRESULT LayerNameGet([in] IComparable* a_pItem, [out] BSTR* a_pbstrName);
+	[helpstring("method LayerNameSet")] HRESULT LayerNameSet([in] IComparable* a_pItem, [in] BSTR a_bstrName);
+	[helpstring("method LayerPropsGet")] HRESULT LayerPropsGet([in] IComparable* a_pItem, [out] ELayerBlend* a_pBlendingMode, [out] BYTE* a_pVisible);
+	[helpstring("method LayerPropsSet")] HRESULT LayerPropsSet([in] IComparable* a_pItem, [in] ELayerBlend const* a_pBlendingMode, [in] BYTE const* a_pVisible);
+	[helpstring("method LayerEffectGet")] HRESULT LayerEffectGet([in] IComparable* a_pItem, [out] IConfig** a_ppOperation, [out] float* a_pOpacity);
+	[helpstring("method LayerEffectSet")] HRESULT LayerEffectSet([in] IComparable* a_pItem, [in] IConfig* a_pOperation);
+	[helpstring("method LayerRender")] HRESULT LayerRender([in] IComparable* a_pItem, [in] BSTR a_bstrLayerWithEffectID, [in] IDocumentBase* a_pLayerWithEffectBase);
+	[helpstring("method LayerEffectStepGet")] HRESULT LayerEffectStepGet([in] IComparable* a_pEffect, [out] BYTE* a_pEnabled, [out] GUID* a_pOpID, [out] IConfig** a_ppOpCfg);
+	[helpstring("method LayerEffectStepSet")] HRESULT LayerEffectStepSet([in] IComparable* a_pEffect, [in] BYTE* a_pEnabled, [in] GUID* a_pOpID, [in] IConfig* a_pOpCfg);
+	[helpstring("method LayerEffectStepAppend")] HRESULT LayerEffectStepAppend([in] IComparable* a_pLayer, [in] BYTE a_bEnabled, [in] REFGUID a_tOpID, [in] IConfig* a_pOpCfg, [out] IComparable** a_ppNew);
+	[helpstring("method LayerEffectStepDelete")] HRESULT LayerEffectStepDelete([in] IComparable* a_pEffect);
+	[helpstring("method IsLayer")] HRESULT IsLayer([in] IComparable* a_pItem, [out] ULONG* a_pLevel, [out] INT_PTR* a_pParentHandle, [out] GUID* a_pBuilder);
+	[helpstring("method LayerEffectsEnum")] HRESULT LayerEffectsEnum([in] IComparable* a_pLayer, [out] IEnumUnknowns** a_ppEffects);
+	[helpstring("method LayerFromEffect")] HRESULT LayerFromEffect([in] IComparable* a_pEffect, [out] IComparable** a_ppLayer);
+};
+
+[
+	object,
+	uuid(B088AA4C-460C-4A57-B703-8A3CC9B57681),
+	helpstring("ILayerType Interface"),
+	pointer_default(unique)
+]
+interface ILayerType : IUnknown
+{
+	[helpstring("method Name")] HRESULT Name([out] ILocalizedString** a_ppLayerType);
+	[helpstring("method IconID")] HRESULT IconID([out] GUID* a_pIconID);
+	[helpstring("method Icon"), local] HRESULT Icon([in] ULONG a_nSize, [out] HICON* a_phIcon);
+};
+
+
+[
+	object,
+	uuid(67C77077-B151-498F-A265-7263C8C3E65D),
+	helpstring("IDocumentFactoryLayeredImage Interface"),
+	pointer_default(unique)
+]
+interface IDocumentFactoryLayeredImage : IUnknown
+{
+	[helpstring("method Create")] HRESULT Create([in] BSTR a_bstrPrefix, [in] IDocumentBase* a_pBase);
+	[helpstring("method AddLayer")] HRESULT AddLayer([in] BSTR a_bstrPrefix, [in] IDocumentBase* a_pBase, [in] BYTE a_bBot, [in] IImageLayerCreator* a_pCreator, [in] BSTR a_bstrName, [in] TImageLayer const* a_pProperties, [in] IConfig* a_pOperation);
+	[helpstring("method SetResolution")] HRESULT SetResolution([in] BSTR a_bstrPrefix, [in] IDocumentBase* a_pBase, [in] TImageResolution const* a_pResolution);
+	[helpstring("method SetSize")] HRESULT SetSize([in] BSTR a_bstrPrefix, [in] IDocumentBase* a_pBase, [in] TImageSize const* a_pSize);
+	[helpstring("method RearrangeLayers")] HRESULT RearrangeLayers([in] BSTR a_bstrPrefix, [in] IDocumentBase* a_pBase, [in] ULONG a_nLayers, [in, size_is(a_nLayers)] TImagePoint const* a_aOffsets);
+};
+
+[
+	object,
+	uuid(8614A7A6-D8A5-4298-94B9-7AB904BAD89F),
+	dual,
+	nonextensible,
+	helpstring("IScriptedLayeredImage Interface"),
+	pointer_default(unique)
+]
+interface IScriptedLayeredImage : IDispatch
+{
+	[propget, id(1), helpstring("property Layers")] HRESULT Layers([out, retval] ULONG* pnCount);
+	[id(2), helpstring("method GetLayer")] HRESULT GetLayer([in] ULONG index, [out, retval] IScriptedDocument** document);
+	[id(3), helpstring("method MoveLayer")] HRESULT MoveLayer([in] ULONG index, [in] LONG under);
+	[id(4), helpstring("method DeleteLayer")] HRESULT DeleteLayer([in] ULONG index);
+	[id(5), helpstring("method CreateLayer")] HRESULT CreateLayer([in] LONG under, [in] IScriptedOpConfig* wizardConfig, [in, optional] VARIANT builder, [out, retval] LONG* newLayer);
+	[id(6), helpstring("method ImportLayer")] HRESULT ImportLayer([in] LONG under, [in] BSTR bstrPath, [out, retval] LONG* newLayer);
+	[id(7), helpstring("method CopyToLayer")] HRESULT CopyToLayer([in] LONG under, [in] IUnknown* document, [in, optional] VARIANT convertToRaster, [out, retval] LONG* newLayer);
+	[id(8), helpstring("method GetLayerName")] HRESULT GetLayerName([in] ULONG index, [out, retval] BSTR* pName);
+	[id(9), helpstring("method SetLayerName")] HRESULT SetLayerName([in] ULONG index, [in] BSTR name);
+	[id(10), helpstring("method GetIndicesFromState")] HRESULT GetIndicesFromState([in] IScriptedContext* context, [in] BSTR state, [out, retval] IDispatch** ppArray);
+	[id(11), helpstring("method PutIndicesToState")] HRESULT PutIndicesToState([in] IScriptedContext* context, [in] BSTR state, [in] VARIANT* pSelectedItems);
+	[id(12), helpstring("method SetLayerStyle")] HRESULT SetLayerStyle([in] ULONG index, [in] BSTR path);
+	[propget, id(13), helpstring("property sizeX")] HRESULT sizeX([out, retval] ULONG* pVal);
+	[propput, id(13), helpstring("property sizeX")] HRESULT sizeX([in] ULONG val);
+	[propget, id(14), helpstring("property sizeY")] HRESULT sizeY([out, retval] ULONG* pVal);
+	[propput, id(14), helpstring("property sizeY")] HRESULT sizeY([in] ULONG val);
+	[id(15), helpstring("method GetLayerBackground")] HRESULT GetLayerBackground([in] ULONG index, [out, retval] ULONG* pRgba);
+	[id(16), helpstring("method SetLayerBackground")] HRESULT SetLayerBackground([in] ULONG index, [in] ULONG rgba);
+	[propget, id(17), helpstring("property resolutionXNum")] HRESULT resolutionXNum([out, retval] ULONG* pVal);
+	[propget, id(18), helpstring("property resolutionXDenom")] HRESULT resolutionXDenom([out, retval] ULONG* pVal);
+	[propget, id(19), helpstring("property resolutionYNum")] HRESULT resolutionYNum([out, retval] ULONG* pVal);
+	[propget, id(20), helpstring("property resolutionYDenom")] HRESULT resolutionYDenom([out, retval] ULONG* pVal);
+	[id(21), helpstring("method SetResolution")] HRESULT SetResolution([in] ULONG a_nResXNum, [in] ULONG a_nResXDenom, [in] ULONG a_nResYNum, [in] ULONG a_nResYDenom);
+	[id(22), helpstring("method IsLayerEnabled")] HRESULT IsLayerEnabled([in] ULONG index, [out, retval] boolean* pVal);
+	[id(23), helpstring("method EnableLayer")] HRESULT EnableLayer([in] ULONG index, [in] boolean enabled);
+};
+
+[
+	object,
+	uuid(EE53F3A2-C383-49FC-A3C8-6F9B952C5B20),
+	helpstring("IRasterImageFilter Interface"),
+	pointer_default(unique)
+]
+interface IRasterImageFilter : IUnknown
+{
+	[helpstring("method Transform")] HRESULT Transform([in] IConfig* a_pConfig, [in] TImageSize const* a_pCanvas, [in] TMatrix3x3f const* a_pContentTransform);
+	[helpstring("method AdjustDirtyRect")] HRESULT AdjustDirtyRect([in] IConfig* a_pConfig, [in] TImageSize const* a_pCanvas, [in, out] TRasterImageRect* a_pRect);
+	[helpstring("method NeededToCompute")] HRESULT NeededToCompute([in] IConfig* a_pConfig, [in] TImageSize const* a_pCanvas, [in, out] TRasterImageRect* a_pRect);
+	[helpstring("method Process")] HRESULT Process([in] IDocument* a_pSrc, [in] IConfig* a_pConfig, [in] IDocumentBase* a_pDst, [in] BSTR a_bstrPrefix);
+	[helpstring("method AdjustTransform")] HRESULT AdjustTransform([in] IConfig* a_pConfig, [in] TImageSize const* a_pCanvas, [in, out] TMatrix3x3f* a_pTransform);
+};
+
+[
+	object,
+	uuid(C1865CCD-47F3-4FC1-90DA-5FC042741F52),
+	helpstring("IRasterImageCallback Interface"),
+	pointer_default(unique)
+]
+interface IRasterImageCallback : IUnknown
+{
+	[helpstring("method Initalize"), local] HRESULT Initalize([in] ULONG a_nPixels, [in, out, size_is(a_nPixels)] TPixelChannel* a_aPixels);
+};
+
+[
+	object,
+	uuid(FFA7793D-9B5A-4D2B-8D44-971B66F8F13A),
+	helpstring("IDocumentFactoryRasterImageCallback Interface"),
+	pointer_default(unique)
+]
+interface IDocumentFactoryRasterImageCallback : IUnknown
+{
+	[helpstring("method Create")] HRESULT Create([in] BSTR a_bstrPrefix, [in] IDocumentBase* a_pBase, [in] TImageSize const* a_pSize, [in] TImageResolution const* a_pResolution, [in] ULONG a_nChannels, [in, size_is(a_nChannels)] TChannelDefault const* a_aChannelDefaults, [in] TRasterImageRect const* a_pRect, [in] IRasterImageCallback* a_pProducer);
+};
+
+typedef [v1_enum] enum ELayerEffectChange
+{
+	ELECState = 1,
+	ELECOpID = 2,
+	ELECOpCfg = 4,
+} ELayerEffectChange;
+
+[
+	object,
+	uuid(5DDA0CFB-CABA-4F64-9B24-E6E5D11DBE88),
+	helpstring("ILayerEffectObserver Interface"),
+	pointer_default(unique)
+]
+interface ILayerEffectObserver : IUnknown
+{
+	[helpstring("method Notify")] HRESULT Notify([in] TCookie a_tCookie, [in] ULONG a_nFlags);
+};
+
+[
+	object,
+	uuid(FBE14D41-6808-4B5F-9CC1-A19AD60EED20),
+	helpstring("IDocumentImageLayerEffect Interface"),
+	pointer_default(unique)
+]
+interface IDocumentImageLayerEffect : IUnknown
+{
+	[helpstring("method Get")] HRESULT Get([out] BYTE* a_pEnabled, [out] GUID* a_pOpID, [out] IConfig** a_ppOpCfg);
+	[helpstring("method Set")] HRESULT Set([in] BYTE* a_pEnabled, [in] GUID* a_pOpID, [in] IConfig* a_pOpCfg);
+
+	[helpstring("method ObserverIns")] HRESULT ObserverIns([in] ILayerEffectObserver* a_pObserver, [in] TCookie a_tCookie);
+	[helpstring("method ObserverDel")] HRESULT ObserverDel([in] ILayerEffectObserver* a_pObserver, [in] TCookie a_tCookie);
+};
+
+[
+	object,
+	uuid(B16286F9-A233-49DB-BD67-7F2EAEDCD7EF),
+	helpstring("IImageLayerFactory Interface"),
+	pointer_default(unique),
+	local
+]
+interface IImageLayerFactory : IUnknown
+{
+	[helpstring("method LayerName")] HRESULT LayerName([in] BYTE a_bCreateNew, [out] ILocalizedString** a_ppLayerType);
+	[helpstring("method LayerIconID")] HRESULT LayerIconID([out] GUID* a_pIconID);
+	[helpstring("method LayerIcon"), local] HRESULT LayerIcon([in] ULONG a_nSize, [out] HICON* a_phIcon);
+	[helpstring("method LayerAccelerator")] HRESULT LayerAccelerator([out] TCmdAccel* a_pAccel);
+	[helpstring("method LayerCreatorGet")] HRESULT LayerCreatorGet([in] TImageSize a_tSize, [in, size_is(4)] float const* a_aBackgroundRGBA, [out] IImageLayerCreator** a_ppCreator);
+	[helpstring("method LayerDescription")] HRESULT LayerDescription([out] ILocalizedString** a_ppImageType);
+};
+
+
+[
+	uuid(96DCDDB2-BF2C-429B-9EB2-239C68A55FDF),
+	version(1.0),
+	helpstring("RWDocumentImageRaster 1.0 Type Library")
+]
+library RWDocumentImageRasterLib
+{
+	importlib("stdole2.tlb");
+	importlib("RWConfig.tlb");
+	importlib("RWInput.tlb");
+	importlib("RWConceptSharedState.tlb");
+	importlib("RWConceptDesignerExtension.tlb");
+	importlib("RWImaging.tlb");
+	importlib("RWProcessing.tlb");
+	importlib("RWScripting.tlb");
+	importlib("RWConceptStructuredData.tlb");
+
+	//interface IDocumentRasterImage;
+	interface IRasterImageControl;
+	interface IDocumentLayeredImage;
+	//interface IRasterImageWithSelection;
+	interface IScriptedLayeredImage;
+
+	[
+		uuid(35AFBDB5-1B26-4195-8786-83C8E1CBC08E),
+		helpstring("DocumentFactoryRasterImage Class")
+	]
+	coclass DocumentFactoryRasterImage
+	{
+		[default] interface IDocumentFactoryRasterImage;
+		interface IDocumentBuilder;
+		interface IDesignerWizard;
+		interface IDocumentFactoryRasterImageCallback;
+	};
+
+	[
+		uuid(50841982-AF18-43B6-8F55-06ECF5B91FFB),
+		helpstring("ImageFromClipboard Class")
+	]
+	coclass ImageFromClipboard
+	{
+		[default] interface IDesignerWizard;
+	};
+
+	[
+		uuid(38A9B8BE-84D8-442A-8CFA-B587C0E3938C),
+		helpstring("SharedStateImageSelection Class")
+	]
+	coclass SharedStateImageSelection
+	{
+		[default] interface ISharedState;
+		interface ISharedStateImageSelection;
+	};
+
+	[
+		uuid(ADE9631E-DFCC-4D98-88D7-A1A3B80DBD67),
+		helpstring("GlobalConfigDefaultImageFormat Class")
+	]
+	coclass GlobalConfigDefaultImageFormat
+	{
+		[default] interface IGlobalConfigFactory;
+	};
+
+	[
+		uuid(917803FF-8ACA-4D97-8DF5-3BCF19F9B599),
+		helpstring("DocumentCreatorCaptureDesktop Class")
+	]
+	coclass DocumentCreatorCaptureDesktop
+	{
+		[default] interface IDesignerWizard;
+	};
+
+	[
+		uuid(75E2E54E-C275-42EC-8A63-04A487C8E328),
+		helpstring("DocumentFactoryLayeredImage Class")
+	]
+	coclass DocumentFactoryLayeredImage
+	{
+		[default] interface IDocumentFactoryLayeredImage;
+		interface IDocumentFactoryRasterImage;
+		interface IDocumentBuilder;
+		interface IScriptingInterface;
+	};
+};
+
+cpp_quote("static OLECHAR const CFGID_DIF_BUILDER[] = L\"Builder\";")
+cpp_quote("#include \"RWDocumentImageRasterUtils.h\"")
+cpp_quote("#define ENCFEAT_IMAGE_LAYER L\"[image_layer]\"")
+cpp_quote("#define ENCFEAT_IMAGE_LAYER_EFFECT L\"[image_layer_effect]\"")
+cpp_quote("#define ENCFEAT_IMAGE_LAYER_SPECIAL L\"[image_layer_special]\"")
+

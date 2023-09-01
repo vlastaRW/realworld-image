@@ -1,0 +1,10 @@
+; RWOperationImagePhoto.def : Declares the module parameters.
+
+LIBRARY      "RWOperationImagePhoto.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+;	DllRegisterServer	PRIVATE
+;	DllUnregisterServer	PRIVATE
+	DllEnumClasses		PRIVATE

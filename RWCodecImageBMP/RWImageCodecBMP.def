@@ -1,0 +1,8 @@
+; RWCodecImageBMP.def : Declares the module parameters.
+
+LIBRARY      "RWCodecImageBMP.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE

@@ -1,0 +1,8 @@
+; RWCodecImageGIMP.def : Declares the module parameters.
+
+LIBRARY      "RWCodecImageGIMP.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE

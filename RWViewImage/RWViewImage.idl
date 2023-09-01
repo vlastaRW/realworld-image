@@ -1,0 +1,118 @@
+// RWViewImage.idl : IDL source for RWViewImage
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (RWViewImage.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "RWInput.idl";
+import "RWImaging.idl";
+//import "RWDocumentAnimation.idl";
+import "RWConceptDesignerView.idl";
+import "RWProcessing.idl";
+
+
+[
+	object,
+	uuid(96D58AC1-D05C-4D8F-93B8-AF8C9152C330),
+	helpstring("IImageZoomControl Interface"),
+	pointer_default(unique)
+]
+interface IImageZoomControl : IUnknown
+{
+	[helpstring("method CanSetZoom")] HRESULT CanSetZoom([in, out] float* a_pVal);
+	[helpstring("method SetZoom")] HRESULT SetZoom([in] float a_fVal);
+	[helpstring("method GetZoom")] HRESULT GetZoom([out] float* a_pVal);
+	[helpstring("method SupportsAutoZoom")] HRESULT SupportsAutoZoom();
+	[helpstring("method IsAutoZoomEnabled")] HRESULT IsAutoZoomEnabled();
+	[helpstring("method EnableAutoZoom")] HRESULT EnableAutoZoom([in] BOOL a_bEnable);
+};
+
+[
+	object,
+	uuid(08871D3E-B772-4C86-B386-0DA9643357BF),
+	helpstring("ISharedStateImageViewport Interface"),
+	pointer_default(unique)
+]
+interface ISharedStateImageViewport : ISharedState
+{
+	[helpstring("method Init")] HRESULT Init([in] float a_fCenterX, [in] float a_fCenterY, [in] float a_fZoom, [in] ULONG a_nSizeX, [in] ULONG a_nSizeY);
+	[helpstring("method Get")] HRESULT Get([out] float* a_pCenterX, [out] float* a_pCenterY, [out] float* a_pZoom, [out] ULONG* a_pSizeX, [out] ULONG* a_pSizeY);
+	[helpstring("method InitEx")] HRESULT InitEx([in] float a_fCenterX, [in] float a_fCenterY, [in] float a_fZoom, [in] ULONG a_nSizeX, [in] ULONG a_nSizeY, [in] ULONG a_nImageX, [in] ULONG a_nImageY, [in] boolean a_bAutoZoom);
+	[helpstring("method GetEx")] HRESULT GetEx([out] float* a_pCenterX, [out] float* a_pCenterY, [out] float* a_pZoom, [out] ULONG* a_pSizeX, [out] ULONG* a_pSizeY, [out] ULONG* a_pImageX, [out] ULONG* a_pImageY, [out] boolean* a_pAutoZoom);
+};
+
+
+[
+	uuid(3F11C610-8079-4F42-9DEA-BBF646948908),
+	version(1.0),
+	helpstring("RWViewImage 1.0 Type Library")
+]
+library RWViewImageLib
+{
+	importlib("stdole2.tlb");
+	importlib("RWConceptDesignerView.tlb");
+	importlib("RWConceptSharedState.tlb");
+	importlib("RWProcessing.tlb");
+
+	interface IImageZoomControl;
+
+	[
+		uuid(9432886A-D01D-40F1-997C-0B8F7A722BFA),
+		helpstring("DesignerViewImage Class")
+	]
+	coclass DesignerViewFactoryImage
+	{
+		[default] interface IDesignerViewFactory;
+	};
+	[
+		uuid(8BB1D88A-4627-4A30-B8E0-60B709A53BC2),
+		helpstring("MenuCommandsImageZoom Class")
+	]
+	coclass MenuCommandsImageZoom
+	{
+		[default] interface IDocumentMenuCommands;
+	};
+	[
+		uuid(9E60F8E6-74DB-4C99-B6B3-DA2868B7AEB9),
+		helpstring("DesignerViewFactoryAnimationFrames Class")
+	]
+	coclass DesignerViewFactoryAnimationFrames
+	{
+		[default] interface IDesignerViewFactory;
+	};
+	[
+		uuid(FB10E7F0-4781-4C72-8BCD-093E4D302503),
+		helpstring("DocumentOperationInsertFrame Class")
+	]
+	coclass DocumentOperationInsertFrame
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(49C46BFA-DA6C-4CE6-BCA3-8A201F82326A),
+		helpstring("SharedStateImageViewport Class")
+	]
+	coclass SharedStateImageViewport
+	{
+		[default] interface ISharedStateImageViewport;
+		interface ISharedState;
+	};
+	[
+		uuid(AFB9B400-46A3-4C62-A3B2-389A9A5E1F68),
+		helpstring("DocumentOperationReverseFrames Class")
+	]
+	coclass DocumentOperationReverseFrames
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(AAD0343F-D118-48CD-BB7B-E133353D74E1),
+		helpstring("DesignerViewFactoryAnimation Class")
+	]
+	coclass DesignerViewFactoryAnimation
+	{
+		[default] interface IDesignerViewFactory;
+	};
+};

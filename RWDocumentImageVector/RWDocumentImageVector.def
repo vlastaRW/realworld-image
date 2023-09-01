@@ -1,0 +1,8 @@
+; RWDocumentImageVector.def : Declares the module parameters.
+
+LIBRARY      "RWDocumentImageVector.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE

@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{7d2ccb2d-646f-4163-ace5-eccb9ebd64c6}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{c775c1b6-cd80-4ef1-b0e6-e7d812bcd733}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RemoveHue">
+      <UniqueIdentifier>{8b046969-a5ca-4900-9759-bbef481576e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PhotoGreyscale">
+      <UniqueIdentifier>{391b07a5-9634-40d6-9617-7a6f70b408f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PhotoAutoContrast">
+      <UniqueIdentifier>{e4e282c9-01b1-4338-b320-efb3c8b42f76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PhotoHLS">
+      <UniqueIdentifier>{2ab37705-4145-4551-b9b8-5b0529603d16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditToolPhoto">
+      <UniqueIdentifier>{16bc9081-91d7-49f0-b143-736b8d2d94b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditToolPhoto\RedEye">
+      <UniqueIdentifier>{939c8cb6-0cf5-4f73-91f1-7a8a1897bc09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditToolPhoto\Crop">
+      <UniqueIdentifier>{050c88fb-9f20-4426-b859-5cc721c9a656}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditToolPhoto\Clone">
+      <UniqueIdentifier>{6020b125-1fb0-4ce7-a481-9f7bbc4f9531}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditToolPhoto\Bubble">
+      <UniqueIdentifier>{7eca1b41-6b78-4bb2-b38b-cce65d2a91de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditToolPhoto\ShapeShift">
+      <UniqueIdentifier>{587910c2-3e86-4c7d-a82e-065d0c4c82ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RemoveNoise">
+      <UniqueIdentifier>{9c01e1c4-a5c9-4544-96b2-d8d27b6f3a85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Watermark">
+      <UniqueIdentifier>{73574122-9202-46d5-adbc-2ab4854e28d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Glow">
+      <UniqueIdentifier>{1356962c-765a-4a40-be9c-fd098f49f56b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vignetting">
+      <UniqueIdentifier>{a76d98bd-457a-4389-a6ef-4098b2d62fd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SoftenSkin">
+      <UniqueIdentifier>{aafa94e1-2b2c-44b7-a6f8-8b55070884b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SeamCarving">
+      <UniqueIdentifier>{43f24837-6656-4cef-aac7-d1b0d792e017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blurring">
+      <UniqueIdentifier>{df717965-d375-4553-8093-0e0176450bbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FillStyleTexture">
+      <UniqueIdentifier>{0a84a7e9-dfab-472e-9201-19587b9e72e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FillStyleTexture\Wood">
+      <UniqueIdentifier>{44a4bff0-f119-43a8-a5ff-90efbe066d0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FillStyleTexture\Clouds">
+      <UniqueIdentifier>{bb54641b-32de-4106-82fe-e9c03feaccdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Levels">
+      <UniqueIdentifier>{637db9f0-1153-4821-81eb-4a5327856b8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Curves">
+      <UniqueIdentifier>{aba1bb27-fd64-41a4-98fd-3f02ef303473}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RWOperationImagePhoto.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWVersion.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUIRemoveHue.h">
+      <Filter>RemoveHue</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageRemoveHue.h">
+      <Filter>RemoveHue</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUIGreyscale.h">
+      <Filter>PhotoGreyscale</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageGreyscale.h">
+      <Filter>PhotoGreyscale</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageAutoContrast.h">
+      <Filter>PhotoAutoContrast</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUIHLS.h">
+      <Filter>PhotoHLS</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageHLS.h">
+      <Filter>PhotoHLS</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterImageEditToolsPhoto.h">
+      <Filter>EditToolPhoto</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolRedEye.h">
+      <Filter>EditToolPhoto\RedEye</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolCrop.h">
+      <Filter>EditToolPhoto\Crop</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolCropDlg.h">
+      <Filter>EditToolPhoto\Crop</Filter>
+    </ClInclude>
+    <ClInclude Include="SharedStateEditToolCrop.h">
+      <Filter>EditToolPhoto\Crop</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolClone.h">
+      <Filter>EditToolPhoto\Clone</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolCloneDlg.h">
+      <Filter>EditToolPhoto\Clone</Filter>
+    </ClInclude>
+    <ClInclude Include="SharedStateEditToolClone.h">
+      <Filter>EditToolPhoto\Clone</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolBubble.h">
+      <Filter>EditToolPhoto\Bubble</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolBubbleDlg.h">
+      <Filter>EditToolPhoto\Bubble</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolShapeShift.h">
+      <Filter>EditToolPhoto\ShapeShift</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolShapeShiftDlg.h">
+      <Filter>EditToolPhoto\ShapeShift</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRemoveNoise.h">
+      <Filter>RemoveNoise</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUIWatermark.h">
+      <Filter>Watermark</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationWatermark.h">
+      <Filter>Watermark</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageGlow.h">
+      <Filter>Glow</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUIVignetting.h">
+      <Filter>Vignetting</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageVignetting.h">
+      <Filter>Vignetting</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUISoftenSkin.h">
+      <Filter>SoftenSkin</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageSoftenSkin.h">
+      <Filter>SoftenSkin</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationSeamCarving.h">
+      <Filter>SeamCarving</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageUnsharpMask.h">
+      <Filter>Blurring</Filter>
+    </ClInclude>
+    <ClInclude Include="Noise.h">
+      <Filter>FillStyleTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterImageFillStyleTexture.h">
+      <Filter>FillStyleTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="FillStyleWood.h">
+      <Filter>FillStyleTexture\Wood</Filter>
+    </ClInclude>
+    <ClInclude Include="FillStyleWoodDlg.h">
+      <Filter>FillStyleTexture\Wood</Filter>
+    </ClInclude>
+    <ClInclude Include="FillStyleClouds.h">
+      <Filter>FillStyleTexture\Clouds</Filter>
+    </ClInclude>
+    <ClInclude Include="FillStyleCloudsDlg.h">
+      <Filter>FillStyleTexture\Clouds</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterImageLevels.h">
+      <Filter>Levels</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RWOperationImagePhoto_i.c">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RWOperationImagePhoto.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageRemoveHue.cpp">
+      <Filter>RemoveHue</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageGreyscale.cpp">
+      <Filter>PhotoGreyscale</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageAutoContrast.cpp">
+      <Filter>PhotoAutoContrast</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageHLS.cpp">
+      <Filter>PhotoHLS</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterImageEditToolsPhoto.cpp">
+      <Filter>EditToolPhoto</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRemoveNoise.cpp">
+      <Filter>RemoveNoise</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationWatermark.cpp">
+      <Filter>Watermark</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageGlow.cpp">
+      <Filter>Glow</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageVignetting.cpp">
+      <Filter>Vignetting</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageSoftenSkin.cpp">
+      <Filter>SoftenSkin</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationSeamCarving.cpp">
+      <Filter>SeamCarving</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageUnsharpMask.cpp">
+      <Filter>Blurring</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterImageFillStyleTexture.cpp">
+      <Filter>FillStyleTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterImageLevels.cpp">
+      <Filter>Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterImageCurves.cpp">
+      <Filter>Curves</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RWOperationImagePhoto.def">
+      <Filter>Misc Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RWOperationImagePhoto.rc">
+      <Filter>Misc Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="CGHLSPickColor+.ico">
+      <Filter>PhotoHLS</Filter>
+    </Image>
+    <Image Include="CGHLSPickColor-.ico">
+      <Filter>PhotoHLS</Filter>
+    </Image>
+    <Image Include="CGHLSPickColor.ico">
+      <Filter>PhotoHLS</Filter>
+    </Image>
+    <Image Include="EditToolBubble.ico">
+      <Filter>EditToolPhoto\Bubble</Filter>
+    </Image>
+    <Image Include="FillStyleWood.ico">
+      <Filter>FillStyleTexture\Wood</Filter>
+    </Image>
+    <Image Include="FillStyleClouds.ico">
+      <Filter>FillStyleTexture\Clouds</Filter>
+    </Image>
+    <Image Include="LevelAuto.ico">
+      <Filter>Levels</Filter>
+    </Image>
+    <Image Include="ResetGray.ico">
+      <Filter>Levels</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="RWOperationImagePhoto.idl" />
+  </ItemGroup>
+</Project>

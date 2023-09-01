@@ -1,0 +1,8 @@
+; RWEXIF.def : Declares the module parameters.
+
+LIBRARY      "RWEXIF.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE

@@ -1,0 +1,8 @@
+; RWCodecImageJPEG2000.def : Declares the module parameters.
+
+LIBRARY      "RWCodecImageJPEG2000.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE

@@ -1,0 +1,8 @@
+; RWCodecImageTGA.def : Declares the module parameters.
+
+LIBRARY      "RWCodecImageTGA.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE

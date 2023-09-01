@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{0abf4daf-08b4-461f-8b04-6d639dfa0e69}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;cpp;c;cxx;def;odl;idl;hpj;bat;asm;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{f254b9cf-1eb5-40d3-bd04-0bf380fb28bc}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="DesignerViewImage Files">
+      <UniqueIdentifier>{5891fec4-d8a4-4f80-b4c6-5d04602fd29c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MenuCommandsImageZoom Files">
+      <UniqueIdentifier>{fab3ebc2-025d-4227-b13c-1cd9dabaa882}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DesignerViewAnimationFrames Files">
+      <UniqueIdentifier>{282e4d1c-7626-4f0f-98d8-145e6a928545}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MenuCommandsAminationFrames Files">
+      <UniqueIdentifier>{2788976e-fb40-48a1-8e7a-30c24043c382}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SharedStateImageViewport">
+      <UniqueIdentifier>{e3d4084c-35c6-4a41-9cd8-0979926637a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DesignerViewAnimation Files">
+      <UniqueIdentifier>{8b325a3a-cfd1-4e2d-bf0b-10f40a00e171}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWVersion.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigIDsImageView.h">
+      <Filter>DesignerViewImage Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewFactoryImage.h">
+      <Filter>DesignerViewImage Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewImage.h">
+      <Filter>DesignerViewImage Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageControl.h">
+      <Filter>DesignerViewImage Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCommandsImageZoom.h">
+      <Filter>MenuCommandsImageZoom Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUISyncID.h">
+      <Filter>DesignerViewAnimationFrames Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewAnimationFrames.h">
+      <Filter>DesignerViewAnimationFrames Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewFactoryAnimationFrames.h">
+      <Filter>DesignerViewAnimationFrames Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationInsertFrame.h">
+      <Filter>MenuCommandsAminationFrames Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationReverseFrames.h">
+      <Filter>MenuCommandsAminationFrames Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SharedStateImageViewport.h">
+      <Filter>SharedStateImageViewport</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewAnimation.h">
+      <Filter>DesignerViewAnimation Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewFactoryAnimation.h">
+      <Filter>DesignerViewAnimation Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RWViewImage.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RWViewImage_i.c">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewFactoryImage.cpp">
+      <Filter>DesignerViewImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewImage.cpp">
+      <Filter>DesignerViewImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsImageZoom.cpp">
+      <Filter>MenuCommandsImageZoom Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewAnimationFrames.cpp">
+      <Filter>DesignerViewAnimationFrames Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewFactoryAnimationFrames.cpp">
+      <Filter>DesignerViewAnimationFrames Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationAnimationMorph.cpp">
+      <Filter>MenuCommandsAminationFrames Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationInsertFrame.cpp">
+      <Filter>MenuCommandsAminationFrames Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationReverseFrames.cpp">
+      <Filter>MenuCommandsAminationFrames Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SharedStateImageViewport.cpp">
+      <Filter>SharedStateImageViewport</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewAnimation.cpp">
+      <Filter>DesignerViewAnimation Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewFactoryAnimation.cpp">
+      <Filter>DesignerViewAnimation Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RWViewImage.def">
+      <Filter>Misc Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RWViewImage.rc">
+      <Filter>Misc Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="RWViewImage.idl">
+      <Filter>Misc Files</Filter>
+    </Midl>
+  </ItemGroup>
+</Project>

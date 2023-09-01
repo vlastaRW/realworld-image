@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="DocumentAnimation Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{1efd53b8-98e1-493f-be21-f8d4f620e18d}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="ScriptingInterfaceAnimation Files">
+      <UniqueIdentifier>{8bf7d26f-3fc4-4b8b-9e1d-00400815a94b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RWDocumentAnimation.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentAnimation.cpp">
+      <Filter>DocumentAnimation Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentFactoryAnimation.cpp">
+      <Filter>DocumentAnimation Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RWDocumentAnimation_i.c">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptingInterfaceAnimation.cpp">
+      <Filter>ScriptingInterfaceAnimation Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWVersion.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationUndo.h">
+      <Filter>DocumentAnimation Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentAnimation.h">
+      <Filter>DocumentAnimation Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentFactoryAnimation.h">
+      <Filter>DocumentAnimation Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GIFComment.h">
+      <Filter>DocumentAnimation Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptingInterfaceAnimation.h">
+      <Filter>ScriptingInterfaceAnimation Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\_inc\RWDocumentAnimationUtils.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RWDocumentAnimation.def">
+      <Filter>Misc Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RWDocumentAnimation.rc">
+      <Filter>Misc Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="..\_inc\RWDocumentAnimation.idl">
+      <Filter>Misc Files</Filter>
+    </Midl>
+  </ItemGroup>
+</Project>

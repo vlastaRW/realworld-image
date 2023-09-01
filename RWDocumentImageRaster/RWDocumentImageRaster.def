@@ -1,0 +1,8 @@
+; RWDocumentImageRaster.def : Declares the module parameters.
+
+LIBRARY      "RWDocumentImageRaster.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE

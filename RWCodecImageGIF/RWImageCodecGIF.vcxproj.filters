@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b0ae1d28-e65e-4a1b-9ec0-6c58edfb7a04}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;h;hpp;hxx;hm;inl;inc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="DocumentEncoderGIF Files">
+      <UniqueIdentifier>{3171be9a-52ba-4ede-9eaf-8a9e262270c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DocumentDecoderGIF Files">
+      <UniqueIdentifier>{bbaf7f56-e803-4a39-8ed9-6783b9b3bfc4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RWVersion.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentEncoderGIF.h">
+      <Filter>DocumentEncoderGIF Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GIFCompressor.h">
+      <Filter>DocumentEncoderGIF Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentDecoderGIF.h">
+      <Filter>DocumentDecoderGIF Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GIF2.h">
+      <Filter>DocumentDecoderGIF Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWImageCodecGIF.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RWImageCodecGIF.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentEncoderGIF.cpp">
+      <Filter>DocumentEncoderGIF Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentDecoderGIF.cpp">
+      <Filter>DocumentDecoderGIF Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GIF2.cpp">
+      <Filter>DocumentDecoderGIF Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RWImageCodecGIF.def">
+      <Filter>Misc Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RWImageCodecGIF.rc">
+      <Filter>Misc Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

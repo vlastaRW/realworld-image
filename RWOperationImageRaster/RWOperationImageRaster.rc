@@ -1,0 +1,823 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1250)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_SCRIPTALPHA         ICON                    "ScriptAlpha.ico"
+
+IDI_SCRIPTBRIGHTNESS    ICON                    "ScriptBrightness.ico"
+
+IDI_SCRIPTCONTRAST      ICON                    "ScriptContrast.ico"
+
+IDI_SCRIPTCONTURES      ICON                    "ScriptContures.ico"
+
+IDI_SCRIPTMIXALPHA      ICON                    "MixAlpha.ico"
+
+IDI_SCRIPTSHADOW        ICON                    "ScriptShadow.ico"
+
+IDI_IMAGEHUETORUS       ICON                    "HueTorus.ico"
+
+IDI_IMAGE_FADE          ICON                    "ImageFade.ico"
+
+IDI_IMAGE_BACKGROUND    ICON                    "ImageBackground.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_IBTFILE
+//
+
+IDR_DIRECTION           RT_IBTFILE              "Direction.ibt"
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Czech (Czech Republic) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CSY)
+LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONFIGGUI_REMOVEBORDER DIALOGEX 0, 0, 134, 42
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Pozice:",IDC_STATIC,0,0,35,8
+    COMBOBOX        IDC_CGRB_ALIGN,38,0,51,87,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    RADIOBUTTON     "\\",IDC_CGRB_TOP_LEFT,95,0,13,12,BS_ICON | BS_PUSHLIKE | WS_GROUP
+    RADIOBUTTON     "|",IDC_CGRB_TOP,108,0,13,12,BS_ICON | BS_PUSHLIKE
+    RADIOBUTTON     "/",IDC_CGRB_TOP_RIGHT,121,0,13,12,BS_ICON | BS_PUSHLIKE
+    RADIOBUTTON     "<",IDC_CGRB_LEFT,95,13,13,12,BS_ICON | BS_PUSHLIKE
+    RADIOBUTTON     "+",IDC_CGRB_CENTER,108,13,13,12,BS_ICON | BS_PUSHLIKE
+    RADIOBUTTON     ">",IDC_CGRB_RIGHT,121,13,13,12,BS_ICON | BS_PUSHLIKE
+    RADIOBUTTON     "/",IDC_CGRB_BOTTOM_LEFT,95,26,13,12,BS_ICON | BS_PUSHLIKE
+    RADIOBUTTON     "|",IDC_CGRB_BOTTOM,108,26,13,12,BS_ICON | BS_PUSHLIKE
+    RADIOBUTTON     "\\",IDC_CGRB_BOTTOM_RIGHT,121,26,13,12,BS_ICON | BS_PUSHLIKE
+    LTEXT           "Velikost:",IDC_STATIC,0,18,35,8
+    EDITTEXT        IDC_CGRB_SIZEEDIT,38,16,34,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_CGRB_SIZESPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,62,16,12,12
+    LTEXT           "%",IDC_CGRB_SIZEUNIT,78,18,8,8
+    CHECKBOX        "Ètverec",IDC_CGRB_SQUARE,0,32,41,10
+END
+
+IDD_CONFIGGUI_BACKGROUNDBLEND DIALOGEX 0, 0, 103, 28
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Barva pozadí:",IDC_STATIC,0,2,59,8
+    PUSHBUTTON      "Background",IDC_CGPX_BACKGROUND,63,0,40,12
+    LTEXT           "Minimální alfa:",IDC_STATIC,0,18,60,8
+    EDITTEXT        IDC_CGPX_THRESHOLD,63,16,40,12,ES_AUTOHSCROLL
+END
+
+IDD_CONFIGGUI_MASK DIALOGEX 0, 0, 185, 94
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Operace:",IDC_STATIC,0,2,35,8
+    COMBOBOX        IDC_CGM_OPERATION,38,0,63,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "ID masky:",IDC_CGM_SELSYNCIDLABEL,110,2,35,8
+    EDITTEXT        IDC_CGM_SELSYNCID,148,0,37,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_CGM_CONFIG,"Static",SS_BLACKRECT,0,16,185,78
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_CONFIGGUI_REMOVEBORDER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 127
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 35
+    END
+
+    IDD_CONFIGGUI_BACKGROUNDBLEND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 96
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 21
+    END
+
+    IDD_CONFIGGUI_MASK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 178
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""RWOperationImageRaster.tlb""\r\n"
+    "#include ""RWVersion.h""\r\n"
+    "#include ""RWVersionInfo.rc2""\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_PROJNAME            "RWOperationImageRaster"
+    IDS_TORASTERIMAGE_NAME  "Obrázek -> Rastrový obrázek"
+    IDS_RASTERIMAGEPROPS_NAME "Rastrový obrázek - vlastnosti"
+    IDS_RASTERIMAGERESAMPLE_NAME "Rastrový obrázek - zmìnit velikost"
+    IDS_RASTERIMAGEDROPSHADOW_NAME "Rastrový obrázek - pøidat stín"
+    IDS_RASTERIMAGECONVOLUTION_NAME "Rastrový obrázek - konvoluèní filtr"
+    IDS_CFGID_SIZEXABS_NAME "Šíøka"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_SIZEXABS_DESC "Šíøka výsledného obrázku v pixelech"
+    IDS_CFGID_SIZEYABS_NAME "Výška"
+    IDS_CFGID_SIZEYABS_DESC "Výška výsledného obrázku v pixelech"
+    IDS_RASTERIMAGEDEFORMATION_NAME "Rastrový obrázek - deformovat"
+    IDS_RASTERIMAGEFADE_NAME "Rastrový obrázek - potlaèení"
+    IDS_RASTERIMAGEBEVEL_NAME "Rastrový obrázek - zkosení"
+    IDS_RASTERIMAGEFILL_NAME "Rastrový obrázek - vyplnìní"
+    IDS_RASTERIMAGEPOLAR_NAME "Rastrový obrázek - polární transformace"
+    IDS_RASTERIMAGEOUTLINES_NAME "Rastrový obrázek - obrys"
+    IDS_RASTERIMAGEPERSPECTIVE_NAME "Rastrový obrázek - transformovat"
+    IDS_CFGID_PT1X_NAME     "Horní levý X"
+    IDS_CFGID_PT1Y_NAME     "Horní levý Y"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_PT2X_NAME     "Horní pravý X"
+    IDS_CFGID_PT2Y_NAME     "Horní pravý Y"
+    IDS_CFGID_PT3X_NAME     "Dolní pravý X"
+    IDS_CFGID_PT3Y_NAME     "Dolní pravý Y"
+    IDS_CFGID_PT4X_NAME     "Dolní levý X"
+    IDS_CFGID_PT4Y_NAME     "Dolní levý Y"
+    IDS_CFGID_PTX_DESC      "X-ová souøadnice transformovaného bodu."
+    IDS_CFGID_PTY_DESC      "Y-ová souøadnice transformovaného bodu."
+    IDS_HELP_ANGLE          "Pohybem myši pøi stisknutém levém tlaèítku otoèíte obdelníkem."
+    IDS_HELP_PERSPECTIVE    "Tažením bodù lze nastavit perspektivní transformaci. Polygon musí zùstat konvexní, aby definoval platnou transformaci."
+    IDS_CFGID_SIZETYPE_NAME "Pøevzorkování podle"
+    IDS_CFGID_SIZETYPE_DESC "Urèuje, jak bude zadána cílová velikost."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGVAL_SIZETYPE_REL "Relativnì"
+    IDS_CFGVAL_SIZETYPE_ABS "Absolutnì"
+    IDS_CFGVAL_SIZETYPE_X   "Zadaná šíøka"
+    IDS_CFGVAL_SIZETYPE_Y   "Zadaná výška"
+    IDS_CFGID_SIZEREL_NAME  "Realtivní velikost"
+    IDS_CFGID_SIZEREL_DESC  "Cílová velikost je procentem originální velikosti obrázku."
+    IDS_CFGID_SIZEXONLY_DESC 
+                            "Cílová šíøka obrázku. Výška je automaticky dopoèítána, aby byl zachován pomìr stran."
+    IDS_CFGID_SIZEYONLY_DESC 
+                            "Cílová výška obrázku. Šíøka je automaticky dopoèítána, aby byl zachován pomìr stran."
+    IDS_CFGID_RIPS_SCRIPTCONFIG "Konfigurace skriptu"
+    IDS_CFGID_RESAMPLEMETHOD_NAME "Metoda"
+    IDS_CFGID_RESAMPLEMETHOD_DESC "Metoda pro zvìtšení nebo zmenšení obrázku."
+    IDS_CFGVAL_RESAMPLE_NEAREST "Nejbližší pixel"
+    IDS_CFGVAL_RESAMPLE_LINEAR "Lineární interpolace"
+    IDS_CFGVAL_RESAMPLE_CUBIC "Kubická interpolace"
+    IDS_CFGID_CS_COLOR_NAME "Barva okraje"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_SHADOWDENSITY_NAME "Hustota stínu"
+    IDS_CFGID_SHADOWDENSITY_DESC 
+                            "Tato hodnota urèuje hustotu stínu. Vyšší èíslo znamená tmavší stín."
+    IDS_CFGID_SHADOWSIZE_NAME "Velikost stínu"
+    IDS_CFGID_SHADOWSIZE_DESC "Polomìr stínu v pixelech."
+    IDS_CFGID_SHADOWOFFSET_NAME "Posun stínu"
+    IDS_CFGID_SHADOWOFFSET_DESC 
+                            "Posun vrženého stínu v pixelech. Kladná hodnota posune stín vpravo dolù."
+    IDS_CFGID_SHADOWTYPE_NAME "Typ algoritmu"
+    IDS_CFGID_SHADOWTYPE_DESC "Urèuje postup pro vrhání stínu."
+    IDS_CFGVAL_TYPE_STANDARD "Podle prùhlednosti"
+    IDS_CFGVAL_TYPE_OUTLINE "Jen na hranách"
+    IDS_CFGID_SHADOWCOLOR_NAME "Barva"
+    IDS_CFGID_SHADOWCOLOR_DESC 
+                            "Barva vrženého stínu. Stín poloprùhledných pixelù bude ménì intenzivní."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_RASTERIMAGECOLORTRANSFORMATIONS_NAME 
+                            "Rastrový obrázek - transformace barev"
+    IDS_CFGID_BRIGHTNESS_NAME "Jas"
+    IDS_CFGID_BRIGHTNESS_DESC 
+                            "Jas ovlivòuje celkovou svìtlost obrázku. Zmìna se provede pøiètením zadané hodnoty ke každému pixelu."
+    IDS_CFGID_CONTRAST_NAME "Kontrast"
+    IDS_CFGID_CONTRAST_DESC "Kontrast urèuje rozdíl mezi svìtlými a tmavými èástmi obrázku."
+    IDS_CFGID_GAMMA_NAME    "Gama"
+    IDS_CFGID_GAMMA_DESC    "Provést gama-korekci pro kompenzování nelineárních vlastností zobrazovacích zaøízení."
+    IDS_CFGID_SATURATION_NAME "Saturace"
+    IDS_CFGID_SATURATION_DESC 
+                            "Barevná saturace urèuje výraznost barev. Nižší hodnoty udìlají obrázek více èernobílý."
+    IDS_CFGID_RELSIZE_NAME  "Relativní velikost"
+    IDS_CFGID_RELSIZE_DESC  "Požadovaná výsledná velikost objektu. Je-li nižší než 100%, budou okraje zachovány nebo pøidány."
+    IDS_CFGID_ALIGNMENT_NAME "Umístìní objektu"
+    IDS_CFGID_ALIGNMENT_DESC 
+                            "Urèuje, kde bude objekt umístìn ve výsledném obrázku."
+    IDS_CFGVAL_ALIGNTL      "Nahoøe vlevo"
+    IDS_CFGVAL_ALIGNTC      "Nahoøe"
+    IDS_CFGVAL_ALIGNTR      "Nahoøe vpravo"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGVAL_ALIGNML      "Vlevo"
+    IDS_CFGVAL_ALIGNMC      "Uprostøed"
+    IDS_CFGVAL_ALIGNMR      "Vpravo"
+    IDS_CFGVAL_ALIGNBL      "Dole vlevo"
+    IDS_CFGVAL_ALIGNBC      "Dole"
+    IDS_CFGVAL_ALIGNBR      "Dole vpravo"
+    IDS_CFGID_SQUARE_NAME   "Ètverec"
+    IDS_CFGID_SQUARE_DESC   "Je-li povoleno, bude výsledný obrázek vždy ètvercový s pøípadným prázdným okrajem."
+    IDS_CFGID_MATRIX_NAME   "Konvoluèní matice"
+    IDS_CFGID_MATRIX_DESC   "Èleny konvoluèní matice reprezentují váhy pixelù. Poèet øádkù a sloupcù musí být lichý."
+    IDS_CFGID_DIVISOR_NAME  "Dìlitel"
+    IDS_CFGID_DIVISOR_DESC  "Souèet hodnot z konvoluèní matice je vydìlen tímto faktorem."
+    IDS_CFGID_BIAS_NAME     "Hladina"
+    IDS_CFGID_BIAS_DESC     "Tato hodnota je pøiètena k výsledné hodotì pixelu."
+    IDS_QUICKEFFECT_CUSTOM  "Vlastní konvoluèní filtr"
+    IDS_QUICKEFFECT_SHARPEN "Zaostøení"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_QUICKEFFECT_SOFTEN  "Rozmazání"
+    IDS_CFGID_IGNOREALPHA_NAME "Ignorovat alfu"
+    IDS_CFGID_IGNOREALPHA_DESC 
+                            "Je-li povoleno, bude filtr aplikován pouze na barevné kanály a alfa kanál zùstane nedotèen."
+    IDS_CFGID_CS_POSITION_BOTTOM "Dole"
+    IDS_HELP_QUICKEFFECT    "Umožní rychle nastavit konvoluèní matici na jeden ze standardních filtrù."
+    IDS_HELP_EFFECTSTRENGTH "Síla zvoleného standardního filtru."
+    IDS_HELP_RIP_SIZEX      "Šíøka nového plátna v pixelech."
+    IDS_HELP_RIP_SIZEY      "Výška nového plátna v pixelech."
+    IDS_HELP_RIP_SIZEZ      "Dimenzi Z lze využít pro uložení rùzných vrstev, snímkù nebo objemových informací."
+    IDS_HELP_RIP_SIZEW      "Libovolnì využitelná ètvrtá dimenze."
+    IDS_HELP_RIP_ALPHACHANNEL 
+                            "Urèuje, jestli pixely obsahují složku alfa. Automatický mód automaticky pøidá alfa kanál, pokud ho operace vyžaduje."
+    IDS_HELP_IDOK           "Tlaèítko OK zavøe dialog a potvrdí všechny provedené zmìny."
+    IDS_HELP_IDCANCEL       "Tlaèítko Storno zavøe dialog a zruší všechny provedené zmìny."
+    IDS_RASTERIMAGESHIFTHUE_NAME "Rastrový obrázek - posunout odstín"
+    IDS_RASTERIMAGECOLORIZE_NAME "Rastrový obrázek - obarvit"
+    IDS_CFGID_CLRZ_HUE_NAME "Odstín"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_CLRZ_HUE_DESC "Odstín pro obarvovaný obrázek."
+    IDS_CFGID_CLRZ_SATURATION_NAME "Sytost"
+    IDS_CFGID_CLRZ_SATURATION_DESC "Sytost obarvovaného obrázku."
+    IDS_CFGID_SH_ANGLE_NAME "Úhel"
+    IDS_CFGID_SH_ANGLE_DESC "Úhel, o který otoèit odstíny v obrázku."
+    IDS_RASTERIMAGEBACKGROUNDBLEND_NAME "Rastrový obrázek - smíchat s pozadím"
+    IDS_CFGID_BACKGROUND_NAME "Pozadí"
+    IDS_CFGID_BACKGROUND_HELP 
+                            "Barva typického pozadí pro optimalizaci obrázku. Výsledek bude vypadat nejlépe na podobných pozadích."
+    IDS_CFGID_THRESHOLD_NAME "Minimální alfa"
+    IDS_CFGID_THRESHOLD_HELP 
+                            "Pixely s prùhledností vyšší než tato hranice budou smazány."
+    IDS_RASTERIMAGEMODIFYMASK_NAME "Rastrový obrázek - upravit masku"
+    IDS_RASTERIMAGEAUTOMASK_NAME "Rastrový obrázek - automatická maska"
+    IDS_CFGID_SELECTIONSYNCID_NAME "Synchronizace výbìru"
+    IDS_CFGID_SELECTIONSYNCID_DESC 
+                            "Identifikátor stavu pohledu, který obsahuje masku."
+    IDS_CFGID_OPERATION_NAME "Operace"
+    IDS_CFGID_OPERATION_DESC "Typ vlastní operace."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_TRANMODE_NAME "Transformace"
+    IDS_CFGID_TRANMODE_DESC "Urèuje, jak budou pixel ze zdrojového obd=lníka namapovány na cílový ètyøúhelník."
+    IDS_CFGVAL_TM_AFFINE    "Bilineární"
+    IDS_CFGVAL_TM_PERSPECTIVE "Perspektivní"
+    IDS_CFGID_FD_STRENGTH_NAME "Síla"
+    IDS_CFGID_FD_STRENGTH_DESC 
+                            "Parametr urèuje sílu aplikovaného efektu. Síla 1 znamená normální pùsobnost efektu."
+    IDS_CFGID_FD_OPERATION_NAME "Operace"
+    IDS_CFGID_FD_OPERATION_DESC 
+                            "Operace, jejíž síla je ovlivòována. Musí se jednat o operaci pracující s rastrovými obrázky."
+    IDS_CFGID_PT_DIRECTION_NAME "Smìr"
+    IDS_CFGID_PT_DIRECTION_DESC "Smìr pøevodu souøadnic bodù obrázku."
+    IDS_CFGVAL_PTDIR_TOPOLAR "Kartézské na polární"
+    IDS_CFGVAL_PTDIR_TORECTANGULAR "Polární na kartézské"
+    IDS_CFGID_FL_FSID_NAME  "Styl výplnì"
+    IDS_CFGID_FL_FSID_DESC  "Identifikátor stylu výplnì."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_FL_RESPECTALPHA_NAME "Respektovat alfu"
+    IDS_CFGID_FL_RESPECTALPHA_DESC 
+                            "Pøi vyplòování vzít v potaz alfa-kanál obrázku a pouze nevyplòovat prùhledné oblasti."
+    IDS_CFGID_FL_COLOR1_NAME "Hlavní barva"
+    IDS_CFGID_FL_COLOR1_DESC 
+                            "Hodnota AARRGGBB barvy, keterá bude použita jako hlavní barva pro styly nedefinující vlastní barvy."
+    IDS_CFGID_FL_COLOR2_NAME "Vedlejší barva"
+    IDS_CFGID_FL_COLOR2_DESC 
+                            "Hodnota AARRGGBB barvy, keterá bude použita jako vedlejší barva pro styly nedefinující vlastní barvy."
+    IDS_CFGID_FL_BLENDINGMODE_NAME "Zpùsob míchání"
+    IDS_CFGID_FL_BLENDINGMODE_DESC 
+                            "Urèuje, jak zkombinovat výplò s pøedchozím obsahem."
+    IDS_CFGID_BV_SOURCE_NAME "Zdroj výšky"
+    IDS_CFGID_BV_SOURCE_DESC 
+                            "Definuje, jak získat hodnotu výšky pro efekt zkosení hran."
+    IDS_CFGVAL_BVS_OPACITY  "Prùhlednost"
+    IDS_CFGVAL_BVS_OPACITYANDMASK "Prùhlednost a maska"
+    IDS_CFGID_BV_SELECTIONID_NAME "ID masky"
+    IDS_CFGID_BV_SELECTIONID_DESC "Identifikátor obazové masky."
+    IDS_CFGID_BV_AMOUNT_NAME "Velikost"
+    IDS_CFGID_BV_AMOUNT_DESC "Velikost zkosené oblasti v pixelech."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_BV_BLUR_NAME  "Vyhlazení"
+    IDS_CFGID_BV_BLUR_DESC  "Polomìr vyhlazení v pixelech. Zaoblí zkosené hrany."
+    IDS_CFGID_BV_LIGHT_NAME "Smìr svìtla"
+    IDS_CFGID_BV_LIGHT_DESC "Smìr paralelních paprskù svìtla dopadajících na výškovou mapu."
+    IDS_CFGID_BV_KEEPFLAT_NAME "Zachovat plochy"
+    IDS_CFGID_BV_KEEPFLAT_DESC 
+                            "Automaticky nastavit úrovìò svìtla, aby rovné plochy zùstaly beze zmìn."
+    IDS_CFGVAL_FLBM_REPLACE "Nahradit"
+    IDS_CFGVAL_FLBM_PAINTOVER "Kreslit na"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_CS_COLOR_DESC "Barva pro vyplnìní okrajù."
+    IDS_CFGID_CS_DELTA_DESC "Hodnota v pixelech pøiètená k aktuální velikosti plátna. Jsou povoleny i záporné hodnoty."
+    IDS_CFGID_CS_DELTA_X_NAME "Zmìna šíøky"
+    IDS_CFGID_CS_DELTA_Y_NAME "Zmìna výšky"
+    IDS_CFGID_CS_POSITION_BOTTOM_LEFT "Dole vlevo"
+    IDS_CFGID_CS_POSITION_BOTTOM_RIGHT "Dole vpravo"
+    IDS_CFGID_CS_POSITION_CENTER "Uprostøed"
+    IDS_CFGID_CS_POSITION_DESC 
+                            "Urèuje umístìní pùvodního obrázku na novém plátnì."
+    IDS_CFGID_CS_POSITION_LEFT "Vlevo"
+    IDS_CFGID_CS_POSITION_NAME "Pozice obrázku"
+    IDS_CFGID_CS_POSITION_RIGHT "Vpravo"
+    IDS_CFGID_CS_POSITION_TOP "Nahoøe"
+    IDS_CFGID_CS_POSITION_TOP_LEFT "Nahoøe vlevo"
+    IDS_CFGID_CS_POSITION_TOP_RIGHT "Nahoøe vpravo"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_CS_SIZE_DESC  "Hodnota v pixelech urèující novou velikost plátna."
+    IDS_CFGID_CS_SIZE_X_NAME "Šíøka"
+    IDS_CFGID_CS_SIZE_Y_NAME "Výška"
+    IDS_CFGID_CS_TYPE_DESC  "Urèuje, jakým zpùsobem je zadávána cílová velikost plátna."
+    IDS_CFGID_CS_TYPE_NAME  "Specifikace velikosti"
+    IDS_CFGVAL_CST_DELTA    "Relativní"
+    IDS_CFGVAL_CST_SIZE     "Absolutní"
+END
+
+#endif    // Czech (Czech Republic) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONFIGGUI_REMOVEBORDER DIALOGEX 0, 0, 134, 42
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Alignment:",IDC_STATIC,0,2,46,8
+    COMBOBOX        IDC_CGRB_ALIGN,48,0,41,82,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    RADIOBUTTON     "\\",IDC_CGRB_TOP_LEFT,95,0,13,12,BS_ICON | BS_PUSHLIKE | WS_GROUP
+    RADIOBUTTON     "|",IDC_CGRB_TOP,108,0,13,12,BS_ICON | BS_PUSHLIKE
+    RADIOBUTTON     "/",IDC_CGRB_TOP_RIGHT,121,0,13,12,BS_ICON | BS_PUSHLIKE
+    RADIOBUTTON     "<",IDC_CGRB_LEFT,95,13,13,12,BS_ICON | BS_PUSHLIKE
+    RADIOBUTTON     "+",IDC_CGRB_CENTER,108,13,13,12,BS_ICON | BS_PUSHLIKE
+    RADIOBUTTON     ">",IDC_CGRB_RIGHT,121,13,13,12,BS_ICON | BS_PUSHLIKE
+    RADIOBUTTON     "/",IDC_CGRB_BOTTOM_LEFT,95,26,13,12,BS_ICON | BS_PUSHLIKE
+    RADIOBUTTON     "|",IDC_CGRB_BOTTOM,108,26,13,12,BS_ICON | BS_PUSHLIKE
+    RADIOBUTTON     "\\",IDC_CGRB_BOTTOM_RIGHT,121,26,13,12,BS_ICON | BS_PUSHLIKE
+    LTEXT           "Image size:",IDC_STATIC,0,18,46,8
+    EDITTEXT        IDC_CGRB_SIZEEDIT,48,16,24,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_CGRB_SIZESPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,62,16,12,12
+    LTEXT           "%",IDC_CGRB_SIZEUNIT,78,18,8,8
+    CHECKBOX        "S&quare",IDC_CGRB_SQUARE,0,32,71,10
+END
+
+IDD_CONFIGGUI_BACKGROUNDBLEND DIALOGEX 0, 0, 115, 28
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Background color:",IDC_STATIC,0,2,75,8
+    PUSHBUTTON      "Background",IDC_CGPX_BACKGROUND,75,0,40,12
+    LTEXT           "Alpha threshold:",IDC_STATIC,0,18,75,8
+    EDITTEXT        IDC_CGPX_THRESHOLD,75,16,40,12,ES_AUTOHSCROLL
+END
+
+IDD_CONFIGGUI_MASK DIALOGEX 0, 0, 185, 94
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Operation:",IDC_STATIC,0,2,49,8
+    COMBOBOX        IDC_CGM_OPERATION,50,0,56,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Mask ID:",IDC_CGM_SELSYNCIDLABEL,113,2,40,8
+    EDITTEXT        IDC_CGM_SELSYNCID,155,0,30,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_CGM_CONFIG,"Static",SS_BLACKRECT,0,16,185,78
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_CONFIGGUI_REMOVEBORDER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 127
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 35
+    END
+
+    IDD_CONFIGGUI_BACKGROUNDBLEND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 108
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 21
+    END
+
+    IDD_CONFIGGUI_MASK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 178
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_PROJNAME            "RWOperationImageRaster"
+    IDS_TORASTERIMAGE_NAME  "Image -> Raster Image"
+    IDS_RASTERIMAGEPROPS_NAME "Raster Image - Properties"
+    IDS_RASTERIMAGERESAMPLE_NAME "Raster Image - Resample"
+    IDS_RASTERIMAGEDROPSHADOW_NAME "Raster Image - Drop Shadow"
+    IDS_RASTERIMAGECONVOLUTION_NAME "Raster Image - Convolution"
+    IDS_CFGID_SIZEXABS_NAME "Width"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_SIZEXABS_DESC "Width of the resized image in pixels"
+    IDS_CFGID_SIZEYABS_NAME "Height"
+    IDS_CFGID_SIZEYABS_DESC "Height of the resized image in pixels"
+    IDS_RASTERIMAGEDEFORMATION_NAME "Raster Image - Deformation"
+    IDS_RASTERIMAGEFADE_NAME "Raster Image - Fade"
+    IDS_RASTERIMAGEBEVEL_NAME "Raster Image - Bevel"
+    IDS_RASTERIMAGEFILL_NAME "Raster Image - Fill"
+    IDS_RASTERIMAGEPOLAR_NAME "Raster Image - Polar Transformation"
+    IDS_RASTERIMAGEOUTLINES_NAME "Raster Image - Outline"
+    IDS_RASTERIMAGEPERSPECTIVE_NAME "Raster Image - Transform"
+    IDS_CFGID_PT1X_NAME     "Upper left X"
+    IDS_CFGID_PT1Y_NAME     "Upper left Y"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_PT2X_NAME     "Upper right X"
+    IDS_CFGID_PT2Y_NAME     "Upper right Y"
+    IDS_CFGID_PT3X_NAME     "Lower right X"
+    IDS_CFGID_PT3Y_NAME     "Lower right Y"
+    IDS_CFGID_PT4X_NAME     "Lower left X"
+    IDS_CFGID_PT4Y_NAME     "Lower left Y"
+    IDS_CFGID_PTX_DESC      "X coordinate of a transformed point."
+    IDS_CFGID_PTY_DESC      "Y coordinate of a transformed point."
+    IDS_HELP_ANGLE          "Move your mouse while holding left button down to rotate the rectangle."
+    IDS_HELP_PERSPECTIVE    "Drag the points to specify a perspective transformation. Keep the polygon convex."
+    IDS_CFGID_SIZETYPE_NAME "Resize by setting"
+    IDS_CFGID_SIZETYPE_DESC "Method specifying the target size."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGVAL_SIZETYPE_REL "Relative size"
+    IDS_CFGVAL_SIZETYPE_ABS "Absolute size"
+    IDS_CFGVAL_SIZETYPE_X   "Specify width"
+    IDS_CFGVAL_SIZETYPE_Y   "Specify height"
+    IDS_CFGID_SIZEREL_NAME  "Realtive size"
+    IDS_CFGID_SIZEREL_DESC  "Target size is percentage of the original image size."
+    IDS_CFGID_SIZEXONLY_DESC 
+                            "Width of the target image. Height is automatically computed to maintain original aspect ratio."
+    IDS_CFGID_SIZEYONLY_DESC 
+                            "Height of the target image. Width is automatically computed to maintain original aspect ratio."
+    IDS_CFGID_RIPS_SCRIPTCONFIG "Script config"
+    IDS_CFGID_RESAMPLEMETHOD_NAME "Method"
+    IDS_CFGID_RESAMPLEMETHOD_DESC "Method used to zoom pixels in or out."
+    IDS_CFGVAL_RESAMPLE_NEAREST "Nearest pixel"
+    IDS_CFGVAL_RESAMPLE_LINEAR "Linear interpolation"
+    IDS_CFGVAL_RESAMPLE_CUBIC "Cubic interpolation"
+    IDS_CFGID_CS_COLOR_NAME "Border color"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_SHADOWDENSITY_NAME "Shadow density"
+    IDS_CFGID_SHADOWDENSITY_DESC 
+                            "This value constrols shadow density. Higher value means darker shadow."
+    IDS_CFGID_SHADOWSIZE_NAME "Shadow size"
+    IDS_CFGID_SHADOWSIZE_DESC "Radius of the shadow in pixels."
+    IDS_CFGID_SHADOWOFFSET_NAME "Shadow offset"
+    IDS_CFGID_SHADOWOFFSET_DESC 
+                            "Offset of the dropped shadow in pixels. Positive values will move the shadow in the right bottom direction."
+    IDS_CFGID_SHADOWTYPE_NAME "Algorithm type"
+    IDS_CFGID_SHADOWTYPE_DESC 
+                            "Determines the method used to compute the shadow."
+    IDS_CFGVAL_TYPE_STANDARD "Opacity-based"
+    IDS_CFGVAL_TYPE_OUTLINE "Outline only"
+    IDS_CFGID_SHADOWCOLOR_NAME "Color"
+    IDS_CFGID_SHADOWCOLOR_DESC 
+                            "Color of the dropped shadow. Shadow of semitransparent pixels will be less intense."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_RASTERIMAGECOLORTRANSFORMATIONS_NAME 
+                            "Raster Image - Color Adjustments"
+    IDS_CFGID_BRIGHTNESS_NAME "Brightness"
+    IDS_CFGID_BRIGHTNESS_DESC 
+                            "Brightness influences the luminance of the entire image by adding the given value to every pixel."
+    IDS_CFGID_CONTRAST_NAME "Contrast"
+    IDS_CFGID_CONTRAST_DESC "Contrast controls the difference between darker and lighter areas of the image."
+    IDS_CFGID_GAMMA_NAME    "Gamma"
+    IDS_CFGID_GAMMA_DESC    "Apply gamma-correction to compensate for non-linear display properties."
+    IDS_CFGID_SATURATION_NAME "Saturation"
+    IDS_CFGID_SATURATION_DESC 
+                            "Saturation controls how intense are the colors. Lower the value to make the image more black-and-white and vice versa."
+    IDS_CFGID_RELSIZE_NAME  "Relative size"
+    IDS_CFGID_RELSIZE_DESC  "Target size of the object. If less than 100%, borders will be preserved or added."
+    IDS_CFGID_ALIGNMENT_NAME "Object alignment"
+    IDS_CFGID_ALIGNMENT_DESC 
+                            "Defines, where will be the object positioned in the output image if relative size is less than 100%."
+    IDS_CFGVAL_ALIGNTL      "Top left"
+    IDS_CFGVAL_ALIGNTC      "Top"
+    IDS_CFGVAL_ALIGNTR      "Top right"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGVAL_ALIGNML      "Left"
+    IDS_CFGVAL_ALIGNMC      "Center"
+    IDS_CFGVAL_ALIGNMR      "Right"
+    IDS_CFGVAL_ALIGNBL      "Bottom left"
+    IDS_CFGVAL_ALIGNBC      "Bottom"
+    IDS_CFGVAL_ALIGNBR      "Bottom right"
+    IDS_CFGID_SQUARE_NAME   "Square"
+    IDS_CFGID_SQUARE_DESC   "If enabled, the output image will always have square proportions."
+    IDS_CFGID_MATRIX_NAME   "Convolution matrix"
+    IDS_CFGID_MATRIX_DESC   "Values in the convolution matrix represent weights of pixels. The number of rows and columns must be odd."
+    IDS_CFGID_DIVISOR_NAME  "Divisor"
+    IDS_CFGID_DIVISOR_DESC  "The sum of values from the convolution matrix is divided by this factor."
+    IDS_CFGID_BIAS_NAME     "Bias"
+    IDS_CFGID_BIAS_DESC     "Value added to the final pixel."
+    IDS_QUICKEFFECT_CUSTOM  "Custom convolution filter"
+    IDS_QUICKEFFECT_SHARPEN "Sharpen"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_QUICKEFFECT_SOFTEN  "Soften"
+    IDS_CFGID_IGNOREALPHA_NAME "Ignore alpha"
+    IDS_CFGID_IGNOREALPHA_DESC 
+                            "If enabled, the filter will be applied to color channels only, leaving the alpha channel intact."
+    IDS_CFGID_CS_POSITION_BOTTOM "Bottom"
+    IDS_HELP_QUICKEFFECT    "Allows you to quickly change the convolution matrix to one of the commonly used filters."
+    IDS_HELP_EFFECTSTRENGTH "Strength of the selected standard effect."
+    IDS_HELP_RIP_SIZEX      "Width of the new image canvas in pixels."
+    IDS_HELP_RIP_SIZEY      "Height of the new image canvas in pixels."
+    IDS_HELP_RIP_SIZEZ      "The Z dimension can be used to store multiple layers, frames or volume information."
+    IDS_HELP_RIP_SIZEW      "Fourth dimension for arbitrary usage."
+    IDS_HELP_RIP_ALPHACHANNEL 
+                            "Contols whether pixels contain alpha channel. The automatic mode auto enables alpha channel for operations that require it to work."
+    IDS_HELP_IDOK           "The OK button closes this dialog accepting changes made"
+    IDS_HELP_IDCANCEL       "The Cancel button closes this dialog reverting all changes"
+    IDS_RASTERIMAGESHIFTHUE_NAME "Raster Image - Shift Hue"
+    IDS_RASTERIMAGECOLORIZE_NAME "Raster Image - Colorize"
+    IDS_CFGID_CLRZ_HUE_NAME "Hue"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_CLRZ_HUE_DESC "Hue of the colorized image."
+    IDS_CFGID_CLRZ_SATURATION_NAME "Saturation"
+    IDS_CFGID_CLRZ_SATURATION_DESC "Saturation of the colorized image."
+    IDS_CFGID_SH_ANGLE_NAME "Angle"
+    IDS_CFGID_SH_ANGLE_DESC "Angle to rotate hues in an image."
+    IDS_RASTERIMAGEBACKGROUNDBLEND_NAME "Raster Image - Blend with Background"
+    IDS_CFGID_BACKGROUND_NAME "Background"
+    IDS_CFGID_BACKGROUND_HELP 
+                            "Typical background color for the image. Images will look best if used on similar backgrounds."
+    IDS_CFGID_THRESHOLD_NAME "Alpha Threshold"
+    IDS_CFGID_THRESHOLD_HELP 
+                            "Pixels more transparent than the given value (0-255) will be deleted."
+    IDS_RASTERIMAGEMODIFYMASK_NAME "Raster Image - Modify Mask"
+    IDS_RASTERIMAGEAUTOMASK_NAME "Raster Image - Mask"
+    IDS_CFGID_SELECTIONSYNCID_NAME "Selection sync ID"
+    IDS_CFGID_SELECTIONSYNCID_DESC 
+                            "Identifier of the view state holding the image mask."
+    IDS_CFGID_OPERATION_NAME "Operation"
+    IDS_CFGID_OPERATION_DESC "Type of the actual operation."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_TRANMODE_NAME "Transformation"
+    IDS_CFGID_TRANMODE_DESC "Defines how are the pixels in the source rectangle mapped to the destination quadrangle."
+    IDS_CFGVAL_TM_AFFINE    "Bilinear"
+    IDS_CFGVAL_TM_PERSPECTIVE "Perspective"
+    IDS_CFGID_FD_STRENGTH_NAME "Strength"
+    IDS_CFGID_FD_STRENGTH_DESC 
+                            "Strength parameter controls strength of the applied effect. Strength of 1 indicates normal effect strength."
+    IDS_CFGID_FD_OPERATION_NAME "Operation"
+    IDS_CFGID_FD_OPERATION_DESC 
+                            "Operation whose strength is being adjusted. It must be an operation working with raster images."
+    IDS_CFGID_PT_DIRECTION_NAME "Direction"
+    IDS_CFGID_PT_DIRECTION_DESC 
+                            "Direction of the pixel coordinates transformation."
+    IDS_CFGVAL_PTDIR_TOPOLAR "Cartesian to polar"
+    IDS_CFGVAL_PTDIR_TORECTANGULAR "Polar to cartesian"
+    IDS_CFGID_FL_FSID_NAME  "Fill style"
+    IDS_CFGID_FL_FSID_DESC  "Identifier of the fill style."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_FL_RESPECTALPHA_NAME "Respect alpha"
+    IDS_CFGID_FL_RESPECTALPHA_DESC 
+                            "Respect the alpha channel of the filled image and do not fill transparent areas."
+    IDS_CFGID_FL_COLOR1_NAME "Primary color"
+    IDS_CFGID_FL_COLOR1_DESC 
+                            "AARRGGBB value of a color used as a primary color with styles that do not define their own colors."
+    IDS_CFGID_FL_COLOR2_NAME "Secondary color"
+    IDS_CFGID_FL_COLOR2_DESC 
+                            "AARRGGBB value of a color used as a secondary color with styles that do not define their own colors."
+    IDS_CFGID_FL_BLENDINGMODE_NAME "Blending mode"
+    IDS_CFGID_FL_BLENDINGMODE_DESC 
+                            "Defines how to combine fill pattern with previous content."
+    IDS_CFGID_BV_SOURCE_NAME "Height source"
+    IDS_CFGID_BV_SOURCE_DESC 
+                            "Defines how to obtain the height map for bevel effect."
+    IDS_CFGVAL_BVS_OPACITY  "Opacity"
+    IDS_CFGVAL_BVS_OPACITYANDMASK "Opacity and image mask"
+    IDS_CFGID_BV_SELECTIONID_NAME "Mask ID"
+    IDS_CFGID_BV_SELECTIONID_DESC "Identifier of the image mask."
+    IDS_CFGID_BV_AMOUNT_NAME "Amount"
+    IDS_CFGID_BV_AMOUNT_DESC "Size of beveled region in pixels."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_BV_BLUR_NAME  "Smoothing"
+    IDS_CFGID_BV_BLUR_DESC  "Radius for smoothing in pixels. Makes the beveled shape round."
+    IDS_CFGID_BV_LIGHT_NAME "Light direction"
+    IDS_CFGID_BV_LIGHT_DESC "Direction of parallel light rays shining on the height map."
+    IDS_CFGID_BV_KEEPFLAT_NAME "Keep flat level"
+    IDS_CFGID_BV_KEEPFLAT_DESC 
+                            "Adjust the light level to avoid changing flat surfaces."
+    IDS_CFGVAL_FLBM_REPLACE "Replace"
+    IDS_CFGVAL_FLBM_PAINTOVER "Paint over"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_CS_COLOR_DESC "Color used to fill the borders."
+    IDS_CFGID_CS_DELTA_DESC "Value in pixels added to current cavas size. Negative values are allowed."
+    IDS_CFGID_CS_DELTA_X_NAME "Width delta"
+    IDS_CFGID_CS_DELTA_Y_NAME "Height delta"
+    IDS_CFGID_CS_POSITION_BOTTOM_LEFT "Bottom left"
+    IDS_CFGID_CS_POSITION_BOTTOM_RIGHT "Bottom right"
+    IDS_CFGID_CS_POSITION_CENTER "Center"
+    IDS_CFGID_CS_POSITION_DESC 
+                            "Controls the placement of the original image on the new canvas."
+    IDS_CFGID_CS_POSITION_LEFT "Left"
+    IDS_CFGID_CS_POSITION_NAME "Image Position"
+    IDS_CFGID_CS_POSITION_RIGHT "Right"
+    IDS_CFGID_CS_POSITION_TOP "Top"
+    IDS_CFGID_CS_POSITION_TOP_LEFT "Top left"
+    IDS_CFGID_CS_POSITION_TOP_RIGHT "Top right"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_CS_SIZE_DESC  "Value in pixels determining new size of the canvas."
+    IDS_CFGID_CS_SIZE_X_NAME "Width"
+    IDS_CFGID_CS_SIZE_Y_NAME "Height"
+    IDS_CFGID_CS_TYPE_DESC  "Controls how to specify the final canvas size."
+    IDS_CFGID_CS_TYPE_NAME  "Size specification"
+    IDS_CFGVAL_CST_DELTA    "Relative"
+    IDS_CFGVAL_CST_SIZE     "Absolute"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "RWOperationImageRaster.tlb"
+#include "RWVersion.h"
+#include "RWVersionInfo.rc2"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

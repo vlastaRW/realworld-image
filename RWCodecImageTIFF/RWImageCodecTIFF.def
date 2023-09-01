@@ -1,0 +1,8 @@
+; RWCodecImageTIFF.def : Declares the module parameters.
+
+LIBRARY      "RWCodecImageTIFF.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE

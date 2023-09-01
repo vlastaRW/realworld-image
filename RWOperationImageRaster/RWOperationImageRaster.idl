@@ -1,0 +1,401 @@
+// RWOperationImageRaster.idl : IDL source for RWOperationImageRaster
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (RWOperationImageRaster.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "RWBase.idl";
+import "RWConfig.idl";
+import "RWProcessing.idl";
+import "RWConceptDesignerExtension.idl";
+import "RWScripting.idl";
+
+
+[
+	object,
+	uuid(64B9ABC5-4C40-4615-840B-9797E05E4911),
+	dual,
+	nonextensible,
+	helpstring("IScriptedRasterImage Interface"),
+	pointer_default(unique)
+]
+interface IScriptedRasterImage : IDispatch
+{
+	[id(1), helpstring("method GetPixelColor")] HRESULT GetPixelColor([in] ULONG posX, [in] ULONG posY, [in] ULONG posZ, [in] ULONG posW, [out,retval] OLE_COLOR* pixelColor);
+	[id(2), helpstring("method GetPixelAlpha")] HRESULT GetPixelAlpha([in] ULONG posX, [in] ULONG posY, [in] ULONG posZ, [in] ULONG posW, [out,retval] BYTE* pixelAlpha);
+	[id(3), helpstring("method GetPixelRed")] HRESULT GetPixelRed([in] ULONG posX, [in] ULONG posY, [in] ULONG posZ, [in] ULONG posW, [out,retval] BYTE* pixelRed);
+	[id(4), helpstring("method GetPixelGreen")] HRESULT GetPixelGreen([in] ULONG posX, [in] ULONG posY, [in] ULONG posZ, [in] ULONG posW, [out,retval] BYTE* pixelGreen);
+	[id(5), helpstring("method GetPixelBlue")] HRESULT GetPixelBlue([in] ULONG posX, [in] ULONG posY, [in] ULONG posZ, [in] ULONG posW, [out,retval] BYTE* pixelBlue);
+	[id(6), helpstring("method GetPixel")] HRESULT GetPixel([in] ULONG posX, [in] ULONG posY, [in] ULONG posZ, [in] ULONG posW, [out,retval] ULONG* packedPixel);
+	[id(7), helpstring("method SetPixelColor")] HRESULT SetPixelColor([in] ULONG posX, [in] ULONG posY, [in] ULONG posZ, [in] ULONG posW, [in] OLE_COLOR pixelColor);
+	[id(8), helpstring("method SetPixelAlpha")] HRESULT SetPixelAlpha([in] ULONG posX, [in] ULONG posY, [in] ULONG posZ, [in] ULONG posW, [in] BYTE pixelAlpha);
+	[id(9), helpstring("method SetPixelRed")] HRESULT SetPixelRed([in] ULONG posX, [in] ULONG posY, [in] ULONG posZ, [in] ULONG posW, [in] BYTE pixelRed);
+	[id(10), helpstring("method SetPixelGreen")] HRESULT SetPixelGreen([in] ULONG posX, [in] ULONG posY, [in] ULONG posZ, [in] ULONG posW, [in] BYTE pixelGreen);
+	[id(11), helpstring("method SetPixelBlue")] HRESULT SetPixelBlue([in] ULONG posX, [in] ULONG posY, [in] ULONG posZ, [in] ULONG posW, [in] BYTE pixelBlue);
+	[id(12), helpstring("method SetPixel")] HRESULT SetPixel([in] ULONG posX, [in] ULONG posY, [in] ULONG posZ, [in] ULONG posW, [in] ULONG packedPixel);
+	[propget, id(13), helpstring("property sizeX")] HRESULT sizeX([out, retval] ULONG* pVal);
+	[propget, id(14), helpstring("property sizeY")] HRESULT sizeY([out, retval] ULONG* pVal);
+	[propget, id(15), helpstring("property sizeZ")] HRESULT sizeZ([out, retval] ULONG* pVal);
+	[propget, id(16), helpstring("property sizeW")] HRESULT sizeW([out, retval] ULONG* pVal);
+	[id(17), helpstring("method Resize")] HRESULT Resize([in] ULONG sizeX, [in] ULONG sizeY, [in] ULONG sizeZ, [in] ULONG sizeW, [in] LONG offsetX, [in] LONG offsetY, [in] LONG offsetZ, [in] LONG offsetW);
+	[id(18), helpstring("method GetPixelH")] HRESULT GetPixelH([in] ULONG posX, [in] ULONG posY, [in] ULONG posZ, [in] ULONG posW, [out, retval] float* pixelH);
+	[id(19), helpstring("method GetPixelL")] HRESULT GetPixelL([in] ULONG posX, [in] ULONG posY, [in] ULONG posZ, [in] ULONG posW, [out, retval] float* pixelL);
+	[id(20), helpstring("method GetPixelS")] HRESULT GetPixelS([in] ULONG posX, [in] ULONG posY, [in] ULONG posZ, [in] ULONG posW, [out, retval] float* pixelS);
+	[id(21), helpstring("method SetPixelHLS")] HRESULT SetPixelHLS([in] ULONG posX, [in] ULONG posY, [in] ULONG posZ, [in] ULONG posW, [in] float pixelH, [in] float pixelL, [in] float pixelS);
+	[id(22), helpstring("method HasAlpha")] HRESULT HasAlpha([out, retval] VARIANT_BOOL* alpha);
+	[id(23), helpstring("method SetAlpha")] HRESULT SetAlpha([in] VARIANT_BOOL alpha);
+	[id(24), helpstring("method FillResize")] HRESULT FillResize([in] ULONG sizeX, [in] ULONG sizeY, [in] ULONG sizeZ, [in] ULONG sizeW, [in] LONG offsetX, [in] LONG offsetY, [in] LONG offsetZ, [in] LONG offsetW, [in] ULONG fillColor);
+	[propget, id(25), helpstring("property resolutionXNum")] HRESULT resolutionXNum([out, retval] ULONG* pVal);
+	[propget, id(26), helpstring("property resolutionXDenom")] HRESULT resolutionXDenom([out, retval] ULONG* pVal);
+	[propget, id(27), helpstring("property resolutionYNum")] HRESULT resolutionYNum([out, retval] ULONG* pVal);
+	[propget, id(28), helpstring("property resolutionYDenom")] HRESULT resolutionYDenom([out, retval] ULONG* pVal);
+	[propget, id(29), helpstring("property resolutionZNum")] HRESULT resolutionZNum([out, retval] ULONG* pVal);
+	[propget, id(30), helpstring("property resolutionZDenom")] HRESULT resolutionZDenom([out, retval] ULONG* pVal);
+	[propget, id(31), helpstring("property resolutionWNum")] HRESULT resolutionWNum([out, retval] ULONG* pVal);
+	[propget, id(32), helpstring("property resolutionWDenom")] HRESULT resolutionWDenom([out, retval] ULONG* pVal);
+	[id(33), helpstring("method SetResolution")] HRESULT SetResolution([in] ULONG a_nResXNum, [in] ULONG a_nResXDenom, [in] ULONG a_nResYNum, [in] ULONG a_nResYDenom, [in] ULONG a_nResZNum, [in] ULONG a_nResZDenom, [in] ULONG a_nResWNum, [in] ULONG a_nResWDenom);
+	[propget, id(34), helpstring("property previewScale")] HRESULT previewScale([out, retval] ULONG* pVal);
+};
+
+[
+	object,
+	uuid(0E6B8FD6-1A3A-481B-BAA2-5E181D698A56),
+	dual,
+	nonextensible,
+	helpstring("IScriptedBlender Interface"),
+	pointer_default(unique)
+]
+interface IScriptedBlender : IDispatch
+{
+	[propget, id( 1), helpstring("property OpClear")] HRESULT OpClear([out, retval] ULONG* pVal);
+	[propget, id( 2), helpstring("property OpColorBurn")] HRESULT OpColorBurn([out, retval] ULONG* pVal);
+	[propget, id( 3), helpstring("property OpColorDodge")] HRESULT OpColorDodge([out, retval] ULONG* pVal);
+	[propget, id( 4), helpstring("property OpContrast")] HRESULT OpContrast([out, retval] ULONG* pVal);
+	[propget, id( 5), helpstring("property OpDarken")] HRESULT OpDarken([out, retval] ULONG* pVal);
+	[propget, id( 6), helpstring("property OpDifference")] HRESULT OpDifference([out, retval] ULONG* pVal);
+	[propget, id( 7), helpstring("property OpDst")] HRESULT OpDst([out, retval] ULONG* pVal);
+	[propget, id( 8), helpstring("property OpDstAtop")] HRESULT OpDstAtop([out, retval] ULONG* pVal);
+	[propget, id( 9), helpstring("property OpDstIn")] HRESULT OpDstIn([out, retval] ULONG* pVal);
+	[propget, id(10), helpstring("property OpDstOut")] HRESULT OpDstOut([out, retval] ULONG* pVal);
+	[propget, id(11), helpstring("property OpDstOver")] HRESULT OpDstOver([out, retval] ULONG* pVal);
+	[propget, id(12), helpstring("property OpExclusion")] HRESULT OpExclusion([out, retval] ULONG* pVal);
+	[propget, id(13), helpstring("property OpHardLight")] HRESULT OpHardLight([out, retval] ULONG* pVal);
+	[propget, id(14), helpstring("property OpInvert")] HRESULT OpInvert([out, retval] ULONG* pVal);
+	[propget, id(15), helpstring("property OpInvertRGB")] HRESULT OpInvertRGB([out, retval] ULONG* pVal);
+	[propget, id(16), helpstring("property OpLighten")] HRESULT OpLighten([out, retval] ULONG* pVal);
+	[propget, id(17), helpstring("property OpMinus")] HRESULT OpMinus([out, retval] ULONG* pVal);
+	[propget, id(18), helpstring("property OpMultiply")] HRESULT OpMultiply([out, retval] ULONG* pVal);
+	[propget, id(19), helpstring("property OpOverlay")] HRESULT OpOverlay([out, retval] ULONG* pVal);
+	[propget, id(20), helpstring("property OpPlus")] HRESULT OpPlus([out, retval] ULONG* pVal);
+	[propget, id(21), helpstring("property OpScreen")] HRESULT OpScreen([out, retval] ULONG* pVal);
+	[propget, id(22), helpstring("property OpSoftLight")] HRESULT OpSoftLight([out, retval] ULONG* pVal);
+	[propget, id(23), helpstring("property OpSrc")] HRESULT OpSrc([out, retval] ULONG* pVal);
+	[propget, id(24), helpstring("property OpSrcAtop")] HRESULT OpSrcAtop([out, retval] ULONG* pVal);
+	[propget, id(25), helpstring("property OpSrcIn")] HRESULT OpSrcIn([out, retval] ULONG* pVal);
+	[propget, id(26), helpstring("property OpSrcOut")] HRESULT OpSrcOut([out, retval] ULONG* pVal);
+	[propget, id(27), helpstring("property OpSrcOver")] HRESULT OpSrcOver([out, retval] ULONG* pVal);
+	[propget, id(28), helpstring("property OpXor")] HRESULT OpXor([out, retval] ULONG* pVal);
+	[propget, id(29), helpstring("property GammaCorrection")] HRESULT GammaCorrection([out, retval] float* pVal);
+	[propput, id(29), helpstring("property GammaCorrection")] HRESULT GammaCorrection([in] float newVal);
+	[id(30), helpstring("method CreateCanvas")] HRESULT CreateCanvas([in] ULONG sizeX, [in] ULONG sizeY, [in] ULONG fill, [out, retval] IScriptedRasterImage** ppCanvas);
+	[id(31), helpstring("method Compose")] HRESULT Compose([in] IUnknown* dst, [in] LONG dstX1, [in] LONG dstY1, [in] LONG dstX2, [in] LONG dstY2, [in] VARIANT src, [in] LONG srcX1, [in] LONG srcY1, [in] VARIANT outFill, [in] ULONG compositionMode, [in, optional] VARIANT parameter);
+	[id(32), helpstring("method CanvasFromMask")] HRESULT CanvasFromMask([in] IUnknown* context, [in] BSTR maskID, [out, retval] IScriptedRasterImage** ppCanvas);
+	[id(33), helpstring("method CanvasToMask")] HRESULT CanvasToMask([in] IUnknown* context, [in] BSTR maskID, [in] IUnknown* canvas);
+	[propget, id(40), helpstring("property OpRGBAPlus")] HRESULT OpRGBAPlus([out, retval] ULONG* pVal);
+	[propget, id(41), helpstring("property OpRGBAMinus")] HRESULT OpRGBAMinus([out, retval] ULONG* pVal);
+	[propget, id(42), helpstring("property OpRGBAMultiply")] HRESULT OpRGBAMultiply([out, retval] ULONG* pVal);
+	[propget, id(43), helpstring("property OpRGBAMultiply2x")] HRESULT OpRGBAMultiply2x([out, retval] ULONG* pVal);
+	[propget, id(44), helpstring("property OpNormalBumpmap")] HRESULT OpNormalBumpmap([out, retval] ULONG* pVal);
+	[propget, id(45), helpstring("property OpHeightBumpmap")] HRESULT OpHeightBumpmap([out, retval] ULONG* pVal);
+	[propget, id(46), helpstring("property OpMapChannels")] HRESULT OpMapChannels([out, retval] ULONG* pVal);
+	[id(47), helpstring("method MapChannels")] HRESULT MapChannels([in] ULONG src1, [in] ULONG src2, [in] ULONG src3, [in] ULONG src4, [in] ULONG dst1, [in] ULONG dst2, [in] ULONG dst3, [in] ULONG dst4, [out, retval] ULONG* mapCode);
+	[propget, id(48), helpstring("property ChEmpty")] HRESULT ChEmpty([out, retval] ULONG* pVal);
+	[propget, id(49), helpstring("property ChR")] HRESULT ChR([out, retval] ULONG* pVal);
+	[propget, id(50), helpstring("property ChG")] HRESULT ChG([out, retval] ULONG* pVal);
+	[propget, id(51), helpstring("property ChB")] HRESULT ChB([out, retval] ULONG* pVal);
+	[propget, id(52), helpstring("property ChA")] HRESULT ChA([out, retval] ULONG* pVal);
+	[propget, id(53), helpstring("property ChY")] HRESULT ChY([out, retval] ULONG* pVal);
+	[propget, id(54), helpstring("property ChCb")] HRESULT ChCb([out, retval] ULONG* pVal);
+	[propget, id(55), helpstring("property ChCr")] HRESULT ChCr([out, retval] ULONG* pVal);
+	[propget, id(56), helpstring("property ChH")] HRESULT ChH([out, retval] ULONG* pVal);
+	[propget, id(57), helpstring("property ChL")] HRESULT ChL([out, retval] ULONG* pVal);
+	[propget, id(58), helpstring("property ChS")] HRESULT ChS([out, retval] ULONG* pVal);
+	[id(59), helpstring("method GetActiveColor")] HRESULT GetActiveColor([in] IUnknown* context, [in] BSTR colorID, [out, retval] ULONG* pColor);
+	[propget, id(60), helpstring("property DesktopSizeX")] HRESULT DesktopSizeX([out, retval] ULONG* pVal);
+	[propget, id(61), helpstring("property DesktopSizeY")] HRESULT DesktopSizeY([out, retval] ULONG* pVal);
+	[propget, id(62), helpstring("property OpNormalDisplace")] HRESULT OpNormalDisplace([out, retval] ULONG* pVal);
+	[propget, id(63), helpstring("property OpHeightDisplace")] HRESULT OpHeightDisplace([out, retval] ULONG* pVal);
+	[propget, id(64), helpstring("property OpHeightToNormal")] HRESULT OpHeightToNormal([out, retval] ULONG* pVal);
+	[propget, id(65), helpstring("property OpRGBAMaximum")] HRESULT OpRGBAMaximum([out, retval] ULONG* pVal);
+	[propget, id(66), helpstring("property OpRGBAMinimum")] HRESULT OpRGBAMinimum([out, retval] ULONG* pVal);
+	[propget, id(67), helpstring("property OpRGBADifference")] HRESULT OpRGBADifference([out, retval] ULONG* pVal);
+	[propget, id(68), helpstring("property OpNormalReflection")] HRESULT OpNormalReflection([out, retval] ULONG* pVal);
+};
+
+[
+	object,
+	uuid(D2003B3D-89BB-440E-81B1-6C5D61052065),
+	dual,
+	nonextensible,
+	helpstring("IScriptedTool Interface"),
+	pointer_default(unique)
+]
+interface IScriptedTool : IDispatch
+{
+	[propget, id(1), helpstring("property BlendMode")] HRESULT BlendMode([out, retval] int* pVal);
+	[propput, id(1), helpstring("property BlendMode")] HRESULT BlendMode([in] int newVal);
+	[propget, id(2), helpstring("property RasterizationMode")] HRESULT RasterizationMode([out, retval] int* pVal);
+	[propput, id(2), helpstring("property RasterizationMode")] HRESULT RasterizationMode([in] int newVal);
+	[propget, id(3), helpstring("property ShapeFillMode")] HRESULT ShapeFillMode([out, retval] int* pVal);
+	[propput, id(3), helpstring("property ShapeFillMode")] HRESULT ShapeFillMode([in] int newVal);
+	[propget, id(4), helpstring("property CoordinatesMode")] HRESULT CoordinatesMode([out, retval] int* pVal);
+	[propput, id(4), helpstring("property CoordinatesMode")] HRESULT CoordinatesMode([in] int newVal);
+	[propget, id(5), helpstring("property OutlineWidth")] HRESULT OutlineWidth([out, retval] float* pVal);
+	[propput, id(5), helpstring("property OutlineWidth")] HRESULT OutlineWidth([in] float newVal);
+	[propget, id(6), helpstring("property GammaOverride")] HRESULT GammaOverride([out, retval] float* pVal);
+	[propput, id(6), helpstring("property GammaOverride")] HRESULT GammaOverride([in] float newVal);
+	[id(7), helpstring("method SetFillColor")] HRESULT SetFillColor([in] float fR, [in] float fG, [in] float fB, [in] float fA);
+	[id(8), helpstring("method SetOutlineColor")] HRESULT SetOutlineColor([in] float fR, [in] float fG, [in] float fB, [in] float fA);
+	[id(9), helpstring("method SetFillStyle")] HRESULT SetFillStyle([in] BSTR styleID, [in] BSTR styleParams);
+	[id(10), helpstring("method Execute")] HRESULT Execute([in] IUnknown* document, [in] BSTR toolID, [in] BSTR toolParams);
+	[propget, id(11), helpstring("property BMDrawOver")] HRESULT BMDrawOver([out, retval] int* pVal);
+	[propget, id(12), helpstring("property BMReplace")] HRESULT BMReplace([out, retval] int* pVal);
+	[propget, id(13), helpstring("property BMDrawUnder")] HRESULT BMDrawUnder([out, retval] int* pVal);
+	[propget, id(14), helpstring("property RMBinary")] HRESULT RMBinary([out, retval] int* pVal);
+	[propget, id(15), helpstring("property RMSmooth")] HRESULT RMSmooth([out, retval] int* pVal);
+	[propget, id(16), helpstring("property SFMOutline")] HRESULT SFMOutline([out, retval] int* pVal);
+	[propget, id(17), helpstring("property SFMFilled")] HRESULT SFMFilled([out, retval] int* pVal);
+	//[propget, id(18), helpstring("property SFMBrushFill")] HRESULT SFMBrushFill([out, retval] int* pVal);
+	[propget, id(19), helpstring("property SFMCombined")] HRESULT SFMCombined([out, retval] int* pVal);
+	[propget, id(20), helpstring("property CMArbitrary")] HRESULT CMArbitrary([out, retval] int* pVal);
+	[propget, id(21), helpstring("property CMIntegral")] HRESULT CMIntegral([out, retval] int* pVal);
+	[id(22), helpstring("method SetSelection")] HRESULT SetSelection([in] IUnknown* context, [in] BSTR stateID);
+	[propget, id(23), helpstring("property BMAdd")] HRESULT BMAdd([out, retval] int* pVal);
+	[propget, id(24), helpstring("property OutlinePos")] HRESULT OutlinePos([out, retval] float* pVal);
+	[propput, id(24), helpstring("property OutlinePos")] HRESULT OutlinePos([in] float newVal);
+	[propget, id(25), helpstring("property OutlineJoins")] HRESULT OutlineJoins([out, retval] int* pVal);
+	[propput, id(25), helpstring("property OutlineJoins")] HRESULT OutlineJoins([in] int newVal);
+	[propget, id(26), helpstring("property OJMiter")] HRESULT OJMiter([out, retval] int* pVal);
+	[propget, id(27), helpstring("property OJRound")] HRESULT OJRound([out, retval] int* pVal);
+	[propget, id(28), helpstring("property OJBevel")] HRESULT OJBevel([out, retval] int* pVal);
+	[id(29), helpstring("method FromSRGB")] HRESULT FromSRGB([in] int color, [out, retval] float* pColor);
+
+	// deprecared - kept for compatibility reasons only
+	[id(30), helpstring("method SetColor1")] HRESULT SetColor1([in] float fR, [in] float fG, [in] float fB, [in] float fA);
+};
+
+
+
+[
+	uuid(2D83935D-1E47-4080-9445-0ED230709121),
+	version(1.0),
+	helpstring("RWOperationImageRaster 1.0 Type Library")
+]
+library RWOperationImageRasterLib
+{
+	importlib("stdole2.tlb");
+	importlib("RWProcessing.tlb");
+	importlib("RWConceptDesignerExtension.tlb");
+	importlib("RWScripting.tlb");
+
+	interface IScriptedRasterImage;
+	interface IScriptedBlender;
+	interface IScriptedTool;
+
+	[
+		uuid(8E4A04FD-3B30-4FE9-8EDF-D60055A97B5B),
+		helpstring("DocumentOperationRasterImageScript Class")
+	]
+	coclass DocumentOperationRasterImageScript
+	{
+		[default] interface IScriptingInterface;
+		interface IDesignerFrameIcons;
+	};
+	[
+		uuid(9704653A-7B73-4921-AE3B-82C0F0616E5E),
+		helpstring("DocumentOperationRasterImageProps Class")
+	]
+	coclass DocumentOperationRasterImageProps
+	{
+		[default] interface IDocumentOperation;
+		interface IDesignerFrameIcons;
+	};
+	[
+		uuid(80CCE9DF-840E-4D1B-881B-7842961832E5),
+		helpstring("DocumentTransformationToRasterImage Class")
+	]
+	coclass DocumentTransformationToRasterImage
+	{
+		[default] interface IDocumentTransformation;
+	};
+	[
+		uuid(04F9937C-4135-474C-AD27-E414E14DCE7A),
+		helpstring("DocumentOperationRasterImageResample Class")
+	]
+	coclass DocumentOperationRasterImageResample
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(C1CFEEE0-0E2E-44AA-94E2-7041F8F0C7AE),
+		helpstring("DocumentOperationRasterImageRotate Class")
+	]
+	coclass DocumentOperationRasterImageRotate
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(A13EC2D9-D8F7-4C05-A998-1E43061F3EFC),
+		helpstring("DocumentOperationRasterImagePerspective Class")
+	]
+	coclass DocumentOperationRasterImagePerspective
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(179FED75-A48F-4708-AF14-56BFB2A2ADBC),
+		helpstring("DocumentOperationRasterImageDropShadow Class")
+	]
+	coclass DocumentOperationRasterImageDropShadow
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(6B506239-51B0-4416-8B1A-341C516A0F0C),
+		helpstring("DocumentOperationRasterImageConvolution Class")
+	]
+	coclass DocumentOperationRasterImageConvolution
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(0DAF0F19-0E19-4295-B648-8F7DCE2E19A6),
+		helpstring("DocumentOperationRasterImageColorTransformations Class")
+	]
+	coclass DocumentOperationRasterImageColorTransformations
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(C6001A7D-4D4E-4431-BAA9-6311F9593A31),
+		helpstring("DocumentOperationRasterImageRemoveBorder Class")
+	]
+	coclass DocumentOperationRasterImageRemoveBorder
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(5118B993-1B94-4C31-AE7C-E09A14EF6C02),
+		helpstring("DocumentOperationRasterImageColorize Class")
+	]
+	coclass DocumentOperationRasterImageColorize
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(CE877EAE-2E47-4BD2-A817-D4055ADDDEEE),
+		helpstring("DocumentOperationRasterImageShiftHue Class")
+	]
+	coclass DocumentOperationRasterImageShiftHue
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(BCD0FD69-A4BD-46B0-A7DA-8B48F18E8820),
+		helpstring("DocumentOperationRasterImageBackgroundBlend Class")
+	]
+	coclass DocumentOperationRasterImageBackgroundBlend
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(ED962E6A-7335-4BF0-9005-1A9AF7D8FBBF),
+		helpstring("DocumentOperationRasterImageModifyMask Class")
+	]
+	coclass DocumentOperationRasterImageModifyMask
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(1B3B2D28-0C2C-4105-82CE-F0E868661C72),
+		helpstring("DocumentOperationRasterImageAutoMask Class")
+	]
+	coclass DocumentOperationRasterImageAutoMask
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(4DD76D14-45A2-4FE5-9870-0DC94A53DF75),
+		helpstring("DocumentOperationRasterImageBlur Class")
+	]
+	coclass DocumentOperationRasterImageBlur
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(E22803B2-143B-45D6-812C-ED1472B10460),
+		helpstring("DocumentOperationRasterImageFade Class")
+	]
+	coclass DocumentOperationRasterImageFade
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(BC29F53A-6940-4C6D-ABC9-EBE5536D07ED),
+		helpstring("RasterImageBevel Class")
+	]
+	coclass RasterImageBevel
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(76F44ED2-D0B4-4047-985D-2FA6356A1BF9),
+		helpstring("RasterImageFill Class")
+	]
+	coclass RasterImageFill
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(46F6ECDF-1B48-494C-A27D-4A50020F3959),
+		helpstring("RasterImagePolarTransformation Class")
+	]
+	coclass RasterImagePolarTransformation
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(8092B240-8AE7-418F-AE49-047D790CDFB8),
+		helpstring("DocumentOperationRasterImageOutlines Class")
+	]
+	coclass DocumentOperationRasterImageOutlines
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(8B4C0E3F-AF8E-493D-B44B-8C692DBE0893),
+		helpstring("DocumentOperationRasterImageCanvasSize Class")
+	]
+	coclass DocumentOperationRasterImageCanvasSize
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(70B52EB0-39F7-4754-8F7D-F0A738488612),
+		helpstring("DocumentOperationRasterImageSatin Class")
+	]
+	coclass DocumentOperationRasterImageSatin
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(19F9FA9A-3F1C-4B8B-B5F0-31A10310AF93),
+		helpstring("DocumentOperationRasterImageReduceColors Class")
+	]
+	coclass DocumentOperationRasterImageReduceColors
+	{
+		[default] interface IDocumentOperation;
+	};
+};

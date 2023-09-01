@@ -1,0 +1,157 @@
+// RWOperationImagePhoto.idl : IDL source for RWOperationImagePhoto
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (RWOperationImagePhoto.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "RWBase.idl";
+import "RWConfig.idl";
+import "RWProcessing.idl";
+import "RWConceptSharedState.idl";
+import "RWDrawing.idl";
+import "RWDocumentImageRaster.idl";
+//import "RWConceptDesignerExtension.idl";
+
+[
+	uuid(6046338F-83DF-40C0-BFC8-5210902A5341),
+	version(1.0),
+	helpstring("RWOperationImagePhoto 1.0 Type Library")
+]
+library RWOperationImagePhotoLib
+{
+	importlib("stdole2.tlb");
+	importlib("RWProcessing.tlb");
+	importlib("RWConceptSharedState.tlb");
+	importlib("RWDrawing.tlb");
+
+	[
+		uuid(64DF9613-5A05-4AA0-AD45-FC850CD4C61B),
+		helpstring("DocumentOperationRasterImageRemoveHue Class")
+	]
+	coclass DocumentOperationRasterImageRemoveHue
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(6AF5FCC9-8F1C-48FC-8F87-D508AFA6A999),
+		helpstring("DocumentOperationRasterImageGreyscale Class")
+	]
+	coclass DocumentOperationRasterImageGreyscale
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(7B852CA0-DBEC-4233-9440-3089C8D5EC1C),
+		helpstring("DocumentOperationRasterImageAutoContrast Class")
+	]
+	coclass DocumentOperationRasterImageAutoContrast
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(FFE8308D-381F-4AF1-A4C3-0627B8CEF394),
+		helpstring("DocumentOperationRasterImageHLS Class")
+	]
+	coclass DocumentOperationRasterImageHLS
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(6BB54295-6014-4183-A1D8-A6EBC0C287F9),
+		helpstring("RasterImageEditToolsPhoto Class")
+	]
+	coclass RasterImageEditToolsPhoto
+	{
+		[default] interface IRasterImageEditToolsFactory;
+	};
+	[
+		uuid(BD100AC3-2AAE-4603-A93A-B5642F049B0A),
+		helpstring("SharedStateEditToolCrop Class")
+	]
+	coclass SharedStateEditToolCrop
+	{
+		[default] interface ISharedState;
+	};
+	[
+		uuid(F76FDC1F-D819-4D46-8663-3CF86540ED85),
+		helpstring("SharedStateEditToolClone Class")
+	]
+	coclass SharedStateEditToolClone
+	{
+		[default] interface ISharedState;
+	};
+	[
+		uuid(455E8F11-8FFF-446A-AF40-C323A6BCE66F),
+		helpstring("DocumentOperationRemoveNoise Class")
+	]
+	coclass DocumentOperationRemoveNoise
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(B840563F-6365-40EB-9438-1F84DB5B808F),
+		helpstring("DocumentOperationWatermark Class")
+	]
+	coclass DocumentOperationWatermark
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(70360EEA-7CCF-4510-91E7-6C6B4C9EB2AA),
+		helpstring("DocumentOperationRasterImageGlow Class")
+	]
+	coclass DocumentOperationRasterImageGlow
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(60BBDB95-4997-46D2-9F44-EC8F4773173B),
+		helpstring("DocumentOperationRasterImageVignetting Class")
+	]
+	coclass DocumentOperationRasterImageVignetting
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(0FACC56C-3804-4248-AF3A-6CCA235AA21D),
+		helpstring("DocumentOperationRasterImageSoftenSkin Class")
+	]
+	coclass DocumentOperationRasterImageSoftenSkin
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(770489CF-E77F-45C9-B2BA-3187C23836AA),
+		helpstring("DocumentOperationSeamCarving Class")
+	]
+	coclass DocumentOperationSeamCarving
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(715F55FB-C711-4E36-B39B-208EE2316128),
+		helpstring("DocumentOperationRasterImageUnsharpMask Class")
+	]
+	coclass DocumentOperationRasterImageUnsharpMask
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(D472128F-E98F-4776-84A8-30D9F558DA91),
+		helpstring("RasterImageFillStyleTexture Class")
+	]
+	coclass RasterImageFillStyleTexture
+	{
+		[default] interface IRasterImageFillStyleFactory;
+	};
+	[
+		uuid(E41ACEFC-8D7D-49CB-9C0E-2535AFA855A3),
+		helpstring("DocumentOperationRasterImageLevels Class")
+	]
+	coclass DocumentOperationRasterImageLevels
+	{
+		[default] interface IDocumentOperation;
+	};
+};

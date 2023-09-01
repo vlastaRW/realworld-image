@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="DocumentVectorImage Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{a22d17a1-878d-4cab-b2b3-6294e63d2138}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RWDocumentImageVector.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentFactoryVectorImage.cpp">
+      <Filter>DocumentVectorImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentVectorImage.cpp">
+      <Filter>DocumentVectorImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentVectorImageClipboard.cpp">
+      <Filter>DocumentVectorImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RWDocumentImageVector_i.c">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RWVersion.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentFactoryVectorImage.h">
+      <Filter>DocumentVectorImage Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentVectorImage.h">
+      <Filter>DocumentVectorImage Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentVectorImageUndo.h">
+      <Filter>DocumentVectorImage Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptedVectorImage.h">
+      <Filter>DocumentVectorImage Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\_inc\RWDocumentImageVector.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RWDocumentImageVector.def">
+      <Filter>Misc Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RWDocumentImageVector.rc">
+      <Filter>Misc Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="VectorImage.ico">
+      <Filter>DocumentVectorImage Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="..\_inc\RWDocumentImageVector.idl">
+      <Filter>Misc Files</Filter>
+    </Midl>
+  </ItemGroup>
+</Project>

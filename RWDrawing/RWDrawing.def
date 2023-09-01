@@ -1,0 +1,11 @@
+; RWDrawing.def : Declares the module parameters.
+
+LIBRARY      "RWDrawing.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+;	DllRegisterServer	PRIVATE
+;	DllUnregisterServer	PRIVATE
+;	DllInstall		PRIVATE
+	DllEnumClasses		PRIVATE

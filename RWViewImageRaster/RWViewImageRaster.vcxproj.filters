@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{9f993119-a0b5-4bdf-87bb-b15276af476a}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;cpp;c;cxx;def;odl;idl;hpj;bat;asm;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{aa18eaf3-3808-4fef-8ccc-1cb66449fc4a}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="RasterEdit Files">
+      <UniqueIdentifier>{331b14e5-ed2b-4352-bb17-89235ade7011}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterEdit Files\MenuCommandsGrid">
+      <UniqueIdentifier>{c23b6418-b6ce-4c07-b138-442d719bfd23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterEdit Files\MenuCommandsColor">
+      <UniqueIdentifier>{1b4ca869-c106-4595-9607-4ee0896494a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterEdit Files\MenuCommandsDrawingTools">
+      <UniqueIdentifier>{74f31849-4232-4b11-b476-a2a8926ebeb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterEdit Files\MenuCommandsDrawMode">
+      <UniqueIdentifier>{920d37d1-63cc-4b46-a91a-343994be5b75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterEdit Files\MenuCommandsSelectionDocument">
+      <UniqueIdentifier>{6c8bf18c-fa8e-4db6-b752-3a14288603dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterEdit Files\MouseGestures">
+      <UniqueIdentifier>{23e45cf0-724b-432b-a51d-e47cb79e9158}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterEdit Files\Tablet">
+      <UniqueIdentifier>{95143079-f013-4c31-81c7-5e64812c9007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterEdit Files\MenuCommandsFinishDrawing">
+      <UniqueIdentifier>{5aa03290-7503-48ae-822c-9dd4ed57fd41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterEdit Files\MenuCommandsFillStyle">
+      <UniqueIdentifier>{d2f7a53c-06d1-4c55-b211-a8bbb2b37411}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterEdit Files\MenuCommandsWindowRendering">
+      <UniqueIdentifier>{bf094a5a-4c11-4dc4-b5d8-0744716842af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterEdit Files\MenuCommandsComposedView">
+      <UniqueIdentifier>{75d323dd-a22d-40c7-a681-2154e3fd84dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterEdit Files\MenuCommandsCustomPresets">
+      <UniqueIdentifier>{7de437dd-e818-43aa-b528-d1c0d72d682f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RasterEdit Files\MenuCommandsOutlineStyle">
+      <UniqueIdentifier>{4437dc92-e5e4-4d53-8c9d-6e45b83df9b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EditToolProperties Files">
+      <UniqueIdentifier>{f68d493c-7193-4847-b2fb-aba36bcedb4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FillStyleProperties Files">
+      <UniqueIdentifier>{ab26ae41-9fa2-4456-a985-40a9af286448}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ColorSwatch Files">
+      <UniqueIdentifier>{328f0cd4-a83a-4063-9451-5b8d695e5348}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LayeredImage Files">
+      <UniqueIdentifier>{92c80120-7f88-4d76-84cc-bc5707792dbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LayeredImage Files\MenuCommandsLayerEffect">
+      <UniqueIdentifier>{d67f5636-d39a-466a-af95-a355343ddb6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LayeredImage Files\MenuCommandsManageLayers">
+      <UniqueIdentifier>{127a2fd9-cb64-4fd2-8ab8-6f3b124dafc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LayeredImage Files\MenuCommandsSwitchLayer Files">
+      <UniqueIdentifier>{f3ce56f0-53bf-4870-9131-d1960dd56ab9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LayeredImage Files\OperationRasterizeLayer Files">
+      <UniqueIdentifier>{d3719db0-20ab-494f-8bf6-c2cd1b66eb1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrawToolCmdLine Files">
+      <UniqueIdentifier>{32698154-649b-4e58-82c3-da14df1be8d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OutlineProperties Files">
+      <UniqueIdentifier>{103ef446-0b8e-4340-b7b6-df1dadf697c7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWVersion.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUIRasterEdit.h">
+      <Filter>RasterEdit Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigIDsRasterEdit.h">
+      <Filter>RasterEdit Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewFactoryRasterEdit.h">
+      <Filter>RasterEdit Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewRasterEdit.h">
+      <Filter>RasterEdit Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditToolNull.h">
+      <Filter>RasterEdit Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessorCount.h">
+      <Filter>RasterEdit Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterImageEditWindowCallbackHelper.h">
+      <Filter>RasterEdit Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SharedStateToolMode.h">
+      <Filter>RasterEdit Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCommandsGrid.h">
+      <Filter>RasterEdit Files\MenuCommandsGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCommandsSwapColors.h">
+      <Filter>RasterEdit Files\MenuCommandsColor</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCommandsDrawingTools.h">
+      <Filter>RasterEdit Files\MenuCommandsDrawingTools</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCommandsDrawMode.h">
+      <Filter>RasterEdit Files\MenuCommandsDrawMode</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCommandsSelectionDocument.h">
+      <Filter>RasterEdit Files\MenuCommandsSelectionDocument</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectionBlockingOperationContext.h">
+      <Filter>RasterEdit Files\MenuCommandsSelectionDocument</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectionDocument.h">
+      <Filter>RasterEdit Files\MenuCommandsSelectionDocument</Filter>
+    </ClInclude>
+    <ClInclude Include="GestureOperationManager.h">
+      <Filter>RasterEdit Files\MouseGestures</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCommandsConfigureGestures.h">
+      <Filter>RasterEdit Files\MouseGestures</Filter>
+    </ClInclude>
+    <ClInclude Include="pktdef.h">
+      <Filter>RasterEdit Files\Tablet</Filter>
+    </ClInclude>
+    <ClInclude Include="StylusSupport.h">
+      <Filter>RasterEdit Files\Tablet</Filter>
+    </ClInclude>
+    <ClInclude Include="wintab.h">
+      <Filter>RasterEdit Files\Tablet</Filter>
+    </ClInclude>
+    <ClInclude Include="WinTabWrapper.h">
+      <Filter>RasterEdit Files\Tablet</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCommandsFinishDrawing.h">
+      <Filter>RasterEdit Files\MenuCommandsFinishDrawing</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCommandsFillStyle.h">
+      <Filter>RasterEdit Files\MenuCommandsFillStyle</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCommandsWindowRendering.h">
+      <Filter>RasterEdit Files\MenuCommandsWindowRendering</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCommandsComposedView.h">
+      <Filter>RasterEdit Files\MenuCommandsComposedView</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUICustomTools.h">
+      <Filter>RasterEdit Files\MenuCommandsCustomPresets</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCommandsCustomTools.h">
+      <Filter>RasterEdit Files\MenuCommandsCustomPresets</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCommandsOutlineStyle.h">
+      <Filter>RasterEdit Files\MenuCommandsOutlineStyle</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUIEditToolProperties.h">
+      <Filter>EditToolProperties Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigIDsEditToolProperties.h">
+      <Filter>EditToolProperties Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewEditToolProperties.h">
+      <Filter>EditToolProperties Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewFactoryEditToolProperties.h">
+      <Filter>EditToolProperties Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewFactoryFillStyleProperties.h">
+      <Filter>FillStyleProperties Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewFillStyleProperties.h">
+      <Filter>FillStyleProperties Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewColorHistory.h">
+      <Filter>ColorSwatch Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewColorSwatch.h">
+      <Filter>ColorSwatch Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCommandsColorSwatch.h">
+      <Filter>ColorSwatch Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUILayerID.h">
+      <Filter>LayeredImage Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigGUILayerStyleSequence.h">
+      <Filter>LayeredImage Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HandleCoordinates.h">
+      <Filter>LayeredImage Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigureLayerEffectDlg.h">
+      <Filter>LayeredImage Files\MenuCommandsLayerEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCommandsLayerEffect.h">
+      <Filter>LayeredImage Files\MenuCommandsLayerEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCommandsSwitchLayer.h">
+      <Filter>LayeredImage Files\MenuCommandsSwitchLayer Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationRasterizeLayer.h">
+      <Filter>LayeredImage Files\OperationRasterizeLayer Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewDrawToolCmdLine.h">
+      <Filter>DrawToolCmdLine Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewFactoryDrawToolCmdLine.h">
+      <Filter>DrawToolCmdLine Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewFactoryOutlineProperties.h">
+      <Filter>OutlineProperties Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewOutlineProperties.h">
+      <Filter>OutlineProperties Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RWViewImageRaster.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RWViewImageRaster_i.c">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewFactoryRasterEdit.cpp">
+      <Filter>RasterEdit Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewRasterEdit.cpp">
+      <Filter>RasterEdit Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewRasterEditPainting.cpp">
+      <Filter>RasterEdit Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsHandleSize.cpp">
+      <Filter>RasterEdit Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsHideHandles.cpp">
+      <Filter>RasterEdit Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SharedStateImageEditor.cpp">
+      <Filter>RasterEdit Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SharedStateToolMode.cpp">
+      <Filter>RasterEdit Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsGrid.cpp">
+      <Filter>RasterEdit Files\MenuCommandsGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsSwapColors.cpp">
+      <Filter>RasterEdit Files\MenuCommandsColor</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsDrawingTools.cpp">
+      <Filter>RasterEdit Files\MenuCommandsDrawingTools</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsDrawMode.cpp">
+      <Filter>RasterEdit Files\MenuCommandsDrawMode</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsSelectionDocument.cpp">
+      <Filter>RasterEdit Files\MenuCommandsSelectionDocument</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectionDocument.cpp">
+      <Filter>RasterEdit Files\MenuCommandsSelectionDocument</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsConfigureGestures.cpp">
+      <Filter>RasterEdit Files\MouseGestures</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsFinishDrawing.cpp">
+      <Filter>RasterEdit Files\MenuCommandsFinishDrawing</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsFillStyle.cpp">
+      <Filter>RasterEdit Files\MenuCommandsFillStyle</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsWindowRendering.cpp">
+      <Filter>RasterEdit Files\MenuCommandsWindowRendering</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsComposedView.cpp">
+      <Filter>RasterEdit Files\MenuCommandsComposedView</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsCustomTools.cpp">
+      <Filter>RasterEdit Files\MenuCommandsCustomPresets</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsOutlineStyle.cpp">
+      <Filter>RasterEdit Files\MenuCommandsOutlineStyle</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewFactoryEditToolProperties.cpp">
+      <Filter>EditToolProperties Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewFactoryFillStyleProperties.cpp">
+      <Filter>FillStyleProperties Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewImageEffectEditor.cpp">
+      <Filter>LayeredImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewImageEffectPanel.cpp">
+      <Filter>LayeredImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewLayeredImageEditor.cpp">
+      <Filter>LayeredImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewLayerEffect.cpp">
+      <Filter>LayeredImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewLayers.cpp">
+      <Filter>LayeredImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsImageEffectManipulate.cpp">
+      <Filter>LayeredImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsImageEffectToggle.cpp">
+      <Filter>LayeredImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsLayerDefault.cpp">
+      <Filter>LayeredImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsLayerEffectCategory.cpp">
+      <Filter>LayeredImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsLayerEffectDelete.cpp">
+      <Filter>LayeredImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsLayerEffectModifiers.cpp">
+      <Filter>LayeredImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsLayerEffectMove.cpp">
+      <Filter>LayeredImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsToggleEffect.cpp">
+      <Filter>LayeredImage Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsLayerEffect.cpp">
+      <Filter>LayeredImage Files\MenuCommandsLayerEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsStyleClear.cpp">
+      <Filter>LayeredImage Files\MenuCommandsLayerEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsStyleImportExport.cpp">
+      <Filter>LayeredImage Files\MenuCommandsLayerEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsLayerBlending.cpp">
+      <Filter>LayeredImage Files\MenuCommandsManageLayers</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsLayerGrouping.cpp">
+      <Filter>LayeredImage Files\MenuCommandsManageLayers</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsLayerImportExport.cpp">
+      <Filter>LayeredImage Files\MenuCommandsManageLayers</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsLayerInsert.cpp">
+      <Filter>LayeredImage Files\MenuCommandsManageLayers</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsLayerMerge.cpp">
+      <Filter>LayeredImage Files\MenuCommandsManageLayers</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsLayerReorder.cpp">
+      <Filter>LayeredImage Files\MenuCommandsManageLayers</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsSwitchLayer.cpp">
+      <Filter>LayeredImage Files\MenuCommandsSwitchLayer Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationRasterizeLayer.cpp">
+      <Filter>LayeredImage Files\OperationRasterizeLayer Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewFactoryDrawToolCmdLine.cpp">
+      <Filter>DrawToolCmdLine Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewFactoryOutlineProperties.cpp">
+      <Filter>OutlineProperties Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RWViewImageRaster.def">
+      <Filter>Misc Files</Filter>
+    </None>
+    <None Include="DesignerViewFactoryEditToolProperties.rgs">
+      <Filter>EditToolProperties Files</Filter>
+    </None>
+    <None Include="DesignerViewFactoryFillStyleProperties.rgs">
+      <Filter>FillStyleProperties Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RWViewImageRaster.rc">
+      <Filter>Misc Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="StatusCoords.ico">
+      <Filter>RasterEdit Files</Filter>
+    </Image>
+    <Image Include="SwapColors.ico">
+      <Filter>RasterEdit Files\MenuCommandsColor</Filter>
+    </Image>
+    <Image Include="PresetAdd.ico">
+      <Filter>RasterEdit Files\MenuCommandsCustomPresets</Filter>
+    </Image>
+    <Image Include="PresetManage.ico">
+      <Filter>RasterEdit Files\MenuCommandsCustomPresets</Filter>
+    </Image>
+    <Image Include="NoPaint.ico">
+      <Filter>RasterEdit Files\MenuCommandsOutlineStyle</Filter>
+    </Image>
+    <Image Include="LayerOperation.ico">
+      <Filter>LayeredImage Files\MenuCommandsLayerEffect</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="RWViewImageRaster.idl">
+      <Filter>Misc Files</Filter>
+    </Midl>
+  </ItemGroup>
+</Project>

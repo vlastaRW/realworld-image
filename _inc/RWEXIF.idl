@@ -1,0 +1,118 @@
+// RWEXIF.idl : IDL source for RWEXIF
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (RWEXIF.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "RWBase.idl";
+import "RWConceptDesignerView.idl";
+import "RWConceptDesignerExtension.idl";
+import "RWProcessing.idl";
+import "RWScripting.idl";
+
+
+[
+	object,
+	uuid(979FC039-2904-44EF-984D-CA996D8B504C),
+	helpstring("IRWEXIF Interface"),
+	pointer_default(unique)
+]
+interface IRWEXIF : IUnknown
+{
+	[helpstring("method Load")] HRESULT Load([in] ULONG a_nSize, [in, size_is(a_nSize)] BYTE const* a_pData);
+	[helpstring("method Save")] HRESULT Save([in] IReturnedData* a_pData);
+	[helpstring("method ThumbnailGet")] HRESULT ThumbnailGet([in] IReturnedData* a_pData);
+	[helpstring("method ThumbnailSet")] HRESULT ThumbnailSet([in] ULONG a_nSize, [in, size_is(a_nSize)] BYTE const* a_pData);
+	[helpstring("method TagGetInt")] HRESULT TagGetInt([in] WORD a_nIFD, [in] WORD a_nTag, [in] ULONG a_nComponent, [out] LONG* a_n);
+	[helpstring("method TagSetInt")] HRESULT TagSetInt([in] WORD a_nIFD, [in] WORD a_nTag, [in] ULONG a_nComponent, [in] LONG a_n);
+	[helpstring("method TagGetFlt")] HRESULT TagGetFlt([in] WORD a_nIFD, [in] WORD a_nTag, [in] ULONG a_nComponent, [out] double* a_f);
+	[helpstring("method TagSetFlt")] HRESULT TagSetFlt([in] WORD a_nIFD, [in] WORD a_nTag, [in] ULONG a_nComponent, [in] double a_f);
+	[helpstring("method TagGetRat")] HRESULT TagGetRat([in] WORD a_nIFD, [in] WORD a_nTag, [in] ULONG a_nComponent, [out] LONG* a_nNom, [in] ULONG* a_nDenom);
+	[helpstring("method TagSetRat")] HRESULT TagSetRat([in] WORD a_nIFD, [in] WORD a_nTag, [in] ULONG a_nComponent, [in] LONG a_nNom, [in] ULONG a_nDenom);
+	[helpstring("method TagGetStr")] HRESULT TagGetStr([in] WORD a_nIFD, [in] WORD a_nTag, [out] BSTR* a_bstrText);
+	[helpstring("method TagSetStr")] HRESULT TagSetStr([in] WORD a_nIFD, [in] WORD a_nTag, [in] BSTR a_bstrText);
+	[helpstring("method TagDel")] HRESULT TagDel([in] WORD a_nIFD, [in] WORD a_nTag);
+	[helpstring("method TagGetAsText")] HRESULT TagGetAsText([in] WORD a_nIFD, [in] WORD a_nTag, [out] BSTR* a_pbstrText);
+	[helpstring("method TagSetAsText")] HRESULT TagSetAsText([in] WORD a_nIFD, [in] WORD a_nTag, [in] BSTR a_bstrText);
+	[helpstring("method TagGetName")] HRESULT TagGetName([in] WORD a_nIFD, [in] WORD a_nTag, [out] BSTR* a_pbstrName);
+	[helpstring("method TagFindByName")] HRESULT TagFindByName([in] BSTR a_bstrName, [out] WORD* a_pIFD, [out] WORD* a_pTag);
+};
+
+[
+	object,
+	uuid(AE5DFE9E-C0A0-4877-8A8A-D5A77AF8A169),
+	dual,
+	nonextensible,
+	helpstring("IScriptedEXIF Interface"),
+	pointer_default(unique)
+]
+interface IScriptedEXIF : IDispatch
+{
+	[propget, id(1), helpstring("property Exists")] HRESULT Exists([out, retval] VARIANT_BOOL* pVal);
+	[propput, id(1), helpstring("property Exists")] HRESULT Exists([in] VARIANT_BOOL newVal);
+	[id(2), helpstring("method GetValueByName")] HRESULT GetValueByName([in] BSTR tagName, [out, retval] BSTR/*VARIANT*/* pVal);
+	[id(3), helpstring("method SetValueByName")] HRESULT SetValueByName([in] BSTR tagName, [in] BSTR/*VARIANT*/ val);
+};
+
+
+
+[
+	uuid(955D4178-C757-420B-8C85-AD08BF7D984C),
+	version(1.0),
+	helpstring("RWEXIF 1.0 Type Library")
+]
+library RWEXIFLib
+{
+	importlib("stdole2.tlb");
+	importlib("RWBase.tlb");
+	importlib("RWConceptDesignerView.tlb");
+	importlib("RWConceptDesignerExtension.tlb");
+	importlib("RWProcessing.tlb");
+	importlib("RWScripting.tlb");
+
+	interface IScriptedEXIF;
+
+	[
+		uuid(786EB427-50E1-4C4F-B84F-2C642B6D7C16),
+		helpstring("DesignerViewFactoryEXIF Class")
+	]
+	coclass DesignerViewFactoryEXIF
+	{
+		[default] interface IDesignerViewFactory;
+	};
+	[
+		uuid(0D6D4400-0F76-489B-AFE0-9BB6DB51DD12),
+		helpstring("RWEXIF Class")
+	]
+	coclass RWEXIF
+	{
+		[default] interface IRWEXIF;
+	};
+	[
+		uuid(CE09F0A6-BD52-44A5-B51F-75A2EA2CF2CB),
+		helpstring("ScriptingInterfaceEXIF Class")
+	]
+	coclass ScriptingInterfaceEXIF
+	{
+		[default] interface IScriptingInterface;
+	};
+	[
+		uuid(092A3C19-FDD8-4098-9380-2BCAF0F137AC),
+		helpstring("DesignerViewFactoryEXIFTag Class")
+	]
+	coclass DesignerViewFactoryEXIFTag
+	{
+		[default] interface IDesignerViewFactory;
+	};
+	[
+		uuid(345343D6-79C3-45D7-B34E-880FE97797C2),
+		helpstring("MenuCommandsEXIF Class")
+	]
+	coclass MenuCommandsEXIF
+	{
+		[default] interface IDocumentMenuCommands;
+		interface IDesignerFrameIcons;
+	};
+};

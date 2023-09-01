@@ -1,0 +1,82 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ generated include file.
+// Used by RWViewImage.rc
+//
+#define IDS_PROJNAME                    100
+#define IDS_FRAMES_VIEWNAME             103
+#define IDS_OPINSERTFRAME_NAME          108
+#define IDS_OPREVERSEFRAMES_NAME        110
+#define IDS_CFGID_SELSYNCGROUP_NAME     112
+#define IDS_CFGID_SELSYNCGROUP_HELP     113
+#define IDS_CFGID_INSERT_POS_NAME       114
+#define IDS_CFGID_INSERT_POS_HELP       115
+#define IDS_CFGVAL_INSPOS_FIRST         116
+#define IDS_CFGVAL_INSPOS_LAST          117
+#define IDS_CFGVAL_INSPOS_BEFORE        118
+#define IDS_CFGVAL_INSPOS_AFTER         119
+#define IDS_CFGID_INSERT_COPY_NAME      120
+#define IDS_CFGID_INSERT_COPY_HELP      121
+#define IDS_DROPMSG_APPENDFRAMES        122
+#define IDS_VIEWNAME                    128
+#define IDS_CFGID_IMGVIEW_CUSTOMBACKGROUND_NAME 130
+#define IDS_CFGID_IMGVIEW_CUSTOMBACKGROUND_DESC 131
+#define IDS_CFGID_IMGVIEW_BACKGROUNDCOLOR_NAME 132
+#define IDS_CFGID_IMGVIEW_BACKGROUNDCOLOR_NAME2 133
+#define IDS_CFGID_IMGVIEW_BACKGROUNDCOLOR_DESC 133
+#define IDS_CUSTCFG_DEFAULTCOLOR        134
+#define IDS_CUSTCFG_MORECOLORS          135
+#define IDS_CFGID_IMGVIEW_AUTOZOOM_NAME 136
+#define IDS_CUSTCFG_COLORNAMES          137
+#define IDS_DEFAULTBACKGROUND           138
+#define IDS_CFGID_IMGVIEW_AUTOZOOM_DESC 139
+#define IDS_IV_CONTEXTHELP              140
+#define IDS_CFGID_IMGVIEW_MYVIEWPORT_NAME 141
+#define IDS_CFGID_IMGVIEW_MYVIEWPORT_DESC 142
+#define IDS_CFGID_IMGVIEW_CONTROLLEDVIEPORT_NAME 143
+#define IDS_CFGID_IMGVIEW_CONTROLLEDVIEPORT_DESC 144
+#define IDS_IV_CONTEXTHELP_CONTROLLED   145
+#define IDS_AF_CONTEXTHELP              146
+#define IDC_CGIMGVIEW_COLORBTN          202
+#define IDD_CONFIGGUI_IMGVIEW           203
+#define IDC_CGIMGVIEW_USECUSTOM         203
+#define IDC_CGID_SELECTION              203
+#define IDD_CONFIGGUI_INSERTFRAME       207
+#define IDD_CONFIGGUI_SYNCID            209
+#define IDC_CGIF_INSPOS_GRP             209
+#define IDC_CGIF_INSFIRST               210
+#define IDC_CGIF_INSLAST                211
+#define IDC_CGIF_INSBEFORE              212
+#define IDC_CGIF_INSAFTER               213
+#define IDC_CGIF_COPY                   214
+#define IDC_CGIF_SYNCID                 215
+#define IDC_CGIF_IMGSYNCID              216
+#define IDD_CUSTOMZOOM                  227
+#define IDC_CGIMGVIEW_AUTOZOOM          230
+#define IDC_CGIMGVIEW_VIEWSYNC          231
+#define IDC_CGIMGVIEW_CTRLSYNC          232
+#define IDC_ZOON                        233
+#define IDC_ZOOM                        234
+#define IDC_CGIMGVIEW_DRAWFRAME         235
+#define IDS_MENU_IMAGEZOOM              240
+#define IDS_MENU_ZOOMIN_NAME            241
+#define IDS_MENU_ZOOMIN_DESC            242
+#define IDS_MENU_ZOOMOUT_NAME           243
+#define IDS_MENU_ZOOMOUT_DESC           244
+#define IDS_MENU_ZOOMAUTO_NAME          245
+#define IDS_MENU_ZOOMAUTO_DESC          246
+#define IDS_MENU_ZOOMPOPUP_DESC         247
+#define IDS_MENU_ZOOMCUSTOM_NAME        248
+#define IDS_MENU_ZOOMCUSTOM_DESC        249
+#define IDS_MENU_ZOOMCONST_NAME         250
+#define IDS_MENU_ZOOMCONST_DESC         251
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        229
+#define _APS_NEXT_COMMAND_VALUE         32768
+#define _APS_NEXT_CONTROL_VALUE         236
+#define _APS_NEXT_SYMED_VALUE           124
+#endif
+#endif

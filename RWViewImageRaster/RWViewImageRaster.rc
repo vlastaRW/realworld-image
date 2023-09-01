@@ -1,0 +1,1572 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MENU_SWAPCOLORS     ICON                    "SwapColors.ico"
+IDI_PRESET_ADD          ICON                    "PresetAdd.ico"
+IDI_PRESET_MANAGE       ICON                    "PresetManage.ico"
+IDI_LAYER_OPERATION     ICON                    "LayerOperation.ico"
+IDI_STATUS_COORDS       ICON                    "StatusCoords.ico"
+IDI_NO_PAINT            ICON                    "NoPaint.ico"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Czech resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CSY)
+#ifdef _WIN32
+LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDITTOOL_NOOPTIONS DIALOGEX 0, 0, 100, 18
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "Nástroj nemá žádné volby.",IDC_ET_NOOPTIONS,5,5,90,8
+END
+
+IDD_CONFIGGUI_EDITTOOLPROPERTIES DIALOGEX 0, 0, 139, 12
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "&Synchronizaèní ID nástrojù:",-1,0,2,89,8
+    EDITTEXT        IDC_CGETP_SYNCGRP,99,0,40,12,ES_AUTOHSCROLL
+END
+
+IDD_CONFIGGUI_RASTEREDIT DIALOGEX 0, 0, 139, 121
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "ID nástroje:",IDC_STATIC,0,2,41,8
+    EDITTEXT        IDC_CGRE_SYNCGRP,41,0,26,12,ES_AUTOHSCROLL
+    LTEXT           "ID výbìru:",IDC_CGRE_SELECTIONIDLABEL,72,2,38,8
+    EDITTEXT        IDC_CGRE_SELECTIONID,113,0,26,12,ES_AUTOHSCROLL
+    LTEXT           "ID pohledu:",IDC_STATIC,0,18,38,8
+    EDITTEXT        IDC_CGRE_VIEWID,41,16,26,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Konfigurace gest",IDC_CGRE_GESTURES,72,15,67,14
+    LTEXT           "Vkládání:",IDC_CGRE_PASTELABEL,0,34,34,8
+    EDITTEXT        IDC_CGRE_PASTE,41,32,26,12,ES_AUTOHSCROLL
+    CHECKBOX        "Libovolný výbìr",IDC_CGRE_SELECTIONMASK,72,33,67,10
+    CHECKBOX        "&Automatický zoom",IDC_CGRE_AUTOZOOM,0,49,74,10
+    LTEXT           "&Møížka:",IDC_STATIC,75,50,24,8
+    COMBOBOX        IDC_CGRE_GRID,103,48,36,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Kontextové menu:",IDC_STATIC,0,66,60,8
+    COMBOBOX        IDC_CGRE_CONTEXTMENU,65,64,74,132,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_CGRE_SUBCONFIG,"Static",SS_BLACKRECT,0,80,139,41
+END
+
+IDD_CONFIGGUI_SELDOC DIALOGEX 0, 0, 145, 74
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CHECKBOX        "Celý obrázek",IDC_CG_ENTIREIMAGE,88,17,57,10
+    LTEXT           "Pøíkazy:",IDC_STATIC,0,18,30,8
+    COMBOBOX        IDC_CG_OPERATION,38,16,43,160,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_CG_OPCONFIG,"Static",SS_GRAYRECT,0,32,145,42
+    LTEXT           "ID obrazové masky:",IDC_STATIC,0,2,67,8
+    EDITTEXT        IDC_CG_IMAGEMASKID,72,0,73,12,ES_AUTOHSCROLL
+END
+
+IDD_CONFIGGUI_DRAWINGTOOLLIST DIALOGEX 0, 0, 139, 29
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "&Synchronizaèní ID nástrojù:",IDC_STATIC,0,2,89,8
+    EDITTEXT        IDC_CGTL_SYNCGRP,99,0,40,12,ES_AUTOHSCROLL
+    LTEXT           "Typ zobrazených nástrojù:",IDC_STATIC,0,18,87,8
+    EDITTEXT        IDC_CGTL_FILTER,99,16,40,12,ES_AUTOHSCROLL
+END
+
+IDD_MODIFYHANDLE DIALOGEX 0, 0, 184, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Upravit souøadnice vrcholu"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Souøadnice &X:",IDC_STATIC,7,9,46,8
+    EDITTEXT        IDC_MH_X,54,7,35,12,ES_AUTOHSCROLL
+    LTEXT           "Souøadnice &Y:",IDC_STATIC,95,9,46,8
+    EDITTEXT        IDC_MH_Y,142,7,35,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,26,170,1
+    LTEXT           "Poznámka: souøadnice bodu budou pøedány pøímo kreslicímu nástoji bez jakýcholi zaokrouhlení nebo korekcí. V pøípadì neplatných souøadnic není výsledek zaruèen.",IDC_STATIC,7,34,170,32
+    DEFPUSHBUTTON   "OK",IDOK,73,73,50,14
+    PUSHBUTTON      "Storno",IDCANCEL,127,73,50,14
+END
+
+IDD_CONFIGGUI_CUSTOMTOOL DIALOGEX 0, 0, 200, 141
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Jméno:",IDC_STATIC,0,2,25,8
+    EDITTEXT        IDC_CT_NAME,46,0,83,12,ES_AUTOHSCROLL
+    LTEXT           "Zkratka:",IDC_CT_SHORTCUTLABEL,139,2,30,8
+    EDITTEXT        IDC_CT_SHORTCUT,172,0,27,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Popis:",IDC_STATIC,0,18,42,8
+    EDITTEXT        IDC_CT_DESC,46,16,90,12,ES_AUTOHSCROLL
+    LTEXT           "Ikona:",IDC_CT_ICONIDLABEL,142,18,25,8
+    CONTROL         "",IDC_CT_ICONID,"ComboBoxEx32",CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP,170,16,29,167
+    PUSHBUTTON      "Button2",IDC_CT_OUTCOLOR,158,48,40,12
+    CHECKBOX        "Nástroj",IDC_CT_USETOOLID,0,65,46,10
+    EDITTEXT        IDC_CT_TOOLID,47,64,48,12,ES_AUTOHSCROLL
+    CHECKBOX        "Výplò",IDC_CT_USESTYLEID,103,65,46,10
+    EDITTEXT        IDC_CT_STYLEID,150,64,48,12,ES_AUTOHSCROLL
+    CHECKBOX        "",IDC_CT_USEBLENDMODE,0,33,10,10
+    COMBOBOX        IDC_CT_BLENDMODE,15,32,44,79,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CHECKBOX        "",IDC_CT_USERASTERMODE,70,33,10,10
+    COMBOBOX        IDC_CT_RASTERMODE,85,32,44,91,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CHECKBOX        "",IDC_CT_USECOORDSMODE,140,33,10,10
+    COMBOBOX        IDC_CT_COORDSMODE,155,32,44,86,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CHECKBOX        "Okraj",IDC_CT_USEOUTLINE,0,49,46,10
+    EDITTEXT        IDC_CT_OUTWIDTH,100,48,35,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_CT_TOOLCFG,"Static",SS_BLACKRECT | NOT WS_VISIBLE,0,79,96,62
+    CONTROL         "",IDC_CT_STYLECFG,"Static",SS_BLACKRECT | NOT WS_VISIBLE,103,79,96,62
+    CHECKBOX        "Povolit",IDC_CT_OUTENABLED,51,49,37,10
+    LTEXT           "px",IDC_STATIC,139,49,8,8
+END
+
+IDD_CONFIGGUI_CUSTOMTOOLS DIALOGEX 0, 0, 333, 167
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "ToolBar",IDC_CT_TOOLBAR,"ToolbarWindow32",0x994e,0,0,126,14
+    CONTROL         "",IDC_CT_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_EDITLABELS | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,0,14,126,129
+    CONTROL         "",IDC_CT_CONFIG,"Static",SS_BLACKRECT,131,0,202,143
+    CHECKBOX        "Schovat pøíkazy ""Pøidat"" a ""Spravovat""",IDC_CT_HIDEMANAGER,0,155,145,10
+    LTEXT           "ID stavu nástrojù:",IDC_CT_TOOLLABEL,186,156,67,8
+    EDITTEXT        IDC_CT_TOOLSYNC,255,154,78,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_CT_SEPLINE,"Static",SS_ETCHEDHORZ,0,148,333,1
+END
+
+IDD_MANAGECUSTOMTOOLS DIALOGEX 0, 0, 349, 206
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CONTEXTHELP | WS_EX_CONTROLPARENT
+CAPTION "Spravovat uživatelské pøedvolby"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,238,185,50,14
+    PUSHBUTTON      "Storno",IDCANCEL,292,185,50,14
+    CONTROL         "",IDC_RT_CONFIG,"Static",SS_BLACKRECT,0,0,349,185
+    PUSHBUTTON      "Nápovìda",IDHELP,7,185,50,14
+END
+
+IDD_ADDCUSTOMTOOL DIALOGEX 0, 0, 263, 179
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CONTEXTHELP | WS_EX_CONTROLPARENT
+CAPTION "Pøidat novou pøedvolbu"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,152,158,50,14
+    PUSHBUTTON      "Storno",IDCANCEL,206,158,50,14
+    CONTROL         "",IDC_RT_CONFIG,"Static",SS_BLACKRECT,0,0,263,158
+    PUSHBUTTON      "Nápovìda",IDHELP,7,158,50,14
+END
+
+IDD_FILLSTYLE_NOOPTIONS DIALOGEX 0, 0, 100, 18
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "Výplò nemá žádné volby.",IDC_ET_NOOPTIONS,5,5,90,8
+END
+
+IDD_FILLSTYLE_UNAPPLICABLE DIALOGEX 0, 0, 100, 18
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "Výplò není využitelná.",IDC_ET_NOOPTIONS,5,5,90,8
+END
+
+IDD_CONFIGURELAYEREFFECT DIALOGEX 0, 0, 350, 220
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CONTEXTHELP | WS_EX_CONTROLPARENT
+CAPTION "Konfigurovat styl vrstvy"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,239,199,50,14
+    PUSHBUTTON      "Storno",IDCANCEL,293,199,50,14
+    PUSHBUTTON      "Nápovìda",IDHELP,7,199,50,14
+    LTEXT           "Poøadí efektù:",IDC_STATIC,7,7,65,8
+    CONTROL         "",IDC_LE_SEQUENCE,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,7,19,110,71
+    LTEXT           "Náhled efektu:",IDC_LE_PREVIEWLABEL,7,93,105,8
+    CONTROL         "",IDC_LE_PREVIEW,"Static",SS_OWNERDRAW | SS_NOTIFY,7,105,108,87
+    CONTROL         "",IDC_LE_CONFIG,"Static",SS_BLACKRECT,117,21,232,178
+    CONTROL         "",IDC_LE_OPERATIONS,"SysListView32",LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_SHAREIMAGELISTS | LVS_AUTOARRANGE | WS_BORDER | WS_TABSTOP,124,19,219,173
+    CONTROL         "ToolBar",IDC_LE_TOOLBAR,"ToolbarWindow32",NOT WS_VISIBLE | 0x994e,124,7,219,14
+    LTEXT           "Kliknìte pro pøidání efektu:",IDC_LE_OPERATIONS_LABEL,124,7,140,8
+END
+
+IDD_ADDSWATCHES DIALOGEX 0, 0, 210, 65
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+CAPTION "Pøidat gradient do vzorníku"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,99,44,50,14
+    PUSHBUTTON      "Storno",IDCANCEL,153,44,50,14
+    LTEXT           "Poèáteèní barva:",IDC_STATIC,7,9,59,8
+    PUSHBUTTON      "Button1",IDC_ASG_COLOR1,68,7,35,12
+    LTEXT           "Koncová barva:",IDC_STATIC,110,9,57,8
+    PUSHBUTTON      "Button2",IDC_ASG_COLOR2,168,7,35,12
+    LTEXT           "Kroky gradientu vèetnì první a poslední barvy:",IDC_STATIC,7,26,156,8
+    EDITTEXT        IDC_ASG_STEP_EDIT,168,24,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_ASG_STEP_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,192,24,11,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_EDITTOOL_NOOPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 11
+    END
+
+    IDD_CONFIGGUI_EDITTOOLPROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 132
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 5
+    END
+
+    IDD_CONFIGGUI_RASTEREDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 132
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_CONFIGGUI_SELDOC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 138
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 67
+    END
+
+    IDD_CONFIGGUI_DRAWINGTOOLLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 132
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 22
+    END
+
+    IDD_MODIFYHANDLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 177
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_CONFIGGUI_CUSTOMTOOL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 134
+    END
+
+    IDD_CONFIGGUI_CUSTOMTOOLS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 326
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_MANAGECUSTOMTOOLS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 342
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+
+    IDD_ADDCUSTOMTOOL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 256
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 172
+    END
+
+    IDD_FILLSTYLE_NOOPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 11
+    END
+
+    IDD_FILLSTYLE_UNAPPLICABLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 11
+    END
+
+    IDD_CONFIGURELAYEREFFECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 343
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 213
+    END
+
+    IDD_ADDSWATCHES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_PROJNAME            "RWViewImageRaster"
+    IDS_NOSHORTCUT          "žádná"
+    IDS_MENU_LAYEREFFECT    "Vrstvený obrázek - efekt vrstvy"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_DRAWINGTOOLS   "Rastrový editor - kreslicí nástroje"
+    IDS_IMGEDIT_VIEWNAME    "Rastrový obrázek - 2D editor"
+    IDS_MENU_DRAWINGTOOL_DESC "Pøepnout na tento nástroj."
+    IDS_CLIPBOARDDATA_NAME  "výbìr obrázku"
+    IDS_MENU_DRAWMODE       "Rastrový editor - zpùsob kreslení"
+    IDS_CFGID_DRAWMODE_TYPE_NAME "Typ"
+    IDS_CFGID_DRAWMODE_TYPE_DESC 
+                            "Urèuje, který aspekt kreslicího módu bude kontrolován."
+    IDS_CFGVAL_DRAWMODE_RASTERIZATION "Rasterizace"
+    IDS_CFGVAL_DRAWMODE_BLENDING "Míchání s pozadím"
+    IDS_MENUCOMMANDSSELECTIONDOCUMENT_NAME 
+                            "Rastrový obrázek - pracovat s výbìrem"
+    IDS_CFGID_2DEDIT_TOOLSYNC_NAME "Synchronizace editaèních nástrojù"
+    IDS_CFGID_2DEDIT_TOOLSYNC_DESC 
+                            "Aktivní editovací nástroj bude synchronizován s ostaními náhledy ve stejné skupinì."
+    IDS_COLORPICKER_VIEWNAME "Rastrový editor - výbìr barvy"
+    IDS_CFGID_CLRPICK_COLORINDEX_NAME "Typ barvy"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_EDITTOOL_EXTRUSION  "Protažení"
+    IDS_CFGID_2DEDIT_CONTEXTMENU_NAME "Pøíkazy kontextového menu"
+    IDS_EDITTOOL_EMBOSS     "%s Na výsledný tvar pøidat efekt reliéfu."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_2DEDIT_COLOR1SYNC_NAME "Synchronizace barvy 1"
+    IDS_CFGID_2DEDIT_COLOR1SYNC_DESC 
+                            "Aktivní primární barva bude synchronizována s ostaními náhledy ve stejné skupinì."
+    IDS_CFGID_2DEDIT_COLOR2SYNC_NAME "Synchronizace barvy 2"
+    IDS_TOOLPROPS_VIEWNAME  "Rastrový editor - vlastnosti nástroje"
+    IDS_TOOL                "Nástroj"
+    IDS_CFGID_CLRPICK_GUITYPE_NAME "Typ rozhraní"
+    IDS_CFGID_CLRPICK_GUITYPE_DESC 
+                            "Urèuje, jakým zpùsoben budou barvy vizualizovány."
+    IDS_CFGVAL_CPGTYPE_SLIDERS "RGBA posuvníky a textová pole"
+    IDS_CFGVAL_CPGTYPE_AREAS "Odstín-saturace and svìtlost-alpha 2D oblasti"
+    IDS_CFGID_SUBCOMMANDS_NAME "Pøíkazy"
+    IDS_CFGID_SUBCOMMANDS_DESC "Vnitøní objekt pøíkazù menu."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_GRID           "Rastrový editor - møížka"
+    IDS_MENU_GRID0_NAME     "Žádná &møížka"
+    IDS_MENU_GRID0_DESC     "Nepoužívat žádnou møížku."
+    IDS_MENU_GRID1_NAME     "M&alá møížka"
+    IDS_MENU_GRID1_DESC     "Kreslit okraj každého pixelu nebo malých skupin pixelù."
+    IDS_MENU_GRID8_NAME     "V&elká møížka"
+    IDS_MENU_GRID8_DESC     "Zvýraznit okraj každé dlaždice."
+    IDS_MENU_CONFIGUREGESTURES "Rastrový editor - konfigurace gest"
+    IDS_MENU_COMPOSEDVIEW   "Rastrový editor - skládání obrázku"
+    IDS_MN_SHOWCOMPOSED     "Zobrazit všechny vrstvy"
+    IDS_MD_SHOWCOMPOSED     "Rastrový editor zobrazí výsledný obrázek složený ze všech vrstev."
+    IDS_MENU_WINDOWRENDERING "Rastrový editor - vykreslování okna"
+    IDS_MN_RENDERNEAREST    "Vysoká rychlost"
+    IDS_MD_RENDERNEAREST    "Použít barvu nejbližšího pixelu."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_TOOLLIST_FILTER_NAME "Zobrazené nástroje"
+    IDS_CFGID_TOOLLIST_FILTER_DESC "Urèuje, které nástroje budou k dispozici."
+    IDS_CFGVAL_TL_RAW       "Výchozí nástroje nejvýšší úrovnì"
+    IDS_CFGVAL_TL_HOTSPOT   "Nástroj pro nastavení aktivního bodu ukazatele"
+    IDS_CFGID_ALLIMAGEONOSEL_NAME "Celý obrázek"
+    IDS_CFGID_ALLIMAGEONOSEL_DESC 
+                            "Je-li povoleno a výbìr neexistuje, budou pøíkazy aplikovány na celý obrázek."
+    IDS_RE_CONTEXTHELP      "Toto okno umožòuje upravovat rastrové obrázky. Ovládání:\n - Nastavte zvìtšní pomocí koleèka myši. Posunujte obrázek tažením prostøedním tlaèítkem (koleèkem).  Klávesa CTRL = plynulé zvìtšení.\n - Levým tlaèítkem aktivujete kreslící nástroj. Klávesy SHIFT a CTRL mìní funkci nìkterých nástrojù.\n - Pravým tlaèítkem provádìjte gesta myši. Kliknutí pravým zobrazí kontextové menu."
+    IDS_HELP_COLORAREAHS    "Klinìte pro výbìr odstínu a saturace aktuální barvy. Aktuální barva je též ovlivnìna nastavením svìtlosti v sousední oblasti."
+    IDS_HELP_COLORAREALA    "Kliknìte pro výbìr svìtlosti barvy a hodnoty alfa kanálu."
+    IDS_CFGID_2DEDIT_COLOR2SYNC_DESC 
+                            "Aktivní vedlejší barva bude synchronizována s ostaními náhledy ve stejné skupinì."
+    IDS_MENU_COLOR          "Rastrový editor - barva"
+    IDS_MENU_COLOR1_NAME    "Hlavní"
+    IDS_MENU_COLOR1_DESC    "Barva používaná pøi kreslení levým tlaèítkem myši."
+    IDS_MENU_COLOR2_NAME    "Vedlejší"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_COLOR2_DESC    "Barva používaná pøi kreslení pravým tlaèítkem myši."
+    IDS_MENU_COLORSET_DESC  "Vybrat tuto barvu."
+    IDS_HELP_COLORSLIDER    "Nastavením posuvníku zmìníte hodnotu barevného kanálu aktuální barvy."
+    IDS_HELP_COLOREDIT      "Zadejte èíslo pro zmìnu hodnoty barevného kanálu aktuální barvy. Stisknìte Enter pro pøechod na další kanál."
+    IDS_MENU_RASTERSMOOTH_NAME "Vyhlazování"
+    IDS_MENU_RASTERSMOOTH_DESC 
+                            "Pixely mohou být èásteènì pokryté, což umožòuje vyhladit hrany objektù (antialiasing)."
+    IDS_MENU_RASTERBINARY_NAME "Bez vyhlazování"
+    IDS_MENU_RASTERBINARY_DESC 
+                            "Pixel je buï zcela pokrytý nebo není vùbec pokrytý, což mùže zpùsobovat hranaté okraje objektù."
+    IDS_MENU_BLENDOVER_NAME "Kreslit na"
+    IDS_MENU_BLENDOVER_DESC "Smíchá popøedí s pozadím. Toto nastavení se projeví pouze pokud je používána èásteènì prùhledná barva."
+    IDS_MENU_BLENDREPLACE_NAME "Nahradit"
+    IDS_MENU_BLENDREPLACE_DESC 
+                            "Zasažené pixely budou nahrazeny aktivní barvou nebo obrázkem."
+    IDS_MENU_BLENDUNDER_NAME "Kreslit pod"
+    IDS_MENU_BLENDUNDER_DESC 
+                            "Objekty budou kreselny pod aktuální pozadí. Objekty budou viditelné pouze pokud aktuální pozadí je alespoò èásteènì prùhledné."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_HELP_FINISH         "Kliknìte pro potvrzení zmìn a ukonèení aktuálního tvaru nebo operace."
+    IDS_HELP_SINGLELINE     "Táhnìte myší z poèáteèního do koncového bodu pro nakreslení èáry."
+    IDS_HELP_POLYLINE       "Táhnìte myší z poèáteèního do koncového bodu prvního segmentu lomené èáry. Poté kliknìte a potáhnìte znovu pro zadání následujícího segmentu. Použijte funkci Zpìt pro smazání posledního segmentu."
+    IDS_HELP_CONTURE        "Kreslit pouze obrys tvaru pomocí vybrané šíøky a barvy pera."
+    IDS_HELP_FILL           "Vyplnit tvar vybranou barvou."
+    IDS_HELP_ALTERNATEFILL  "Nakreslit obrys pomocí vybrané barvy a vyplnit tvar alternativní barvou."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_HELP_SOLIDCOLOR     "Kliknìte na pixel pro spuštìní vyplòování z tohoto bodu pomocí vybrané barvy."
+    IDS_HELP_GRADIENT       "Kliknìte na pixel a táhnìte myší pro urèení smìru gradientu pro vyplòování."
+    IDS_CFGID_2DEDIT_SELECTIONSYNC_NAME "Synchronizace výbìru"
+    IDS_CFGID_2DEDIT_SELECTIONSYNC_DESC 
+                            "Vybraná oblast v obrázku je dopstupná a sychronizována pøes zadané ID."
+    IDS_CFGID_2DEDIT_FILLSTYLESYNC_NAME "Synchronizace stylu vyplòování"
+    IDS_CFGID_2DEDIT_FILLSTYLESYNC_DESC 
+                            "Styl vyplòování je synchronizován pomocí zadaného ID."
+    IDS_CFGVAL_DRAWMODE_COORDINATES "Pøesnost souèadnic"
+    IDS_CFGVAL_DRAWMODE_SHAPEFILL "Vyplòování tvarù"
+    IDS_MENU_COORDSFLOAT_NAME "Libovolné souøadnice"
+    IDS_MENU_COORDSFLOAT_DESC 
+                            "Souøadnice kontrolních bodù mohou nabývat libovolných reálných hodnot."
+    IDS_MENU_COORDSINT_NAME "Celoèíselné souøadnice"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_COORDSINT_DESC "Souøadnice kontrolních bodù jsou omezeny na celoèíselné hodnoty."
+    IDS_MENU_SHAPEOUTLINE_NAME "Obrys"
+    IDS_MENU_SHAPEOUTLINE_DESC "Kreslit pouze okraje tvarù."
+    IDS_MENU_SHAPEFILL_NAME "Vyplnit"
+    IDS_MENU_SHAPEFILL_DESC "Nakreslené tvary budou vyplnìny barvou nebo vzorem."
+    IDS_MENU_SHAPECOMBINED_NAME "Kombinace"
+    IDS_MENU_SHAPECOMBINED_DESC "Kombinace obrysù a výplnì."
+    IDS_MENU_FINISHDRAWING  "Rastrový editor - dokonèit kreslení"
+    IDS_MENU_FINISHDRAWING_NAME "Dokonèit"
+    IDS_MENU_FINISHDRAWING_DESC 
+                            "Dokonèit kreslení s aktivním nástrojem a potvrdit zmìny."
+    IDS_CFGVAL_DRAWMODE_OUTLINEWIDTH "Šíøka obrysu"
+    IDS_MENU_OUTLINEINC_NAME "Zvìtšit šíøku obrysu"
+    IDS_MENU_OUTLINEINC_DESC 
+                            "Zvìtšit šíøku obrysu tvaru o 1 pixel nebo o 5 pixelù pokud je klávesa CTRL stisknuta."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_OUTLINEDEC_NAME "Zmenšit šíøku obrysu"
+    IDS_MENU_OUTLINEDEC_DESC 
+                            "Zmenšit šíøku obrysu tvaru o 1 pixel nebo o 5 pixelù pokud je klávesa CTRL stisknuta."
+    IDS_HELP_COLORAARRGGBB  "Zadejte barvu v šestnáctkovém webovém formátu jako RRGGBB nebo pøidejte i hodnotu alfa ve formátu AARRGGBB."
+    IDS_MENU_FILLSTYLE      "Rastrový editor - styl vyplòování"
+    IDS_MENU_SWAPCOLORS_NAME "Prohodit barvy"
+    IDS_MENU_SWAPCOLORS_DESC 
+                            "Prohodit hlavní a vedlejší barvy užívané pro upravování obrázkù."
+    IDS_MENU_SWAPCOLORS     "Rastrový editor - prohodit barvy"
+    IDS_FILLPROPS_VIEWNAME  "Rastrový editor - vlastnosti vyplòování"
+    IDS_CFGID_2DEDIT_VIEWPORTSYNC_NAME "Synchronizace zobrazení"
+    IDS_CFGID_2DEDIT_VIEWPORTSYNC_DESC 
+                            "Zvìtšení obrázku a pozice zobrazené èásti bude synchronizována pomocí zadaného stavu."
+    IDS_CFGID_2DEDIT_PASTETOOL_NAME "Zpracování funkce Vložit"
+    IDS_CFGID_2DEDIT_PASTETOOL_DESC 
+                            "Identifikátor kreslicího nástroje, který bude použit když dojde ke vložení obrázku nebo pøetažení na okno editoru."
+    IDS_CFGID_2DEDIT_CONTEXTMENU_DESC 
+                            "Objekt urèující, které pøíkazy budou zobrazeny v kontextovém menu okna."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MN_RENDERLINEAR     "Kompromis"
+    IDS_MD_RENDERLINEAR     "Použít barvu lineárnì interpolovanou z nìjbližších pixelù."
+    IDS_MN_RENDERCOVERAGE   "Vysoká kvalita"
+    IDS_MD_RENDERCOVERAGE   "Spoèítat pokrytí výsledného pixelu pro zmenšené obrázky."
+    IDS_MN_SHOWTRANSPARENT  "Zvýraznit aktivní vrstvu"
+    IDS_MD_SHOWTRANSPARENT  "Zobrazit vybranou vrstvu normálnì a ostatní s 50% krytím."
+    IDS_MN_SHOWLAYER        "Zobrazit pouze aktivní vrstvu"
+    IDS_MD_SHOWLAYER        "V rastrovém editoru se bude zobrazovat pouze vybraná vrstva bez efektù."
+    IDS_MN_RENDERINVERTED   "Zobrazit neplatné pixely"
+    IDS_MD_RENDERINVERTED   "Neplatné pixely mají prùhlednost na 100% a pøitom nejsou èerné. Tyto pixely se používají pro inverzi barvy pozadí v ukazatelích myši. V normálních obrázcích by nemìly být pøítomny."
+    IDS_GOID_UNDO           "Gesta - zpìt"
+    IDS_GOID_REDO           "Gesta - vpøed"
+    IDS_GOID_APPLY          "Gesta - dokonèit kreslení"
+    IDS_GOID_OUTLINE        "Gesta - obrys"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_GOID_DRAWMODE       "Gesta - zpùsob kreslení"
+    IDS_GOID_SWITCHSTYLE    "Gesta - styl vyplòování"
+    IDS_GOID_AUTOZOOM       "Gesta - automatické zvìtšení"
+    IDS_GOID_SWAPCOLORS     "Gesta - prohodit barvy"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_CONFIGUREGESTURES_NAME "Konfigurovat gesta"
+    IDS_MENU_CONFIGUREGESTURES_DESC 
+                            "Vyberte akci, která se provede když je rozpoznáno gesto myši v oknì rastrového editoru."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_HANDLECOORDINATES_NAME "Upravit souøadnice bodu..."
+    IDS_MENU_HANDLECOORDINATES_DESC 
+                            "Ruènì nastavit souøadnice kliknutého kontrolního bodu."
+    IDS_CFGID_2DEDIT_SELECTIONSUPPORT_NAME "Maska výbìru"
+    IDS_CFGID_2DEDIT_SELECTIONSUPPORT_DESC 
+                            "Je-li povoleno, bude okno schopno vytváøet a používat libovolné výbìry."
+    IDS_MENU_CUSTOMTOOLS    "Rastrový editor - vlastní pøedvolby"
+    IDS_MENU_OWCONST_DESC   "Nastavit šíøku okraje plochy na pøednastavenou hodnotu."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_OWPOPUP_DESC   "Ukazuje aktuální hodnotu šíøky okraje ploch."
+    IDS_LISTBUTTONNAMES     "Vytvoøit novou pøedvolbu|Duplikovat pøedvolbu|Smazat pøedvolbu|Posunout nahoru|Posunout dolù|Importovat pøedvolbu|Exportovat pøedvolbu|"
+    IDS_RWTOOLS_FILTER      "Pøedvolby kreslicích nástrojù"
+    IDS_RWTOOLS_OPEN        "Oveøít pøedvolbu kreslicího nástroje"
+    IDS_RWTOOLS_SAVE        "Uložit pøedvolbu kreslicího nástroje"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_CT_COMMANDNAME_NAME "Jméno"
+    IDS_CFGID_CT_COMMANDNAME_DESC 
+                            "Jméno položky zobrazené v menu nebo v lištì. Vícejazyèný formát je povolen."
+    IDS_CFGID_CT_COMMANDDESC_NAME "Popis"
+    IDS_CFGID_CT_COMMANDDESC_DESC 
+                            "Text zobrazený pro tuto položku ve stavovém øádku. Vícejazyèný formát je povolen."
+    IDS_CFGID_ICONID_NAME   "Ikona"
+    IDS_CFGID_ICONID_DESC   "Ikona zobrazená v menu nebo v lištì."
+    IDS_CFGID_CT_USECOLOR1_NAME "Nastav hlavní barvu"
+    IDS_CFGID_CT_COLOR1_NAME "Hlavní barva"
+    IDS_CFGID_CT_COLOR1_DESC "Hlavní barva bude nastavena na tuto barvu."
+    IDS_CFGID_CT_USECOLOR2_NAME "Nastav vedlejší barvu"
+    IDS_CFGID_CT_COLOR2_NAME "Vedlejší barva"
+    IDS_CFGID_CT_COLOR2_DESC "Vedlejší barva bude nastavena na tuto barvu."
+    IDS_CFGID_CT_ENABLER_DESC 
+                            "Je-li toto pole zaškrtnuto, bude odpovídající položka nastavena na zvolenou hodnotu pøi aktivaci pøíkazu."
+    IDS_CFGID_CT_USETOOLID_NAME "Nastav ID nástroje"
+    IDS_CFGID_CT_TOOLID_NAME "ID nástroje"
+    IDS_CFGID_CT_TOOLID_DESC "Identifikátor activního kreslicího nástroje."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_CT_USETOOLCONFIG_NAME "Nastav parametry nástroje"
+    IDS_CFGID_CT_TOOLCONFIG_NAME "Parametry nástroje"
+    IDS_CFGID_CT_TOOLCONFIG_DESC 
+                            "Parametry aktivního kreslicího nástroje (pokud nástroj podporuje pøenositelné parametery). Nemìòte toto pole, pokud nevíce, co dìláte."
+    IDS_CFGID_CT_USESTYLEID_NAME "Nastav ID stylu"
+    IDS_CFGID_CT_STYLEID_NAME "ID stylu"
+    IDS_CFGID_CT_STYLEID_DESC "Identifikátor aktivního stylu vyplòování."
+    IDS_CFGID_CT_USESTYLECONFIG_NAME "Nastav parametry stylu"
+    IDS_CFGID_CT_STYLECONFIG_NAME "Parametry stylu"
+    IDS_CFGID_CT_STYLECONFIG_DESC 
+                            "Parametry stylu aktivního stylyu vyplòování (pokud styl podporuje pøenositelné parametery). Nemìòte toto pole, pokud nevíce, co dìláte."
+    IDS_CFGID_CT_USEBLENDMODE_NAME "Nastav zpùsob míchání"
+    IDS_CFGID_CT_BLENDMODE_NAME "Zpùsob míchání"
+    IDS_CFGID_CT_BLENDMODE_DESC 
+                            "Zpùsob míchání urèuje, jak budou nové pixely zkombinovány se stávajícími."
+    IDS_CFGID_CT_USERASTERMODE_NAME "Nastav zpùsob rastrování"
+    IDS_CFGID_CT_RASTERMODE_NAME "Zpùsob rastrování"
+    IDS_CFGID_CT_RASTERMODE_DESC 
+                            "Zpùsob rastrování urèuje jemnost hran tvarù."
+    IDS_CFGID_CT_USEFILLMODE_NAME "Nastav zpùsob vyplòování"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_CT_FILLMODE_NAME "Zpùsob vyplòování"
+    IDS_CFGID_CT_FILLMODE_DESC 
+                            "Zpùsob vyplòování kotroluje, jak jsou tvrary vyplòovány a jestli mají obrys."
+    IDS_CFGID_CT_USECOORDSMODE_NAME "Nastav souøadnicový mód"
+    IDS_CFGID_CT_COORDSMODE_NAME "Souøadnicový mód"
+    IDS_CFGID_CT_COORDSMODE_DESC 
+                            "Souøadnicový mód urèuje, jestli budou tvary zarovnány na hranici pixelù."
+    IDS_CFGID_CT_COMMANDS_NAME "Pøíkazy"
+    IDS_CFGID_CT_COMMANDS_DESC "Poèet vlastních pøednastavených nástrojù."
+    IDS_CFGID_CT_HIDEMANAGER_NAME "Schovat správce"
+    IDS_CFGID_CT_HIDEMANAGER_DESC 
+                            "Nezobrazovat pøíkazy ""Pøidat vlastní pøedvolbu"" a ""Spravovat vlastní pøedvolby"" v menu. Zobrazení laze znovu povolit z konfigurace layoutu."
+    IDS_MN_ADDCUSTOMTOOL    "Pøidat vlastní pøedvolbu"
+    IDS_MD_ADDCUSTOMTOOL    "Uložit aktivní kreslicí nástroj a jeho nastavení pod vlastním jménem."
+    IDS_MN_MANAGECUSTOMTOOLS "Spravovat vlastní pøedvolby"
+    IDS_MD_MANAGECUSTOMTOOLS 
+                            "Pøidávat, odìbírat, upravovat, exportovat a importovat nastavení vlastních nástrojù."
+    IDS_CFGID_CT_USEOUTLINE_NAME "Nastav šíøku obrysu"
+    IDS_CFGID_CT_OUTLINE_NAME "Šíøka obrysu"
+    IDS_CFGID_CT_OUTLINE_DESC 
+                            "Šíøka obrysu nakresleného tvaru, pokud je obrys podporován a povolen."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_CT_COMMANDSHORTCUT_NAME "Klávesová zkratka"
+    IDS_CFGID_CT_COMMANDSHORTCUT_DESC 
+                            "Klávesová zkratka pro tuto položku v menu."
+    IDS_GOID_SWITCHTOOL     "Gesta - zmìnit nástroj"
+    IDS_CFGID_GESTUREOUTLINEDDELTA_NAME "Zmìna šíøky"
+    IDS_CFGID_GESTUREOUTLINEDDELTA_DESC 
+                            "Zadaná hodnota bude pøiètena k aktualní šíøce okrajù."
+    IDS_CFGID_GESTUREMODETYPE_NAME "Mód"
+    IDS_CFGID_GESTUREMODETYPE_DESC 
+                            "Urèuje, který z kreslicích módù bude zmìnìn."
+    IDS_GENERICERROR        "Provedení operace se nezdaøilo a byl vrácen chybový kód 0x%08x. Prosím ovìøte, že je dostatek volné pamìti a konfigurace operace je správná."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COLORSWATCH_VIEWNAME "Rastrový editor - vzorník barev"
+    IDS_HELP_COLORSWATCH    "Kliknutím na políèko nastavíte hlavní barvu. Podržte pøi kliknutí SHIFT pro nastavení vedlejší barvy. Kliknìte pravým pro smazání barvy."
+    IDS_MENU_DELETECOLORS_NAME "Smazat vlastní barvy"
+    IDS_MENU_DELETECOLORS_DESC 
+                            "Smazat celý vzorník vlastních barev. Doporuèeno pøed importem."
+    IDS_MENU_LOADCOLORS_NAME "Nahrát barvy"
+    IDS_MENU_LOADCOLORS_DESC "Importovat vzorník barev ze souboru."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_INSERTCOLORS_NAME "Pøidat barvy"
+    IDS_MENU_INSERTCOLORS_DESC "Pøidat nový barevný gradient."
+    IDS_MENU_PRESETCOLORS_DESC "Pøidat nové pøedvolené barvy."
+    IDS_MENU_PRESETCOLORS_DEFAULT "Výchozí barvy"
+    IDS_MENU_PRESETCOLORS_WINDOWS "Barvy Windows"
+    IDS_MENU_PRESETCOLORS_WEB "Barvy pro web"
+    IDS_MENU_SAVECOLORS_NAME "Uložit barvy"
+    IDS_MENU_SAVECOLORS_DESC "Exportovat vzorník barev do souboru."
+    IDS_DROPMSG_PASTEIMAGE  "Vložit tažený obrázek èi obrázky jako plovoucí výbìr."
+    IDS_FORMATFILTER_RWCS   "Vzorníky barev RealWorldu"
+    IDS_FORMATFILTER_ACO    "Vzorníky barev Photoshopu"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_HELP_FSCURVE        "Køivka urèuje mapování vzdálenosti na barvu. Bod pøidáte kliknutím a tažením na køivce a vybraný bod odstraníte klávesou Delete."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_MANAGELAYERS   "Vrstvený obrázek - správa vrstev"
+    IDS_MN_APPENDLAYER      "Vytvoøit rastrovou vrstvu"
+    IDS_MD_APPENDLAYER      "Vytvoøit novou rastrovou vrstvu a umístit ji nad stávající vrstvy."
+    IDS_MN_DELETELAYER      "Smazat vrstvu"
+    IDS_MD_DELETELAYER      "Odstranit vybrané vrstvy."
+    IDS_CFGID_COMMANDCODES_NAME "Kódy pøíkazù"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_COMMANDCODES_DESC 
+                            "Zvolte zobrazené pøíkazy: AR - pøidat rastrovou, IR - vložit rastrovou, C - duplikovat, D - smazat, ^ - nahoru, v - dolù, I - import, E - export, M - spojení, | - oddìlovaè"
+    IDS_MN_DUPLICATELAYER   "Duplikovat vrstvu"
+    IDS_MD_DUPLICATELAYER   "Vložit kopii vybrané vrstvy pøímo za ní."
+    IDS_LAYER_COPYOF        "Kopie - %s"
+    IDS_LAYER_MERGED        "Smíchaný"
+    IDS_MN_MOVELAYERUP      "Posunout vrstvu nahoru"
+    IDS_MN_MOVELAYERDOWN    "Posunout vrstvu dolù"
+    IDS_MD_MOVELAYER        "Prohodit pozice vrstev."
+    IDS_MN_IMPORTLAYER      "Importovat vrstvu..."
+    IDS_MD_IMPORTLAYER      "Pøidat obrázek z existujícího souboru jako novou vrstvu."
+    IDS_MN_EXPORTLAYER      "Exportovat vrstvu..."
+    IDS_MD_EXPORTLAYER      "Uložit obrázek z vybrané vrstvy do souboru."
+    IDS_MN_LAYEROPERATION   "Konfigurovat efekt vrstvy"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MD_LAYEROPERATION   "Zmìnit operaci (nebo sekvenci operací) aplikovanou na vybranou vrstvu."
+    IDS_HELP_COLORBUTTON    "Vyberte barvu z palety standardních barev nebo z bodu obrazovky."
+    IDS_CFGVAL_CPGTYPE_PICKER "Oblasti s nastavitelnými osami"
+    IDS_CFGVAL_CPGTYPE_COMPACT 
+                            "Kompaktní - tlaèítko a šestnáckové políèko barvy"
+    IDS_GLBCFG_COLOR_NAME   "Barvy"
+    IDS_GLBCFG_COLOR_DESC   "Vyberte, co má být zobrazeno v navídce tlaèítka pro rychlý výbìr barev a co v dialogovém oknì výbìru barev."
+    IDS_CFGID_GCC_BUTTONPAL_NAME "Paleta tlaèítka barvy"
+    IDS_CFGID_GCC_BUTTONPAL_DESC 
+                            "Barvy zobrazené v paletì tlaèítka pro výbìr barvy (mimo standardních)."
+    IDS_CFGID_GCC_FACTOR_NAME "Barevný rozsah"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_GCC_FACTOR_DESC 
+                            "Maximámní hodnota pro barvy. Doporuèené hodnoty jsou 1 (pøirozený HDR rozsah), 100 (rozsah v procentech) nebo 255 (klasický 8-bitový rozsah)."
+    IDS_CFGID_GCC_DECIMALS_NAME "Desetinná místa"
+    IDS_CFGID_GCC_DECIMALS_DESC 
+                            "Poèet míst za desetinnou èárkou. Zvyšte tuto hodnotu pro vyšší pøesnost pøi zadávání barev nebo když rozsah je nízký."
+    IDS_CFGID_GCC_DLGVIEW_NAME "Pohled pro barevný dialog"
+    IDS_CFGID_GCC_DLGVIEW_DESC 
+                            "Tento pohled bude použit ve standrdním dialogu pro výbìr barvy."
+    IDS_COLOR_CURRENTTOLAST "Kliknutím pøidáte aktuální barvu mezi naposled použité."
+    IDS_HELP_COLORHISTORY   "Toto okno zobrazuje nedávno použité barvy. Kliknìta na ètvereèek pro aktivaci jeho barvy. Podržte SHIFT pro volbu vedlejší barvy."
+    IDS_HELP_COLOR2DAREA    "Kliknìte myší nebo použijte klávesy šipek ke zmìnì barevných komponent komplementárních ke zvolené."
+    IDS_HELP_COLOR1DAREA    "Kliknìte myší nebo použijte klávesy nahoru a dolù ke zmìnì zvolené barevné komponenty."
+    IDS_HELP_COLORALPHAAREA "Kliknìte myší nebo použijte klávesy vlevo a vpravo ke zmìnì krytí (alfy)."
+    IDS_HELP_COLORCHANNEL   "Vyberte komponentu pro barevné oblasti vlevo."
+    IDS_HELP_COLORNUMBER    "Zadejte hodnotu pro barevnou komonentu. Rozsah a pøesnost lze zmìnit v nastaveních aplikace."
+    IDS_CFGVAL_CSGTYPE_SWATCH "Vzorník s výchozími a vlastními barvami"
+    IDS_CFGVAL_CSGTYPE_HISTORY "Vzorník s naposledy použitými barvami"
+    IDS_CFGID_CLRSWCH_SWATCHFLAGS_NAME "Vzorníky"
+    IDS_CFGID_CLRSWCH_SWATCHFLAGS_DESC "Kód zobrazených vzorníkù."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_STOCKCOLORS_NAME "Zabudované barvy"
+    IDS_MENU_STOCKCOLORS_DESC 
+                            "Vyberte, které zabudované barvy budou zobrazeny v oknì vzorníkù."
+    IDS_MENU_CUSTOMCOLORS_NAME "Vlastní barvy"
+    IDS_MENU_CUSTOMCOLORS_DESC 
+                            "Pøidávejte, odebírejte, importujte a exportujte vlastní barvy."
+    IDS_CFGID_GCC_GAMMA_NAME "Výchozí gama"
+    IDS_CFGID_GCC_GAMMA_DESC 
+                            "Gama korekce pøedpokládaná v pøípadech, kdy obrázek nemá barevný profil."
+    IDS_LAYEREFFECTTOOLBAR  "Kopírovat|Vložit| Vyèistit|Otevøít...|Uložit...|"
+    IDS_CFGID_CLRPICK_LABEL_NAME "Znaèka"
+    IDS_CFGID_CLRPICK_LABEL_DESC 
+                            "Text zobrazovaný pøed výbìrem barvy, je-li dostatek prostoru."
+END
+
+#endif    // Czech resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDITTOOL_NOOPTIONS DIALOGEX 0, 0, 100, 18
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "Tool has no options.",IDC_ET_NOOPTIONS,5,5,90,8
+END
+
+IDD_CONFIGGUI_EDITTOOLPROPERTIES DIALOGEX 0, 0, 125, 12
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Tool state sync ID:",-1,0,2,79,8
+    EDITTEXT        IDC_CGETP_SYNCGRP,85,0,40,12,ES_AUTOHSCROLL
+END
+
+IDD_CONFIGGUI_RASTEREDIT DIALOGEX 0, 0, 139, 121
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Tool ID:",IDC_STATIC,0,2,42,8
+    EDITTEXT        IDC_CGRE_SYNCGRP,43,0,22,12,ES_AUTOHSCROLL
+    LTEXT           "Selection:",IDC_CGRE_SELECTIONIDLABEL,72,2,44,8
+    EDITTEXT        IDC_CGRE_SELECTIONID,117,0,22,12,ES_AUTOHSCROLL
+    LTEXT           "Viewport:",IDC_STATIC,0,18,42,8
+    EDITTEXT        IDC_CGRE_VIEWID,43,16,22,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Gestures",IDC_CGRE_GESTURES,72,15,67,14
+    LTEXT           "Paste:",IDC_CGRE_PASTELABEL,0,34,42,8
+    EDITTEXT        IDC_CGRE_PASTE,43,32,22,12,ES_AUTOHSCROLL
+    CHECKBOX        "Selection mask",IDC_CGRE_SELECTIONMASK,72,33,67,10
+    CHECKBOX        "&Automatic zoom",IDC_CGRE_AUTOZOOM,0,49,71,10
+    LTEXT           "&Grid:",IDC_STATIC,75,50,29,8
+    COMBOBOX        IDC_CGRE_GRID,105,48,34,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Context menu:",IDC_STATIC,0,66,66,8
+    COMBOBOX        IDC_CGRE_CONTEXTMENU,67,64,72,135,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_CGRE_SUBCONFIG,"Static",SS_BLACKRECT,0,80,139,41
+END
+
+IDD_CONFIGGUI_SELDOC DIALOGEX 0, 0, 145, 74
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Commands:",IDC_STATIC,0,18,49,8
+    COMBOBOX        IDC_CG_OPERATION,50,16,28,160,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_CG_OPCONFIG,"Static",SS_GRAYRECT,0,32,145,42
+    CHECKBOX        "Entire image",IDC_CG_ENTIREIMAGE,83,17,62,10
+    LTEXT           "Image mask ID:",IDC_STATIC,0,2,66,8
+    EDITTEXT        IDC_CG_IMAGEMASKID,67,0,78,12,ES_AUTOHSCROLL
+END
+
+IDD_CONFIGGUI_DRAWINGTOOLLIST DIALOGEX 0, 0, 139, 29
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Tool state sync ID:",IDC_STATIC,0,2,91,8
+    EDITTEXT        IDC_CGTL_SYNCGRP,97,0,42,12,ES_AUTOHSCROLL
+    LTEXT           "Displayed drawing tools:",IDC_STATIC,0,18,91,8
+    EDITTEXT        IDC_CGTL_FILTER,97,16,42,12,ES_AUTOHSCROLL
+END
+
+IDD_MODIFYHANDLE DIALOGEX 0, 0, 184, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Modify Handle Coordinates"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "&X coordinate:",IDC_STATIC,7,9,51,8
+    EDITTEXT        IDC_MH_X,59,7,30,12,ES_AUTOHSCROLL
+    LTEXT           "&Y coordinate:",IDC_STATIC,95,9,51,8
+    EDITTEXT        IDC_MH_Y,147,7,30,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,26,170,1
+    LTEXT           "Note: handle coordinates will be sent to the tool exactly as entered, regardless of current coordinate mode. In case of invalid values, the results can be unexpected.",IDC_STATIC,7,34,170,32
+    DEFPUSHBUTTON   "OK",IDOK,73,73,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,127,73,50,14
+END
+
+IDD_MANAGECUSTOMTOOLS DIALOGEX 0, 0, 349, 206
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CONTEXTHELP | WS_EX_CONTROLPARENT
+CAPTION "Manage Custom Presets"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,238,185,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,292,185,50,14
+    CONTROL         "",IDC_RT_CONFIG,"Static",SS_BLACKRECT,0,0,349,185
+    PUSHBUTTON      "Help",IDHELP,7,185,50,14
+END
+
+IDD_ADDCUSTOMTOOL DIALOGEX 0, 0, 263, 179
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CONTEXTHELP | WS_EX_CONTROLPARENT
+CAPTION "Define Custom Preset"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,152,158,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,206,158,50,14
+    CONTROL         "",IDC_RT_CONFIG,"Static",SS_BLACKRECT,0,0,263,158
+    PUSHBUTTON      "Help",IDHELP,7,158,50,14
+END
+
+IDD_CONFIGGUI_CUSTOMTOOL DIALOGEX 0, 0, 200, 141
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Name:",IDC_STATIC,0,2,46,8
+    EDITTEXT        IDC_CT_NAME,47,0,77,12,ES_AUTOHSCROLL
+    LTEXT           "Shortcut:",IDC_CT_SHORTCUTLABEL,135,2,40,8
+    EDITTEXT        IDC_CT_SHORTCUT,176,0,23,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Description:",IDC_STATIC,0,18,46,8
+    EDITTEXT        IDC_CT_DESC,47,16,86,12,ES_AUTOHSCROLL
+    LTEXT           "Icon:",IDC_CT_ICONIDLABEL,141,18,27,8
+    CONTROL         "",IDC_CT_ICONID,"ComboBoxEx32",CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP,170,16,29,167
+    PUSHBUTTON      "Button2",IDC_CT_OUTCOLOR,158,48,40,12
+    CHECKBOX        "Edit tool",IDC_CT_USETOOLID,0,65,46,10
+    EDITTEXT        IDC_CT_TOOLID,47,64,48,12,ES_AUTOHSCROLL
+    CHECKBOX        "Fill style",IDC_CT_USESTYLEID,103,65,46,10
+    EDITTEXT        IDC_CT_STYLEID,150,64,48,12,ES_AUTOHSCROLL
+    CHECKBOX        "",IDC_CT_USEBLENDMODE,0,33,10,10
+    COMBOBOX        IDC_CT_BLENDMODE,15,32,44,79,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CHECKBOX        "",IDC_CT_USERASTERMODE,70,33,10,10
+    COMBOBOX        IDC_CT_RASTERMODE,85,32,44,91,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CHECKBOX        "",IDC_CT_USECOORDSMODE,140,33,10,10
+    COMBOBOX        IDC_CT_COORDSMODE,155,32,44,86,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CHECKBOX        "Outline",IDC_CT_USEOUTLINE,0,49,46,10
+    EDITTEXT        IDC_CT_OUTWIDTH,100,48,35,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_CT_TOOLCFG,"Static",SS_BLACKRECT | NOT WS_VISIBLE,0,79,96,62
+    CONTROL         "",IDC_CT_STYLECFG,"Static",SS_BLACKRECT | NOT WS_VISIBLE,103,79,96,62
+    CHECKBOX        "Enabled",IDC_CT_OUTENABLED,51,49,42,10
+    LTEXT           "px",IDC_STATIC,139,49,8,8
+END
+
+IDD_CONFIGGUI_CUSTOMTOOLS DIALOGEX 0, 0, 333, 167
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "ToolBar",IDC_CT_TOOLBAR,"ToolbarWindow32",0x994e,0,0,126,14
+    CONTROL         "",IDC_CT_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_EDITLABELS | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,0,14,126,129
+    CONTROL         "",IDC_CT_CONFIG,"Static",SS_BLACKRECT,131,0,202,143
+    CHECKBOX        "Hide ""Add"" and ""Manage"" menu entries",IDC_CT_HIDEMANAGER,0,155,159,10
+    LTEXT           "Tool state sync-ID:",IDC_CT_TOOLLABEL,186,156,67,8
+    EDITTEXT        IDC_CT_TOOLSYNC,255,154,78,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_CT_SEPLINE,"Static",SS_ETCHEDHORZ,0,148,334,1
+END
+
+IDD_FILLSTYLE_NOOPTIONS DIALOGEX 0, 0, 100, 18
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "Fill style has no options.",IDC_ET_NOOPTIONS,5,5,90,8
+END
+
+IDD_FILLSTYLE_UNAPPLICABLE DIALOGEX 0, 0, 100, 18
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "Fill style is not applicable.",IDC_ET_NOOPTIONS,5,5,90,8
+END
+
+IDD_ADDSWATCHES DIALOGEX 0, 0, 180, 65
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Gradient to Swatch"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,69,44,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,123,44,50,14
+    LTEXT           "Start color:",IDC_STATIC,7,9,44,8
+    PUSHBUTTON      "Button1",IDC_ASG_COLOR1,51,7,35,12
+    LTEXT           "End color:",IDC_STATIC,96,9,41,8
+    PUSHBUTTON      "Button2",IDC_ASG_COLOR2,138,7,35,12
+    LTEXT           "Gradient steps including first and last:",IDC_STATIC,7,26,129,8
+    EDITTEXT        IDC_ASG_STEP_EDIT,138,24,35,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_ASG_STEP_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,162,24,11,12
+END
+
+IDD_CONFIGURELAYEREFFECT DIALOGEX 0, 0, 350, 220
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CONTEXTHELP | WS_EX_CONTROLPARENT
+CAPTION "Configure Layer Style"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Effect sequence:",IDC_STATIC,7,7,65,8
+    CONTROL         "",IDC_LE_SEQUENCE,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,7,19,110,71
+    LTEXT           "Effect preview:",IDC_LE_PREVIEWLABEL,7,93,105,8
+    CONTROL         "",IDC_LE_PREVIEW,"Static",SS_OWNERDRAW | SS_NOTIFY,7,105,108,87
+    CONTROL         "",IDC_LE_CONFIG,"Static",SS_BLACKRECT,117,21,232,178
+    CONTROL         "",IDC_LE_OPERATIONS,"SysListView32",LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_SHAREIMAGELISTS | LVS_AUTOARRANGE | WS_BORDER | WS_TABSTOP,124,19,219,173
+    CONTROL         "ToolBar",IDC_LE_TOOLBAR,"ToolbarWindow32",NOT WS_VISIBLE | 0x994e,124,7,219,14
+    PUSHBUTTON      "Help",IDHELP,7,199,50,14
+    DEFPUSHBUTTON   "OK",IDOK,239,199,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,293,199,50,14
+    LTEXT           "Select an effect to add:",IDC_LE_OPERATIONS_LABEL,124,7,140,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MANAGECUSTOMTOOLS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 342
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+
+    IDD_ADDCUSTOMTOOL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 256
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 172
+    END
+
+    IDD_CONFIGGUI_CUSTOMTOOL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 134
+    END
+
+    IDD_CONFIGGUI_CUSTOMTOOLS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 326
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_ADDSWATCHES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 173
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_CONFIGURELAYEREFFECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 343
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 213
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""RWViewImageRaster.tlb""\r\n"
+    "#include ""RWVersion.h""\r\n"
+    "#include ""RWVersionInfo.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_PROJNAME            "RWViewImageRaster"
+    IDS_NOSHORTCUT          "None"
+    IDS_MENU_LAYEREFFECT    "Layered Image - Layer Effect"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_DRAWINGTOOLS   "Raster Editor - Edit Tools"
+    IDS_IMGEDIT_VIEWNAME    "Raster Image - 2D Editor"
+    IDS_MENU_DRAWINGTOOL_DESC "Switch to this tool."
+    IDS_CLIPBOARDDATA_NAME  "image selection"
+    IDS_MENU_DRAWMODE       "Raster Editor - Draw Mode"
+    IDS_CFGID_DRAWMODE_TYPE_NAME "Type"
+    IDS_CFGID_DRAWMODE_TYPE_DESC "Determines the aspect of the draw mode."
+    IDS_CFGVAL_DRAWMODE_RASTERIZATION "Rasterization mode"
+    IDS_CFGVAL_DRAWMODE_BLENDING "Blending mode"
+    IDS_MENUCOMMANDSSELECTIONDOCUMENT_NAME 
+                            "Raster Image - Work with Selection"
+    IDS_CFGID_2DEDIT_TOOLSYNC_NAME "Edit tools synchronization"
+    IDS_CFGID_2DEDIT_TOOLSYNC_DESC 
+                            "The active tool will be synchronized with other views in the same group."
+    IDS_COLORPICKER_VIEWNAME "Raster Editor - Color Picker"
+    IDS_CFGID_CLRPICK_COLORINDEX_NAME "Color type"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_EDITTOOL_EXTRUSION  "Extrusion"
+    IDS_CFGID_2DEDIT_CONTEXTMENU_NAME "Context Menu Commands"
+    IDS_EDITTOOL_EMBOSS     "%s Apply relief effect on the shape."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_2DEDIT_COLOR1SYNC_NAME "Color 1 synchronization"
+    IDS_CFGID_2DEDIT_COLOR1SYNC_DESC 
+                            "The active primary colors will be synchronized with other views in the same group."
+    IDS_CFGID_2DEDIT_COLOR2SYNC_NAME "Color 2 synchronization"
+    IDS_TOOLPROPS_VIEWNAME  "Raster Editor - Edit Tool Properties"
+    IDS_TOOL                "Tool"
+    IDS_CFGID_CLRPICK_GUITYPE_NAME "GUI type"
+    IDS_CFGID_CLRPICK_GUITYPE_DESC "Select how to visualize the colors."
+    IDS_CFGVAL_CPGTYPE_SLIDERS "RGBA sliders and edit boxes"
+    IDS_CFGVAL_CPGTYPE_AREAS "Hue-Saturation and Luminostity-Alpha 2D areas"
+    IDS_CFGID_SUBCOMMANDS_NAME "Commands"
+    IDS_CFGID_SUBCOMMANDS_DESC "Internal menu commands."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_GRID           "Raster Editor - Grid"
+    IDS_MENU_GRID0_NAME     "&No grid"
+    IDS_MENU_GRID0_DESC     "Do not use pixel grid."
+    IDS_MENU_GRID1_NAME     "&Small grid"
+    IDS_MENU_GRID1_DESC     "Draw a grid around pixels or small tiles."
+    IDS_MENU_GRID8_NAME     "&Large grid"
+    IDS_MENU_GRID8_DESC     "Draw grid around large tiles."
+    IDS_MENU_CONFIGUREGESTURES "Raster Editor - Configure Gestures"
+    IDS_MENU_COMPOSEDVIEW   "Raster Editor - Image Composition"
+    IDS_MN_SHOWCOMPOSED     "Show all layers"
+    IDS_MD_SHOWCOMPOSED     "Show the final image in the raster editor."
+    IDS_MENU_WINDOWRENDERING "Raster Editor - Window Rendering"
+    IDS_MN_RENDERNEAREST    "High speed"
+    IDS_MD_RENDERNEAREST    "Use color of nearest pixel."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_TOOLLIST_FILTER_NAME "Displayed tools"
+    IDS_CFGID_TOOLLIST_FILTER_DESC 
+                            "Controls which drawing tools will be available."
+    IDS_CFGVAL_TL_RAW       "Default top level tools"
+    IDS_CFGVAL_TL_HOTSPOT   "Cursor hot spot tool"
+    IDS_CFGID_ALLIMAGEONOSEL_NAME "Entire image"
+    IDS_CFGID_ALLIMAGEONOSEL_DESC 
+                            "If enabled and selection does not exist, the commands will apply to the entire image."
+    IDS_RE_CONTEXTHELP      "This view allows you to modify raster images using drawing tools. Controls:\n - Zoom in and out by rotating mouse wheel. Pan by dragging with middle button (wheel) pressed. CTRL = smooth zoom.\n - Left mouse button activates the current edit tool. SHIFT and CTRL keys modify behavior of some tools.\n - Use right mouse button to perform mouse gestures. Right-click for context menu."
+    IDS_HELP_COLORAREAHS    "Click to select hue and saturation values of the current color. The final color is also influenced by the luminance set in the second area."
+    IDS_HELP_COLORAREALA    "Click to select luminance and alpha values for the current color."
+    IDS_CFGID_2DEDIT_COLOR2SYNC_DESC 
+                            "The active secondary colors will be synchronized with other views in the same group."
+    IDS_MENU_COLOR          "Raster Editor - Color"
+    IDS_MENU_COLOR1_NAME    "Primary"
+    IDS_MENU_COLOR1_DESC    "Color used when drawing using left mouse button."
+    IDS_MENU_COLOR2_NAME    "Secondary"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_COLOR2_DESC    "Color used when drawing using right mouse button."
+    IDS_MENU_COLORSET_DESC  "Select this color."
+    IDS_HELP_COLORSLIDER    "Move the slider to modify a single color channel of the current color."
+    IDS_HELP_COLOREDIT      "Enter a number to set single color channel of the current color. Press Enter to go to next channel."
+    IDS_MENU_RASTERSMOOTH_NAME "Smoothing"
+    IDS_MENU_RASTERSMOOTH_DESC 
+                            "Pixels may be partially covered resulting in smooth edges (antialiasing)."
+    IDS_MENU_RASTERBINARY_NAME "No smoothing"
+    IDS_MENU_RASTERBINARY_DESC 
+                            "Pixel is either fully covered or not covered at all, resulting in jagged edges."
+    IDS_MENU_BLENDOVER_NAME "Paint over"
+    IDS_MENU_BLENDOVER_DESC "Blend foreground with background. This setting only applies when drawing with semitransparent color."
+    IDS_MENU_BLENDREPLACE_NAME "Replace"
+    IDS_MENU_BLENDREPLACE_DESC 
+                            "Replace affected pixels by foreground color or image."
+    IDS_MENU_BLENDUNDER_NAME "Paint under"
+    IDS_MENU_BLENDUNDER_DESC 
+                            "Paint objects under current background. Drawn object will be visible only if the current background is semitransparent."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_HELP_FINISH         "Click to apply the changes and finish the current drawing or operation."
+    IDS_HELP_SINGLELINE     "Drag with your mouse from start point to end point to draw a line."
+    IDS_HELP_POLYLINE       "Drag with your mouse from start point to end point to draw the first segment of a polyline. Then click and drag again to draw next segment of a polyline. Press Undo button to remove the last segment."
+    IDS_HELP_CONTURE        "Draw the outline of the shape only; with selected pen width and color."
+    IDS_HELP_FILL           "Fill the shape with the selected color."
+    IDS_HELP_ALTERNATEFILL  "Draw the outline with selected color and fill the interior with alternate color."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_HELP_SOLIDCOLOR     "Click on a pixel and to flood-fill from that pixel using the current color."
+    IDS_HELP_GRADIENT       "Click on a pixel and drag with mouse to set direction of a gradient for the flood-filling."
+    IDS_CFGID_2DEDIT_SELECTIONSYNC_NAME "Selection sync ID"
+    IDS_CFGID_2DEDIT_SELECTIONSYNC_DESC 
+                            "Image selection is synchronized by the given ID."
+    IDS_CFGID_2DEDIT_FILLSTYLESYNC_NAME "Fill style ID"
+    IDS_CFGID_2DEDIT_FILLSTYLESYNC_DESC 
+                            "Shape filling style is synchronized be the given ID."
+    IDS_CFGVAL_DRAWMODE_COORDINATES "Coordinates accuracy"
+    IDS_CFGVAL_DRAWMODE_SHAPEFILL "Shape filling"
+    IDS_MENU_COORDSFLOAT_NAME "Arbitrary coordinates"
+    IDS_MENU_COORDSFLOAT_DESC 
+                            "Coordinates of shapes' control points can have any real values."
+    IDS_MENU_COORDSINT_NAME "Integral coordinates"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_COORDSINT_DESC "Coordinates of shapes' control points are limited to integral values."
+    IDS_MENU_SHAPEOUTLINE_NAME "Outline"
+    IDS_MENU_SHAPEOUTLINE_DESC "Only draw outline of basic shapes."
+    IDS_MENU_SHAPEFILL_NAME "Filled"
+    IDS_MENU_SHAPEFILL_DESC "Shapes will be filled with solid color or brush."
+    IDS_MENU_SHAPECOMBINED_NAME "Combined"
+    IDS_MENU_SHAPECOMBINED_DESC "Draw shapes with outlines and fill."
+    IDS_MENU_FINISHDRAWING  "Raster Editor - Finish Drawing"
+    IDS_MENU_FINISHDRAWING_NAME "Apply"
+    IDS_MENU_FINISHDRAWING_DESC 
+                            "Finish using the current tool and apply the changes."
+    IDS_CFGVAL_DRAWMODE_OUTLINEWIDTH "Outline width"
+    IDS_MENU_OUTLINEINC_NAME "Increase outline width"
+    IDS_MENU_OUTLINEINC_DESC 
+                            "Increase width of shape outline by 1 pixel or by 5 pixels if CTRL key is down."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_OUTLINEDEC_NAME "Decrease outline width"
+    IDS_MENU_OUTLINEDEC_DESC 
+                            "Decrease width of shape outline by 1 pixel or by 5 pixels if CTRL key is down."
+    IDS_HELP_COLORAARRGGBB  "Enter color in hexadecimal web format as RRGGBB or include alpha channel using AARRGGBB format."
+    IDS_MENU_FILLSTYLE      "Raster Editor - Fill Style"
+    IDS_MENU_SWAPCOLORS_NAME "Swap colors"
+    IDS_MENU_SWAPCOLORS_DESC 
+                            "Swap primary and secondary colors used for image editing."
+    IDS_MENU_SWAPCOLORS     "Raster Editor - Swap Colors"
+    IDS_FILLPROPS_VIEWNAME  "Raster Editor - Fill Style Properties"
+    IDS_CFGID_2DEDIT_VIEWPORTSYNC_NAME "Viewport sync ID"
+    IDS_CFGID_2DEDIT_VIEWPORTSYNC_DESC 
+                            "Zoom and position of the visible part of the image will be synchronzied using given ID."
+    IDS_CFGID_2DEDIT_PASTETOOL_NAME "Paste Handler"
+    IDS_CFGID_2DEDIT_PASTETOOL_DESC 
+                            "Identifier of an edit tool that will be used when an image is pasted or dropped on the window."
+    IDS_CFGID_2DEDIT_CONTEXTMENU_DESC 
+                            "Object that controls the command in the window's context menu."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MN_RENDERLINEAR     "Balanced"
+    IDS_MD_RENDERLINEAR     "Use linear interpolation of pixel colors."
+    IDS_MN_RENDERCOVERAGE   "Best quality"
+    IDS_MD_RENDERCOVERAGE   "Compute coverage of pixels when viewing a zoomed out image."
+    IDS_MN_SHOWTRANSPARENT  "Emphasize active layer"
+    IDS_MD_SHOWTRANSPARENT  "Draw selected layer normally and other layers with opacity set to 50%."
+    IDS_MN_SHOWLAYER        "Show active layer only"
+    IDS_MD_SHOWLAYER        "Only show the selected layer without effects in the raster editor."
+    IDS_MN_RENDERINVERTED   "Show invalid pixels"
+    IDS_MD_RENDERINVERTED   "Invalid pixels have transparency set to 100% yet they are not black. These pixels are inverting background color if used on cursors. They should not be present in normal images."
+    IDS_GOID_UNDO           "Gestures - Undo"
+    IDS_GOID_REDO           "Gestures - Redo"
+    IDS_GOID_APPLY          "Gestures - Apply"
+    IDS_GOID_OUTLINE        "Gestures - Outline"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_GOID_DRAWMODE       "Gestures - Draw Mode"
+    IDS_GOID_SWITCHSTYLE    "Gestures - Fill Style"
+    IDS_GOID_AUTOZOOM       "Gestures - Automatic Zoom"
+    IDS_GOID_SWAPCOLORS     "Gestures - Swap Colors"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_CONFIGUREGESTURES_NAME "Mouse gestures..."
+    IDS_MENU_CONFIGUREGESTURES_DESC 
+                            "Specify actions to execute when a mouse gesture is detected in the raster image editor window."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_HANDLECOORDINATES_NAME "Handle coordinates..."
+    IDS_MENU_HANDLECOORDINATES_DESC 
+                            "Manually set coordinates of the clicked control handle."
+    IDS_CFGID_2DEDIT_SELECTIONSUPPORT_NAME "Selection mask"
+    IDS_CFGID_2DEDIT_SELECTIONSUPPORT_DESC 
+                            "If enabled, the view will be able to create and use arbitrary selections."
+    IDS_MENU_CUSTOMTOOLS    "Raster Editor - Custom Presets"
+    IDS_MENU_OWCONST_DESC   "Set outline width of a shape to the predefined value."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_OWPOPUP_DESC   "Indicates the currently used value for outline width."
+    IDS_LISTBUTTONNAMES     "Create new preset|Duplicate preset|Delete preset|Move up|Move down|Import preset|Export preset|"
+    IDS_RWTOOLS_FILTER      "Draw tool presets"
+    IDS_RWTOOLS_OPEN        "Open Draw Tool Preset"
+    IDS_RWTOOLS_SAVE        "Save Draw Tool Preset"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_CT_COMMANDNAME_NAME "Name"
+    IDS_CFGID_CT_COMMANDNAME_DESC 
+                            "Name of the item displayed in menu or toolbar. Multilanguage format is allowed."
+    IDS_CFGID_CT_COMMANDDESC_NAME "Description"
+    IDS_CFGID_CT_COMMANDDESC_DESC 
+                            "Text displayed in status bar for this item. Multilanguage format is allowed."
+    IDS_CFGID_ICONID_NAME   "Icon"
+    IDS_CFGID_ICONID_DESC   "Icon displayed in toolbar or menu."
+    IDS_CFGID_CT_USECOLOR1_NAME "Set primary color"
+    IDS_CFGID_CT_COLOR1_NAME "Primary color"
+    IDS_CFGID_CT_COLOR1_DESC "Primary color will be set to this color."
+    IDS_CFGID_CT_USECOLOR2_NAME "Set secondary color"
+    IDS_CFGID_CT_COLOR2_NAME "Secondary color"
+    IDS_CFGID_CT_COLOR2_DESC "Secondary color will be set to this color."
+    IDS_CFGID_CT_ENABLER_DESC 
+                            "If this option is enabled the related field will be set to the defined value when the command is activated."
+    IDS_CFGID_CT_USETOOLID_NAME "Set tool ID"
+    IDS_CFGID_CT_TOOLID_NAME "Tool ID"
+    IDS_CFGID_CT_TOOLID_DESC "Identifier of the active draw tool."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_CT_USETOOLCONFIG_NAME "Set tool config"
+    IDS_CFGID_CT_TOOLCONFIG_NAME "Tool config"
+    IDS_CFGID_CT_TOOLCONFIG_DESC 
+                            "Configuration of the active draw tool (if it supports persistent configuration). Do not change this field unless you know what you are doing."
+    IDS_CFGID_CT_USESTYLEID_NAME "Set style ID"
+    IDS_CFGID_CT_STYLEID_NAME "Style ID"
+    IDS_CFGID_CT_STYLEID_DESC "Identifier of the active fill style."
+    IDS_CFGID_CT_USESTYLECONFIG_NAME "Set style config"
+    IDS_CFGID_CT_STYLECONFIG_NAME "Style config"
+    IDS_CFGID_CT_STYLECONFIG_DESC 
+                            "Configuration of active fill style (if it supports persistent configuration). Do not change this field unless you know what you are doing."
+    IDS_CFGID_CT_USEBLENDMODE_NAME "Set blending mode"
+    IDS_CFGID_CT_BLENDMODE_NAME "Blending mode"
+    IDS_CFGID_CT_BLENDMODE_DESC 
+                            "Blending mode defines how are new pixels combined with the old ones."
+    IDS_CFGID_CT_USERASTERMODE_NAME "Set rasterization mode"
+    IDS_CFGID_CT_RASTERMODE_NAME "Rasterization mode"
+    IDS_CFGID_CT_RASTERMODE_DESC 
+                            "Rasterization mode controls the smoothness of shapes' edges."
+    IDS_CFGID_CT_USEFILLMODE_NAME "Set shape fill mode"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_CT_FILLMODE_NAME "Shape fill mode"
+    IDS_CFGID_CT_FILLMODE_DESC 
+                            "Shape fill mode controls how shapes are filled and if outline is drawn."
+    IDS_CFGID_CT_USECOORDSMODE_NAME "Set coordinates mode"
+    IDS_CFGID_CT_COORDSMODE_NAME "Coordinates mode"
+    IDS_CFGID_CT_COORDSMODE_DESC 
+                            "Coordinates mode controls whether draw shapes are aligned on pixel boundaries."
+    IDS_CFGID_CT_COMMANDS_NAME "Commands"
+    IDS_CFGID_CT_COMMANDS_DESC "Number of custom tool commands."
+    IDS_CFGID_CT_HIDEMANAGER_NAME "Hide manager"
+    IDS_CFGID_CT_HIDEMANAGER_DESC 
+                            "Hide the ""Add custom preset"" and ""Manage custom presets"" commands from menu. You can re-enable them from layout configuration later."
+    IDS_MN_ADDCUSTOMTOOL    "Add custom preset"
+    IDS_MD_ADDCUSTOMTOOL    "Save the currently selected tool and its configuration under you own custom name."
+    IDS_MN_MANAGECUSTOMTOOLS "Manage custom presets"
+    IDS_MD_MANAGECUSTOMTOOLS 
+                            "Add, remove, configure, export, and import custom tool configurations."
+    IDS_CFGID_CT_USEOUTLINE_NAME "Set outline width"
+    IDS_CFGID_CT_OUTLINE_NAME "Outline width"
+    IDS_CFGID_CT_OUTLINE_DESC 
+                            "Width of the outline of the drawn shape if the tool supports it and outlines are enabled."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_CT_COMMANDSHORTCUT_NAME "Shortcut"
+    IDS_CFGID_CT_COMMANDSHORTCUT_DESC 
+                            "Keyboard accelerator for this menu command."
+    IDS_GOID_SWITCHTOOL     "Gestures - Switch Tool"
+    IDS_CFGID_GESTUREOUTLINEDDELTA_NAME "Width delta"
+    IDS_CFGID_GESTUREOUTLINEDDELTA_DESC 
+                            "The specified value will be added to current outline width."
+    IDS_CFGID_GESTUREMODETYPE_NAME "Mode"
+    IDS_CFGID_GESTUREMODETYPE_DESC "Controls which draw mode will be changed."
+    IDS_GENERICERROR        "The attempted operation failed with error code 0x%08x. Please verify that there is enough free memory and that the configuration of the operation is correct."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COLORSWATCH_VIEWNAME "Raster Editor - Color Swatch"
+    IDS_HELP_COLORSWATCH    "Click to use this color as primary color. Hold down SHIFT for secondary color. Right-click on a color to delete it."
+    IDS_MENU_DELETECOLORS_NAME "Delete custom colors"
+    IDS_MENU_DELETECOLORS_DESC 
+                            "Clear all custom color swatches. Recommended before importing."
+    IDS_MENU_LOADCOLORS_NAME "Load colors..."
+    IDS_MENU_LOADCOLORS_DESC "Import color swatches from a file."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_INSERTCOLORS_NAME "Insert colors"
+    IDS_MENU_INSERTCOLORS_DESC "Add new color swatch gradient."
+    IDS_MENU_PRESETCOLORS_DESC "Add predefined color swatches."
+    IDS_MENU_PRESETCOLORS_DEFAULT "Default colors"
+    IDS_MENU_PRESETCOLORS_WINDOWS "Windows colors"
+    IDS_MENU_PRESETCOLORS_WEB "Web colors"
+    IDS_MENU_SAVECOLORS_NAME "Save colors..."
+    IDS_MENU_SAVECOLORS_DESC "Export current color swatches to a file."
+    IDS_DROPMSG_PASTEIMAGE  "Paste the dragged image(s) as a floating selection."
+    IDS_FORMATFILTER_RWCS   "RealWorld color swatches"
+    IDS_FORMATFILTER_ACO    "Photoshop color swatches"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_HELP_FSCURVE        "The curve controls mapping from distance to color. Add a point by clicking and dragging the curve. Delete selected point with Delete key."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_MANAGELAYERS   "Layered Image - Manage Layers"
+    IDS_MN_APPENDLAYER      "Create raster layer"
+    IDS_MD_APPENDLAYER      "Create new raster layer and place it on top of the other layers."
+    IDS_MN_DELETELAYER      "Delete layer(s)"
+    IDS_MD_DELETELAYER      "Remove selected layers."
+    IDS_CFGID_COMMANDCODES_NAME "Command codes"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_COMMANDCODES_DESC 
+                            "Define commands to show: AR - append raster, IR - insert raster, C - duplicate, D - delete, ^ - move up, v - move down, I - import, E - export, M - merge, | - separator"
+    IDS_MN_DUPLICATELAYER   "Duplicate layer"
+    IDS_MD_DUPLICATELAYER   "Insert a copy of the selected layer right after it."
+    IDS_LAYER_COPYOF        "Copy of %s"
+    IDS_LAYER_MERGED        "Merged"
+    IDS_MN_MOVELAYERUP      "Move layer up"
+    IDS_MN_MOVELAYERDOWN    "Move layer down"
+    IDS_MD_MOVELAYER        "Swap positions of layers."
+    IDS_MN_IMPORTLAYER      "Import layer..."
+    IDS_MD_IMPORTLAYER      "Add an existing image file as a new layer to the layered image."
+    IDS_MN_EXPORTLAYER      "Export layer..."
+    IDS_MD_EXPORTLAYER      "Save the image in selected layer into a file."
+    IDS_MN_LAYEROPERATION   "Configure layer effect"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MD_LAYEROPERATION   "Change an operation (or a sequence thereof) applied on the selected layer."
+    IDS_HELP_COLORBUTTON    "Select color from a palette of default colors or from a screen pixel."
+    IDS_CFGVAL_CPGTYPE_PICKER "Color areas with selectable axes"
+    IDS_CFGVAL_CPGTYPE_COMPACT "Compact - hexadecimal color code + button"
+    IDS_GLBCFG_COLOR_NAME   "Colors"
+    IDS_GLBCFG_COLOR_DESC   "Define what should be displayed on a color button popup palette and how should the color picker dialog look like."
+    IDS_CFGID_GCC_BUTTONPAL_NAME "Color button palette"
+    IDS_CFGID_GCC_BUTTONPAL_DESC 
+                            "Colors displayed in the color button's popup palette (beside the stadard ones)."
+    IDS_CFGID_GCC_FACTOR_NAME "Color range"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_GCC_FACTOR_DESC 
+                            "Maximum color value. Recommended values are 1 (the native HDR range), 100 (percent range), or 255 (classic 8-bit color)."
+    IDS_CFGID_GCC_DECIMALS_NAME "Decimal places"
+    IDS_CFGID_GCC_DECIMALS_DESC 
+                            "Number of places behind the decimal point. Increase this value for higher precision color accuracy or when range is low."
+    IDS_CFGID_GCC_DLGVIEW_NAME "Color picker view"
+    IDS_CFGID_GCC_DLGVIEW_DESC "The view used in color selection dialogs."
+    IDS_COLOR_CURRENTTOLAST "Click to add current color to last used colors."
+    IDS_HELP_COLORHISTORY   "This window displays recently used color. Click a box to select a color. Hold SHIFT to select the secondary color."
+    IDS_HELP_COLOR2DAREA    "Click with mouse or use arrow keys to change color components complementary to the selected one."
+    IDS_HELP_COLOR1DAREA    "Click with mouse or use up and down arrow keys to change the selected color component."
+    IDS_HELP_COLORALPHAAREA "Click with mouse or use left and right arrow keys to change color opacity (alpha)."
+    IDS_HELP_COLORCHANNEL   "Select color component used by the color areas to the left."
+    IDS_HELP_COLORNUMBER    "Enter value for a single color component. Range and accuracy can be set in application options."
+    IDS_CFGVAL_CSGTYPE_SWATCH "Swatch with default and custom colors"
+    IDS_CFGVAL_CSGTYPE_HISTORY "Swatch with last used colors"
+    IDS_CFGID_CLRSWCH_SWATCHFLAGS_NAME "Swatches"
+    IDS_CFGID_CLRSWCH_SWATCHFLAGS_DESC 
+                            "Flags of swatches dislayed in the window."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_STOCKCOLORS_NAME "Stock colors"
+    IDS_MENU_STOCKCOLORS_DESC 
+                            "Choose, what stock colors are visible in the swatch window."
+    IDS_MENU_CUSTOMCOLORS_NAME "Custom colors"
+    IDS_MENU_CUSTOMCOLORS_DESC 
+                            "Add, remove, import, and export custom colors."
+    IDS_CFGID_GCC_GAMMA_NAME "Default gamma"
+    IDS_CFGID_GCC_GAMMA_DESC 
+                            "Gamma correction value assumed when no color profile is assigned to an image."
+    IDS_LAYEREFFECTTOOLBAR  "Copy|Paste| Clear|Open...|Save...|"
+    IDS_CFGID_CLRPICK_LABEL_NAME "Label"
+    IDS_CFGID_CLRPICK_LABEL_DESC 
+                            "Text displayed before the color picker if there is enough space."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "RWViewImageRaster.tlb"
+#include "RWVersion.h"
+#include "RWVersionInfo.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,906 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1250)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_HOWTO_SHADOW        ICON                    "HowToShadow.ico"
+
+IDI_EDITTOOL_TEXTART    ICON                    "EditToolArtisticText.ico"
+
+IDI_EDITTOOL_ERASER     ICON                    "EditToolEraser.ico"
+
+IDI_EDITTOOL_STYLIZE    ICON                    "EditToolStylize.ico"
+
+IDI_FILLSTYLE_SOLID     ICON                    "FillStyleSolid.ico"
+
+IDI_FILLSTYLE_PATTERN   ICON                    "FillStylePattern.ico"
+
+IDI_FILLSTYLE_LINEAR    ICON                    "FillStyleLinear.ico"
+
+IDI_FILLSTYLE_RADIAL    ICON                    "FillStyleRadial.ico"
+
+IDI_FILLSTYLE_CONICAL   ICON                    "FillStyleConical.ico"
+
+IDI_STATUS_RECTSIZE     ICON                    "StatusRectSize.ico"
+
+IDI_FILLSTYLE_DIAMOND   ICON                    "FillStyleDiamond.ico"
+
+IDI_FILLSTYLE_SPHERE    ICON                    "FillStyleSphere.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDITTOOL_PENCIL DIALOGEX 0, 0, 100, 24
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "ToolBar",IDC_ET_PENCILSHAPE,"ToolbarWindow32",0x994e,5,5,90,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_EDITTOOL_PENCIL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 17
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Czech (Czech Republic) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CSY)
+LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDITTOOL_VISTAGLASS DIALOGEX 0, 0, 100, 48
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Rozostøit pozadí",IDC_ET_BLURBACKGROUND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,5,67,10
+    CONTROL         "Stín",IDC_ET_DROPSHADOW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,19,30,10
+    EDITTEXT        IDC_ET_SHADOWSIZE,38,18,16,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "px",IDC_ET_SHADOWSIZE_UNIT,56,20,9,8
+    EDITTEXT        IDC_ET_SHADOWDENSITY,69,18,16,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "%",IDC_ET_SHADOWDENSITY_UNIT,87,20,9,8
+    CONTROL         "Pøidat odrazy",IDC_ET_ADDREFLECTION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,33,59,10
+    CONTROL         "",IDC_ET_SEPLINE1,"Static",SS_ETCHEDHORZ | WS_GROUP,5,47,90,1
+END
+
+IDD_EDITTOOL_TEXT DIALOGEX 0, 0, 100, 112
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_ET_FONT,5,5,54,192,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_ET_SIZE,5,21,35,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_ET_SIZESPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,28,21,11,12
+    LTEXT           "Úhel:",IDC_STATIC,5,39,29,8
+    EDITTEXT        IDC_ET_ANGLE,41,37,27,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_ET_ANGLESPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,60,37,12,12
+    LTEXT           "°",IDC_ET_DEGREES,74,39,21,8
+    LTEXT           "Ohnutí:",IDC_STATIC,5,55,33,8
+    EDITTEXT        IDC_ET_BEND,39,53,29,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_ET_BENDSPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,60,53,12,12
+    LTEXT           "%",IDC_ET_BENDUNIT,74,55,8,8
+    CONTROL         "",IDC_ET_SEPLINE1,"Static",SS_ETCHEDHORZ | WS_GROUP,5,69,90,1
+    EDITTEXT        IDC_ET_TEXT,5,75,90,32,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    CONTROL         "ToolBar",IDC_ET_FONT_STYLE,"ToolbarWindow32",0x994e,65,5,30,12
+    CONTROL         "ToolBar",IDC_ET_ALIGN,"ToolbarWindow32",0x994e,44,21,51,12
+END
+
+IDD_EDITTOOL_SHADOW DIALOGEX 0, 0, 100, 134
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_ET_BLUR,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,0,5,100,18
+    LTEXT           "Ostrý stín",IDC_STATIC,5,24,35,8
+    RTEXT           "Mìkký stín",IDC_ET_BLURMAX,57,24,37,8
+    CONTROL         "",IDC_ET_SEPLINE1,"Static",SS_ETCHEDHORZ | WS_GROUP,5,36,90,1
+    LTEXT           "Hustota vpøedu:",IDC_STATIC,5,43,54,8
+    EDITTEXT        IDC_ET_NEARDENS,60,41,24,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_ET_NEARDENSSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,74,40,10,14
+    LTEXT           "%",IDC_ET_NEARDENSLABEL,87,43,8,8
+    LTEXT           "Hustota vzadu:",IDC_STATIC,5,59,50,8
+    EDITTEXT        IDC_ET_FARDENS,60,57,24,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_ET_FARDENSSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,74,56,10,14
+    LTEXT           "%",IDC_ET_FARDENSLABEL,87,59,8,8
+    ICON            "",IDC_ET_HELPIMAGE,30,96,20,20
+    CTEXT           "Tip: táhnìte ve smìru šipky.",IDC_ET_HELPTEXT,5,121,90,8,SS_WORDELLIPSIS
+END
+
+IDD_EDITTOOL_RETOUCH DIALOGEX 0, 0, 100, 39
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Efekt:",IDC_STATIC,5,7,27,8
+    COMBOBOX        IDC_ET_RETOUCHEFFECT,34,5,61,120,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Síla:",IDC_STATIC,5,23,27,8
+    EDITTEXT        IDC_ET_RETROUCHSTREDIT,34,21,48,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_ET_RETROUCHSTRSPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,70,21,12,12
+    LTEXT           "%",IDC_ET_RETROUCHSTRUNIT,87,23,8,8
+    CONTROL         "",IDC_ET_SEPLINE1,"Static",SS_ETCHEDHORZ | WS_GROUP,5,38,90,1
+END
+
+IDD_EDITTOOL_MOVESELECT DIALOGEX 0, 0, 100, 48
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Bez filtrování",IDC_ET_NOFILTERING,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,5,5,57,10
+    CONTROL         "Lineární filtrování",IDC_ET_LINEARFILTERING,"Button",BS_AUTORADIOBUTTON,5,19,71,10
+    CONTROL         "Kubické filtrování",IDC_ET_CUBICFILTERING,"Button",BS_AUTORADIOBUTTON,5,33,70,10
+END
+
+IDD_EDITTOOL_MAGICWAND DIALOGEX 0, 0, 100, 102
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "RGBA",IDC_ET_RGBA,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,5,5,34,10
+    CONTROL         "Odstín",IDC_ET_HUE,"Button",BS_AUTORADIOBUTTON,50,6,37,10
+    CONTROL         "Alfa",IDC_ET_ALPHA,"Button",BS_AUTORADIOBUTTON,5,19,29,10
+    CONTROL         "Jas",IDC_ET_BRIGHTNESS,"Button",BS_AUTORADIOBUTTON,50,19,27,10
+    CONTROL         "",IDC_ET_SEPLINE1,"Static",SS_ETCHEDHORZ | WS_GROUP,5,33,90,1
+    CONTROL         "Více zdrojových bodù",IDC_ET_MULTIPOINT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,38,91,10
+    CONTROL         "Spojité zvýhodnìní",IDC_ET_EDGESNAP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,52,80,10
+    CONTROL         "Vyhladit okraje oblasti",IDC_ET_EDGESMOOTH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,66,88,10
+    CONTROL         "",IDC_ET_SEPLINE2,"Static",SS_ETCHEDHORZ | WS_GROUP,5,80,90,1
+    LTEXT           "Tolerance:",IDC_STATIC,5,87,36,8
+    EDITTEXT        IDC_ET_TOLERANCE,43,85,41,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_ET_TOLERANCESPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,74,84,10,14
+    LTEXT           "%",IDC_ET_TOLERANCELABEL,87,87,8,8
+END
+
+IDD_EDITTOOL_FLOODFILL DIALOGEX 0, 0, 100, 88
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Jednoduché vyplòování",IDC_ET_SIMPLEFILL,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,5,5,91,10
+    CONTROL         "Vícebodové vyplòování",IDC_ET_MULTIPOINT,"Button",BS_AUTORADIOBUTTON,5,19,89,10
+    CONTROL         "",IDC_ET_SEPLINE1,"Static",SS_ETCHEDHORZ | WS_GROUP,5,33,90,1
+    CONTROL         "RGBA",IDC_ET_RGBA,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,5,38,34,10
+    CONTROL         "Odstín",IDC_ET_HUE,"Button",BS_AUTORADIOBUTTON,50,39,37,10
+    CONTROL         "Alfa",IDC_ET_ALPHA,"Button",BS_AUTORADIOBUTTON,5,52,29,10
+    CONTROL         "Jas",IDC_ET_BRIGHTNESS,"Button",BS_AUTORADIOBUTTON,50,52,27,10
+    CONTROL         "",IDC_ET_SEPLINE2,"Static",SS_ETCHEDHORZ | WS_GROUP,5,66,90,1
+    LTEXT           "Tolerance:",IDC_STATIC,5,73,35,8
+    EDITTEXT        IDC_ET_TOLERANCE,43,71,41,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_ET_TOLERANCESPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,74,70,10,14
+    LTEXT           "%",IDC_ET_TOLERANCELABEL,87,73,8,8
+END
+
+IDD_EDITTOOL_BRUSH DIALOGEX 0, 0, 100, 84
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Tvar:",IDC_STATIC,5,7,38,8
+    LTEXT           "Velikost:",IDC_STATIC,5,23,30,8
+    CONTROL         "",IDC_ET_SIZECHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,39,22,10,10
+    EDITTEXT        IDC_ET_SIZEEDIT,53,21,16,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_ET_SIZESPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,58,21,11,12
+    LTEXT           "pixely",IDC_ET_SIZEUNIT,74,23,21,8
+    LTEXT           "Pøechod:",IDC_ET_BLURLABEL,5,39,32,8
+    CONTROL         "",IDC_ET_BLURCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,39,38,10,10
+    EDITTEXT        IDC_ET_BLUREDIT,53,37,16,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_ET_BLURSPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,58,36,11,12
+    LTEXT           "%",IDC_ET_BLURUNIT,74,39,10,8
+    LTEXT           "Proud:",IDC_STATIC,5,55,23,8
+    CONTROL         "",IDC_ET_FLOWCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,39,54,10,10
+    EDITTEXT        IDC_ET_FLOWEDIT,53,53,16,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_ET_FLOWSPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,58,53,11,12
+    LTEXT           "%",IDC_ET_FLOWUNIT,74,55,10,8
+    CONTROL         "Rozptýlit",IDC_ET_SCATTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,69,26,10
+    CONTROL         "Otáèet",IDC_ET_ROTATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,37,69,26,10
+    CONTROL         "Zvìtšovat",IDC_ET_RESIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,69,69,26,10
+    CONTROL         "ToolBar",IDC_ET_BRUSHSHAPE,"ToolbarWindow32",0x994e,53,5,41,12
+    CONTROL         "Vyhlazování",IDC_ET_SMOOTHING_CHECK,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_DISABLED | WS_TABSTOP,5,83,60,10
+    CONTROL         "",IDC_ET_SMOOTHING_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | NOT WS_VISIBLE | WS_DISABLED | WS_TABSTOP,65,82,30,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_EDITTOOL_VISTAGLASS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 41
+    END
+
+    IDD_EDITTOOL_TEXT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 105
+    END
+
+    IDD_EDITTOOL_SHADOW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_EDITTOOL_MOVESELECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 41
+    END
+
+    IDD_EDITTOOL_MAGICWAND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_EDITTOOL_FLOODFILL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 81
+    END
+
+    IDD_EDITTOOL_BRUSH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_PROJNAME            "RWDrawing"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HELP_COLORBUTTON    "Vyberte barvu z palety standardních barev nebo z bodu obrazovky."
+    IDS_HELP_FSPATH         "Tvar bude vyplòen vzorem z vybraného souboru s obrázkem."
+    IDS_HELP_FSPATTERN      "Plocha bude vyplòena vybraným vzorem pomocí hlavní a vedlejší barvy."
+    IDS_OPENCUSTOMPATTERN   "Otevøít vlastní vyplòovací vzor"
+    IDS_BRUSHSHAPE_ROUND    "Kruh"
+    IDS_BRUSHSHAPE_SLASH    "Úhlopøíèka"
+    IDS_BRUSHSHAPE_SQUARE   "Ètverec"
+    IDS_FILLSTYLE_CONICAL_NAME "Úhlový gradient"
+    IDS_FILLSTYLE_LINEAR_NAME "Lineární gradient"
+    IDS_FILLSTYLE_PATTERN_NAME "Vyplnit vzorem"
+    IDS_FILLSTYLE_RADIAL_NAME "Radiální gradient"
+    IDS_FILLSTYLE_SOLID_NAME "Jednobarevná výplò"
+    IDS_HELP_ADDREFLECTION  "Obohatit kreselný tvar  pomocí svìtlejších a tmavších pruhù."
+    IDS_HELP_BEVELJOIN      "Ostrá hrana na spojení dvou èar bude oøíznuta."
+    IDS_HELP_BEZIERXFORM    "Obdélník je možno transformovat pomocí Bézierova plátu."
+    IDS_HELP_BLUR           "Urèuje ostrost stínu. Je doporuèeno použít ostøejší stíny pro malé obrázky a jemnìjší stíny pro velké."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HELP_MATCHRGBA      "Poèítat rozdíl pixelù podle rozdílù hodnot jednotlivých kanálù R, G, B, A."
+    IDS_HELP_MATCHHUE       "Poèítat rozdíl pixelù podle odstínu."
+    IDS_HELP_MATCHALPHA     "Poèítat rozdíl pixelù podle hodnoty alfa (prùhlednost)."
+    IDS_HELP_MATCHBRIGHTNESS "Poèítat rozdíl pixelù podle svìtlosti."
+    IDS_HELP_MULTIPOINT     "Ve vícebodovém režimu existuje nìkolik poèáteèních bodù vyplòování. Výsledná odchylka pixelu je minimum odchylek od jednotlivých poèáteèních bodù."
+    IDS_HELP_RETOUCHEFFECT  "Efekt aplikovaný na retušované pixely."
+    IDS_HELP_RETOUCHSTRENGTH 
+                            "Síla efektu aplikovaného na retušované pixely. Síla muže být negativní nebo vìtší než 100%."
+    IDS_HELP_MATCHALL       "Vyplnit každý pixel. Výsledek bude ovlivnìn pouze výbìrem."
+    IDS_HELP_SHADOWSIZE     "Velikost pøidaného stínu v pixelech."
+    IDS_HELP_SHADOWDENSITY  "Hustota stínu. Vyšší hodnoty znamenají výraznìjší stín."
+    IDS_HELP_GRADIENTSTOPPOS 
+                            "Nastavete pozici zastavení vybraného v gradientu nahoøe."
+    IDS_TOOLNAME_SELECT     "Jednoduchý výbìr"
+    IDS_TOOLDESC_SELECT     "Vyberte obdélníkovou oblast tažením myší. Podržte SHIFT a/nebo CTRL pro pøidání, odebrání nebo inverzi výbìru."
+    IDS_TOOLNAME_PENCIL     "Tužka"
+    IDS_TOOLDESC_PENCIL     "Mìnit barvu jednotlivých pixelù."
+    IDS_TOOLNAME_LINE       "Úseèka"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HELP_BLURBACKGROUND "Vytvoøit efekt skla rozmazáním pozadí pod poloprùhlednými oblastmi."
+    IDS_HELP_BRUSHBLUR      "Vyšší èísla zpùsobí jemnìjsí hrany kresleného vzoru."
+    IDS_HELP_BRUSHFLOW      "Maximální pokrytí každého kresleného vzoru."
+    IDS_HELP_BRUSHPRESSURE  "Je-li zaškrtnuto, parametr bude ovlivnìn tlakem na pero tabletu."
+    IDS_HELP_BRUSHSHAPE     "Typ vzoru ktesleného pøi pohubu štìtcem pøes plátno."
+    IDS_HELP_BRUSHSIZE      "Prùmìr nebo velikost opsaného ètverce vybraného vzoru."
+    IDS_HELP_BUTTCAP        "Èáry budou uøíznuty pøesnì v koncových bodech."
+    IDS_HELP_CLOSED         "Spojit první bod køivky nebo lomené èáry s posledním."
+    IDS_HELP_CUBICFILTERING "Metoda použitá pøi zvìtšování vybrané oblasti. Barva cílového pixelu je získána kubickou interpolací hodnot okolních zdrojových pixelù."
+    IDS_HELP_DASHPATTERN    "Je-li èerchování povoleno, vzor z až 32 znakù "" "" nebo ""-"" urèuje støídání èar a mezer na lince."
+    IDS_HELP_DEFAULTCOLORS  "Je-li povoleno, použije se jednoduchý gradient od primární do sekundární barvy. Je-li zakázáno, lze nadefinovat vlastní gradient."
+    IDS_HELP_DROPSHADOW     "Pøidat kreslenému tvaru stín."
+    IDS_HELP_EDGESMOOTH     "Výsledná oblast je vyhlazena a jsou odstranìny osamocené pixely."
+    IDS_HELP_EDGESNAP       "Tolerance je zvýšena pro spojité oblasti a snížena pro èlenité oblasti."
+    IDS_HELP_FARDENS        "Hustota promítnutého stínu na konci."
+    IDS_HELP_FONT           "Použijte ovládací prvky pro výbìr typu, stylu a velikosti písma."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HELP_FSCENTER       "Automaticky upravovat vlastnosti gradientu podle vyplòované plochy."
+    IDS_HELP_GRADIENTCTL    "Kliknìte na prázdném prostoru pro pøidání zastavení. Zastavení smažete odtažením ven. Vyberte zastavení kliknutím."
+    IDS_HELP_GRADIENTSTOPCLR 
+                            "Zvolte barvu zastavení vybraného v gradientu nahoøe."
+    IDS_HELP_NOFILTERING    "Metoda použitá pøi zmìnì velikosti vybrané oblasti. Barva cílového pixelu je pøevzata z nejbližšího zdrojového pixelu."
+    IDS_HELP_LINEARFILTERING 
+                            "Metoda použitá pøi zmìnì velikosti vybrané oblasti. Barva cílového pixelu je prùmìrem barev pokrytých zdrojových pixelù."
+    IDS_HELP_TEXT           "Napište text do tohoto okna a poté kliknìte v rastrovém editoru pro vykreslení textu pomocí zvoleného fontu."
+    IDS_HELP_WIDTH          "Šíøka linky mùže být libovolné kladné èíslo vèetnì necelých hodnot."
+    IDS_HELP_MITERJOIN      "Spojení dvou èar bude mít ostrou hranu."
+    IDS_HELP_ROUNDJOIN      "Spojení dvou èar bude zakulacené."
+    IDS_HELP_RADIUS         "Polomìr zakulacených rohù. Je-li nastaveno na 0, zùstanou rohy ostré."
+    IDS_HELP_SQUARECAP      "Krajní body linky budou ètvercové. Velikost ètverce je rovna šíøce èáry a ètverec je orientován podle smìru èáry."
+    IDS_HELP_ROUNDEDCAP     "Krajní body linky budou zakulacené. Prùmìr kruhu je roven šíøce èáry a kruh je umístìn v koncovém bodu."
+    IDS_HELP_TOLERANCE      "Urèuje maximální rozdíl mezi barvou prvnì kliknutého pixelu a právì vybarvovaného pixelu. Rozsah je od 0 do 100%."
+    IDS_HELP_NEARDENS       "Hustota promítnutého stínu na zaèátku."
+    IDS_HELP_RECTANGULARXFORM 
+                            "Obdélník je možno posunovat, škálovat ve smìrech X a Y a otáèet."
+    IDS_HELP_PERSPECTIVEXFORM 
+                            "Obdélník je možno namapovat na libovolný konvexní ètyøúhelník, který vznikne perspektivní projekcí pùvodního obélníku."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TOOLDESC_POLYGON    "Vrchol n-úhelníku lze pøidat tažením kontrolního bodu uprostøed hrany."
+    IDS_TOOLNAME_TRANSFORMATION "Transformace"
+    IDS_TOOLDESC_TRANSFORMATION 
+                            "Posunovat, otáèet, mìnit velikost nebo perspektivnì deformovat vybranou èást obrázku."
+    IDS_TOOLNAME_MAGICWAND  "Kouzelná hùlka"
+    IDS_TOOLDESC_MAGICWAND  "Vybrat oblast podobnou jako kliknutý pixel. Podržte CTRL a/nebo SHIFT pro zkombinování nového výbìru s pùvodním."
+    IDS_TOOLNAME_SIMPLESELECT "Pøesun a zmìna velikosti"
+    IDS_TOOLDESC_SIMPLESELECT 
+                            "Vybírat, mìnit velikost a pøesunovat obdélníkové oblasti obrázku."
+    IDS_TOOLNAME_BRUSH      "Štìtec"
+    IDS_TOOLDESC_BRUSH      "Malovat štìtcem pomocí myši nebo tabletu."
+    IDS_TOOLNAME_ERASER     "%s - mazání"
+    IDS_TOOLDESC_ERASER     "Použít nástoj ""%s"" pro mazání pixelù namísto jejich kreslení (prùhlednost pixelù bude nastavena na maximum)."
+    IDS_TOOLNAME_RETOUCH    "Retušovat: %s"
+    IDS_TOOLDESC_RETOUCH    "Aplikovat vybranou úpravu na oblast vymezenou nástrojem ""%s""."
+    IDS_TOOLNAME_METASELECT "%s - výbìr"
+    IDS_TOOLDESC_METASELECT "Upravit výbìr pomocí nástroje ""%s"". Podržte SHIFT, CTRL nebo oba pro pøidání, zámìnu nebo odebrání oblasti z výbìru."
+    IDS_TOOLNAME_STYLIZE    "%s s efekty"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TOOLDESC_LINE       "Kreslit jednoduché nebo lomené èáry. Èáru lze rozdìlit tažením kontrolního bodu uprostøed segmentu èáry."
+    IDS_TOOLNAME_RECTANGLE  "Obdélník"
+    IDS_TOOLDESC_RECTANGLE  "Kreslit ètverce nebo obdélníky se zvoleným zaoblením rohù."
+    IDS_TOOLNAME_FLOODFILL  "Vyplòovat"
+    IDS_TOOLDESC_FLOODFILL  "Vyplnit pixely podobné kliknutému pixelu."
+    IDS_TOOLNAME_DROPPER    "Nasát barvu"
+    IDS_TOOLDESC_DROPPER    "Nastavte hlavní barvu klinutím na pixel obrázku. Podržte Shift pro nastavení vedlejší barvy."
+    IDS_TOOLNAME_ELLIPSE    "Elipsa"
+    IDS_TOOLDESC_ELLIPSE    "Kreslit kružnice nebo elipsy."
+    IDS_TOOLNAME_TEXT       "Text"
+    IDS_TOOLDESC_TEXT       "Text lze psát pøímo v oknì rastrového editoru."
+    IDS_TOOLNAME_CURVE      "Køivka"
+    IDS_TOOLDESC_CURVE      "Kreslit køivku procházející danými body. Nový bod lze pøidat tažením kontrolního bodu uprostøed segmentu èáry."
+    IDS_TOOLNAME_PSHADOW    "Vržený stín"
+    IDS_TOOLDESC_PSHADOW    "Táhnìte myší z bodu, kde se objekt dotýká podkladu smìrem nahoru pro vytvoøení vrženého stínu."
+    IDS_TOOLNAME_POLYGON    "N-úhelník"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TOOLDESC_STYLIZE    "%s Aplikovat efekty stínu, rozmazání a odrazu."
+    IDS_TOOLNAME_ALPHA      "Alfa podle jasu pomocí: %s"
+    IDS_PENCILSHAPES        "Jeden pixel|Ètverec 3x3|Ètverec 5x5|Kruh 3x3|Kruh 5x5|Kosoètverec 5x5|Úhlopøíèka 3px|Úhlopøíèka 5px|"
+    IDS_RETOUCH_ADD         "Pøièíst barvu"
+    IDS_RETOUCH_BRIGHTEN    "Zesvìtlit"
+    IDS_RETOUCH_DARKEN      "Ztmavit"
+    IDS_RETOUCH_DESATURATE  "Desaturovat"
+    IDS_RETOUCH_MUL         "Vynásobit barvou"
+    IDS_RETOUCH_REPLACEHUE  "Obarvit"
+    IDS_RETOUCH_SHARPEN     "Zaostøit"
+    IDS_RETOUCH_SOFTEN      "Vyhladit"
+    IDS_ET_TEXTALIGNMENTS   "Doleva|Na støed|Doprava|"
+    IDS_MENU_DELETEVERTEX_DESC 
+                            "Odstranit vrchol pøiøazený ke kliknutému kontrolnímu bodu."
+    IDS_MENU_DELETEVERTEX_NAME "Odstranit vrchol"
+    IDS_MENU_RESTORESELECTION_DESC "Nastavit zvìtšení výbìru na 100%."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MENU_RESTORESELECTION_NAME "Pùvodní velikost výbìru"
+    IDS_MENU_STRETCHSELECTION_DESC 
+                            "Roztáhnout vybranou oblast na celý obrázek."
+    IDS_MENU_STRETCHSELECTION_NAME "Roztáhnout výbìr na okno"
+    IDS_POINTDESC_POLYLINEEDGE 
+                            "Tažením tohoto bodu rozpùlíte pøiøazenou hranu lomené èáry."
+    IDS_POINTDESC_POLYLINEVERTEX 
+                            "Tažením bodu zmìníte pozici pøiøazeného vrcholu. Odtažením na sousední vrchol tento smažete. Kliknìte pravým pro další možnosti."
+    IDS_TOOLNAME_MOVE       "Pøesunutí"
+    IDS_TOOLDESC_MOVE       "Tažením myší se posune celý obrázek. Okraje lze buï vyplnit zvolenou barvou nebo se obrázek obtoèí."
+    IDS_MENU_CROP2SELECTION_NAME "Oøíznout na výbìr"
+    IDS_MENU_CROP2SELECTION_DESC 
+                            "Nahradit celý obrázek (resp. vrstvu) aktuálním plovoucím výbìrem."
+    IDS_TOOLNAME_FILL       "Vyplnit"
+    IDS_TOOLDESC_FILL       "Vyplnit celý obrázek (nebo vybranou oblast) pomocí aktuálního stylu vyplòování."
+    IDS_TOOLNAME_LASSO      "Laso"
+    IDS_TOOLDESC_LASSO      "Urèit tvar nakreslením jeho obrysu myší."
+    IDS_FILLSTYLE_DIAMOND_NAME "Diamantový gradient"
+    IDS_FILLSTYLE_SPHERE_NAME "Kulový gradient"
+END
+
+#endif    // Czech (Czech Republic) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDITTOOL_VISTAGLASS DIALOGEX 0, 0, 100, 48
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Blur background",IDC_ET_BLURBACKGROUND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,5,83,10
+    CONTROL         "Shadow",IDC_ET_DROPSHADOW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,19,44,10
+    EDITTEXT        IDC_ET_SHADOWSIZE,50,18,10,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "px",IDC_ET_SHADOWSIZE_UNIT,62,20,9,8
+    EDITTEXT        IDC_ET_SHADOWDENSITY,75,18,10,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "%",IDC_ET_SHADOWDENSITY_UNIT,87,20,9,8
+    CONTROL         "Add reflection",IDC_ET_ADDREFLECTION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,33,82,10
+    CONTROL         "",IDC_ET_SEPLINE1,"Static",SS_ETCHEDHORZ | WS_GROUP,5,47,90,1
+END
+
+IDD_EDITTOOL_TEXT DIALOGEX 0, 0, 100, 112
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_ET_FONT,5,5,56,192,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_ET_SIZE,5,21,35,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_ET_SIZESPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,30,21,11,12
+    LTEXT           "Angle:",IDC_STATIC,5,39,33,8
+    EDITTEXT        IDC_ET_ANGLE,39,37,29,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_ET_ANGLESPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,60,37,12,12
+    LTEXT           "°",IDC_ET_DEGREES,74,39,25,8
+    LTEXT           "Bend:",IDC_STATIC,5,55,33,8
+    EDITTEXT        IDC_ET_BEND,39,53,29,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_ET_BENDSPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,60,53,12,12
+    LTEXT           "%",IDC_ET_BENDUNIT,74,55,8,8
+    CONTROL         "",IDC_ET_SEPLINE1,"Static",SS_ETCHEDHORZ | WS_GROUP,5,69,90,1
+    EDITTEXT        IDC_ET_TEXT,5,75,90,32,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    CONTROL         "ToolBar",IDC_ET_FONT_STYLE,"ToolbarWindow32",0x994e,65,5,30,12
+    CONTROL         "ToolBar",IDC_ET_ALIGN,"ToolbarWindow32",0x994e,44,21,51,12
+END
+
+IDD_EDITTOOL_SHADOW DIALOGEX 0, 0, 100, 134
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_ET_BLUR,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,0,5,100,18
+    LTEXT           "Sharp shadow",IDC_STATIC,5,24,57,8
+    RTEXT           "Soft shadow",IDC_ET_BLURMAX,39,24,56,8
+    CONTROL         "",IDC_ET_SEPLINE1,"Static",SS_ETCHEDHORZ | WS_GROUP,5,36,90,1
+    LTEXT           "Near density:",IDC_STATIC,5,43,54,8
+    EDITTEXT        IDC_ET_NEARDENS,60,41,24,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_ET_NEARDENSSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,74,40,10,14
+    LTEXT           "%",IDC_ET_NEARDENSLABEL,87,43,8,8
+    LTEXT           "Far density:",IDC_STATIC,5,59,54,8
+    EDITTEXT        IDC_ET_FARDENS,60,57,24,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_ET_FARDENSSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,74,56,10,14
+    LTEXT           "%",IDC_ET_FARDENSLABEL,87,59,8,8
+    ICON            "",IDC_ET_HELPIMAGE,30,96,20,20
+    CTEXT           "Tip: Drag in arrow direction.",IDC_ET_HELPTEXT,5,121,90,8,SS_WORDELLIPSIS
+END
+
+IDD_EDITTOOL_RETOUCH DIALOGEX 0, 0, 100, 39
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Effect:",IDC_STATIC,5,7,42,8
+    COMBOBOX        IDC_ET_RETOUCHEFFECT,48,5,47,120,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Strength:",IDC_STATIC,5,23,42,8
+    EDITTEXT        IDC_ET_RETROUCHSTREDIT,48,21,34,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_ET_RETROUCHSTRSPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,70,21,12,12
+    LTEXT           "%",IDC_ET_RETROUCHSTRUNIT,87,23,8,8
+    CONTROL         "",IDC_ET_SEPLINE1,"Static",SS_ETCHEDHORZ | WS_GROUP,5,38,90,1
+END
+
+IDD_EDITTOOL_MOVESELECT DIALOGEX 0, 0, 100, 48
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "No filtering",IDC_ET_NOFILTERING,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,5,5,78,10
+    CONTROL         "Linear filtering",IDC_ET_LINEARFILTERING,"Button",BS_AUTORADIOBUTTON,5,19,84,10
+    CONTROL         "Cubic filtering",IDC_ET_CUBICFILTERING,"Button",BS_AUTORADIOBUTTON,5,33,83,10
+END
+
+IDD_EDITTOOL_MAGICWAND DIALOGEX 0, 0, 100, 102
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "RGBA",IDC_ET_RGBA,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,5,5,39,10
+    CONTROL         "Hue",IDC_ET_HUE,"Button",BS_AUTORADIOBUTTON,50,5,49,10
+    CONTROL         "Alpha",IDC_ET_ALPHA,"Button",BS_AUTORADIOBUTTON,5,19,39,10
+    CONTROL         "Brightness",IDC_ET_BRIGHTNESS,"Button",BS_AUTORADIOBUTTON,50,19,49,10
+    CONTROL         "",IDC_ET_SEPLINE1,"Static",SS_ETCHEDHORZ | WS_GROUP,5,33,90,1
+    CONTROL         "Multiple source points",IDC_ET_MULTIPOINT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,38,91,10
+    CONTROL         "Continuous boost",IDC_ET_EDGESNAP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,52,94,10
+    CONTROL         "Smooth area edges",IDC_ET_EDGESMOOTH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,66,94,10
+    CONTROL         "",IDC_ET_SEPLINE2,"Static",SS_ETCHEDHORZ | WS_GROUP,5,80,90,1
+    LTEXT           "Tolerance:",IDC_STATIC,5,87,43,8
+    EDITTEXT        IDC_ET_TOLERANCE,49,85,35,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_ET_TOLERANCESPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,74,84,10,14
+    LTEXT           "%",IDC_ET_TOLERANCELABEL,87,87,8,8
+END
+
+IDD_EDITTOOL_FLOODFILL DIALOGEX 0, 0, 100, 88
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Simple flood fill",IDC_ET_SIMPLEFILL,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,5,5,94,10
+    CONTROL         "Multi-point flood fill",IDC_ET_MULTIPOINT,"Button",BS_AUTORADIOBUTTON,5,19,93,10
+    CONTROL         "",IDC_ET_SEPLINE1,"Static",SS_ETCHEDHORZ | WS_GROUP,5,33,90,1
+    CONTROL         "RGBA",IDC_ET_RGBA,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,5,38,38,10
+    CONTROL         "Hue",IDC_ET_HUE,"Button",BS_AUTORADIOBUTTON,50,39,49,10
+    CONTROL         "Alpha",IDC_ET_ALPHA,"Button",BS_AUTORADIOBUTTON,5,52,38,10
+    CONTROL         "Brightness",IDC_ET_BRIGHTNESS,"Button",BS_AUTORADIOBUTTON,50,52,49,10
+    CONTROL         "",IDC_ET_SEPLINE2,"Static",SS_ETCHEDHORZ | WS_GROUP,5,66,90,1
+    LTEXT           "Tolerance:",IDC_STATIC,5,73,43,8
+    EDITTEXT        IDC_ET_TOLERANCE,49,71,35,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_ET_TOLERANCESPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,74,70,10,14
+    LTEXT           "%",IDC_ET_TOLERANCELABEL,87,73,8,8
+END
+
+IDD_EDITTOOL_BRUSH DIALOGEX 0, 0, 100, 84
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Shape:",IDC_STATIC,5,7,40,8
+    LTEXT           "Size:",IDC_STATIC,5,23,33,8
+    CONTROL         "",IDC_ET_SIZECHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,39,22,10,10
+    EDITTEXT        IDC_ET_SIZEEDIT,53,21,16,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_ET_SIZESPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,58,21,11,12
+    LTEXT           "pixels",IDC_ET_SIZEUNIT,74,23,25,8
+    LTEXT           "Blur:",IDC_ET_BLURLABEL,5,39,33,8
+    CONTROL         "",IDC_ET_BLURCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,39,38,10,10
+    EDITTEXT        IDC_ET_BLUREDIT,53,37,16,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_ET_BLURSPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,58,36,11,12
+    LTEXT           "%",IDC_ET_BLURUNIT,74,39,10,8
+    LTEXT           "Flow:",IDC_STATIC,5,55,33,8
+    CONTROL         "",IDC_ET_FLOWCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,39,54,10,10
+    EDITTEXT        IDC_ET_FLOWEDIT,53,53,16,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_ET_FLOWSPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,58,53,11,12
+    LTEXT           "%",IDC_ET_FLOWUNIT,74,55,10,8
+    CONTROL         "Scatter",IDC_ET_SCATTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,69,26,10
+    CONTROL         "Rotate",IDC_ET_ROTATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,37,69,26,10
+    CONTROL         "Resize",IDC_ET_RESIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,69,69,26,10
+    CONTROL         "ToolBar",IDC_ET_BRUSHSHAPE,"ToolbarWindow32",0x994e,53,5,40,12
+    CONTROL         "Smoothing",IDC_ET_SMOOTHING_CHECK,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_DISABLED | WS_TABSTOP,5,83,60,10
+    CONTROL         "",IDC_ET_SMOOTHING_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | NOT WS_VISIBLE | WS_DISABLED | WS_TABSTOP,65,82,30,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_EDITTOOL_TEXT, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 96
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""RWDrawing.tlb""\r\n"
+    "#include ""RWVersion.h""\r\n"
+    "#include ""RWVersionInfo.rc2""\r\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_PROJNAME            "RWDrawing"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HELP_COLORBUTTON    "Select color from a palette of default colors or from a screen pixel."
+    IDS_HELP_FSPATH         "Shape is filled using pattern from the selected image file."
+    IDS_HELP_FSPATTERN      "Shape is filled using selected pattern combining primary and secondary colors."
+    IDS_OPENCUSTOMPATTERN   "Open Custom Fill Pattern"
+    IDS_BRUSHSHAPE_ROUND    "Circle"
+    IDS_BRUSHSHAPE_SLASH    "Diagonal"
+    IDS_BRUSHSHAPE_SQUARE   "Rectangle"
+    IDS_FILLSTYLE_CONICAL_NAME "Angular gradient"
+    IDS_FILLSTYLE_LINEAR_NAME "Linear gradient"
+    IDS_FILLSTYLE_PATTERN_NAME "Pattern fill"
+    IDS_FILLSTYLE_RADIAL_NAME "Radial gradient"
+    IDS_FILLSTYLE_SOLID_NAME "Solid fill"
+    IDS_HELP_ADDREFLECTION  "Enrich the drawn shape by drawing darker and brigher stripes."
+    IDS_HELP_BEVELJOIN      "The sharp edge of the join is cut."
+    IDS_HELP_BEZIERXFORM    "A rectangle can be mapped onto a Bézier patch."
+    IDS_HELP_BLUR           "Determines the sharpness of the shadow. It is recommended to use sharper shadow for small images and less sharp for big ones."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HELP_FSCENTER       "Auto-adjust gradient properties as the filled shape changes."
+    IDS_HELP_GRADIENTCTL    "Click empty space to add new stop to the gradient. Delete stop by dragging it outside. Select stop by clicking on it."
+    IDS_HELP_GRADIENTSTOPCLR 
+                            "Change color of the stop selected in the gradient above."
+    IDS_HELP_NOFILTERING    "A method used when the selected area is resized. Color of each destination pixel is taken from the closest source pixel."
+    IDS_HELP_LINEARFILTERING 
+                            "A method used when the selected area is resized. Color of each destination pixel is the average color of the covered source pixels."
+    IDS_HELP_TEXT           "Type any text in this box and then click in the raster image editor to render the text using the specified font."
+    IDS_HELP_WIDTH          "Width of a line can be any positive number including floating point values."
+    IDS_HELP_MITERJOIN      "Sharp joins between lines."
+    IDS_HELP_ROUNDJOIN      "Smooth rounded joins beween lines."
+    IDS_HELP_RADIUS         "Radius of the rounded corners. If set to 0, the corners are sharp."
+    IDS_HELP_SQUARECAP      "The end points of the line are square. The size of the square is equal to the line width and it is positioned parallel with the line."
+    IDS_HELP_ROUNDEDCAP     "The end points of the line are rounded. Diameter of the circles is equal to the line width and they are centered at the end points."
+    IDS_HELP_TOLERANCE      "Maximum difference between the color of the clicked pixel and the color of the flood-filled pixel. Values range from 0 to 100%."
+    IDS_HELP_NEARDENS       "Density of the projected shadow at the beginning."
+    IDS_HELP_RECTANGULARXFORM 
+                            "A rectangle can be moved, scaled in X and Y directions and rotated."
+    IDS_HELP_PERSPECTIVEXFORM 
+                            "A rectangle can be turn into arbitrary convex quadrangle as if it were rotated in 3D space and projected back using perspective projection."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HELP_BLURBACKGROUND "Create glass effect by blurring background under semitransparent areas."
+    IDS_HELP_BRUSHBLUR      "Higher number makes the edges of the painted pattern blurry."
+    IDS_HELP_BRUSHFLOW      "This parameter controls the maximum coverage of each painted pattern."
+    IDS_HELP_BRUSHPRESSURE  "If checked, the parameter will be influenced by pen pressure if tablet is available."
+    IDS_HELP_BRUSHSHAPE     "Type of pattern painted when the brush is moving over the canvas."
+    IDS_HELP_BRUSHSIZE      "Diameter or size of the bounding box of the painted pattern."
+    IDS_HELP_BUTTCAP        "The line is cut exactly at the end points."
+    IDS_HELP_CLOSED         "Connect the first point of a curve or polyline with the last one."
+    IDS_HELP_CUBICFILTERING "A method used when the selected area is magnified. Color of each destination pixel is obtained using cubic interpolation of surrouding source pixels."
+    IDS_HELP_DASHPATTERN    "If dashing is enabled, the pattern can consist of up to 32 'space' and '-' characters representing the dashing."
+    IDS_HELP_DEFAULTCOLORS  "Enable to use simple gradient (primary -> secondary color); disable to define custom gradient."
+    IDS_HELP_DROPSHADOW     "Add a shadow to the drawn shape."
+    IDS_HELP_EDGESMOOTH     "The resulting region is smoothed removing individual selected or not selected pixels."
+    IDS_HELP_EDGESNAP       "Tolerance is increased in continuous areas and reduced for bumpy areas."
+    IDS_HELP_FARDENS        "Density of the projected shadow at the end."
+    IDS_HELP_FONT           "Use the controls to select font family, style, and size."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HELP_MATCHRGBA      "Matches pixels with similar values in red, green, blue and alpha channels."
+    IDS_HELP_MATCHHUE       "Matches pixels with similar hues."
+    IDS_HELP_MATCHALPHA     "Matches pixels with similar alpha value (opacity/transparency)."
+    IDS_HELP_MATCHBRIGHTNESS "Matches pixels with similar brightness."
+    IDS_HELP_MULTIPOINT     "In multi-point mode, the flood filing has multiple starting points. Final pixel difference is the minumum difference from each start point."
+    IDS_HELP_RETOUCHEFFECT  "Select an effect to apply on the retouched pixels."
+    IDS_HELP_RETOUCHSTRENGTH 
+                            "Strength of the effect applied on the retouched pixels. The strength may be negative or bigger than 100%."
+    IDS_HELP_MATCHALL       "Fill every pixel. Result will be masked by selection."
+    IDS_HELP_SHADOWSIZE     "Size of the added shadow in pixels."
+    IDS_HELP_SHADOWDENSITY  "Density of the shadow. Higher values make the shadow more intense."
+    IDS_HELP_GRADIENTSTOPPOS 
+                            "Specify position of the stop selected in the gradinet above."
+    IDS_TOOLNAME_SELECT     "Simple select"
+    IDS_TOOLDESC_SELECT     "Select a rectangle by dragging with mouse. Hold down SHIFT and/or CTRL to add, remove or negate current selection."
+    IDS_TOOLNAME_PENCIL     "Pencil"
+    IDS_TOOLDESC_PENCIL     "Change color of individual pixels."
+    IDS_TOOLNAME_LINE       "Line"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TOOLDESC_LINE       "Draw lines or polylines. Divide a line by dragging control handle in middle of a line segment."
+    IDS_TOOLNAME_RECTANGLE  "Rectangle"
+    IDS_TOOLDESC_RECTANGLE  "Draw squares or rectangles with given corner radius."
+    IDS_TOOLNAME_FLOODFILL  "Flood fill"
+    IDS_TOOLDESC_FLOODFILL  "Fill the pixels similar to the clicked one."
+    IDS_TOOLNAME_DROPPER    "Dropper"
+    IDS_TOOLDESC_DROPPER    "Set the current primary color by clicking an image a pixel. Hold down Shift to set secondary color."
+    IDS_TOOLNAME_ELLIPSE    "Ellipse"
+    IDS_TOOLDESC_ELLIPSE    "Draw circles or ellipses."
+    IDS_TOOLNAME_TEXT       "Text"
+    IDS_TOOLDESC_TEXT       "Type text directly in the raster editor."
+    IDS_TOOLNAME_CURVE      "Curve"
+    IDS_TOOLDESC_CURVE      "Draw a curve passig through specified points. Add a new point by dragging control handle in middle of a line segment."
+    IDS_TOOLNAME_PSHADOW    "Projected shadow"
+    IDS_TOOLDESC_PSHADOW    "Drag with your mouse from a point where the object touches ground upwards to create a projected shadow."
+    IDS_TOOLNAME_POLYGON    "Polygon"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TOOLDESC_POLYGON    "Add vertex to the polygon by dragging control handle in middle of an edge."
+    IDS_TOOLNAME_TRANSFORMATION "Transformation"
+    IDS_TOOLDESC_TRANSFORMATION 
+                            "Move, rotate, scale or apply perspective transformation to the selected area."
+    IDS_TOOLNAME_MAGICWAND  "Magic wand"
+    IDS_TOOLDESC_MAGICWAND  "Select a region similar to the clicked pixel. Hold down CTRL and/or SHIFT to combine the new selection with the current one."
+    IDS_TOOLNAME_SIMPLESELECT "Move and resize"
+    IDS_TOOLDESC_SIMPLESELECT 
+                            "Select, resize and move rectangular image regions."
+    IDS_TOOLNAME_BRUSH      "Brush"
+    IDS_TOOLDESC_BRUSH      "Draw with a brush."
+    IDS_TOOLNAME_ERASER     "%s eraser"
+    IDS_TOOLDESC_ERASER     "Use the ""%s"" tool to erase pixels instead of drawing them (pixels' transparency is set to maximum)."
+    IDS_TOOLNAME_RETOUCH    "Retouch with: %s"
+    IDS_TOOLDESC_RETOUCH    "Apply an selected modifier on region defined by ""%s"" tool."
+    IDS_TOOLNAME_METASELECT "%s selection"
+    IDS_TOOLDESC_METASELECT "Modify selection using the ""%s"" tool. Hold down SHIFT, CTRL or both to add, negate or remove region from selection."
+    IDS_TOOLNAME_STYLIZE    "%s with effects"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TOOLDESC_STYLIZE    "%s Apply shadow, blur and reflection effects."
+    IDS_TOOLNAME_ALPHA      "Alpha from brightness with: %s"
+    IDS_PENCILSHAPES        "Single pixel|Square 3x3|Square 5x5|Circle 3x3|Circle 5x5|Diamond 5x5|Diagonal 3px|Diagonal 5px|"
+    IDS_RETOUCH_ADD         "Add color"
+    IDS_RETOUCH_BRIGHTEN    "Brighten"
+    IDS_RETOUCH_DARKEN      "Darken"
+    IDS_RETOUCH_DESATURATE  "Desaturate"
+    IDS_RETOUCH_MUL         "Multiply color"
+    IDS_RETOUCH_REPLACEHUE  "Colorize"
+    IDS_RETOUCH_SHARPEN     "Sharpen"
+    IDS_RETOUCH_SOFTEN      "Soften"
+    IDS_ET_TEXTALIGNMENTS   "Left|Center|Right|"
+    IDS_MENU_DELETEVERTEX_DESC 
+                            "Remove the vertex associate with the clicked handle from the control polygon."
+    IDS_MENU_DELETEVERTEX_NAME "Delete vertex"
+    IDS_MENU_RESTORESELECTION_DESC 
+                            "Set the zoom factor of the selection to 100%."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MENU_RESTORESELECTION_NAME "Restore selection size"
+    IDS_MENU_STRETCHSELECTION_DESC 
+                            "Resize the selection to cover the entire image."
+    IDS_MENU_STRETCHSELECTION_NAME "Fit selection to window"
+    IDS_POINTDESC_POLYLINEEDGE 
+                            "Drag this handle to split the associated edge of a polyline."
+    IDS_POINTDESC_POLYLINEVERTEX 
+                            "Drag this handle to move the associated vertex. Drop it over a neighbour handle to delete it. Right-click for more options."
+    IDS_TOOLNAME_MOVE       "Move"
+    IDS_TOOLDESC_MOVE       "Dragging with mouse moves the entire picture. Exterior can be either filled with given color or the image can be wrapped."
+    IDS_MENU_CROP2SELECTION_NAME "Crop to selection"
+    IDS_MENU_CROP2SELECTION_DESC 
+                            "Replace the entire image (or layer) with the current floating selection."
+    IDS_TOOLNAME_FILL       "Fill"
+    IDS_TOOLDESC_FILL       "Fill the entire image (or selected area) using current fill style."
+    IDS_TOOLNAME_LASSO      "Lasso"
+    IDS_TOOLDESC_LASSO      "Define a shape by drawing its outline with mouse."
+    IDS_FILLSTYLE_DIAMOND_NAME "Diamond gradient"
+    IDS_FILLSTYLE_SPHERE_NAME "Sphere gradient"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "RWDrawing.tlb"
+#include "RWVersion.h"
+#include "RWVersionInfo.rc2"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

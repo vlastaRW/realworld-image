@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{ea2e2e02-e7ba-4529-b883-7a50057fed3a}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;cpp;c;cxx;def;odl;idl;hpj;bat;asm;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="DocumentEncoderPNG Files">
+      <UniqueIdentifier>{fa1db075-51d2-4046-87a1-26de0678bc0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DocumentDecoderPNG Files">
+      <UniqueIdentifier>{83244adc-a052-4cc4-a4cc-3b2ea57db4ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DocumentEncoderAPNG Files">
+      <UniqueIdentifier>{cf3bcbee-63a3-471a-8a51-999b684a164f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zopfli">
+      <UniqueIdentifier>{7f97ebc2-9647-4974-b010-b4b3941635a6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RWVersion.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentEncoderPNG.h">
+      <Filter>DocumentEncoderPNG Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PNGDataSink.h">
+      <Filter>DocumentEncoderPNG Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentDecoderPNG.h">
+      <Filter>DocumentDecoderPNG Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PNGDataSource.h">
+      <Filter>DocumentDecoderPNG Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentEncoderAPNG.h">
+      <Filter>DocumentEncoderAPNG Files</Filter>
+    </ClInclude>
+    <ClInclude Include="zopfli\blocksplitter.h">
+      <Filter>zopfli</Filter>
+    </ClInclude>
+    <ClInclude Include="zopfli\cache.h">
+      <Filter>zopfli</Filter>
+    </ClInclude>
+    <ClInclude Include="zopfli\deflate.h">
+      <Filter>zopfli</Filter>
+    </ClInclude>
+    <ClInclude Include="zopfli\hash.h">
+      <Filter>zopfli</Filter>
+    </ClInclude>
+    <ClInclude Include="zopfli\katajainen.h">
+      <Filter>zopfli</Filter>
+    </ClInclude>
+    <ClInclude Include="zopfli\lz77.h">
+      <Filter>zopfli</Filter>
+    </ClInclude>
+    <ClInclude Include="zopfli\squeeze.h">
+      <Filter>zopfli</Filter>
+    </ClInclude>
+    <ClInclude Include="zopfli\tree.h">
+      <Filter>zopfli</Filter>
+    </ClInclude>
+    <ClInclude Include="zopfli\util.h">
+      <Filter>zopfli</Filter>
+    </ClInclude>
+    <ClInclude Include="zopfli\zlib_container.h">
+      <Filter>zopfli</Filter>
+    </ClInclude>
+    <ClInclude Include="zopfli\zopfli.h">
+      <Filter>zopfli</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWImageCodecPNG.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RWImageCodecPNG.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentEncoderPNG.cpp">
+      <Filter>DocumentEncoderPNG Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentDecoderPNG.cpp">
+      <Filter>DocumentDecoderPNG Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentEncoderAPNG.cpp">
+      <Filter>DocumentEncoderAPNG Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zopfli\blocksplitter.c">
+      <Filter>zopfli</Filter>
+    </ClCompile>
+    <ClCompile Include="zopfli\cache.c">
+      <Filter>zopfli</Filter>
+    </ClCompile>
+    <ClCompile Include="zopfli\deflate.c">
+      <Filter>zopfli</Filter>
+    </ClCompile>
+    <ClCompile Include="zopfli\hash.c">
+      <Filter>zopfli</Filter>
+    </ClCompile>
+    <ClCompile Include="zopfli\katajainen.c">
+      <Filter>zopfli</Filter>
+    </ClCompile>
+    <ClCompile Include="zopfli\lz77.c">
+      <Filter>zopfli</Filter>
+    </ClCompile>
+    <ClCompile Include="zopfli\squeeze.c">
+      <Filter>zopfli</Filter>
+    </ClCompile>
+    <ClCompile Include="zopfli\tree.c">
+      <Filter>zopfli</Filter>
+    </ClCompile>
+    <ClCompile Include="zopfli\util.c">
+      <Filter>zopfli</Filter>
+    </ClCompile>
+    <ClCompile Include="zopfli\zlib_container.c">
+      <Filter>zopfli</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RWImageCodecPNG.def">
+      <Filter>Misc Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RWImageCodecPNG.rc">
+      <Filter>Misc Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

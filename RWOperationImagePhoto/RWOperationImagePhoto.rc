@@ -1,0 +1,995 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1250)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_PICK_COLOR_ADD      ICON                    "CGHLSPickColor+.ico"
+
+IDI_PICK_COLOR          ICON                    "CGHLSPickColor.ico"
+
+IDI_PICK_COLOR_REMOVE   ICON                    "CGHLSPickColor-.ico"
+
+IDI_EDITTOOL_BUBBLE     ICON                    "EditToolBubble.ico"
+
+IDI_FILLSTYLE_WOOD      ICON                    "FillStyleWood.ico"
+
+IDI_FILLSTYLE_CLOUDS    ICON                    "FillStyleClouds.ico"
+
+IDI_RESET_GRAY          ICON                    "ResetGray.ico"
+
+IDI_LEVEL_AUTO          ICON                    "LevelAuto.ico"
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Czech (Czech Republic) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CSY)
+LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONFIGGUI_REMOVEHUE DIALOGEX 0, 0, 266, 170
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_CGRHUE_CURVECTL,"Static",SS_BLACKRECT,11,0,173,160
+    PUSHBUTTON      "Color",IDC_CGRHUE_COLOR,187,0,35,13
+    CONTROL         "Vzdálenost &odstínu",IDC_CGRHUE_RADIO_HUE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,192,25,71,10
+    CONTROL         "Vzdálenost &barvy",IDC_CGRHUE_RADIO_COLOR,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,192,35,71,10
+    CONTROL         "&B-Spline",IDC_CGRHUE_RADIO_BSPLINE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,192,61,41,10
+    CONTROL         "&Lineární",IDC_CGRHUE_RADIO_LINEAR,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,192,71,41,10
+    EDITTEXT        IDC_CGRHUE_X,192,97,33,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_CGRHUE_X_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,214,97,11,12
+    EDITTEXT        IDC_CGRHUE_Y,228,97,33,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_CGRHUE_Y_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,250,97,11,12
+    GROUPBOX        "Osa X",IDC_CGRHUE_GROUP_AXISX,188,14,78,34,0,WS_EX_TRANSPARENT
+    GROUPBOX        "Interpolace køivky",IDC_CGRHUE_GROUP_INTER,188,50,78,34,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_CGRHUE_COLORBAR,"Static",SS_BLACKRECT,11,162,173,8
+    GROUPBOX        "Pozice bodu",IDC_CGRHUE_GROUP_POINT,188,86,78,28,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_CGRHUE_ALPHABAR,"Static",SS_BLACKRECT,0,0,9,160
+END
+
+IDD_EDITTOOL_CROP DIALOGEX 0, 0, 100, 69
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Odstranìní perspektivy",IDC_ET_PERSPECTIVECROP,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,5,5,91,10
+    CONTROL         "Normální oøíznutí",IDC_ET_NORMALCROP,"Button",BS_AUTORADIOBUTTON,5,19,69,10
+    CONTROL         "Dlaždicové oøíznutí",IDC_ET_JPEGCROP,"Button",BS_AUTORADIOBUTTON,5,33,75,10
+    CONTROL         "",IDC_ET_SEPLINE1,"Static",SS_ETCHEDHORZ | WS_GROUP,5,47,90,1
+    LTEXT           "Pomìr stran:",IDC_STATIC,5,54,45,8
+    COMBOBOX        IDC_ET_ASPECTRATIO,54,52,41,107,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_EDITTOOL_CLONE DIALOGEX 0, 0, 100, 78
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_ET_SEPLINE1,"Static",SS_ETCHEDHORZ | WS_GROUP,5,77,90,1
+    CONTROL         "Kopírovat celé pixely",IDC_ET_STANDARD,"Button",BS_AUTORADIOBUTTON,5,5,82,10
+    CONTROL         "Kopírovat detaily",IDC_ET_HIGHFREQ,"Button",BS_AUTORADIOBUTTON,5,19,70,10
+    CONTROL         "Kopírovat pozadí",IDC_ET_LOWFREQ,"Button",BS_AUTORADIOBUTTON,5,33,69,10
+    CONTROL         "Relativní výchozí bod",IDC_ET_RELATIVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,52,83,10
+    CTEXT           "Tip: Podržte CTRL pro zmìnu výchozího bodu.",IDC_ET_HINT,5,64,90,8,SS_WORDELLIPSIS
+    CONTROL         "",IDC_ET_SEPLINE2,"Static",SS_ETCHEDHORZ | WS_GROUP,5,47,90,1
+END
+
+IDD_CONFIGGUI_VIGNETTING DIALOGEX 0, 0, 267, 118
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_CGVIG_CURVECTL,"Static",SS_BLACKRECT,11,0,173,116
+    CONTROL         "&B-Spline",IDC_CGVIG_RADIO_BSPLINE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,193,54,41,10
+    CONTROL         "&Lineární",IDC_CGVIG_RADIO_LINEAR,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,193,64,41,10
+    EDITTEXT        IDC_CGVIG_X,193,91,33,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_CGVIG_X_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,215,91,11,12
+    EDITTEXT        IDC_CGVIG_Y,229,91,33,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_CGVIG_Y_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,251,91,11,12
+    GROUPBOX        "Interpolace køivky",IDC_CGVIG_GROUP_INTER,189,43,78,34,0,WS_EX_TRANSPARENT
+    GROUPBOX        "Pozice bodu",IDC_CGVIG_GROUP_POINT,189,79,78,28,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_CGVIG_BAR,"Static",SS_BLACKRECT,0,0,8,116
+    CHECKBOX        "Automatické odstranìní vinìtace",IDC_CGVIG_AUTO,193,0,73,23,BS_TOP | BS_MULTILINE
+    PUSHBUTTON      "Color",IDC_CGVIG_COLOR,193,28,35,13
+END
+
+IDD_CONFIGGUI_SOFTENSKIN DIALOGEX 0, 0, 142, 29
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Síla zjemnìní:",IDC_CGSS_STRENGTH_TEXT,50,2,44,8
+    CONTROL         "",IDC_CGSS_STRENGTH_SLIDER,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,44,14,98,15
+    EDITTEXT        IDC_CGSS_STRENGTH_EDIT,97,0,40,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_CGSS_STRENGTH_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,126,0,11,12
+    PUSHBUTTON      "Barva kùže",IDC_CGSS_COLOR,0,0,35,13
+END
+
+IDD_CONFIGGUI_SEAMCARVING DIALOGEX 0, 0, 218, 12
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Šíøka:",IDC_STATIC,0,2,26,8
+    LTEXT           "Výška:",IDC_STATIC,70,2,27,8
+    EDITTEXT        IDC_CGSC_SIZEX,28,0,35,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CGSC_SIZEY,99,0,35,12,ES_AUTOHSCROLL
+    LTEXT           "|",IDC_STATIC,141,2,8,8
+    COMBOBOX        IDC_CGSC_SELMODE,151,0,30,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_CGSC_SELID,188,0,30,12,ES_AUTOHSCROLL
+END
+
+IDD_FILLSTYLE_WOOD DIALOGEX 0, 0, 100, 162
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Následovat kreslený tvar",IDC_ETW_AUTOCENTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,5,94,10
+    LTEXT           "RNG start:",IDC_STATIC,5,35,39,8
+    EDITTEXT        IDC_ETW_SEED,55,33,40,12,ES_AUTOHSCROLL
+    LTEXT           "Mìøítko:",IDC_STATIC,5,51,45,8
+    EDITTEXT        IDC_ETW_SCALE,55,49,40,12,ES_AUTOHSCROLL
+    LTEXT           "Protažení:",IDC_STATIC,5,67,45,8
+    EDITTEXT        IDC_ETW_STRETCH,55,65,40,12,ES_AUTOHSCROLL
+    LTEXT           "Úhel:",IDC_STATIC,5,83,45,8
+    EDITTEXT        IDC_ETW_ANGLE,55,81,40,12,ES_AUTOHSCROLL
+    LTEXT           "Suky:",IDC_STATIC,5,99,45,8
+    EDITTEXT        IDC_ETW_RINGS,55,97,40,12,ES_AUTOHSCROLL
+    LTEXT           "Turbulence:",IDC_STATIC,5,115,45,8
+    EDITTEXT        IDC_ETW_TURBULENCE,55,113,40,12,ES_AUTOHSCROLL
+    LTEXT           "Tøísky:",IDC_STATIC,5,131,45,8
+    EDITTEXT        IDC_ETW_FIBRES,55,129,40,12,ES_AUTOHSCROLL
+    LTEXT           "Ostrost:",IDC_STATIC,5,147,45,8
+    EDITTEXT        IDC_ETW_GAIN,55,145,40,12,ES_AUTOHSCROLL
+    LTEXT           "Barvy:",IDC_STATIC,5,19,40,8
+    PUSHBUTTON      "1",IDC_ETW_COLOR1,55,17,30,12
+    PUSHBUTTON      "2",IDC_ETW_COLOR2,85,17,30,12
+END
+
+IDD_EDITTOOL_BUBBLE DIALOGEX 0, 0, 100, 23
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_ET_SEPLINE1,"Static",SS_ETCHEDHORZ | WS_GROUP,5,22,90,1
+    LTEXT           "Barva bubliny:",IDC_STATIC,5,7,51,8
+    PUSHBUTTON      "Button1",IDC_ET_BUBBLECOLOR,54,5,40,12
+END
+
+IDD_FILLSTYLE_CLOUDS DIALOGEX 0, 0, 100, 130
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Následovat kreslený tvar",IDC_ETW_AUTOCENTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,5,82,10
+    LTEXT           "RNG start:",IDC_STATIC,5,35,39,8
+    EDITTEXT        IDC_ETW_SEED,55,33,40,12,ES_AUTOHSCROLL
+    LTEXT           "Mìøítko:",IDC_STATIC,5,51,45,8
+    EDITTEXT        IDC_ETW_SCALE,55,49,40,12,ES_AUTOHSCROLL
+    LTEXT           "Protažení:",IDC_STATIC,5,67,45,8
+    EDITTEXT        IDC_ETW_STRETCH,55,65,40,12,ES_AUTOHSCROLL
+    LTEXT           "Úhel:",IDC_STATIC,5,83,45,8
+    EDITTEXT        IDC_ETW_ANGLE,55,81,40,12,ES_AUTOHSCROLL
+    LTEXT           "Ostrost:",IDC_STATIC,5,99,45,8
+    EDITTEXT        IDC_ETC_AMOUNT,55,97,40,12,ES_AUTOHSCROLL
+    LTEXT           "Množství:",IDC_STATIC,5,115,45,8
+    EDITTEXT        IDC_ETC_BIAS,55,113,40,12,ES_AUTOHSCROLL
+    LTEXT           "Barvy:",IDC_STATIC,5,19,40,8
+    PUSHBUTTON      "1",IDC_ETW_COLOR1,55,17,30,12
+    PUSHBUTTON      "2",IDC_ETW_COLOR2,85,17,30,12
+END
+
+IDD_EDITTOOL_SHAPESHIFT DIALOGEX 0, 0, 100, 52
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Mód:",IDC_STATIC,5,8,33,8
+    CONTROL         "ToolBar",IDC_ET_SHAPETOOL,"ToolbarWindow32",0x994e,39,5,56,12
+    LTEXT           "Velikost:",IDC_ET_SIZELABEL,5,23,33,8
+    EDITTEXT        IDC_ET_SIZEEDIT,39,21,30,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_ET_SIZESPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,58,21,11,12
+    LTEXT           "pixely",IDC_ET_SIZEUNIT,74,23,25,8
+    LTEXT           "Síla:",IDC_ET_INTENSITYLABEL,5,37,33,8
+    CONTROL         "",IDC_ET_INTENSITYCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,39,37,10,10
+    EDITTEXT        IDC_ET_INTENSITYEDIT,53,35,16,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_ET_INTENSITYSPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,58,35,12,12
+    LTEXT           "%",IDC_ET_INTENSITYUNIT,74,37,8,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_CONFIGGUI_REMOVEHUE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 169
+    END
+
+    IDD_EDITTOOL_CROP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 62
+    END
+
+    IDD_EDITTOOL_CLONE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_CONFIGGUI_VIGNETTING, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 117
+    END
+
+    IDD_CONFIGGUI_SEAMCARVING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 211
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 5
+    END
+
+    IDD_FILLSTYLE_WOOD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_FILLSTYLE_CLOUDS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_EDITTOOL_SHAPESHIFT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 45
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""RWVersion.h""\r\n"
+    "#include ""RWVersionInfo.rc2""\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_PROJNAME            "RWOperationImagePhoto"
+    IDS_RASTERIMAGEREMOVEHUE_NAME "Rastrový obrázek - odstranìní odstínu"
+    IDS_CFGID_HUE_NAME      "Odstín"
+    IDS_CFGID_CURVE_NAME    "Køivka"
+    IDS_CFGID_HUE_DESC      "Odstín k odstranìní"
+    IDS_CFGID_CURVE_DESC    "Køivka pro odstranìní"
+    IDS_HELP_CURVE          "Taháním kontrolních bodù myší ovládáte køivku."
+    IDS_CUSTCFG_MORECOLORS  "Další barvy..."
+    IDS_RASTERIMAGEAUTOCONTRAST_NAME "Rastrový obrázek - automatický kontrast"
+    IDS_CUSTCFG_PICKCOLOR   "Barva z obrazovky..."
+    IDS_CFGID_X_AXIS        "Osa X"
+    IDS_CFGID_INTERPOLATION "Interpolace"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_X_AXIS_HUE    "Vzdálenost odstínu"
+    IDS_CFGID_X_AXIS_COLOR  "Vzdálenost barvy"
+    IDS_CFGID_INTERPOLATION_BSPLINE "B-Spline"
+    IDS_CFGID_INTERPOLATION_LINEAR "Lineární"
+    IDS_RASTERIMAGEGRAYSCALE_NAME "Rastrový obrázek - šedotón"
+    IDS_CFGID_COLOR_NAME    "Barva filtru"
+    IDS_CFGID_COLOR_DESC    "Barva filtru pro pøevod na šedotón."
+    IDS_CFGID_AL_TYPE_NAME  "Metoda"
+    IDS_CFGID_AL_TYPE_DESC  "Metoda použitá pro automatické nastavení úrovní."
+    IDS_CFGID_TOLERANCE_NAME "Tolerance"
+    IDS_CFGID_TOLERANCE_DESC "Tolerance pro zvýšení kontrastu."
+    IDS_CFGID_HLS_HUE_NAME  "Odstín"
+    IDS_CFGID_HLS_SATURATION_NAME "Saturace"
+    IDS_CFGID_HLS_LIGHTNESS_NAME "Svìtlost"
+    IDS_CFGID_HLS_AREA_NAME "Oblast zmìny"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_HLS_AREA1_NAME "Zaèátek oblasti od"
+    IDS_CFGID_HLS_AREA2_NAME "Zaèátek oblasti do"
+    IDS_CFGID_HLS_AREA3_NAME "Konec oblasti od"
+    IDS_CFGID_HLS_AREA4_NAME "Konec oblasti do"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_RASTERIMAGEHLS_NAME "Rastrový obrázek - HLS"
+    IDS_CROP_NOPROPORTIONS  "Libovolný"
+    IDS_HELP_STANDARD       "Pixely budou zkopírovány beze zmìn."
+    IDS_HELP_HIGHFREQ       "Budou zkopírovány jen vysoké frekcence ve vybrané oblasti."
+    IDS_HELP_LOWFREQ        "Budou zkopírovány jen nízké frekcence ve vybrané oblasti."
+    IDS_HELP_RELATIVE       "Je-li zaškrtnuto, pixely budou zkopírovány s konstantním ofsetem. Není-li zaškrtnuto, pixely budou zkopírovány vždy z vybraného místa."
+    IDS_DOCOPREMOVENOISE_NAME "Rastrový obrázek - odstranit šum"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DOCOPWATERMARK_NAME "Rastrový obrázek - vodotisk"
+    IDS_CFGID_WM_XPOSITION_NAME "Pozice X"
+    IDS_CFGID_WM_XPOSITION_DESC 
+                            "Relativní horizontální pozice vodotisku v obrázku."
+    IDS_CFGID_WM_YPOSITION_NAME "Pozice Y"
+    IDS_CFGID_WM_YPOSITION_DESC 
+                            "Relativní vertikální pozice vodotisku v obrázku."
+    IDS_CFGID_WM_MARGINS_NAME "Okraje"
+    IDS_CFGID_WM_OPACITY_NAME "Pokrytí"
+    IDS_CFGID_WM_OPACITY_DESC 
+                            "Urèuje, jak silnì bude text nebo obrázek vidìt (0-100%)."
+    IDS_CFGID_WM_TYPE_NAME  "Typ"
+    IDS_CFGID_WM_TYPE_DESC  "Urèuje, jestli bude pro vodotisk použit obrázek nebo parametrizovaný text."
+    IDS_CFGID_WM_IMAGE_NAME "Cesta k obrázku"
+    IDS_CFGID_WM_IMAGE_DESC "Úplná cesta k souboru s obrázkem pro vodotisk."
+    IDS_CFGID_WM_TEXT_NAME  "Šablona textu"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_WM_TEXT_DESC  "Šablona pro text vodotisku. Lze využít následující zástupce:%% - znak %, %FILENAME% - jméno souboru, %FILEFOLDER% - složka s obrázkem vèetnì koncového /, %FILEEXT% - pøípona, %EXIF-TagName% TagName je anglické jméno položky v poli exif."
+    IDS_CFGID_WM_FONT_NAME  "Font"
+    IDS_CFGID_WM_FONT_DESC  "Jméno font pro vodotisk."
+    IDS_CFGID_WM_BOLD_NAME  "Tuèné"
+    IDS_CFGID_WM_BOLD_DESC  "Je-li povoleno, budou písmena používat tuènìjší tahy."
+    IDS_CFGID_WM_ITALIC_NAME "Kurzíva"
+    IDS_CFGID_WM_ITALIC_DESC "Je-li povoleno, text bude vytištìn s náklonem."
+    IDS_CFGID_WM_SHADOW_NAME "Stín"
+    IDS_CFGID_WM_SHADOW_DESC "Stín pomáhá oddìlit text od pozadí."
+    IDS_CFGID_WM_ANGLE_NAME "Úhel"
+    IDS_CFGID_WM_ANGLE_DESC "Natoèení vodotisku ve stupních."
+    IDS_CFGID_WM_ALIGNMENT_NAME "Zarovnání"
+    IDS_CFGID_WM_ALIGNMENT_DESC 
+                            "Zarovnání textu, je-li použit více než jeden øádek."
+    IDS_CFGID_WMA_LEFT      "Doleva"
+    IDS_CFGID_WMA_CENTER    "Vycentrovat"
+    IDS_CFGID_WMA_RIGHT     "Doprava"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_WM_SIZETYPE_NAME "Velikost písma"
+    IDS_CFGID_WM_SIZETYPE_DESC "Metoda zadání velikosti písma."
+    IDS_CFGID_WMH_ABSOLUTE  "Absolutní"
+    IDS_CFGID_WMH_RELATIVE  "Relativní"
+    IDS_CFGID_WM_ABSSIZE_DESC "Velikost textu v pixelech."
+    IDS_WATERMARK_LAYERNAME "Vodotisk"
+    IDS_RASTERIMAGELEVELS_NAME "Rastrový obrázek - úrovnì"
+    IDS_CFGVAL_ALT_CONTRAST "Automatický kontrast"
+    IDS_SELECTIMAGEWATERMARK "Otevøít vzor pro vodotisk"
+    IDS_DOCOPGLOW_NAME      "Rastrový obrázek - záøení"
+    IDS_CFGID_SG_RADIUS_NAME "Polomìr"
+    IDS_CFGID_SG_RADIUS_DESC "Maximální dosah záøení."
+    IDS_CFGID_SG_INTENSITY_NAME "Intenzita"
+    IDS_CFGID_SG_INTENSITY_DESC "Relativní intenzita efektu záøení."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_SG_COLORED_NAME "Barevné"
+    IDS_CFGID_SG_COLORED_DESC 
+                            "Je-li povoleno, budou barevné objekty záøit barevnì."
+    IDS_CFGID_SG_MASKID_NAME "ID masky výbìru"
+    IDS_CFGVAL_ALT_LEVELS   "Automatické úrovnì kanálù"
+    IDS_CFGID_SG_MASKID_DESC 
+                            "Identifikátor stavu, který obsahuje aktivní masku výbìru."
+    IDS_RASTERIMAGEVIGNETTING_NAME "Rastrový obrázek - vinìtace"
+    IDS_CFGID_VIG_AUTO_UNVIG_NAME "Automatika"
+    IDS_CFGID_VIG_AUTO_UNVIG_DESC "Automatické odstranìní vinìtace."
+    IDS_CFGID_VIG_COLOR_NAME "Barva"
+    IDS_CFGID_VIG_COLOR_DESC "Barva vinìtace."
+    IDS_CFGID_VIG_CURVE_NAME "Køivka"
+    IDS_CFGID_VIG_CURVE_DESC 
+                            "Osa X je vzdálenost pixelu od støedu obrázku. Osa Y znaèí míru vinìtace."
+    IDS_CFGID_VIG_INTERPOLATION_NAME "Interpolace"
+    IDS_CFGID_VIG_INTERPOLATION_DESC 
+                            "Interpolace køivky bude lineární, èi pomocí b-spline."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HELP_PERSPECTIVECROP 
+                            "Vybraná oblast má pøedstavovat obdélník zdeformovaný perspektivní transformací. Perspektivní deformace je bìhem oøezání odstranìna."
+    IDS_HELP_NORMALCROP     "Oblast mimo oøezávací obdélník je odstranìna."
+    IDS_HELP_JPEGCROP       "Dlaždicové oøezávání pomáhá najít hranice MCU a umožòuje bezeztrátové oøezávání JPEGù."
+    IDS_HELP_ASPECTRATIO    "Oøezávací obdélník se bude snažit zachovat zvolený pomìr stran. Portrétová nebo krajinová orientace je detekována automaticky."
+    IDS_CFGID_SS_COLOR_NAME "Barva kùže"
+    IDS_CFGID_SS_COLOR_DESC "Urèuje barvu, která bude zjemnìna."
+    IDS_CFGID_SS_STRENGTH_NAME "Síla zjemnìní"
+    IDS_CFGID_SS_STRENGTH_DESC 
+                            "Urèuje míru zjemnìní kùže. Bere v úvahu velikost fotografie."
+    IDS_RASTERIMAGE_SOFTENSKIN_NAME "Rastrový obrázek - zjemnìní kùže"
+    IDS_CFGID_WM_COLOR_DESC "Barva textu vodotisku. Barva stínu bude automaticky zvolena, aby doplòovala barvu textu."
+    IDS_RASTERIMAGESEAMCARVING_NAME "Rastrový obrázek - krájení švù"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_SC_SIZEX_NAME "Šíøka"
+    IDS_CFGID_SC_SIZEX_DESC "Šíøka výsledného obrázku v pixelech."
+    IDS_CFGID_SC_SIZEY_NAME "Výška"
+    IDS_CFGID_SC_SIZEY_DESC "Výška výsledného obrázku v pixelech."
+    IDS_CFGID_SC_SELMODE_NAME "Mód"
+    IDS_CFGID_SC_SELMODE_DESC 
+                            "Zvýšit nebo snížit dùležitost oznaèených pixelù a tak je buï ochránit nebo pøednostnì vyøíznout."
+    IDS_CFGVAL_SCSM_IGNORE  "Ignorovat výbìr"
+    IDS_CFGVAL_SCSM_PROTECT "Ochránit výbìr"
+    IDS_CFGVAL_SCSM_REMOVE  "Odstranit výbìr"
+    IDS_CFGID_SC_SELSYCID_NAME "ID výbìru"
+    IDS_CFGID_SC_SELSYCID_DESC "Identifikátor stavu pohledu s maskou obrázku."
+    IDS_HELP_BUBBLECOLOR    "Barva a prùhlednost pozadí bubliny."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FILLSTYLE_WOOD_NAME "Textura døeva"
+    IDS_FILLSTYLE_WOOD_DESC "Vygenerovaná textura pøipomínající døevo."
+    IDS_FILLSTYLE_CLOUDS_NAME "Textura oblakù"
+    IDS_FILLSTYLE_CLOUDS_DESC "Vygenerovaná textura oblaèného nebe."
+    IDS_CFGID_L_INBLACK_NAME "Vstupní úroveò èerné"
+    IDS_CFGID_L_INBLACK_DESC 
+                            "Pixely s touto nebo nižší úrovní budou považovány za èerné."
+    IDS_CFGID_L_INWHITE_NAME "Vstupní úroveò bílé"
+    IDS_CFGID_L_INWHITE_DESC 
+                            "Pixely s touto nebo nižší úrovní budou považovány za bílé."
+    IDS_CFGID_L_GAMMA_NAME  "Gama"
+    IDS_CFGID_L_GAMMA_DESC  "Uèuje støední bod mezi bílou a èernou."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_L_OUTBLACK_NAME "Výstupní úroveò èerné"
+    IDS_CFGID_L_OUTBLACK_DESC 
+                            "Èerné pixely ve zdrojovém obrázku budou pøevedeny na tuto barvu."
+    IDS_CFGID_L_OUTWHITE_NAME "Výstupní úroveò bílé"
+    IDS_CFGID_L_OUTWHITE_DESC 
+                            "Bílé pixely ve zdrojovém obrázku budou pøevedeny na tuto barvu."
+    IDS_LEVELS_TIPS         "Vybrat barvu|Výchozí úroveò šedé|Automatická úroveò|"
+    IDS_CFGID_RN_METHOD_NAME "Metoda"
+    IDS_CFGID_RN_METHOD_DESC "Metoda použitá pro snížení šumu."
+    IDS_CFGVAL_RNM_BLUR9OF25 "Rozmazat oblast s 9 z 25 sousedních pixelù"
+    IDS_CFGVAL_RNM_BLURENERGY 
+                            "Smíchat normální a rozmazanou verzi podle energie"
+    IDS_CFGID_RN_THRESHOLD_NAME "Hranice"
+    IDS_CFGID_RN_THRESHOLD_DESC 
+                            "Maximální energie pixelu, aby byl považován za šum."
+END
+
+#endif    // Czech (Czech Republic) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONFIGGUI_REMOVEHUE DIALOGEX 0, 0, 266, 170
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_CGRHUE_CURVECTL,"Static",SS_BLACKRECT,11,0,173,160
+    PUSHBUTTON      "Color",IDC_CGRHUE_COLOR,187,0,35,13
+    CONTROL         "&Hue Distance",IDC_CGRHUE_RADIO_HUE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,192,25,71,10
+    CONTROL         "&Color Distance",IDC_CGRHUE_RADIO_COLOR,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,192,35,62,10
+    CONTROL         "&B-Spline",IDC_CGRHUE_RADIO_BSPLINE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,192,61,41,10
+    CONTROL         "&Linear",IDC_CGRHUE_RADIO_LINEAR,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,192,71,35,10
+    EDITTEXT        IDC_CGRHUE_X,192,97,33,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_CGRHUE_X_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,214,97,11,12
+    EDITTEXT        IDC_CGRHUE_Y,228,97,33,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_CGRHUE_Y_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,250,97,11,12
+    GROUPBOX        "X Axis",IDC_CGRHUE_GROUP_AXISX,188,14,78,34,0,WS_EX_TRANSPARENT
+    GROUPBOX        "Curve Interpolation",IDC_CGRHUE_GROUP_INTER,188,50,78,34,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_CGRHUE_COLORBAR,"Static",SS_BLACKRECT,11,162,173,8
+    GROUPBOX        "Point Position",IDC_CGRHUE_GROUP_POINT,188,86,78,28,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_CGRHUE_ALPHABAR,"Static",SS_BLACKRECT,0,0,9,160
+END
+
+IDD_EDITTOOL_CROP DIALOGEX 0, 0, 100, 69
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Perspective removal",IDC_ET_PERSPECTIVECROP,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,5,5,81,10
+    CONTROL         "Normal crop",IDC_ET_NORMALCROP,"Button",BS_AUTORADIOBUTTON,5,19,54,10
+    CONTROL         "Tile crop (16x16 pixels)",IDC_ET_JPEGCROP,"Button",BS_AUTORADIOBUTTON,5,33,90,10
+    CONTROL         "",IDC_ET_SEPLINE1,"Static",SS_ETCHEDHORZ | WS_GROUP,5,47,90,1
+    LTEXT           "Aspect ratio:",IDC_STATIC,5,54,45,8
+    COMBOBOX        IDC_ET_ASPECTRATIO,54,52,41,107,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_EDITTOOL_CLONE DIALOGEX 0, 0, 100, 78
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_ET_SEPLINE1,"Static",SS_ETCHEDHORZ | WS_GROUP,5,77,90,1
+    CONTROL         "Copy entire pixels",IDC_ET_STANDARD,"Button",BS_AUTORADIOBUTTON,5,5,73,10
+    CONTROL         "Copy details",IDC_ET_HIGHFREQ,"Button",BS_AUTORADIOBUTTON,5,19,55,10
+    CONTROL         "Copy background",IDC_ET_LOWFREQ,"Button",BS_AUTORADIOBUTTON,5,33,72,10
+    CONTROL         "Relative reference point",IDC_ET_RELATIVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,52,93,10
+    CTEXT           "Tip: Hold CTRL key to set reference point.",IDC_ET_HINT,5,64,90,8,SS_WORDELLIPSIS
+    CONTROL         "",IDC_ET_SEPLINE2,"Static",SS_ETCHEDHORZ | WS_GROUP,5,47,90,1
+END
+
+IDD_CONFIGGUI_VIGNETTING DIALOGEX 0, 0, 267, 118
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_CGVIG_CURVECTL,"Static",SS_BLACKRECT,11,0,173,116
+    CONTROL         "&B-Spline",IDC_CGVIG_RADIO_BSPLINE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,193,39,41,10
+    CONTROL         "&Linear",IDC_CGVIG_RADIO_LINEAR,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,193,49,35,10
+    EDITTEXT        IDC_CGVIG_X,193,76,33,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_CGVIG_X_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,215,76,11,12
+    EDITTEXT        IDC_CGVIG_Y,229,76,33,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_CGVIG_Y_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,251,76,11,12
+    GROUPBOX        "Curve Interpolation",IDC_CGVIG_GROUP_INTER,189,28,78,34,0,WS_EX_TRANSPARENT
+    GROUPBOX        "Point Position",IDC_CGVIG_GROUP_POINT,189,64,78,28,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_CGVIG_BAR,"Static",SS_BLACKRECT,0,0,8,116
+    CHECKBOX        "Auto un-vignette",IDC_CGVIG_AUTO,193,0,71,10
+    PUSHBUTTON      "Color",IDC_CGVIG_COLOR,193,13,35,13
+END
+
+IDD_CONFIGGUI_SOFTENSKIN DIALOGEX 0, 0, 152, 29
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Soften Strength:",IDC_CGSS_STRENGTH_TEXT,50,2,55,8
+    CONTROL         "",IDC_CGSS_STRENGTH_SLIDER,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,44,14,108,15
+    EDITTEXT        IDC_CGSS_STRENGTH_EDIT,107,0,40,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_CGSS_STRENGTH_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,136,0,11,12
+    PUSHBUTTON      "Skin Color",IDC_CGSS_COLOR,0,0,35,13
+END
+
+IDD_EDITTOOL_BUBBLE DIALOGEX 0, 0, 100, 23
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_ET_SEPLINE1,"Static",SS_ETCHEDHORZ | WS_GROUP,5,22,90,1
+    LTEXT           "Bubble color:",IDC_STATIC,5,7,47,8
+    PUSHBUTTON      "Button1",IDC_ET_BUBBLECOLOR,54,5,40,12
+END
+
+IDD_CONFIGGUI_SEAMCARVING DIALOGEX 0, 0, 218, 12
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Width:",IDC_STATIC,0,2,26,8
+    LTEXT           "Height:",IDC_STATIC,70,2,27,8
+    EDITTEXT        IDC_CGSC_SIZEX,28,0,35,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CGSC_SIZEY,99,0,35,12,ES_AUTOHSCROLL
+    LTEXT           "|",IDC_STATIC,141,2,8,8
+    COMBOBOX        IDC_CGSC_SELMODE,151,0,30,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_CGSC_SELID,188,0,30,12,ES_AUTOHSCROLL
+END
+
+IDD_FILLSTYLE_WOOD DIALOGEX 0, 0, 100, 162
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Follow drawn shape",IDC_ETW_AUTOCENTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,5,82,10
+    LTEXT           "RNG seed:",IDC_STATIC,5,35,39,8
+    EDITTEXT        IDC_ETW_SEED,55,33,40,12,ES_AUTOHSCROLL
+    LTEXT           "Scale:",IDC_STATIC,5,51,45,8
+    EDITTEXT        IDC_ETW_SCALE,55,49,40,12,ES_AUTOHSCROLL
+    LTEXT           "Stretch:",IDC_STATIC,5,67,45,8
+    EDITTEXT        IDC_ETW_STRETCH,55,65,40,12,ES_AUTOHSCROLL
+    LTEXT           "Angle:",IDC_STATIC,5,83,45,8
+    EDITTEXT        IDC_ETW_ANGLE,55,81,40,12,ES_AUTOHSCROLL
+    LTEXT           "Rings:",IDC_STATIC,5,99,45,8
+    EDITTEXT        IDC_ETW_RINGS,55,97,40,12,ES_AUTOHSCROLL
+    LTEXT           "Turbulence:",IDC_STATIC,5,115,45,8
+    EDITTEXT        IDC_ETW_TURBULENCE,55,113,40,12,ES_AUTOHSCROLL
+    LTEXT           "Fibres:",IDC_STATIC,5,131,45,8
+    EDITTEXT        IDC_ETW_FIBRES,55,129,40,12,ES_AUTOHSCROLL
+    LTEXT           "Gain:",IDC_STATIC,5,147,45,8
+    EDITTEXT        IDC_ETW_GAIN,55,145,40,12,ES_AUTOHSCROLL
+    LTEXT           "Colors:",IDC_STATIC,5,19,40,8
+    PUSHBUTTON      "1",IDC_ETW_COLOR1,55,17,30,12
+    PUSHBUTTON      "2",IDC_ETW_COLOR2,85,17,30,12
+END
+
+IDD_FILLSTYLE_CLOUDS DIALOGEX 0, 0, 100, 130
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Follow drawn shape",IDC_ETW_AUTOCENTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,5,82,10
+    LTEXT           "RNG seed:",IDC_STATIC,5,35,39,8
+    EDITTEXT        IDC_ETW_SEED,55,33,40,12,ES_AUTOHSCROLL
+    LTEXT           "Scale:",IDC_STATIC,5,51,45,8
+    EDITTEXT        IDC_ETW_SCALE,55,49,40,12,ES_AUTOHSCROLL
+    LTEXT           "Stretch:",IDC_STATIC,5,67,45,8
+    EDITTEXT        IDC_ETW_STRETCH,55,65,40,12,ES_AUTOHSCROLL
+    LTEXT           "Angle:",IDC_STATIC,5,83,45,8
+    EDITTEXT        IDC_ETW_ANGLE,55,81,40,12,ES_AUTOHSCROLL
+    LTEXT           "Sharpness:",IDC_STATIC,5,99,45,8
+    EDITTEXT        IDC_ETC_AMOUNT,55,97,40,12,ES_AUTOHSCROLL
+    LTEXT           "Amount:",IDC_STATIC,5,115,45,8
+    EDITTEXT        IDC_ETC_BIAS,55,113,40,12,ES_AUTOHSCROLL
+    LTEXT           "Colors:",IDC_STATIC,5,19,40,8
+    PUSHBUTTON      "1",IDC_ETW_COLOR1,55,17,30,12
+    PUSHBUTTON      "2",IDC_ETW_COLOR2,85,17,30,12
+END
+
+IDD_EDITTOOL_SHAPESHIFT DIALOGEX 0, 0, 100, 52
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Mode:",IDC_STATIC,5,8,33,8
+    CONTROL         "ToolBar",IDC_ET_SHAPETOOL,"ToolbarWindow32",0x994e,39,5,56,12
+    LTEXT           "Size:",IDC_ET_SIZELABEL,5,23,33,8
+    EDITTEXT        IDC_ET_SIZEEDIT,39,21,30,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_ET_SIZESPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,58,21,11,12
+    LTEXT           "pixels",IDC_ET_SIZEUNIT,74,23,25,8
+    LTEXT           "Strength:",IDC_ET_INTENSITYLABEL,5,37,33,8
+    CONTROL         "",IDC_ET_INTENSITYCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,39,37,10,10
+    EDITTEXT        IDC_ET_INTENSITYEDIT,53,35,16,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_ET_INTENSITYSPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,58,35,12,12
+    LTEXT           "%",IDC_ET_INTENSITYUNIT,74,37,8,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_CONFIGGUI_VIGNETTING, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 117
+    END
+
+    IDD_CONFIGGUI_SOFTENSKIN, DIALOG
+    BEGIN
+        RIGHTMARGIN, 139
+    END
+
+    IDD_CONFIGGUI_SEAMCARVING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 211
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 5
+    END
+
+    IDD_FILLSTYLE_WOOD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_FILLSTYLE_CLOUDS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_EDITTOOL_SHAPESHIFT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 93
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 45
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_PROJNAME            "RWOperationImagePhoto"
+    IDS_RASTERIMAGEREMOVEHUE_NAME "Raster Image - Remove Hue"
+    IDS_CFGID_HUE_NAME      "Hue"
+    IDS_CFGID_CURVE_NAME    "Curve"
+    IDS_CFGID_HUE_DESC      "Hue to Remove"
+    IDS_CFGID_CURVE_DESC    "Curve for Hue Remove"
+    IDS_HELP_CURVE          "You can control the curve by dragging the control points."
+    IDS_CUSTCFG_MORECOLORS  "More Colors..."
+    IDS_RASTERIMAGEAUTOCONTRAST_NAME "Raster Image - Automatic Contrast"
+    IDS_CUSTCFG_PICKCOLOR   "Color from screen..."
+    IDS_CFGID_X_AXIS        "X axis"
+    IDS_CFGID_INTERPOLATION "Interpolation"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_X_AXIS_HUE    "Hue distance"
+    IDS_CFGID_X_AXIS_COLOR  "Color distance"
+    IDS_CFGID_INTERPOLATION_BSPLINE "B-Spline"
+    IDS_CFGID_INTERPOLATION_LINEAR "Linear"
+    IDS_RASTERIMAGEGRAYSCALE_NAME "Raster Image - Grayscale"
+    IDS_CFGID_COLOR_NAME    "Filter Color"
+    IDS_CFGID_COLOR_DESC    "Color of the filter for greyscale reduction."
+    IDS_CFGID_AL_TYPE_NAME  "Method"
+    IDS_CFGID_AL_TYPE_DESC  "Method used for automatic level adjustments."
+    IDS_CFGID_TOLERANCE_NAME "Tolerance"
+    IDS_CFGID_TOLERANCE_DESC "Tolerance for contrast adjustment."
+    IDS_CFGID_HLS_HUE_NAME  "Hue"
+    IDS_CFGID_HLS_SATURATION_NAME "Saturation"
+    IDS_CFGID_HLS_LIGHTNESS_NAME "Lightness"
+    IDS_CFGID_HLS_AREA_NAME "Change area"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_HLS_AREA1_NAME "Area Start From"
+    IDS_CFGID_HLS_AREA2_NAME "Area Start To"
+    IDS_CFGID_HLS_AREA3_NAME "Area End From"
+    IDS_CFGID_HLS_AREA4_NAME "Area End To"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_RASTERIMAGEHLS_NAME "Raster Image - HLS"
+    IDS_CROP_NOPROPORTIONS  "Not constrained"
+    IDS_HELP_STANDARD       "Pixels are copied without modification."
+    IDS_HELP_HIGHFREQ       "Only high freqencies in the affected region are copied."
+    IDS_HELP_LOWFREQ        "Only low freqencies in the affected region are copied."
+    IDS_HELP_RELATIVE       "If checked, pixels are copied using constant offset. If unchecked, pixels are always copied from selected point."
+    IDS_DOCOPREMOVENOISE_NAME "Raster Image - Remove Noise"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DOCOPWATERMARK_NAME "Raster Image - Watermark"
+    IDS_CFGID_WM_XPOSITION_NAME "Position X"
+    IDS_CFGID_WM_XPOSITION_DESC 
+                            "Relative horizontal position of the watermark."
+    IDS_CFGID_WM_YPOSITION_NAME "Position Y"
+    IDS_CFGID_WM_YPOSITION_DESC "Relative vertical position of the watermark."
+    IDS_CFGID_WM_MARGINS_NAME "Margins"
+    IDS_CFGID_WM_OPACITY_NAME "Opacity"
+    IDS_CFGID_WM_OPACITY_DESC 
+                            "This field controls how transparent or opaque will the text or image be (0-100%)."
+    IDS_CFGID_WM_TYPE_NAME  "Type"
+    IDS_CFGID_WM_TYPE_DESC  "Specifies whether an image or a text template will be used for watermarking."
+    IDS_CFGID_WM_IMAGE_NAME "Path to Image"
+    IDS_CFGID_WM_IMAGE_DESC "Absolute path to the image to use as watermark."
+    IDS_CFGID_WM_TEXT_NAME  "Text Template"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_WM_TEXT_DESC  "Template of the watermark text. The following placeholders can be used:%% - % sign, %FILENAME% - name of the file, %FILEFOLDER% - folder with the image including /, %FILEEXT% - extension, %EXIF-TagName% TagName is name of a tag in exif."
+    IDS_CFGID_WM_FONT_NAME  "Font"
+    IDS_CFGID_WM_FONT_DESC  "Font family used for text watermark."
+    IDS_CFGID_WM_BOLD_NAME  "Bold"
+    IDS_CFGID_WM_BOLD_DESC  "If enabled, the weight of the used font will be increased."
+    IDS_CFGID_WM_ITALIC_NAME "Italic"
+    IDS_CFGID_WM_ITALIC_DESC "If enabled, the text be printed skewed."
+    IDS_CFGID_WM_SHADOW_NAME "Shadow"
+    IDS_CFGID_WM_SHADOW_DESC 
+                            "Separate the text from background by adding a shadow under the text."
+    IDS_CFGID_WM_ANGLE_NAME "Angle"
+    IDS_CFGID_WM_ANGLE_DESC "Orientation of the watermark text in degrees."
+    IDS_CFGID_WM_ALIGNMENT_NAME "Alignment"
+    IDS_CFGID_WM_ALIGNMENT_DESC 
+                            "Text alignment if more than one line is used."
+    IDS_CFGID_WMA_LEFT      "Left"
+    IDS_CFGID_WMA_CENTER    "Center"
+    IDS_CFGID_WMA_RIGHT     "Right"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_WM_SIZETYPE_NAME "Text size"
+    IDS_CFGID_WM_SIZETYPE_DESC "Method used to specify text size."
+    IDS_CFGID_WMH_ABSOLUTE  "Absolute"
+    IDS_CFGID_WMH_RELATIVE  "Relative"
+    IDS_CFGID_WM_ABSSIZE_DESC "Size of watermark text in pixels."
+    IDS_WATERMARK_LAYERNAME "Watermark"
+    IDS_RASTERIMAGELEVELS_NAME "Raster Image - Levels"
+    IDS_CFGVAL_ALT_CONTRAST "Automatic contrast"
+    IDS_SELECTIMAGEWATERMARK "Open Watermark Pattern"
+    IDS_DOCOPGLOW_NAME      "Raster Image - Glow"
+    IDS_CFGID_SG_RADIUS_NAME "Radius"
+    IDS_CFGID_SG_RADIUS_DESC "Blur radius in pixels."
+    IDS_CFGID_SG_INTENSITY_NAME "Intensity"
+    IDS_CFGID_SG_INTENSITY_DESC "Relative intensity of the glow effect."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_SG_COLORED_NAME "Colored"
+    IDS_CFGID_SG_COLORED_DESC 
+                            "If enabled, the glowing will keep the color of the glowing object."
+    IDS_CFGID_SG_MASKID_NAME "Selection mask ID"
+    IDS_CFGVAL_ALT_LEVELS   "Automatic channel levels"
+    IDS_CFGID_SG_MASKID_DESC 
+                            "Identifier of the state that holds the current selection mask."
+    IDS_RASTERIMAGEVIGNETTING_NAME "Raster Image - Vignetting"
+    IDS_CFGID_VIG_AUTO_UNVIG_NAME "Automatic"
+    IDS_CFGID_VIG_AUTO_UNVIG_DESC "Automatic un-vignetting"
+    IDS_CFGID_VIG_COLOR_NAME "Color"
+    IDS_CFGID_VIG_COLOR_DESC "Color of vignetation."
+    IDS_CFGID_VIG_CURVE_NAME "Curve"
+    IDS_CFGID_VIG_CURVE_DESC 
+                            "X-axis means distance of a pixel from the center of image. Y-axis means amount of vignetting."
+    IDS_CFGID_VIG_INTERPOLATION_NAME "Interpolation"
+    IDS_CFGID_VIG_INTERPOLATION_DESC 
+                            "Interpolation of the curve will be linear or via b-spline."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HELP_PERSPECTIVECROP 
+                            "The selected region is assumed to have a rectangular shape that has been distorted by a perspective transformation. The perspective deformation is compensated during the crop."
+    IDS_HELP_NORMALCROP     "The area outside the crop rectangle is removed."
+    IDS_HELP_JPEGCROP       "Tile crop helps to crop the image at MCU boundaries to enable lossless JPEG cropping."
+    IDS_HELP_ASPECTRATIO    "The cropped rectangle tries to maintain the given aspect ratio. Portrait or landscape orientation is auto-detected."
+    IDS_CFGID_SS_COLOR_NAME "Skin Color"
+    IDS_CFGID_SS_COLOR_DESC "The color that should be soften."
+    IDS_CFGID_SS_STRENGTH_NAME "Soften Strength"
+    IDS_CFGID_SS_STRENGTH_DESC 
+                            "Strength of soften effect. Size of the photo will be considered."
+    IDS_RASTERIMAGE_SOFTENSKIN_NAME "Raster Image - Soften Skin"
+    IDS_CFGID_WM_COLOR_DESC "Watermark text color. Shadow color will be picked automatically to complement text color."
+    IDS_RASTERIMAGESEAMCARVING_NAME "Raster Image - Seam Carving"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_SC_SIZEX_NAME "Width"
+    IDS_CFGID_SC_SIZEX_DESC "Width of the retargeted image in pixels."
+    IDS_CFGID_SC_SIZEY_NAME "Height"
+    IDS_CFGID_SC_SIZEY_DESC "Height of the retargeted image in pixels."
+    IDS_CFGID_SC_SELMODE_NAME "Mode"
+    IDS_CFGID_SC_SELMODE_DESC 
+                            "Increase or decrease importance of selected pixels effectively protecting them or marking them for priority deletion."
+    IDS_CFGVAL_SCSM_IGNORE  "Ignore selection"
+    IDS_CFGVAL_SCSM_PROTECT "Protect selection"
+    IDS_CFGVAL_SCSM_REMOVE  "Remove selection"
+    IDS_CFGID_SC_SELSYCID_NAME "Sync ID"
+    IDS_CFGID_SC_SELSYCID_DESC 
+                            "Identifier of a view state with the image mask."
+    IDS_HELP_BUBBLECOLOR    "Color and opacity of the bubble background."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FILLSTYLE_WOOD_NAME "Wood texture"
+    IDS_FILLSTYLE_WOOD_DESC "A generated texture resembling wood."
+    IDS_FILLSTYLE_CLOUDS_NAME "Clouds texture"
+    IDS_FILLSTYLE_CLOUDS_DESC "A generated cloudy sky pattern."
+    IDS_CFGID_L_INBLACK_NAME "Input black level"
+    IDS_CFGID_L_INBLACK_DESC 
+                            "Pixels with this or lower intensitied are considered black."
+    IDS_CFGID_L_INWHITE_NAME "Input white level"
+    IDS_CFGID_L_INWHITE_DESC 
+                            "Pixels with this or greater intensitied are considered white."
+    IDS_CFGID_L_GAMMA_NAME  "Gamma"
+    IDS_CFGID_L_GAMMA_DESC  "Define middle point between black and white levels."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CFGID_L_OUTBLACK_NAME "Output black level"
+    IDS_CFGID_L_OUTBLACK_DESC 
+                            "Black pixels in source image will be mapped to this value."
+    IDS_CFGID_L_OUTWHITE_NAME "Output white level"
+    IDS_CFGID_L_OUTWHITE_DESC 
+                            "White pixels in source image will be mapped to this value."
+    IDS_LEVELS_TIPS         "Pick color|Reset gray level|Automatic level|"
+    IDS_CFGID_RN_METHOD_NAME "Method"
+    IDS_CFGID_RN_METHOD_DESC "Method used for noise reduction."
+    IDS_CFGVAL_RNM_BLUR9OF25 "Blur area with 9 of 25 neighbor pixels"
+    IDS_CFGVAL_RNM_BLURENERGY "Mix normal and blurred images by energy"
+    IDS_CFGID_RN_THRESHOLD_NAME "Threshold"
+    IDS_CFGID_RN_THRESHOLD_DESC 
+                            "Maximum energy of a pixel to consider it noise."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "RWVersion.h"
+#include "RWVersionInfo.rc2"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

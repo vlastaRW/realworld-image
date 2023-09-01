@@ -1,0 +1,8 @@
+; RWOperationPrint.def : Declares the module parameters.
+
+LIBRARY      "RWOperationPrint.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE

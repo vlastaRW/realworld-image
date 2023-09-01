@@ -1,0 +1,8 @@
+; RWOperationImageRaster.def : Declares the module parameters.
+
+LIBRARY      "RWOperationImageRaster.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE

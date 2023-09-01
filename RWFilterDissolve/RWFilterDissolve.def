@@ -1,0 +1,8 @@
+; RWFilterDissolve.def : Declares the module parameters.
+
+LIBRARY      "RWFilterDissolve.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE

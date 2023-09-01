@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="VectorImageEditor Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MoveShape Files">
+      <UniqueIdentifier>{c37c6ec9-659f-4cd0-91e1-f88ce5abdea1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ObjectToShape Files">
+      <UniqueIdentifier>{70df793d-c015-43bb-86d0-eee055fc58cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TransformShapes Files">
+      <UniqueIdentifier>{bd610a79-7f40-4666-9c3b-2b0bb009e216}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RepositionShapes Files">
+      <UniqueIdentifier>{77af009a-cfa9-42c6-8b7b-9b22ba0cd839}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ManipulateShapes Files">
+      <UniqueIdentifier>{5f1e1e8d-8bd0-4381-b281-8ad2bcc4e475}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RWViewImageVector.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewFactoryVectorImageEditor.cpp">
+      <Filter>VectorImageEditor Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignerViewVectorImageEditor.cpp">
+      <Filter>VectorImageEditor Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationMoveShape.cpp">
+      <Filter>MoveShape Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationObjectToShape.cpp">
+      <Filter>ObjectToShape Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationSmoothenShape.cpp">
+      <Filter>TransformShapes Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationTransformShape.cpp">
+      <Filter>TransformShapes Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VectorImageOffsetShape.cpp">
+      <Filter>TransformShapes Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsAlignShapes.cpp">
+      <Filter>RepositionShapes Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsCenterShapes.cpp">
+      <Filter>RepositionShapes Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommandsDistributeShapes.cpp">
+      <Filter>RepositionShapes Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationCombineShapes.cpp">
+      <Filter>ManipulateShapes Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationSplitShape.cpp">
+      <Filter>ManipulateShapes Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentOperationSymmetry.cpp">
+      <Filter>ManipulateShapes Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\realworld-core\clipper\clipper.cpp">
+      <Filter>ManipulateShapes Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RWVersion.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewFactoryVectorImageEditor.h">
+      <Filter>VectorImageEditor Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesignerViewVectorImageEditor.h">
+      <Filter>VectorImageEditor Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GestureOperationManager.h">
+      <Filter>VectorImageEditor Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorDrawingToolHelper.h">
+      <Filter>VectorImageEditor Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationMoveShape.h">
+      <Filter>MoveShape Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentOperationObjectToShape.h">
+      <Filter>ObjectToShape Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PathUtils.h">
+      <Filter>ManipulateShapes Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\realworld-core\clipper\clipper.hpp">
+      <Filter>ManipulateShapes Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RWViewImageVector.def">
+      <Filter>Misc Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RWViewImageVector.rc">
+      <Filter>Misc Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,445 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Czech resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CSY)
+#ifdef _WIN32
+LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONFIGGUI_IMGVIEW DIALOGEX 0, 0, 114, 73
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Button1",IDC_CGIMGVIEW_COLORBTN,80,0,34,12
+    LTEXT           "&Barva pozadí:",IDC_STATIC,0,2,49,8
+    CHECKBOX        "&Automatické zvìtšení",IDC_CGIMGVIEW_AUTOZOOM,0,30,84,10
+    LTEXT           "Synchzonizace zobrazení:",IDC_STATIC,0,46,85,8
+    EDITTEXT        IDC_CGIMGVIEW_VIEWSYNC,86,44,27,12,ES_AUTOHSCROLL
+    LTEXT           "Ovládané zobrazení:",IDC_STATIC,0,62,69,8
+    EDITTEXT        IDC_CGIMGVIEW_CTRLSYNC,86,60,27,12,ES_AUTOHSCROLL
+    CHECKBOX        "Zobrazit rám",IDC_CGIMGVIEW_DRAWFRAME,0,16,97,10
+END
+
+IDD_CONFIGGUI_SYNCID DIALOGEX 0, 0, 160, 12
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Synchronizaèní ID &výbìru:",-1,0,2,85,8
+    EDITTEXT        IDC_CGID_SELECTION,89,0,70,12,ES_AUTOHSCROLL
+END
+
+IDD_CONFIGGUI_INSERTFRAME DIALOGEX 0, 0, 120, 118
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Vložit snímek",IDC_CGIF_INSPOS_GRP,0,0,119,72
+    RADIOBUTTON     "Na &zaèátek aminace",IDC_CGIF_INSFIRST,10,13,79,10
+    RADIOBUTTON     "Na &konec aminace",IDC_CGIF_INSLAST,10,27,73,10
+    RADIOBUTTON     "&Pøed vybraný snímek",IDC_CGIF_INSBEFORE,10,41,83,10
+    RADIOBUTTON     "&Za vybraný snímek",IDC_CGIF_INSAFTER,10,55,76,10
+    CHECKBOX        "Zk&opírovat vybraný snímek",IDC_CGIF_COPY,0,76,102,10,WS_GROUP
+    LTEXT           "ID výbìru:",IDC_STATIC,0,91,58,8
+    EDITTEXT        IDC_CGIF_SYNCID,61,89,58,12,ES_AUTOHSCROLL
+    LTEXT           "ID obrázku:",IDC_STATIC,0,107,58,8
+    EDITTEXT        IDC_CGIF_IMGSYNCID,61,105,58,12,ES_AUTOHSCROLL
+END
+
+IDD_CUSTOMZOOM DIALOGEX 0, 0, 148, 78
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Nastavit vlastní zvìtšení"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "&Zvìtšení obrázku:",IDC_STATIC,7,9,58,8
+    EDITTEXT        IDC_ZOOM,71,7,53,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "%",IDC_STATIC,131,9,10,8
+    LTEXT           "Poznámka: maximální a minimální povolená hodnota zvìtšení mùže záviset na velikosti okna a obrázku.",IDC_STATIC,7,25,134,24
+    DEFPUSHBUTTON   "OK",IDOK,37,57,50,14
+    PUSHBUTTON      "Storno",IDCANCEL,91,57,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_CONFIGGUI_IMGVIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 107
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+
+    IDD_CONFIGGUI_SYNCID, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 153
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 5
+    END
+
+    IDD_CONFIGGUI_INSERTFRAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 113
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_CUSTOMZOOM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_PROJNAME            "RWViewImage"
+    IDS_FRAMES_VIEWNAME     "Animace - seznam snímkù"
+    IDS_OPINSERTFRAME_NAME  "Animace - pøidat snímek"
+    IDS_OPREVERSEFRAMES_NAME "Animace - obrátit poøadí snímkù"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_VIEWNAME            "Obrázek - náhled"
+    IDS_CFGID_IMGVIEW_CUSTOMBACKGROUND_NAME "Vlastní pozadí"
+    IDS_CFGID_IMGVIEW_CUSTOMBACKGROUND_DESC 
+                            "Pokuje je volba zapnuta, je možné nastavit vlastní barvu pozadí. Jinak je použita defaulní barva pro dialogy."
+    IDS_CFGID_IMGVIEW_BACKGROUNDCOLOR_NAME "Barva pozadí"
+    IDS_CFGID_IMGVIEW_BACKGROUNDCOLOR_DESC "RGB hodnota pro výplò pozadí."
+    IDS_CUSTCFG_DEFAULTCOLOR "Standardní barva"
+    IDS_CUSTCFG_MORECOLORS  "Další barvy..."
+    IDS_CFGID_IMGVIEW_AUTOZOOM_NAME "Automatické zvìtšení"
+    IDS_CUSTCFG_COLORNAMES  "Èerná|Hnìdá|Tmavá olivovìzelená|Tmavìzelená|Temná modrozelená|Tmavìmodrá|Indigová modø|Tmavìšedá|Rudá|Oranžová|Tmavìžlutá|Zelená|Tmavìzelenomodrá|Modrá|Šedomodrá|Šedá - 40|Èervená|Svìtleoranžová|Žlutozelená|Moøská zeleò|Zelenomodrá|Svìtlemodrá|Fialová|Šedá- 50|Rùžová|Zlatá|Žlutá|Jasnìzelená|Tyrkysová|Azurová|Švestková|Svìtlešedá|Starorùžová|Svìtlehnìdá|Svìtležlutá|Bledìzelená|Svìtletyrkysová|Modrošedá|Levandulová|Bílá|"
+    IDS_DEFAULTBACKGROUND   "Standardní pozadí"
+    IDS_CFGID_IMGVIEW_AUTOZOOM_DESC 
+                            "Zvìtšení bude nastavováno automaticky tak, aby byl vidìt celý obrázek."
+    IDS_IV_CONTEXTHELP      "Ovládání prohlížeèe obrázkù:\n- Koleèkem myši a klávesami + a - lze nastavovat zvìtšení.\n- Dvojitý klik a klávesa * zapínají automatické zvìtšení.\n- Klávesou / lze nastavit zvìtšení na 100%.\n- Tažením myší a šipkami lze obrázek posunovat."
+    IDS_CFGID_IMGVIEW_MYVIEWPORT_NAME "Synchronizace pohledu"
+    IDS_CFGID_IMGVIEW_MYVIEWPORT_DESC 
+                            "Zvìtšení a pozice pohledù se stejným identifikátorem budou synchronizovány."
+    IDS_CFGID_IMGVIEW_CONTROLLEDVIEPORT_NAME "Synchronizace ovladaèe"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_IMAGEZOOM      "Obrázek - zvìtšení"
+    IDS_MENU_ZOOMIN_NAME    "Z&vìtšit"
+    IDS_MENU_ZOOMIN_DESC    "Pøiblížit obrázek o jeden krok."
+    IDS_MENU_ZOOMOUT_NAME   "Z&menšit"
+    IDS_MENU_ZOOMOUT_DESC   "Oddálit obrázek o jeden krok."
+    IDS_MENU_ZOOMAUTO_NAME  "&Automatické zvìtšení"
+    IDS_MENU_ZOOMAUTO_DESC  "Automaticky nastavovat zvìtšení podle dostupného prostoru."
+    IDS_MENU_ZOOMPOPUP_DESC "Zobrazuje aktuální zvìtšení èi zmenšení. Kliknìte pro rychlé pøepnutí na jednu z pøeddefinovaných hodnot nebo na vlastní zvìtšení."
+    IDS_MENU_ZOOMCUSTOM_NAME "Vlastní zvìtšení"
+    IDS_MENU_ZOOMCUSTOM_DESC 
+                            "Umožòuje nastavit vlastní hodnotu pro zvìtšení obrázku."
+    IDS_MENU_ZOOMCONST_NAME "%g%%"
+    IDS_MENU_ZOOMCONST_DESC "Pøepnout na toto zvìtšení."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_SELSYNCGROUP_NAME "Synchronizaèní ID výbìru"
+    IDS_CFGID_SELSYNCGROUP_HELP 
+                            "Výbìr položek v tomto pohledu bude synchronizován s výbìrem v pohledech se shodným ID."
+    IDS_CFGID_INSERT_POS_NAME "Pozice pro vložení"
+    IDS_CFGID_INSERT_POS_HELP "Urèuje, kam bude nový snímek vložen."
+    IDS_CFGVAL_INSPOS_FIRST "Na zaèátek"
+    IDS_CFGVAL_INSPOS_LAST  "Na konec"
+    IDS_CFGVAL_INSPOS_BEFORE "Pøed aktuální"
+    IDS_CFGVAL_INSPOS_AFTER "Za aktuální"
+    IDS_CFGID_INSERT_COPY_NAME "Kopírovat snímek"
+    IDS_CFGID_INSERT_COPY_HELP 
+                            "Je-li povoleno, bude nový snímek kopií aktuálnì vybraného snímku."
+    IDS_DROPMSG_APPENDFRAMES 
+                            "Pøidat tažené soubory do animace jako nové snímky."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_IMGVIEW_CONTROLLEDVIEPORT_DESC 
+                            "Bude zobrazen obdélník vyznaèující pohled v ovládaném oknì a tento bude možno posunovat."
+    IDS_IV_CONTEXTHELP_CONTROLLED 
+                            "Toto okno zobrazuje náhled na obrázek a zvýrazòuje oblast viditenou v editoru. Tuto oblast mùžete posnout kliknutím levým tlaèítkem."
+    IDS_AF_CONTEXTHELP      "Toto okno zobrazuje náhledy na snímky animace. Ovládání:\n - Vyberte více snímkù tažením obdélníku okolo nich nebo kliknutím s klávesami or CTRL nebo SHIFT. (Nìkteré operace lze spustit na všech vybraných snímcích.)\n - Pøesuòte vybrané snímky jejich odtažením levým tlaèítkem.\n - Duplikujte snímky odtažením se stisknutým CTRL.\n - Pøidejte snímky odtažením souborù s obrázky nebo ukazateli z Prùzkumníka."
+END
+
+#endif    // Czech resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONFIGGUI_IMGVIEW DIALOGEX 0, 0, 114, 73
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Button1",IDC_CGIMGVIEW_COLORBTN,80,0,34,12
+    LTEXT           "&Background color:",IDC_STATIC,0,2,78,8
+    CHECKBOX        "&Automatic zoom",IDC_CGIMGVIEW_AUTOZOOM,0,30,91,10
+    LTEXT           "Viewport sync ID:",IDC_STATIC,0,46,77,8
+    EDITTEXT        IDC_CGIMGVIEW_VIEWSYNC,79,44,34,12,ES_AUTOHSCROLL
+    LTEXT           "Controlled viewport:",IDC_STATIC,0,62,78,8
+    EDITTEXT        IDC_CGIMGVIEW_CTRLSYNC,79,60,34,12,ES_AUTOHSCROLL
+    CHECKBOX        "Show frame",IDC_CGIMGVIEW_DRAWFRAME,0,16,97,10
+END
+
+IDD_CONFIGGUI_SYNCID DIALOGEX 0, 0, 137, 12
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "&Selection sync ID:",-1,0,2,70,8
+    EDITTEXT        IDC_CGID_SELECTION,75,0,62,12,ES_AUTOHSCROLL
+END
+
+IDD_CONFIGGUI_INSERTFRAME DIALOGEX 0, 0, 120, 118
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Insert position",IDC_CGIF_INSPOS_GRP,0,0,119,72
+    RADIOBUTTON     "Before &first frame",IDC_CGIF_INSFIRST,10,13,103,10
+    RADIOBUTTON     "After &last frame",IDC_CGIF_INSLAST,10,27,103,10
+    RADIOBUTTON     "&Before selected item",IDC_CGIF_INSBEFORE,10,41,103,10
+    RADIOBUTTON     "&After selected item",IDC_CGIF_INSAFTER,10,55,103,10
+    CHECKBOX        "&Copy selected frame",IDC_CGIF_COPY,0,76,100,10,WS_GROUP
+    LTEXT           "Selection ID:",IDC_STATIC,0,91,58,8
+    EDITTEXT        IDC_CGIF_SYNCID,61,89,58,12,ES_AUTOHSCROLL
+    LTEXT           "Image ID:",IDC_STATIC,0,107,58,8
+    EDITTEXT        IDC_CGIF_IMGSYNCID,61,105,58,12,ES_AUTOHSCROLL
+END
+
+IDD_CUSTOMZOOM DIALOGEX 0, 0, 148, 78
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Custom Image Zoom"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Image &zoom:",IDC_STATIC,7,9,56,8
+    EDITTEXT        IDC_ZOOM,65,7,59,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "%",IDC_STATIC,131,9,10,8
+    LTEXT           "Note: maximum and minimum zoom values may depend on the size of the window and the displayed image.",IDC_STATIC,7,25,134,24
+    DEFPUSHBUTTON   "OK",IDOK,37,57,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,91,57,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_CONFIGGUI_IMGVIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 107
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+
+    IDD_CONFIGGUI_SYNCID, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 5
+    END
+
+    IDD_CONFIGGUI_INSERTFRAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 113
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_CUSTOMZOOM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""RWViewImage.tlb""\r\n"
+    "#include ""RWVersion.h""\r\n"
+    "#include ""RWVersionInfo.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_PROJNAME            "RWViewImage"
+    IDS_FRAMES_VIEWNAME     "Animation - Frame List"
+    IDS_OPINSERTFRAME_NAME  "Animation - Insert Frame"
+    IDS_OPREVERSEFRAMES_NAME "Animation - Reverse Frame Order"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_VIEWNAME            "Image - Viewer"
+    IDS_CFGID_IMGVIEW_CUSTOMBACKGROUND_NAME "Custom background"
+    IDS_CFGID_IMGVIEW_CUSTOMBACKGROUND_DESC 
+                            "When turned on, window background color can be specified. When turned off, default dialog background color is used."
+    IDS_CFGID_IMGVIEW_BACKGROUNDCOLOR_NAME "Background color"
+    IDS_CFGID_IMGVIEW_BACKGROUNDCOLOR_DESC "RGB value for window background."
+    IDS_CUSTCFG_DEFAULTCOLOR "Default color"
+    IDS_CUSTCFG_MORECOLORS  "More colors..."
+    IDS_CFGID_IMGVIEW_AUTOZOOM_NAME "Automatic zoom"
+    IDS_CUSTCFG_COLORNAMES  "Black|Brown|Dark Olive Green|Dark Green|Dark Teal|Dark blue|Indigo|Dark grey|Dark red|Orange|Dark yellow|Green|Teal|Blue|Blue-grey|Grey - 40|Red|Light orange|Lime|Sea green|Aqua|Light blue|Violet|Grey - 50|Pink|Gold|Yellow|Bright green|Turquoise|Skyblue|Plum|Light grey|Rose|Tan|Light yellow|Pale green|Pale turquoise|Pale blue|Lavender|White|"
+    IDS_DEFAULTBACKGROUND   "Default background"
+    IDS_CFGID_IMGVIEW_AUTOZOOM_DESC 
+                            "The window will automatically adjust the zoom to display the entire image."
+    IDS_IV_CONTEXTHELP      "Image viewer controls:\n- Mouse wheel or + and - keys zoom in and out.\n- Double-click or hit * key to turn automatic zoom on.\n- Press / to set zoom to 1:1.\n- Drag picture with mouse or arrow key to pan."
+    IDS_CFGID_IMGVIEW_MYVIEWPORT_NAME "Viewport sync ID"
+    IDS_CFGID_IMGVIEW_MYVIEWPORT_DESC 
+                            "Zoom and position will be synchronized with views of the same ID."
+    IDS_CFGID_IMGVIEW_CONTROLLEDVIEPORT_NAME "Controlled sync ID"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MENU_IMAGEZOOM      "Image - Zoom"
+    IDS_MENU_ZOOMIN_NAME    "Zoom &in"
+    IDS_MENU_ZOOMIN_DESC    "Increase image magnification by one step."
+    IDS_MENU_ZOOMOUT_NAME   "Zoom &out"
+    IDS_MENU_ZOOMOUT_DESC   "Decrease image magnification by one step."
+    IDS_MENU_ZOOMAUTO_NAME  "&Automatic zoom"
+    IDS_MENU_ZOOMAUTO_DESC  "Automatically choose a zoom factor according to available space."
+    IDS_MENU_ZOOMPOPUP_DESC "Displays the current zoom factor. Click to quickly switch to predefined values or to your own zoom factor."
+    IDS_MENU_ZOOMCUSTOM_NAME "Custom zoom"
+    IDS_MENU_ZOOMCUSTOM_DESC 
+                            "Allows you to specify your own image zoom value."
+    IDS_MENU_ZOOMCONST_NAME "%g%%"
+    IDS_MENU_ZOOMCONST_DESC "Switch to this zoom factor."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_SELSYNCGROUP_NAME "Selection synchronization ID"
+    IDS_CFGID_SELSYNCGROUP_HELP 
+                            "The selection in this view will be synchronized with other views with the same ID."
+    IDS_CFGID_INSERT_POS_NAME "Insert position"
+    IDS_CFGID_INSERT_POS_HELP "Defines where is the new frame placed."
+    IDS_CFGVAL_INSPOS_FIRST "Before first"
+    IDS_CFGVAL_INSPOS_LAST  "After last"
+    IDS_CFGVAL_INSPOS_BEFORE "Before current"
+    IDS_CFGVAL_INSPOS_AFTER "After current"
+    IDS_CFGID_INSERT_COPY_NAME "Copy frame"
+    IDS_CFGID_INSERT_COPY_HELP 
+                            "If enabled, images will be copied from currently selected frame."
+    IDS_DROPMSG_APPENDFRAMES 
+                            "Add dragged files to the animation as new frames."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CFGID_IMGVIEW_CONTROLLEDVIEPORT_DESC 
+                            "A rentangle representing the viewport of the view with the given ID will be displayed and can be dragged."
+    IDS_IV_CONTEXTHELP_CONTROLLED 
+                            "This image viewer displays an overview of an image and indicates the rectangle displayed in an editor window. You can move the rectangle by clicking in this window."
+    IDS_AF_CONTEXTHELP      "This window displays previews of animation frames. Controls:\n - Select multiple frames by drawing rectangle around them or CTRL- or SHIFT-clicking them. (Some operations can be run on all selected frames.)\n - Move selected frames by dragging them with left mouse button.\n - Duplicate frames by dragging them with CTRL key pressed.\n - Append frames by dragging and dropping image or cursor files from Explorer."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "RWViewImage.tlb"
+#include "RWVersion.h"
+#include "RWVersionInfo.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

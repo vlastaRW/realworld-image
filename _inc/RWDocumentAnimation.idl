@@ -1,0 +1,187 @@
+// RWDocumentAnimation.idl : IDL source for RWDocumentAnimation
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (RWDocumentAnimation.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "RWInput.idl";
+import "RWImaging.idl";
+import "RWConceptDesignerExtension.idl";
+import "RWConceptSharedState.idl";
+import "RWScripting.idl";
+
+
+typedef [v1_enum] enum EAnimationChange
+{
+	EACAnimation = 0x2,
+	EACImage = 0x8,
+	EACTimeUnit = 0x80,
+} EAnimatedChange;
+
+typedef struct TAnimationChange
+{
+	ULONG nFlags;
+	ULONG nFrames;
+	[size_is(nFrames)] IUnknown** apFrames;
+} TAnimationChange;
+
+[
+	object,
+	uuid(C16109C6-E18A-4F4D-85CA-5471D3FBDF81),
+	helpstring("IAnimationObserver Interface"),
+	pointer_default(unique)
+]
+interface IAnimationObserver : IUnknown
+{
+	[helpstring("method Notify")] HRESULT Notify([in] TCookie a_tCookie, [in] TAnimationChange a_eChange);
+};
+
+[
+	object,
+	uuid(1ED27D2D-D5C5-4F54-8764-57E70581EA13),
+	helpstring("IAnimationFrameCreator Interface"),
+	pointer_default(unique)
+]
+interface IAnimationFrameCreator : IUnknown
+{
+	[helpstring("method Create")] HRESULT Create([in] IDocumentBuilder* a_pDefaultBuilder, [in] BSTR a_bstrID, [in] IDocumentBase* a_pBase);
+};
+
+[
+	object,
+	uuid(C93712DF-ED85-4F87-AC82-7391A0827FE8),
+	helpstring("IDocumentAnimation Interface"),
+	pointer_default(unique)
+]
+interface IDocumentAnimation : IUnknown
+{
+	[helpstring("method FramesEnum")] HRESULT FramesEnum([out] IEnumUnknowns** a_ppFrames);
+	[helpstring("method IsFramePresent")] HRESULT IsFramePresent([in] IUnknown* a_pFrame);
+	[helpstring("method FrameDel")] HRESULT FrameDel([in] IUnknown* a_pFrame);
+	[helpstring("method FrameIns")] HRESULT FrameIns([in] IUnknown* a_pBefore, [in] IAnimationFrameCreator* a_pCreator, [out] IUnknown** a_ppNewFrame);
+	[helpstring("method FrameMove")] HRESULT FrameMove([in] IUnknown* a_pBefore, [in] IUnknown* a_pSrcFrame);
+	[helpstring("method FrameGetDoc")] HRESULT FrameGetDoc([in] IUnknown* a_pFrame, [out] IDocument** a_ppFrameDoc);
+	[helpstring("method FrameSetDoc")] HRESULT FrameSetDoc([in] IUnknown* a_pFrame, [in] IDocument* a_pFrameDoc);
+	[helpstring("method FrameGetTime")] HRESULT FrameGetTime([in] IUnknown* a_pFrame, [out] float* a_pSeconds);
+	[helpstring("method FrameSetTime")] HRESULT FrameSetTime([in] IUnknown* a_pFrame, [in] float a_fSeconds);
+	[helpstring("method TimeUnitInfo")] HRESULT TimeUnitInfo([out] float* a_pSecondsPerUnit, [in] LCID a_tLocaleHint, [out] BSTR* a_pbstrUnitName);
+	[helpstring("method LoopCountGet")] HRESULT LoopCountGet([out] ULONG* a_pCount);
+	[helpstring("method LoopCountSet")] HRESULT LoopCountSet([in] ULONG a_nCount);
+
+	[helpstring("method StatePack")] HRESULT StatePack([in] IEnumUnknowns* a_pFrames, [out] ISharedState** a_ppState);
+	[helpstring("method StateUnpack")] HRESULT StateUnpack([in] ISharedState* a_pState, [out] IEnumUnknowns** a_ppFrames);
+	[helpstring("method StatePrefix")] HRESULT StatePrefix([out] BSTR* a_pbstrPrefix);
+
+	[helpstring("method ObserverIns")] HRESULT ObserverIns([in] IAnimationObserver* a_pObserver, [in] TCookie a_tCookie);
+	[helpstring("method ObserverDel")] HRESULT ObserverDel([in] IAnimationObserver* a_pObserver, [in] TCookie a_tCookie);
+};
+
+[
+	object,
+	uuid(39B2A8C6-A07C-4854-9BFF-BF0FA7C8EAA9),
+	helpstring("IDocumentAnimationClipboard Interface"),
+	pointer_default(unique)
+]
+interface IDocumentAnimationClipboard : IUnknown
+{
+	[helpstring("method CanPaste"), local] HRESULT CanPaste();
+	[helpstring("method Paste"), local] HRESULT Paste([in] RWHWND a_hWindow, [in] IUnknown* a_pBefore, [out] IEnumUnknowns** a_ppNewFrameIDs);
+	[helpstring("method Copy"), local] HRESULT Copy([in] RWHWND a_hWindow, [in] ULONG a_nFrames, [in, size_is(a_nFrames)] IUnknown** a_apFrames);
+	[helpstring("method CanDrop"), local] HRESULT CanDrop([in] IEnumStrings* a_pFiles);
+	[helpstring("method Drop"), local] HRESULT Drop([in] IEnumStrings* a_pFiles, [in] IUnknown* a_pBefore, [out] IEnumUnknowns** a_ppNewFrameIDs);
+};
+
+[
+	object,
+	uuid(D89EF915-A467-4063-BDE4-60E056BD72FD),
+	dual,
+	nonextensible,
+	helpstring("IScriptedAnimation Interface"),
+	pointer_default(unique)
+]
+interface IScriptedAnimation : IDispatch
+{
+	[propget, id(1), helpstring("property Frames")] HRESULT Frames([out, retval] ULONG* pnCount);
+	[id(2), helpstring("method GetFrame")] HRESULT GetFrame([in] ULONG index, [out, retval] IScriptedDocument** document);
+	[id(3), helpstring("method MoveFrame")] HRESULT MoveFrame([in] ULONG index, [in] LONG before);
+	[id(4), helpstring("method DeleteFrame")] HRESULT DeleteFrame([in] ULONG index);
+	[id(5), helpstring("method CopyToFrame")] HRESULT CopyToFrame([in] LONG index, [in] IUnknown* document);
+	[id(6), helpstring("method GetFrameTime")] HRESULT GetFrameTime([in] LONG index, [out, retval] double* ms);
+	[id(7), helpstring("method SetFrameTime")] HRESULT SetFrameTime([in] LONG index, [in] double ms);
+	[propget, id(8), helpstring("property LoopCount")] HRESULT LoopCount([out, retval] ULONG* pnCount);
+	[propput, id(8), helpstring("property LoopCount")] HRESULT LoopCount([in] ULONG count);
+	[propget, id(9), helpstring("property sizeX")] HRESULT sizeX([out, retval] ULONG* pnVal);
+	[propget, id(10), helpstring("property sizeY")] HRESULT sizeY([out, retval] ULONG* pnVal);
+	[id(11), helpstring("method GetIndicesFromState")] HRESULT GetIndicesFromState([in] IScriptedContext* context, [in] BSTR state, [out, retval] IDispatch** ppArray);
+	[id(12), helpstring("method PutIndicesToState")] HRESULT PutIndicesToState([in] IScriptedContext* context, [in] BSTR state, [in] VARIANT* pSelectedItems);
+};
+
+[
+	object,
+	uuid(23344F54-96A9-44E5-9F78-4EA0275509D0),
+	helpstring("IDocumentFactoryAnimation Interface"),
+	pointer_default(unique)
+]
+interface IDocumentFactoryAnimation : IUnknown
+{
+	[helpstring("method Init")] HRESULT Init([in] BSTR a_bstrPrefix, [in] IDocumentBase* a_pBase);
+	[helpstring("method AppendFrame")] HRESULT AppendFrame([in] IAnimationFrameCreator* a_pCreator, [in] float a_fDelay, [in] BSTR a_bstrPrefix, [in] IDocumentBase* a_pBase);
+	[helpstring("method SetLoopCount")] HRESULT SetLoopCount([in] BSTR a_bstrPrefix, [in] IDocumentBase* a_pBase, [in] ULONG a_nCount);
+	[helpstring("method SetResolution")] HRESULT SetResolution([in] BSTR a_bstrPrefix, [in] IDocumentBase* a_pBase, [in] TImageResolution const* a_pResolution);
+};
+
+[
+	object,
+	uuid(39B50C90-5096-4DBA-B9A5-D1C3FBF27087),
+	helpstring("IDocumentGIF Interface"),
+	pointer_default(unique)
+]
+interface IDocumentGIF : IDocumentAnimation
+{
+	[helpstring("method FrameGetWaitFlag")] HRESULT FrameGetWaitFlag([in] IUnknown* a_pFrame, [out] boolean* a_pWaitForInput);
+	[helpstring("method FrameSetWaitFlag")] HRESULT FrameSetWaitFlag([in] IUnknown* a_pFrame, [in] boolean a_bWaitForInput);
+
+	[helpstring("method SizeGet")] HRESULT SizeGet([out] ULONG* a_pSizeX, [out] ULONG* a_pSizeY);
+	[helpstring("method SizeSet")] HRESULT SizeSet([in] ULONG a_nSizeX, [in] ULONG a_nSizeY);
+};
+
+
+[
+	uuid(1EA81482-119E-47BC-AA40-CA18E86BC78F),
+	version(1.0),
+	helpstring("RWDocumentAnimation 1.0 Type Library")
+]
+library RWDocumentAnimationLib
+{
+	importlib("stdole2.tlb");
+	importlib("RWBase.tlb");
+	importlib("RWInput.tlb");
+	importlib("RWConceptDesignerExtension.tlb");
+	importlib("RWImaging.tlb");
+	importlib("RWConceptSharedState.tlb");
+	importlib("RWScripting.tlb");
+
+	interface IDocumentAnimation;
+	interface IDocumentAnimationClipboard;
+	interface IScriptedAnimation;
+
+	[
+		uuid(F5127DDC-AE79-418E-AD1C-330C3A7B69EF),
+		helpstring("ScriptingInterfaceAnimation Class")
+	]
+	coclass ScriptingInterfaceAnimation
+	{
+		[default] interface IScriptingInterface;
+	};
+	[
+		uuid(1DD0CAA1-B18F-4979-9E3E-3077FE5821CB),
+		helpstring("DocumentFactoryAnimation Class")
+	]
+	coclass DocumentFactoryAnimation
+	{
+		[default] interface IDocumentFactoryAnimation;
+	};
+};
+cpp_quote("#define ENCFEAT_ANIMATION L\"[animation]\"")

@@ -1,0 +1,348 @@
+// RWViewImageRaster.idl : IDL source for RWViewImageRaster
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (RWViewImageRaster.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "RWBase.idl";
+import "RWInput.idl";
+import "RWDocumentImageRaster.idl";
+import "RWConceptDesignerView.idl";
+import "RWProcessing.idl";
+import "RWDrawing.idl";
+
+
+typedef [v1_enum] enum EImageQuality
+{
+	EIQNearest = 0,
+	EIQLinear,
+	EIQCoverage,
+	EIQMethodMask = 0xff,
+} EImageQuality;
+
+typedef [v1_enum] enum EImageCompositon
+{
+	EICActiveLayer = 0,
+	EICFinalImage,
+	EICEmphasizedLayer,
+} EImageCompositon;
+
+[
+	object,
+	uuid(D85B2751-E8FE-49C7-A823-CFFC64C06522),
+	helpstring("IRasterEditView Interface"),
+	pointer_default(unique)
+]
+interface IRasterEditView : IUnknown
+{
+	[helpstring("method CanSetGrid")] HRESULT CanSetGrid([in] ULONG a_nVal);
+	[helpstring("method GetGrid")] HRESULT GetGrid([out] ULONG* a_pVal);
+	[helpstring("method SetGrid")] HRESULT SetGrid([in] ULONG a_nVal);
+	[helpstring("method CanApplyChanges")] HRESULT CanApplyChanges();
+	[helpstring("method ApplyChanges")] HRESULT ApplyChanges();
+	[helpstring("method CanComposeView")] HRESULT CanComposeView();
+	[helpstring("method GetCompositionMode")] HRESULT GetCompositionMode([out] EImageCompositon* a_pMode);
+	[helpstring("method SetCompositionMode")] HRESULT SetCompositionMode([in] EImageCompositon a_eMode);
+	[helpstring("method GetImageQuality")] HRESULT GetImageQuality([out] EImageQuality* a_pQuality);
+	[helpstring("method SetImageQuality")] HRESULT SetImageQuality([in] EImageQuality a_eQuality);
+	[helpstring("method GetInvertedPixels")] HRESULT GetInvertedPixels([out] BYTE* a_pInverting);
+	[helpstring("method SetInvertedPixels")] HRESULT SetInvertedPixels([in] BYTE a_bInverting);
+	[helpstring("method ConfigureGestures")] HRESULT ConfigureGestures([in] RWHWND a_hParent, [in] LCID a_tLocaleID);
+	[helpstring("method CanSetStyle")] HRESULT CanSetStyle([in] ULONG a_nVal);
+	[helpstring("method GetStyle")] HRESULT GetStyle([out] ULONG* a_pVal);
+	[helpstring("method SetStyle")] HRESULT SetStyle([in] ULONG a_nVal);
+	[helpstring("method CanSetHandleSize")] HRESULT CanSetHandleSize();
+	[helpstring("method GetHandleSize")] HRESULT GetHandleSize([out] float* a_pVal);
+	[helpstring("method SetHandleSize")] HRESULT SetHandleSize([in] float a_fVal);
+	[helpstring("method CanHideHandles")] HRESULT CanHideHandles();
+	[helpstring("method GetHideHandles")] HRESULT GetHideHandles([out] BYTE* a_pAutoHide);
+	[helpstring("method SetHideHandles")] HRESULT SetHideHandles([in] BYTE a_bAutoHide);
+};
+
+[
+	object,
+	uuid(24986AFD-5275-4413-8F33-8DF4E8E164ED),
+	helpstring("ISharedStateToolMode Interface"),
+	pointer_default(unique)
+]
+interface ISharedStateToolMode : ISharedState
+{
+	[helpstring("method Get")] HRESULT Get([out] BSTR* a_pbstrToolID, [out] BOOL* a_pFill, [out] BSTR* a_pbstrFillID, [out] EBlendingMode* a_pBlendingMode, [out] ERasterizationMode* a_pRasterizationMode, [out] ECoordinatesMode* a_pCoordinatesMode, [out] BOOL* a_pOutline, [out] TColor* a_pOutlineColor, [out] float* a_pOutlineWidth, [out] float* a_pOutlinePos, [out] EOutlineJoinType* a_pOutlineJoins);
+	[helpstring("method Set")] HRESULT Set([in] BSTR a_bstrToolID, [in] BOOL const* a_pFill, [in] BSTR a_bstrFillID, [in] EBlendingMode const* a_pBlendingMode, [in] ERasterizationMode const* a_pRasterizationMode, [in] ECoordinatesMode const* a_pCoordinatesMode, [in] BOOL const* a_pOutline, [in] TColor const* a_pOutlineColor, [in] float const* a_pOutlineWidth, [in] float const* a_pOutlinePos, [in] EOutlineJoinType const* a_pOutlineJoins, [in] ISharedStateToolMode* a_pOldState);
+	[helpstring("method RemoveRecentTool")] HRESULT RemoveRecentTool([in] BSTR a_bstrToolID);
+	[helpstring("method RemoveRecentFill")] HRESULT RemoveRecentFill([in] BSTR a_bstrFillID);
+	[helpstring("method PickRecentTool")] HRESULT PickRecentTool([in] ULONG a_nTools, [in, size_is(a_nTools)] BSTR* a_pbstrToolIDs, [out] ULONG* a_pIndex);
+	[helpstring("method PickRecentFill")] HRESULT PickRecentFill([in] ULONG a_nFills, [in, size_is(a_nFills)] BSTR* a_pbstrFillIDs, [out] ULONG* a_pIndex);
+	[helpstring("method GetRecentIDs")] HRESULT GetRecentIDs([out] IEnumStrings** a_ppToolIDs, [out] IEnumStrings** a_ppFillIDs);
+};
+
+[
+	object,
+	uuid(6CDD88B3-22B7-4110-8FE0-5637B54EF3BC),
+	helpstring("ISharedStateImageEditor Interface"),
+	pointer_default(unique),
+	local
+]
+interface ISharedStateImageEditor : ISharedState
+{
+	[helpstring("method GetStyle")] ULONG GetStyle();
+	[helpstring("method SetStyle")] HRESULT SetStyle([in] ULONG a_nStyle);
+	[helpstring("method GetGrid")] ULONG GetGrid();
+	[helpstring("method SetGrid")] HRESULT SetGrid([in] ULONG a_nGrid);
+	[helpstring("method GetCompositionMode")] EImageCompositon GetCompositionMode();
+	[helpstring("method SetCompositionMode")] HRESULT SetCompositionMode([in] EImageCompositon a_eMode);
+	[helpstring("method GetImageQuality")] EImageQuality GetImageQuality();
+	[helpstring("method SetImageQuality")] HRESULT SetImageQuality([in] EImageQuality a_eQuality);
+	[helpstring("method GetInvertedPixels")] BYTE GetInvertedPixels();
+	[helpstring("method SetInvertedPixels")] HRESULT SetInvertedPixels([in] BYTE a_bInverting);
+	[helpstring("method GetHandleSize")] float GetHandleSize();
+	[helpstring("method SetHandleSize")] HRESULT SetHandleSize([in] float a_fSize);
+	[helpstring("method GetHideOnLeave")] BYTE GetHideOnLeave();
+	[helpstring("method SetHideOnLeave")] HRESULT SetHideOnLeave([in] BYTE a_bHide);
+};
+
+[
+	object,
+	uuid(C578923C-5010-46FB-B2CE-2CC3B39B6CD2),
+	helpstring("IRasterImageFloatingSelection Interface"),
+	pointer_default(unique)
+]
+interface IRasterImageFloatingSelection : IUnknown
+{
+	[helpstring("method SelectionExists")] HRESULT SelectionExists();
+	[helpstring("method GetSelectionTool")] HRESULT GetSelectionTool([out] IRasterImageEditToolFloatingSelection** a_ppTool);
+};
+
+typedef [v1_enum] enum ESwatchType
+{
+	ESTInvalid = 0,
+	ESTHues = 0x00000001,
+	ESTWindows = 0x00000002,
+	ESTWebSafe = 0x00000004,
+	ESTCustom = 0x00010000,
+} ESwatchType;
+
+[
+	object,
+	uuid(B5D57E7C-70BD-42D8-9294-226D891E283F),
+	helpstring("IColorSwatchView Interface"),
+	pointer_default(unique)
+]
+interface IColorSwatchView : IUnknown
+{
+	[helpstring("method Count")] HRESULT Count([out] ULONG* a_pSize);
+	[helpstring("method Value")] HRESULT Value([in] ULONG a_nIndex, [out] TSwatchColor* a_pColor);
+	[helpstring("method Delete")] HRESULT Delete([in] ULONG a_nFirst, [in] ULONG a_nLast);
+	[helpstring("method Insert")] HRESULT Insert([in] ULONG a_nBefore, [in] TSwatchColor const* a_pColor);
+	[helpstring("method Change")] HRESULT Change([in] ULONG a_nIndex, [in] TSwatchColor const* a_pColor);
+
+	[helpstring("method SwatchEnable")] HRESULT SwatchEnable([in] ESwatchType a_eType);
+	[helpstring("method SwatchDisable")] HRESULT SwatchDisable([in] ESwatchType a_eType);
+	[helpstring("method SwatchesSet")] HRESULT SwatchesSet([in] ULONG a_nTypes);
+	[helpstring("method SwatchesGet")] HRESULT SwatchesGet([out] ULONG* a_pTypes);
+
+	[helpstring("method Defaults")] HRESULT Defaults([out] TSwatchColor* a_pColor1, [out] TSwatchColor* a_pColor2);
+};
+
+
+[
+	uuid(E7BB6138-3D95-44FA-B56C-9E0B8B47AD85),
+	version(1.0),
+	helpstring("RWViewImageRaster 1.0 Type Library")
+]
+library RWViewImageRasterLib
+{
+	importlib("stdole2.tlb");
+	importlib("RWBase.tlb");
+	importlib("RWConceptDesignerView.tlb");
+	importlib("RWConceptSharedState.tlb");
+	importlib("RWProcessing.tlb");
+	importlib("RWDrawing.tlb");
+
+	interface IRasterImageGrid;
+	interface IRasterImageSelectionControl;
+	interface IColorSwatchView;
+
+	[
+		uuid(040D8185-5A96-40D0-9072-FD7531EEC2D5),
+		helpstring("DesignerViewImageEdit Class")
+	]
+	coclass DesignerViewFactoryRasterEdit
+	{
+		[default] interface IDesignerViewFactory;
+	};
+	[
+		uuid(458185E9-E60B-4A41-87D1-93CA37B59A37),
+		helpstring("DesignerViewFactoryEditToolProperties Class")
+	]
+	coclass DesignerViewFactoryEditToolProperties
+	{
+		[default] interface IDesignerViewFactory;
+	};
+
+	[
+		uuid(9D1BA4AE-E67D-402A-AC82-C1FE1836D8FB),
+		helpstring("MenuCommandsDrawingTools Class")
+	]
+	coclass MenuCommandsDrawingTools
+	{
+		[default] interface IDocumentMenuCommands;
+	};
+	[
+		uuid(1946ADAC-155D-4996-939C-15BA33962151),
+		helpstring("MenuCommandsGrid Class")
+	]
+	coclass MenuCommandsGrid
+	{
+		[default] interface IDocumentMenuCommands;
+	};
+	[
+		uuid(B2246A5D-C454-48F0-AFCE-A44E4754115F),
+		helpstring("MenuCommandsDrawMode Class")
+	]
+	coclass MenuCommandsDrawMode
+	{
+		[default] interface IDocumentMenuCommands;
+	};
+	[
+		uuid(ABA84F7D-5806-4FDA-B85D-1B265D3467FC),
+		helpstring("MenuCommandsSelectionDocument Class")
+	]
+	coclass MenuCommandsSelectionDocument
+	{
+		[default] interface IDocumentMenuCommands;
+	};
+	[
+		uuid(35021BE0-2612-459E-9C67-F4B033B023F1),
+		helpstring("SharedStateToolMode Class")
+	]
+	coclass SharedStateToolMode
+	{
+		[default] interface ISharedState;
+		interface ISharedStateToolMode;
+	};
+	[
+		uuid(902C07E4-4810-4A66-BB16-1537F0DB00A7),
+		helpstring("SharedStateImageEditor Class")
+	]
+	coclass SharedStateImageEditor
+	{
+		[default] interface ISharedState;
+		interface ISharedStateImageEditor;
+	};
+	[
+		uuid(289F2305-AE63-4254-827E-FACF56AC3DB2),
+		helpstring("DesignerViewFactoryFillStyleProperties Class")
+	]
+	coclass DesignerViewFactoryFillStyleProperties
+	{
+		[default] interface IDesignerViewFactory;
+	};
+	[
+		uuid(A4F16F0C-76A1-4D8F-BF20-B52C5E212328),
+		helpstring("MenuCommandsFinishDrawing Class")
+	]
+	coclass MenuCommandsFinishDrawing
+	{
+		[default] interface IDocumentMenuCommands;
+	};
+	[
+		uuid(0B9890CC-C131-4567-B944-E7DB533DA595),
+		helpstring("MenuCommandsFillStyle Class")
+	]
+	coclass MenuCommandsFillStyle
+	{
+		[default] interface IDocumentMenuCommands;
+	};
+	[
+		uuid(A61D013E-EBFF-4900-8372-4FF5455A8E96),
+		helpstring("MenuCommandsSwapColors Class")
+	]
+	coclass MenuCommandsSwapColors
+	{
+		[default] interface IDocumentMenuCommands;
+	};
+	[
+		uuid(BB59804D-C19A-4F71-A215-C2F28F20F820),
+		helpstring("MenuCommandsWindowRendering Class")
+	]
+	coclass MenuCommandsWindowRendering
+	{
+		[default] interface IDocumentMenuCommands;
+	};
+	[
+		uuid(C98F25E7-EDD3-498F-A812-3D596B85183D),
+		helpstring("MenuCommandsComposedView Class")
+	]
+	coclass MenuCommandsComposedView
+	{
+		[default] interface IDocumentMenuCommands;
+	};
+	[
+		uuid(B8D19B08-D97D-45B8-BD2B-63751C116847),
+		helpstring("MenuCommandsConfigureGestures Class")
+	]
+	coclass MenuCommandsConfigureGestures
+	{
+		[default] interface IDocumentMenuCommands;
+	};
+	[
+		uuid(69F48071-EC57-4DA1-B496-CDD753534831),
+		helpstring("MenuCommandsCustomTools Class")
+	]
+	coclass MenuCommandsCustomTools
+	{
+		[default] interface IDocumentMenuCommands;
+	};
+	[
+		uuid(E0FB6D3D-C5CF-4BAE-94A1-E035A08410D1),
+		helpstring("MenuCommandsLayerEffect Class")
+	]
+	coclass MenuCommandsLayerEffect
+	{
+		[default] interface IDocumentMenuCommands;
+	};
+	[
+		uuid(778CDD87-F92D-43A5-88EA-BE1E4E5443CB),
+		helpstring("DesignerViewFactoryDrawToolCmdLine Class")
+	]
+	coclass DesignerViewFactoryDrawToolCmdLine
+	{
+		[default] interface IDesignerViewFactory;
+	};
+	[
+		uuid(E764C2F3-3358-4F91-80DE-9B87D6BB275C),
+		helpstring("MenuCommandsSwitchLayer Class")
+	]
+	coclass MenuCommandsSwitchLayer
+	{
+		[default] interface IDocumentMenuCommands;
+	};
+	[
+		uuid(42D308DB-4B8D-49CD-BAF1-167A5D9172A4),
+		helpstring("DocumentOperationRasterizeLayer Class")
+	]
+	coclass DocumentOperationRasterizeLayer
+	{
+		[default] interface IDocumentOperation;
+	};
+	[
+		uuid(AD18049A-9F93-4F4B-A23F-191C6610B044),
+		helpstring("MenuCommandsOutlineStyle Class")
+	]
+	coclass MenuCommandsOutlineStyle
+	{
+		[default] interface IDocumentMenuCommands;
+	};
+	[
+		uuid(9FB46682-70E4-4D3A-9D56-9A1C943094CD),
+		helpstring("DesignerViewFactoryOutlineProperties Class")
+	]
+	coclass DesignerViewFactoryOutlineProperties
+	{
+		[default] interface IDesignerViewFactory;
+	};
+};
+

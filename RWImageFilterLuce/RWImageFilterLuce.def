@@ -1,0 +1,10 @@
+; RWImageFilterLuce.def : Declares the module parameters.
+
+LIBRARY      "RWImageFilterLuce.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+;	DllRegisterServer	PRIVATE
+;	DllUnregisterServer	PRIVATE
+	DllEnumClasses		PRIVATE

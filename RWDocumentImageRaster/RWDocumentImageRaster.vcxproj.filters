@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="DocumentRasterImage">
+      <UniqueIdentifier>{fb09f76b-8562-4ec9-80cb-700598043055}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{cfa776bf-1584-465a-96b7-8129b58c64a3}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Misc Files">
+      <UniqueIdentifier>{b7092aec-85ea-45fb-85e1-4af96b3ac186}</UniqueIdentifier>
+      <Extensions>h;c;cpp;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="ImageFromClipboard Files">
+      <UniqueIdentifier>{8d26e8a3-7eac-448e-a730-baa1569e17da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImageSelection Files">
+      <UniqueIdentifier>{0a0bad29-a6cc-463a-9681-cf0a5695cf58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DefaultImageFormat Files">
+      <UniqueIdentifier>{be3ba193-eaab-46c0-bddb-42603be604fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CaptureDesktop Files">
+      <UniqueIdentifier>{90d9456e-2896-4267-ad1e-0331b5bc5e89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DocumentLayeredImage">
+      <UniqueIdentifier>{d49dc8e1-eb5b-42fd-9b89-d678f69bb8b2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DocumentFactoryRasterImage.cpp">
+      <Filter>DocumentRasterImage</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentRasterImage.cpp">
+      <Filter>DocumentRasterImage</Filter>
+    </ClCompile>
+    <ClCompile Include="RWDocumentImageRaster_i.c">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RWDocumentImageRaster.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Misc Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageFromClipboard.cpp">
+      <Filter>ImageFromClipboard Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SharedStateImageSelection.cpp">
+      <Filter>ImageSelection Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalConfigDefaultImageFormat.cpp">
+      <Filter>DefaultImageFormat Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentCreatorCaptureDesktop.cpp">
+      <Filter>CaptureDesktop Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentFactoryImageEffect.cpp">
+      <Filter>DocumentLayeredImage</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentFactoryLayeredImage.cpp">
+      <Filter>DocumentLayeredImage</Filter>
+    </ClCompile>
+    <ClCompile Include="DocumentLayeredImage.cpp">
+      <Filter>DocumentLayeredImage</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageFilterOpacity.cpp">
+      <Filter>DocumentLayeredImage</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DocumentFactoryRasterImage.h">
+      <Filter>DocumentRasterImage</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentRasterImage.h">
+      <Filter>DocumentRasterImage</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentRasterImageUndo.h">
+      <Filter>DocumentRasterImage</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageMetaDataImpl.h">
+      <Filter>DocumentRasterImage</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWVersion.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageFromClipboard.h">
+      <Filter>ImageFromClipboard Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SharedStateImageSelection.h">
+      <Filter>ImageSelection Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalConfigDefaultImageFormat.h">
+      <Filter>DefaultImageFormat Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentCreatorCaptureDesktop.h">
+      <Filter>CaptureDesktop Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentFactoryLayeredImage.h">
+      <Filter>DocumentLayeredImage</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentLayeredImage.h">
+      <Filter>DocumentLayeredImage</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentLayeredImageCache.h">
+      <Filter>DocumentLayeredImage</Filter>
+    </ClInclude>
+    <ClInclude Include="DocumentLayeredImageUndo.h">
+      <Filter>DocumentLayeredImage</Filter>
+    </ClInclude>
+    <ClInclude Include="LayerBlending.h">
+      <Filter>DocumentLayeredImage</Filter>
+    </ClInclude>
+    <ClInclude Include="LayerEffectSubDocument.h">
+      <Filter>DocumentLayeredImage</Filter>
+    </ClInclude>
+    <ClInclude Include="LayerRasterImage.h">
+      <Filter>DocumentLayeredImage</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterImageOperationStep.h">
+      <Filter>DocumentLayeredImage</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptedLayeredImage.h">
+      <Filter>DocumentLayeredImage</Filter>
+    </ClInclude>
+    <ClInclude Include="StructuredItemLayer.h">
+      <Filter>DocumentLayeredImage</Filter>
+    </ClInclude>
+    <ClInclude Include="StructuredItemLayerEffect.h">
+      <Filter>DocumentLayeredImage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_interninc\ImageClipboardUtils.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\_inc\RWDocumentImageRaster2.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\_inc\RWDocumentImageRasterUtils.h">
+      <Filter>Misc Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="DocumentRasterImage.ico">
+      <Filter>DocumentRasterImage</Filter>
+    </Image>
+    <Image Include="DocumentStdImage.ico">
+      <Filter>DocumentRasterImage</Filter>
+    </Image>
+    <Image Include="DocumentLayeredImage.ico">
+      <Filter>DocumentLayeredImage</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RWDocumentImageRaster.def">
+      <Filter>Misc Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RWDocumentImageRaster.rc">
+      <Filter>Misc Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="..\_inc\RWDocumentImageRaster.idl" />
+  </ItemGroup>
+</Project>

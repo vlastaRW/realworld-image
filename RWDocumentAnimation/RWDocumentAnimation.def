@@ -1,0 +1,8 @@
+; RWDocumentAnimation.def : Declares the module parameters.
+
+LIBRARY      "RWDocumentAnimation.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllEnumClasses		PRIVATE
